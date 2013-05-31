@@ -1,0 +1,92 @@
+/*	Visar.is v1.0
+ *	Designed and built by @brennannovak
+ *  Some stuff (mostly grid) taken from Skeleton boilerplate http://www.getskeleton.com
+ */
+
+/* Mixins */
+@import "mixins/elements.less";
+@import "mixins/shapes.less";
+@import "mixins/animate.less";
+
+/* Config */
+@import "app/fonts.less";
+@import "app/config.less";
+@import "app/icons.less";
+@import "app/backgrounds.less";
+
+/* Base */
+@import "base/_base.less";
+@import "base/_links.less";
+@import "base/_typography.less";
+@import "base/_navigation.less";
+@import "base/_lists.less";
+@import "base/_elements.less";
+@import "base/_images.less";
+@import "base/_buttons.less";
+@import "base/_forms.less";
+@import "base/_skeleton.less";
+@import "base/_tables.less";
+
+/* App */
+@import "app-reports/messages.less";
+@import "app-reports/graphs.less";
+@import "app-reports/web.less";
+@import "app-reports/tablet.less";
+@import "app-reports/mobile.less";
+
+	
+	.chart {
+		max-width: 50em;
+	}
+	
+	.chart object {
+		width: 100%;
+		height: 30em;
+	}
+	
+	
+	.logout { text-align: right; float: right; }
+	.logout form { display: inline; }
+	.logout form input { 
+	
+	
+		padding: 5px 15px;
+	    background: #4479BA;
+
+	    color: #FFF;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    border-radius: 4px;
+	    border: solid 1px @blueDarkest;
+
+	    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+	    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+
+	    -webkit-transition-duration: 0.2s;
+	    -moz-transition-duration: 0.2s;
+	    transition-duration: 0.2s;
+
+	    -webkit-user-select:none;
+	    -moz-user-select:none;
+	    -ms-user-select:none;
+	    user-select:none;
+
+	 }
+	 
+	.logout form input:hover { 
+	    background: #356094;
+	    border: solid 1px #2A4E77;
+	    text-decoration: none;
+	}
+
+	.logout form input:active { 
+	    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    background: #2E5481;
+	    border: solid 1px #203E5F;
+	}
+	
