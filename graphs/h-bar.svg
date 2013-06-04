@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+	<style type="text/css">
+	
+		@font-face {
+			font-family: 'AvenirNextLTPro-It';
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.eot');
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.eot?#iefix') format('embedded-opentype'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.woff') format('woff'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.ttf') format('truetype');
+		}
+		
+		@font-face {
+			font-family: 'AvenirNextLTPro-Demi';
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.eot');
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.eot?#iefix') format('embedded-opentype'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.woff') format('woff'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.ttf') format('truetype');
+		}
+	
+		text {
+			font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		}
+		
+		.chart-name {
+			font-size: 400%;
+			text-anchor: middle;
+		}
+		
+		.background {
+			fill: none;
+		}
+		
+		.chart .background {
+			fill: #eee;
+		}
+		
+		.body {
+			overflow: visible;
+		}
+		
+		.key .name {
+			baseline-shift: -90%;
+		}
+
+		.bars .bar {
+			fill: #bbb;
+		}
+		
+		.bars .label.in-bar {
+			text-anchor: end;
+		}
+		
+		text.label {
+			dominant-baseline: central;
+		}
+
+		text.bar-name {
+			font-family: AvenirNextLTPro-It;
+			font-size: 1.25em;
+			letter-spacing: -1px;
+		}
+		
+		text.label {
+			font-family: AvenirNextLTPro-Demi;
+			font-size: 1.75em;
+			letter-spacing: -1px;
+		}
+
+		.bars .bar-1 { fill: #334433; }
+		.bars .label-1.in-bar { fill: #eee }
+		.bars .bar-2 { fill: #6699aa; }
+		.bars .label-2.in-bar { fill: #eee }
+		.bars .bar-3 { fill: #88aaaa; }
+		.bars .label-3.in-bar { fill: #eee }
+		.bars .bar-4 { fill: #aacccc; }
+		.bars .label-4.in-bar { fill: #111 }
+		.bars .bar-5 { fill: #447799; }
+		.bars .label-5.in-bar { fill: #eee }
+
+	</style>
+	<svg class="body" width="90%" height="90%" x="5%">
+		<g class="bars">
+			<rect class="background" width="10%" height="100%" />
+			<text class="bar-name" x="0.5ex" y="9.0%">Bar 1</text>
+			<rect class="bar bar-1" x="0" y="10.0%" height="10.0%" width="10%" />
+			<text class="label label-1 " x="10%" y="15.0%">&#160;10%&#160;</text>
+
+			<text class="bar-name" x="0.5ex" y="29.0%">Bar 2</text>
+			<rect class="bar bar-2" x="0" y="30.0%" height="10.0%" width="30%" />
+			<text class="label label-2 " x="30%" y="35.0%">&#160;30%&#160;</text>
+
+			<text class="bar-name" x="0.5ex" y="49.0%">Bar 3</text>			
+			<rect class="bar bar-3" x="0" y="50.0%" height="10.0%" width="20%" />
+			<text class="label label-3 " x="20%" y="55.0%">&#160;20%&#160;</text>
+
+			<text class="bar-name" x="0.5ex" y="69.0%">Bar 4</text>
+			<rect class="bar bar-4" x="0" y="70.0%" height="10.0%" width="50%" />
+			<text class="label label-4 " x="50%" y="75.0%">&#160;50%&#160;</text>
+
+			<text class="bar-name" x="0.5ex" y="89.0%">Bar 5</text>
+			<rect class="bar bar-5" x="0" y="90.0%" height="10.0%" width="100%" />
+			<text class="label label-5 in-bar" x="100%" y="95.0%">&#160;100%&#160;</text>
+		</g>
+	</svg>
+</svg>
