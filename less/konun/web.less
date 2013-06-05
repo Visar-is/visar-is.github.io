@@ -11,23 +11,21 @@ input[type="submit"]	{  }
 
 h1 { font-size: 1.3em; clear: both; }
 
-@font-face { font-family: 'VisarPie'; src: url('/webfonts/VisarPies.ttf'); }
+	#messages			{ border-bottom: 1px solid @greenLightBorder; }
 
-
-	#utilities 			{ z-index: 10; background-color: #D4CCC5; position: fixed; top: 5px; left: 15px; padding: 4px; margin: 0; }
+	#header 			{ display: block; margin: 0 auto 2em auto; }
 
 /* Progress */
 	
-	#progress			{ text-align: right; }
-	#progress 			{ z-index: 9; width: 100%; position: absolute; top: 0; left: 0; }
-	#progress div		{ width: 100px; background-color: #D4CCC5; padding: 0 4px; }
-	#progress:before 	{ font-size: 120%; font-family: "VisarPie"; content: "\{{percent_progress_unicode}}"; }
+	#progress 			{ width: 240px; position: relative; top: 10px; left: 10px; float: left; font-family: AvenirNextLTPro-Demi; text-align: left; }
+	#progress span		{ width: 200px; margin-left: 5px;  }
 
 
 /* Language */
 
-	#language_picker 	{ z-index: 10; position: fixed; top: 15px; right: 15px; padding: 4px; margin: 0 1em 0 0; padding: 0; }
+	#language_picker 	{ z-index: 10; float: right; position: relative; top: 15px; right: 15px; padding: 4px; margin: 0 1em 0 0; padding: 0; }
 	#language_picker a	{ margin-left: 15px; }
+
 
 /* Various */
 

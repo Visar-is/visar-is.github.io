@@ -1,4 +1,4 @@
-/*	Konun v1.0
+/*	Visar - Konun v1.0
  *	Designed and built by @brennannovak
  *  Some stuff (mostly grid) taken from Skeleton boilerplate http://www.getskeleton.com
  */
@@ -17,9 +17,15 @@
 @import "base/_images.less";
 @import "base/_buttons.less";
 @import "base/_forms.less";
+@import "base/_skeleton.less";
 
 /* App */
-// @import your custom LESS files here
+@font-face {
+	font-family: 'VisarPie';
+	src: url('/webfonts/VisarPies.ttf'); 
+}
+
+@import "app/messages.less";
 @import "konun/web.less";
 @import "konun/tablet.less";
 @import "konun/mobile.less";
