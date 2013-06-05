@@ -1,0 +1,22 @@
+html, body { overflow-x: hidden; margin: 0; padding: 0; background-color: #EFECE5; color: #3D352A; font: 1em/1.8em Helvetica,Arial,sans-serif; }
+img { border: 0; }
+input, textarea { -webkit-appearance: none; -webkit-border-radius: 0; }
+
+#language_picker { z-index: 10; background-color: #D4CCC5; position: absolute; top: 0; right: 0; padding: 4px; margin: 0 }
+#controls {position: static; width: 100%;}
+#complete { text-align: center; }
+.button_back { border:none; height: 86px; width: 62px;  position: fixed; top: 40%; left:  0; margin: 0 0 0 -12px; -webkit-transition: all 0.25s ease; background: url('{% get_static_prefix %}images/back.png') no-repeat; }
+.button_next { border:none; height: 86px; width: 62px; position: fixed; top: 40%; right: 0; margin: 0 -12px 0 0; -webkit-transition: all 0.25s ease; background: url('{% get_static_prefix %}images/next.png') no-repeat; }
+.button_back:hover { margin: 0 0 0 -6px; -webkit-transition: all 0.25s ease; }
+.button_next:hover { margin: 0 -6px 0 0; -webkit-transition: all 0.25s ease; }
+.content { padding: 20px 60px; margin: 0; }
+
+.button_finish { border:none; height: 86px; width: 86px; background: url('{% get_static_prefix %}images/eject.png') no-repeat; }
+
+/* 
+	Medium Brown #867970 
+	light brown #D4CCC5
+	sage green hex=#D8E0CE
+*/
+#progress { z-index: 9; width: 100%; position: absolute; top: 0; left: 0;}
+#progress div { width: {{percent_progress}}%; background-color: #D4CCC5; padding: 0 4px; }
