@@ -132,6 +132,10 @@
   background: #FFF;
   border: 1px solid #b0b1b2;
 }
+.background-green-box {
+  background: #e2e8e3;
+  border: 1px solid #b0b1b2;
+}
 /* Mountains */
 .divider-mountain-one {
   height: 84px;
@@ -422,6 +426,45 @@ strong {
 small {
   font-size: 80%;
 }
+/* Navigation */
+#navigation {
+  background: #222222;
+  z-index: 10;
+  color: #eeeeee;
+}
+#navigation a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+#navigation a:hover {
+  color: #aaaaaa;
+}
+#navigation span.name_ome {
+  color: #818181;
+}
+#navigation_logo {
+  display: none;
+}
+/* Navigation Sub */
+.navigation-sub {
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+/* #Lists
+================================================== */
+ul,
+ol {
+  margin: ;
+  padding: ;
+}
+ul li,
+ol li {
+  margin: ;
+  padding: ;
+}
+ul li {
+  list-style-type: ;
+}
 /*	Blockquotes  */
 blockquote,
 blockquote p {
@@ -451,10 +494,10 @@ blockquote cite a:visited {
 }
 /* Lines */
 hr {
-  border: solid #666666;
+  border: solid #b0b1b2;
   border-width: 1px 0 0;
   clear: both;
-  margin: 10px 0 30px;
+  margin: 0px 30px;
   height: 0;
 }
 hr.medium {
@@ -1401,7 +1444,16 @@ label span.form_error {
   width: 0;
   height: 0;
 }
-/* Centering */
+/* Vertical Margins & Padding */
+.remove-top {
+  margin-top: 0 !important;
+}
+.half-top {
+  margin-top: 10px !important;
+}
+.add-top {
+  margin-top: 45px !important;
+}
 .remove-bottom {
   margin-bottom: 0 !important;
 }
@@ -1409,8 +1461,9 @@ label span.form_error {
   margin-bottom: 10px !important;
 }
 .add-bottom {
-  margin-bottom: 20px !important;
+  margin-bottom: 45px !important;
 }
+/* Centering */
 .left {
   float: left;
 }
@@ -1451,13 +1504,15 @@ label span.form_error {
   font-family: 'AvenirNextLTPro-Demi';
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   color: #ffffff;
-  border-top: 1px solid #b0b1b2;
+  border-bottom: 1px solid #b0b1b2;
+  background-color: #b0b1b2;
 }
 #messages span.message-text {
   width: 90%;
   padding-top: 3px;
   display: block;
   float: left;
+  text-align: left;
 }
 #messages abbr.message-close {
   cursor: pointer;
@@ -1489,127 +1544,87 @@ label span.form_error {
 #messages .success {
   background-color: #abc78a;
 }
-html,
+/*	Vísar - Konnun - web.less
+========================================= */
+/* Global */
 body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
   background-color: #e2e8e3;
-  color: #333333;
-  font: 1em/1.8em AvenirNextLTPro-Regular, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-html {
-  padding-bottom: 2em;
-}
-img {
-  border: 0;
-}
-footer .logo {
-  width: 156px;
-  height: 42px;
+/* IDs & Classes */
+header {
+  width: 100%;
+  min-height: 48px;
   position: fixed;
-  right: 20px;
-  bottom: 15px;
-}
-textarea {
-  font-size: 1em;
-}
-h1 {
-  font-size: 1.3em;
-  clear: both;
-}
-#messages {
-  border-bottom: 1px solid #b0b1b2;
+  top: 0px;
+  left: 0px;
 }
 #header {
+  height: 48px;
   display: block;
-  margin: 0 auto 2em auto;
+  background: #e2e8e3;
 }
-/* Progress */
-#progress {
+#header #progress {
   width: 240px;
   position: relative;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 15px;
   float: left;
   font-family: AvenirNextLTPro-Demi;
   text-align: left;
 }
-#progress span {
+#header #progress span {
   width: 200px;
   margin-left: 5px;
 }
-/* Language */
-#language_picker {
-  z-index: 10;
+#header .languages {
   float: right;
   position: relative;
-  top: 15px;
+  top: 12px;
   right: 15px;
   padding: 4px;
   margin: 0 1em 0 0;
   padding: 0;
 }
-#language_picker a {
-  margin-left: 15px;
+#header .languages a {
+  margin-left: 20px;
 }
-/* Various */
-#complete {
-  text-align: center;
+#content {
+  padding-bottom: 80px;
+}
+footer {
+  width: 100%;
+  height: 42px;
+  position: relative;
+  left: 0px;
+  bottom: 20px;
+  margin-top: 4em;
+}
+footer .logo {
+  width: 156px;
+  height: 42px;
+  margin-right: 25px;
+  float: right;
 }
 .instructions {
   white-space: pre-wrap;
 }
-.button {
-  height: 150px;
-  width: 62px;
-  text-indent: -90000%;
-  cursor: pointer;
-}
-.button_back {
-  background: url('/img/back.png') no-repeat;
-  left: 0;
-}
-.button_back:hover {
-  margin: 0 0 0 -6px;
-}
-.button_next {
-  background: url('/img/next.png') no-repeat;
-  right: 0;
-}
-.button_next:hover {
-  margin: 0 -6px 0 0;
-}
-.button_finish {
-  cursor: pointer;
-  border: none;
-  height: 86px;
-  width: 86px;
-  background: url('/img/eject.png') no-repeat;
-  text-indent: -900000%;
-}
-.content {
-  padding: 10px 20px;
-  margin: 0 auto;
-  max-width: 50em;
+textarea {
+  width: 90%;
 }
 .choice-target {
   padding: 0.5em;
   margin-bottom: 0.5em;
   display: block;
-  background: #DDD;
+  background: #ffffff;
   border: #ccc 1px solid;
   cursor: pointer;
 }
 .choice-target:hover {
-  background: #ffffff;
+  background: #abc78a;
 }
 .collapse h1,
 .collapse .instructions {
   display: none;
-}
-.question {
-  margin-top: 3em;
 }
 .question.collapse {
   margin-top: 0.5em;
@@ -1621,72 +1636,7 @@ h1 {
   display: none;
   color: #f44;
 }
-.error {
-  margin-top: 40px;
-  text-align: center;
-}
-@media only screen and (min-width: 500px) {
-  h1 {
-    font-size: 2em;
-  }
-}
-/* TODO: replace with em query) */
-@media only screen and (min-width: 500px) {
-  .button {
-    position: fixed;
-    top: 40%;
-  }
-  .button_back {
-    margin: 0 0 0 -12px;
-    left: 0;
-  }
-  .button_next {
-    right: 0;
-    margin: 0 -12px 0 0;
-  }
-}
-@media only screen and (min-width: 500px) {
-  .content {
-    padding: 20px 60px;
-  }
-}
-/* For smaller screens */
-@media screen and (max-width: 500px) {
-  #controls {
-    position: fixed;
-    right: 0;
-    text-align: right;
-    top: 20%;
-    width: 31px;
-  }
-  .content {
-    padding: 10px 35px;
-    margin: 0;
-  }
-  .button_back {
-    height: 86px;
-    width: 31px;
-    background: url('/img/sm_back.png') no-repeat;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    right: 0;
-  }
-  .button_next {
-    height: 86px;
-    width: 31px;
-    background: url('/img/sm_next.png') no-repeat;
-    position: relative;
-    margin: 0;
-    left: 0;
-    top: 100px;
-  }
-  .button_back:hover {
-    margin: 0;
-    -webkit-transition: none;
-  }
-  .button_next:hover {
-    margin: 0;
-    -webkit-transition: none;
-  }
-}
+/*	Vísar - Konnun - tablet.less
+========================================= */
+/*	Vísar - Konnun - mobile.less
+========================================= */

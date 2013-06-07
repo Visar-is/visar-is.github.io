@@ -1,0 +1,38 @@
+/*	Vísar - Konnun - web.less
+========================================= */
+
+/* Global */
+
+	body 				{ background-color: @greenLight; }
+
+
+/* IDs & Classes */
+
+	header 					{ width: 100%; min-height: 48px; position: fixed; top: 0px; left: 0px; }
+	#header 				{ height: 48px; display: block; background: @greenLight; }
+
+	#header #progress 		{ width: 240px; position: relative; top: 12px; left: 15px; float: left; font-family: AvenirNextLTPro-Demi; text-align: left; }
+	#header #progress span	{ width: 200px; margin-left: 5px;  }
+
+	#header .languages 		{ float: right; position: relative; top: 12px; right: 15px; padding: 4px; margin: 0 1em 0 0; padding: 0; }
+	#header .languages a	{ margin-left: 20px; }
+
+	#content 				{ padding-bottom: 80px; }
+
+	footer					{ width: 100%; height: 42px; position: relative; left: 0px; bottom: 20px; margin-top: 4em; }	
+	footer .logo 			{ width: 156px; height: 42px; margin-right: 25px; float: right; }
+
+
+	.instructions			{ white-space: pre-wrap; }
+
+	textarea				{ width: 90%; }
+
+	.choice-target			{ padding: 0.5em; margin-bottom: 0.5em; display: block; background: @white; border: #ccc 1px solid; cursor: pointer; }
+	.choice-target:hover	{ background: @green; }
+
+	.collapse h1,
+	.collapse .instructions	{ display: none; }
+
+	.question.collapse                  { margin-top: 0.5em; }
+	.question.invalid h1                { background: #faa; }
+	.correction-instructions            { display: none; color: #f44; }

@@ -3570,6 +3570,10 @@ body {
   background: #FFF;
   border: 1px solid #b0b1b2;
 }
+.background-green-box {
+  background: #e2e8e3;
+  border: 1px solid #b0b1b2;
+}
 /* Mountains */
 .divider-mountain-one {
   height: 84px;
@@ -3928,10 +3932,10 @@ blockquote cite a:visited {
 }
 /* Lines */
 hr {
-  border: solid #666666;
+  border: solid #b0b1b2;
   border-width: 1px 0 0;
   clear: both;
-  margin: 10px 0 30px;
+  margin: 0px 30px;
   height: 0;
 }
 hr.medium {
@@ -4878,7 +4882,16 @@ label span.form_error {
   width: 0;
   height: 0;
 }
-/* Centering */
+/* Vertical Margins & Padding */
+.remove-top {
+  margin-top: 0 !important;
+}
+.half-top {
+  margin-top: 10px !important;
+}
+.add-top {
+  margin-top: 45px !important;
+}
 .remove-bottom {
   margin-bottom: 0 !important;
 }
@@ -4886,8 +4899,9 @@ label span.form_error {
   margin-bottom: 10px !important;
 }
 .add-bottom {
-  margin-bottom: 20px !important;
+  margin-bottom: 45px !important;
 }
+/* Centering */
 .left {
   float: left;
 }
@@ -5054,13 +5068,15 @@ label span.form_error {
   font-family: 'AvenirNextLTPro-Demi';
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   color: #ffffff;
-  border-top: 1px solid #b0b1b2;
+  border-bottom: 1px solid #b0b1b2;
+  background-color: #b0b1b2;
 }
 #messages span.message-text {
   width: 90%;
   padding-top: 3px;
   display: block;
   float: left;
+  text-align: left;
 }
 #messages abbr.message-close {
   cursor: pointer;
@@ -5100,8 +5116,9 @@ label span.form_error {
   background: #e2e8e3;
   border: 1px solid #b0b1b2;
 }
-/* #Repsonsive Web
+/*	Vísar - Reports - web.less
 ================================================== */
+/* Global Base */
 header {
   width: 100%;
   min-height: 65px;
@@ -5194,8 +5211,9 @@ footer {
 .projects-content {
   display: none;
 }
-/* #Repsonsive Tablet (Portrait) Design for a width of 768px
+/*	Vísar - Reports - tablet.less
 ================================================== */
+/*  (Portrait) Design for a width of 768px  */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   header {
     position: relative;
@@ -5216,8 +5234,9 @@ footer {
     padding-top: 0px;
   }
 }
-/* #Responsive Mobile (Landscape) Design for a width of 480px
+/*	Vísar - Reports - mobile.less
 ================================================== */
+/* #Responsive Mobile (Landscape) Design for a width of 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   header {
     position: relative;
@@ -5241,8 +5260,7 @@ footer {
     padding-top: 0px;
   }
 }
-/* #Responsive Mobile (Portrait) Design for a width of 480px
-================================================== */
+/* #Responsive Mobile (Portrait) Design for a width of 480px */
 @media only screen and (max-width: 480px) {
   header {
     position: relative;

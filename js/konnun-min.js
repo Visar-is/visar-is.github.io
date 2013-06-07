@@ -39,17 +39,14 @@ $(document).ready(function() {
 });
 
 /* **********************************************
-     Begin reports.js
+     Begin konnun.js
 ********************************************** */
 
-/* Vísar.is - reports.js
-	- Requires the Mac OS application CodeKit to compile codeki-prepend tags below
+/* Vísar.is - konnun.js 
+	- Requires the Mac OS application CodeKit to compile prepend tags below
 	- http://incident57.com/codekit
 	- Created by Brennan Novak, June 2013
 */
-// If no console.log() exists
-if (!window.console) window.console = { log: $.noop, group: $.noop, groupEnd: $.noop, info: $.noop, error: $.noop };
-
 
 /*	Import JS Libraries
 	@codekit-prepend "lib/jquery.1.9.1.min.js";
@@ -62,289 +59,66 @@ if (!window.console) window.console = { log: $.noop, group: $.noop, groupEnd: $.
 $(document).ready(function() {
 
 
+		// Fix old safari bugs
+		$('label').click(function () {});
+		
+		
+		$('#next-button').click(function (event) {
+	
+	
+		// Always let the user go back, only check values on next
+		if ($(event.target).attr('name') === 'back')
+		  return true;
+		
+	
+		// Check to see if anything which is required has not been filled in
+		var requiredFields = $('[data-required]');
+	
+	
+		// Clear any current signs of invalidity
+		requiredFields.each(function (i, e) {
+		  $(e).removeClass('invalid');
+		  $(e).find('.correction-instructions').hide();
+		});
+	
+		var unfulfilled = requiredFields.filter(function (i) {
+		  var el = $(this);
+		  
+		  if (el.hasClass('choice') || el.hasClass('multiple-choice')) {
+	
+		    // If a choice question is required, an option must be checked.
+		    // If a multiple-choice question is required, then it should only ever have one
+		    // checkbox, which is required to be checked.
+		    // This selector does both.
+		    var selected = $(this).find('input:checked');
+		    return selected.length === 0 ? true : false; 
+		  }
+		  else if (el.hasClass('open')) {
+		    // Unlikely to be used, but allow for this anyway. open requires a len of > 0
+		    // to be valid
+		    return el.find('textarea').val().length === '' ? true : false;
+		  }
+		  
+		  // No handler set up for this question choice so assume correct
+		  return true;
+		});
+		
+		// if there are any unfulfilled questions:
+		if (unfulfilled.length !== 0) {
+	
+		  // Mark them as invalid, show their correction instructions
+		  unfulfilled.each(function (i, e) {
+		    $(e).find('.correction-instructions').show();
+		    $(e).addClass('invalid');
+		  });
+		  
+		  // Navigate to the first unfulfilled question
+		  document.location.hash = $(unfulfilled[0]).attr('id');
+		  
+		  // Prevent form submit
+		  return false;
+		}
+		});
+
 
 });
-
-/* **********************************************
-     Begin enquire.js
-********************************************** */
-
-// enquire.js v2.0.1 - Awesome Media Queries in JavaScript
-// Copyright (c) 2013 Nick Williams - http://wicky.nillia.ms/enquire.js
-// License: MIT (http://www.opensource.org/licenses/mit-license.php)
-
-;(function(global) {
-
-    'use strict';
-
-    var matchMedia = global.matchMedia;
-    /*jshint -W098 */
-    /**
-     * Helper function for iterating over a collection
-     *
-     * @param collection
-     * @param fn
-     */
-    function each(collection, fn) {
-        var i      = 0,
-            length = collection.length,
-            cont;
-
-        for(i; i < length; i++) {
-            cont = fn(collection[i], i);
-            if(cont === false) {
-                break; //allow early exit
-            }
-        }
-    }
-
-    /**
-     * Helper function for determining whether target object is an array
-     *
-     * @param target the object under test
-     * @return {Boolean} true if array, false otherwise
-     */
-    function isArray(target) {
-        return Object.prototype.toString.apply(target) === '[object Array]';
-    }
-
-    /**
-     * Helper function for determining whether target object is a function
-     *
-     * @param target the object under test
-     * @return {Boolean} true if function, false otherwise
-     */
-    function isFunction(target) {
-        return typeof target === 'function';
-    }
-
-    /**
-     * Delegate to handle a media query being matched and unmatched.
-     *
-     * @param {object} options
-     * @param {function} options.match callback for when the media query is matched
-     * @param {function} [options.unmatch] callback for when the media query is unmatched
-     * @param {function} [options.setup] one-time callback triggered the first time a query is matched
-     * @param {boolean} [options.deferSetup=false] should the setup callback be run immediately, rather than first time query is matched?
-     * @constructor
-     */
-    function QueryHandler(options) {
-        this.options = options;
-        !options.deferSetup && this.setup();
-    }
-    QueryHandler.prototype = {
-
-        /**
-         * coordinates setup of the handler
-         *
-         * @function
-         */
-        setup : function() {
-            if(this.options.setup) {
-                this.options.setup();
-            }
-            this.initialised = true;
-        },
-
-        /**
-         * coordinates setup and triggering of the handler
-         *
-         * @function
-         */
-        on : function() {
-            !this.initialised && this.setup();
-            this.options.match && this.options.match();
-        },
-
-        /**
-         * coordinates the unmatch event for the handler
-         *
-         * @function
-         */
-        off : function() {
-            this.options.unmatch && this.options.unmatch();
-        },
-
-        /**
-         * called when a handler is to be destroyed.
-         * delegates to the destroy or unmatch callbacks, depending on availability.
-         *
-         * @function
-         */
-        destroy : function() {
-            this.options.destroy ? this.options.destroy() : this.off();
-        },
-
-        /**
-         * determines equality by reference.
-         * if object is supplied compare options, if function, compare match callback
-         *
-         * @function
-         * @param {object || function} [target] the target for comparison
-         */
-        equals : function(target) {
-            return this.options === target || this.options.match === target;
-        }
-
-    };
-/**
- * Represents a single media query, manages it's state and registered handlers for this query
- *
- * @constructor
- * @param {string} query the media query string
- * @param {boolean} [isUnconditional=false] whether the media query should run regardless of whether the conditions are met. Primarily for helping older browsers deal with mobile-first design
- */
-function MediaQuery(query, isUnconditional) {
-    this.query = query;
-    this.isUnconditional = isUnconditional;
-    this.handlers = [];
-    this.mql = matchMedia(query);
-
-    var self = this;
-    this.listener = function(mql) {
-        self.mql = mql;
-        self.assess();
-    };
-    this.mql.addListener(this.listener);
-}
-MediaQuery.prototype = {
-
-    /**
-     * add a handler for this query, triggering if already active
-     *
-     * @param {object} handler
-     * @param {function} handler.match callback for when query is activated
-     * @param {function} [handler.unmatch] callback for when query is deactivated
-     * @param {function} [handler.setup] callback for immediate execution when a query handler is registered
-     * @param {boolean} [handler.deferSetup=false] should the setup callback be deferred until the first time the handler is matched?
-     */
-    addHandler : function(handler) {
-        var qh = new QueryHandler(handler);
-        this.handlers.push(qh);
-
-        this.matches() && qh.on();
-    },
-
-    /**
-     * removes the given handler from the collection, and calls it's destroy methods
-     * 
-     * @param {object || function} handler the handler to remove
-     */
-    removeHandler : function(handler) {
-        var handlers = this.handlers;
-        each(handlers, function(h, i) {
-            if(h.equals(handler)) {
-                h.destroy();
-                return !handlers.splice(i,1); //remove from array and exit each early
-            }
-        });
-    },
-
-    /**
-     * Determine whether the media query should be considered a match
-     * 
-     * @return {Boolean} true if media query can be considered a match, false otherwise
-     */
-    matches : function() {
-        return this.mql.matches || this.isUnconditional;
-    },
-
-    /**
-     * Clears all handlers and unbinds events
-     */
-    clear : function() {
-        each(this.handlers, function(handler) {
-            handler.destroy();
-        });
-        this.mql.removeListener(this.listener);
-        this.handlers.length = 0; //clear array
-    },
-
-    /*
-     * Assesses the query, turning on all handlers if it matches, turning them off if it doesn't match
-     */
-    assess : function() {
-        var action = this.matches() ? 'on' : 'off';
-
-        each(this.handlers, function(handler) {
-            handler[action]();
-        });
-    }
-};
-    /**
-     * Allows for registration of query handlers.
-     * Manages the query handler's state and is responsible for wiring up browser events
-     *
-     * @constructor
-     */
-    function MediaQueryDispatch () {
-        if(!matchMedia) {
-            throw new Error('matchMedia not present, legacy browsers require a polyfill');
-        }
-
-        this.queries = {};
-        this.browserIsIncapable = !matchMedia('only all').matches;
-    }
-
-    MediaQueryDispatch.prototype = {
-
-        /**
-         * Registers a handler for the given media query
-         *
-         * @param {string} q the media query
-         * @param {object || Array || Function} options either a single query handler object, a function, or an array of query handlers
-         * @param {function} options.match fired when query matched
-         * @param {function} [options.unmatch] fired when a query is no longer matched
-         * @param {function} [options.setup] fired when handler first triggered
-         * @param {boolean} [options.deferSetup=false] whether setup should be run immediately or deferred until query is first matched
-         * @param {boolean} [shouldDegrade=false] whether this particular media query should always run on incapable browsers
-         */
-        register : function(q, options, shouldDegrade) {
-            var queries         = this.queries,
-                isUnconditional = shouldDegrade && this.browserIsIncapable;
-
-            if(!queries[q]) {
-                queries[q] = new MediaQuery(q, isUnconditional);
-            }
-
-            //normalise to object in an array
-            if(isFunction(options)) {
-                options = { match : options };
-            }
-            if(!isArray(options)) {
-                options = [options];
-            }
-            each(options, function(handler) {
-                queries[q].addHandler(handler);
-            });
-
-            return this;
-        },
-
-        /**
-         * unregisters a query and all it's handlers, or a specific handler for a query
-         *
-         * @param {string} q the media query to target
-         * @param {object || function} [handler] specific handler to unregister
-         */
-        unregister : function(q, handler) {
-            var query = this.queries[q];
-
-            if(query) {
-                if(handler) {
-                    query.removeHandler(handler);
-                }
-                else {
-                    query.clear();
-                    delete this.queries[q];
-                }
-            }
-
-            return this;
-        }
-    };
-
-
-    global.enquire = global.enquire || new MediaQueryDispatch();
-
-}(this));

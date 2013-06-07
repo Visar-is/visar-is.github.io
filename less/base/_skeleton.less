@@ -273,15 +273,15 @@
     .clearfix:after,
     .row:before,
     .row:after {
-      content: '\0020';
-      display: block;
-      overflow: hidden;
-      visibility: hidden;
-      width: 0;
-      height: 0;
-	  clear: both;      
+		content: '\0020';
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+		clear: both;      
     }
-    
+
     .row:after,
     .clearfix:after { clear: both; }
     .row,
@@ -289,20 +289,27 @@
 
     /* You can also use a <br class="clear" /> to clear columns */
     .clear {
-      clear: both;
-      display: block;
-      overflow: hidden;
-      visibility: hidden;
-      width: 0;
-      height: 0;
+		clear: both;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0;
     }
 
 
-/* Centering */
+/* Vertical Margins & Padding */
+
+	.remove-top		{ margin-top: 0 !important; }
+	.half-top		{ margin-top: 10px !important; }
+	.add-top		{ margin-top: 45px !important; }
 
 	.remove-bottom	{ margin-bottom: 0 !important; }
 	.half-bottom	{ margin-bottom: 10px !important; }
-	.add-bottom		{ margin-bottom: 20px !important; }
+	.add-bottom		{ margin-bottom: 45px !important; }
+
+
+/* Centering */
 
 	.left			{ float: left; }
 	.center			{ margin-left: auto; margin-right: auto; }
@@ -313,6 +320,7 @@
 	.text-left		{ text-align: left; }
 	.text-center	{ text-align: center; }
 	.text-right 	{ text-align: right; }
+
 
 /* Hide */
 

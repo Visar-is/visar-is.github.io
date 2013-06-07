@@ -35,6 +35,31 @@
 </head>
 <body>
 
+	<div id="messages">
+		<div class="error clearfix">
+			<span class="message-text">Hey there Cowboy, seems like you've mozyed on over to an error that you ain't supposed to have!</span>
+			<abbr title="Close" class="message-close">X</abbr>
+		</div>
+		<div class="warning clearfix">
+			<span class="message-text">This here be a warnin to yuh, just a warnin mind you!</span>
+			<abbr title="Close" class="message-close">X</abbr>
+		</div>
+		
+		<div class="debug clearfix">
+			<span class="message-text">What kind of bug is a debug?</span>
+			<abbr title="Close" class="message-close">X</abbr>
+		</div>
+		<div class="info clearfix">
+			<span class="message-text">Hi, hi, hi, I am info</span>
+			<abbr title="Close" class="message-close">X</abbr>
+		</div>
+		<div class="success clearfix">
+			<span class="message-text">Success, you sly dog you, keep killin those ladies!</span>
+			<abbr title="Close" class="message-close">X</abbr>
+		</div>
+	</div>		
+
+
 	<div class="container">
 
 		<div class="sixteen columns content">
