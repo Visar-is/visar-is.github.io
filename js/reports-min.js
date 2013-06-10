@@ -24,15 +24,26 @@ for(var b=b||i(a),c=b.frag.cloneNode(),d=0,e=m(),h=e.length;d<h;d++)c.createElem
 
 $(document).ready(function() {
 
+	// Determine if Header is Fixed
+	// Return corresponding height value
+	var header_padding = function() {
+		if ($('header').css('position') === 'fixed') {
+			var padding = $('header').height() + 45;
+		}
+		else {
+			var padding = 45;
+		}
+		return padding;
+	};
+
 	// Set Padding Top for #content
-	$('#content').css('padding-top', $('header').height() + 45);
+	$('#content').css('padding-top', header_padding());
 
 	// Hide Message
 	$('.message-close').on('click', function() {
-		$(this).parent().fadeOut(function(){
-
+		$(this).parent().fadeOut(function() {
 			// Update Padding Top for #content
-			$('#content').css('padding-top', $('header').height() + 45);
+			$('#content').css('padding-top', header_padding());
 		});
 	});
 

@@ -1547,16 +1547,20 @@ label span.form_error {
 /*	Vísar - Konnun - web.less
 ========================================= */
 /* Global */
+html,
+body {
+  height: 100%;
+}
 body {
   background-color: #e2e8e3;
 }
-/* IDs & Classes */
+/* Structure IDs & Classes */
+#wrap {
+  min-height: 100%;
+}
 header {
   width: 100%;
   min-height: 48px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
 }
 #header {
   height: 48px;
@@ -1564,7 +1568,7 @@ header {
   background: #e2e8e3;
 }
 #header #progress {
-  width: 240px;
+  width: 200px;
   position: relative;
   top: 12px;
   left: 15px;
@@ -1580,36 +1584,47 @@ header {
   float: right;
   position: relative;
   top: 12px;
-  right: 15px;
+  right: 10px;
   padding: 4px;
   margin: 0 1em 0 0;
   padding: 0;
 }
 #header .languages a {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 #content {
-  padding-bottom: 80px;
+  overflow: auto;
+  padding-bottom: 65px;
+  /* must be same height as the footer */
 }
 footer {
   width: 100%;
-  height: 42px;
+  height: 65px;
   position: relative;
-  left: 0px;
-  bottom: 20px;
-  margin-top: 4em;
+  clear: both;
+  margin-top: -65px;
+  /* negative value of footer height */
+  padding-top: 48px;
 }
 footer .logo {
   width: 156px;
   height: 42px;
-  margin-right: 25px;
+  margin-right: 30px;
   float: right;
+}
+/* Section Specific */
+#survey-form {
+  max-width: 860px;
+  margin: 0 auto;
+}
+#back-button {
+  margin-right: 20px;
 }
 .instructions {
   white-space: pre-wrap;
 }
 textarea {
-  width: 90%;
+  width: 830px;
 }
 .choice-target {
   padding: 0.5em;
@@ -1629,14 +1644,55 @@ textarea {
 .question.collapse {
   margin-top: 0.5em;
 }
-.question.invalid h1 {
-  background: #faa;
-}
 .correction-instructions {
   display: none;
-  color: #f44;
+  padding: 10px 10px 10px 20px;
+  font-family: 'AvenirNextLTPro-Demi';
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  background-color: #c94d35;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 /*	Vísar - Konnun - tablet.less
 ========================================= */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 21px;
+    letter-spacing: -2px;
+  }
+  textarea {
+    width: 730px;
+  }
+}
 /*	Vísar - Konnun - mobile.less
 ========================================= */
+/* Mobile (Landscape) Design */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 18px;
+    letter-spacing: -2px;
+  }
+  textarea {
+    width: 480px;
+    background: red;
+  }
+}
+/* Mobile (Portrait TEST) Design */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 18px;
+    letter-spacing: -2px;
+  }
+  textarea {
+    width: 266px;
+    margin: 0 auto;
+    background: green;
+  }
+}
