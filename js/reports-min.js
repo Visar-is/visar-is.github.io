@@ -31,7 +31,7 @@ $(document).ready(function() {
 			var padding = $('header').height() + 45;
 		}
 		else {
-			var padding = 45;
+			var padding = 0;
 		}
 		return padding;
 	};
