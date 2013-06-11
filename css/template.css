@@ -3929,7 +3929,7 @@ hr {
   border: solid #b0b1b2;
   border-width: 1px 0 0;
   clear: both;
-  margin: 0px 30px;
+  margin: 0px;
   height: 0;
 }
 hr.medium {
@@ -4354,6 +4354,7 @@ label span.form_error {
   float: left;
   display: inline;
   margin: 20px 1%;
+  word-wrap: break-word;
 }
 .row {
   width: 100%;
@@ -4488,6 +4489,7 @@ label span.form_error {
     width: 960px;
     margin: 0 auto;
     padding: 0;
+    word-wrap: break-word;
   }
   .container .column,
   .container .columns {
@@ -4621,12 +4623,13 @@ label span.form_error {
 /* Tablet (Portrait) Design for a width of 768px ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .container {
-    width: 768px;
+    width: 728px;
   }
   .container .column,
   .container .columns {
     margin-left: 10px;
     margin-right: 10px;
+    word-wrap: break-word;
   }
   .column.alpha,
   .columns.alpha {
@@ -4644,61 +4647,61 @@ label span.form_error {
   }
   .container .one.column,
   .container .one.columns {
-    width: 28px;
+    width: 26px;
   }
   .container .two.columns {
-    width: 76px;
+    width: 72px;
   }
   .container .three.columns {
-    width: 124px;
+    width: 118px;
   }
   .container .four.columns {
-    width: 172px;
+    width: 164px;
   }
   .container .five.columns {
-    width: 220px;
+    width: 210px;
   }
   .container .six.columns {
-    width: 268px;
+    width: 256px;
   }
   .container .seven.columns {
-    width: 316px;
+    width: 302px;
   }
   .container .eight.columns {
-    width: 364px;
+    width: 348px;
   }
   .container .nine.columns {
-    width: 412px;
+    width: 394px;
   }
   .container .ten.columns {
-    width: 460px;
+    width: 440px;
   }
   .container .eleven.columns {
-    width: 508px;
+    width: 486px;
   }
   .container .twelve.columns {
-    width: 556px;
+    width: 532px;
   }
   .container .thirteen.columns {
-    width: 604px;
+    width: 578px;
   }
   .container .fourteen.columns {
-    width: 652px;
+    width: 624px;
   }
   .container .fifteen.columns {
-    width: 700px;
+    width: 670px;
   }
   .container .sixteen.columns {
-    width: 748px;
+    width: 716px;
   }
   .container .one-third.column {
-    width: 236px;
+    width: 220px;
   }
   .container .two-thirds.column {
-    width: 492px;
+    width: 460px;
   }
   .container .half.column {
-    width: 374px;
+    width: 350px;
   }
   /* Offsets */
   .container .offset-by-one {
@@ -4755,6 +4758,7 @@ label span.form_error {
   .container .columns,
   .container .column {
     margin: 20px auto;
+    word-wrap: break-word;
   }
   .row {
     margin-top: 20px;
@@ -4808,6 +4812,7 @@ label span.form_error {
   .container .columns,
   .container .column {
     margin: 20px auto;
+    word-wrap: break-word;
   }
   .row {
     margin-top: 20px;
