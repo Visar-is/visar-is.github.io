@@ -1,10 +1,9 @@
 /* Vísar.is - konnun.js 
+	- Created by Brennan Novak, June 2013
 	- Requires the Mac OS application CodeKit to compile prepend tags below
 	- http://incident57.com/codekit
-	- Created by Brennan Novak, June 2013
-*/
 
-/*	Import JS Libraries
+	Import JS Libraries
 	@codekit-prepend "lib/jquery.1.9.1.min.js";
 	@codekit-prepend "lib/html5shiv.js";
 

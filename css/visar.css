@@ -3792,7 +3792,7 @@ h6 {
   color: #333333;
   font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 h1 a,
 h2 a,
@@ -3806,37 +3806,31 @@ h1 {
   font-size: 60px;
   line-height: 70px;
   margin-bottom: 21px;
-  letter-spacing: -2px;
 }
 h2 {
   font-size: 48px;
   line-height: 58px;
   margin-bottom: 18px;
-  letter-spacing: -2px;
 }
 h3 {
   font-size: 36px;
   line-height: 46px;
   margin-bottom: 12px;
-  letter-spacing: -1px;
 }
 h4 {
   font-size: 30px;
   line-height: 36px;
   margin-bottom: 10px;
-  letter-spacing: -1px;
 }
 h5 {
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 10px;
-  letter-spacing: -1px;
 }
 h6 {
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 10px;
-  letter-spacing: 0px;
 }
 .subheader {
   color: #777;
