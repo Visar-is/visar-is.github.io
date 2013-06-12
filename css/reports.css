@@ -5215,7 +5215,7 @@ footer {
 /*  (Portrait) Design for a width of 768px  */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   header {
-    position: relative;
+    position: fixed;
   }
   #header .logo {
     width: 156px;
@@ -5235,10 +5235,10 @@ footer {
 }
 /*	Vísar - Reports - mobile.less
 ================================================== */
-/* #Responsive Mobile (Landscape) Design for a width of 480px */
+/* Mobile Landscape */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   header {
-    position: relative;
+    position: fixed;
   }
   #header .logo {
     width: 156px;
@@ -5259,10 +5259,10 @@ footer {
     padding-top: 0px;
   }
 }
-/* #Responsive Mobile (Portrait) Design for a width of 480px */
+/* Mobile Portrait */
 @media only screen and (max-width: 480px) {
   header {
-    position: relative;
+    position: fixed;
   }
   header .logo {
     width: 156px;
