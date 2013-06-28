@@ -1,0 +1,178 @@
+/*	Visar PDFs v1.0
+ *	Designed and built by @brennannovak
+ */
+
+/* Config */
+@import "app/fonts.less";
+@import "app/config.less";
+@import "app/icons.less";
+@import "app/backgrounds.less";
+
+/* Base */
+@import "base/_base.less";
+@import "base/_links.less";
+@import "base/_skeleton.less";
+
+	body {
+		margin: 25pt;
+	}
+
+	strong {
+		font-family: @text-font-family-bold;
+	}
+
+	div.new-page {
+		page-break-after: always;
+	}
+
+
+
+/* Cover Page */
+
+	div.cover-visar-logo {
+		width: 156px;
+	}
+
+	div.cover-container {
+		height: 620pt;
+	}
+
+	div.cover-report {
+		background-color: @greenLight;
+		clear: both;
+	}
+
+	div.cover-report-text {
+		width: 65%;
+		padding: 25pt;
+		float: left;
+		text-align: left;
+	}
+
+	div.cover-report-text h1 {
+		margin-bottom: 15pt; 
+		font-family: @text-font-family-bold;
+		font-size: 30pt;
+		line-height: 36pt;
+	}
+
+	div.cover-report-text h2 {
+		font-family: @text-font-family;
+		font-size: 21pt;
+		line-height: 24pt;
+	}
+
+	div.cover-company-logo {
+		width: 20%;
+		margin-top: 25pt;
+		margin-left: 0%;
+		float: right;
+		text-align: center;
+	}
+
+	div.cover-company-logo img {
+		width: 50%;
+	}
+
+	div.cover-footer {
+		font-size: 12px;
+		line-height: 14px;
+		height: 45px;
+		background: url('http://static-visar.herokuapp.com/img/logo-reports.png') left top no-repeat;
+		padding-top: 5pt;
+	}
+
+	div.cover-footer a {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	div.cover-footer-left { 
+		width: 25%;
+		float: right;
+		text-align: center;
+	}
+
+	div.cover-footer-right {
+		width: 33%;
+		float: right;
+		text-align: right;
+	}
+
+
+
+/* Page Elements */
+
+	div.page-heading {
+		background-color: @greenLight;
+		padding: 15pt;
+		margin-bottom: 25pt;
+	}
+	
+	div.page-heading h1 {
+		font-family: @text-font-family-bold;
+		font-size: 21pt;
+		line-height: 24pt;
+	}
+	div.page-heading h1 small {
+		display: block;
+		font-family: @text-font-family;
+		font-size: 13pt;
+		line-height: 13pt;
+		margin-top: 5pt;
+	}
+
+	div.page-heading h2 {
+		font-family: @text-font-family;
+		font-size: 21pt;
+		line-height: 24pt;
+	}
+
+	div.page-section {
+		margin-bottom: 45pt;
+	}
+
+	div.page-section h3 {
+		font-family: @text-font-family-bold;
+		font-size: 18pt;
+		line-height: 18pt;
+		margin: 0 15pt 10pt 15pt;
+	}
+
+	div.page-section p {
+		margin: 0 15pt 10pt 15pt;
+	}
+
+	div.page-section ul {
+		margin: 25pt 15pt 25pt 40pt;
+		list-style: square;
+
+	}
+
+	div.page-section ul li {
+		margin: 5pt 0pt;
+	}
+
+	div.page-section hr {
+		border: 1px solid @greenLightBorder;
+	}
+
+
+
+/* Graphs */
+
+	.graphs-global {
+		width: 100%;
+		height: 500px;
+		background: @greenLight;
+		margin-bottom: 25pt;
+	}
+	
+	.graphs-horizontal {
+
+	}
+	
+	.graphs-vertical {
+	
+	}
+

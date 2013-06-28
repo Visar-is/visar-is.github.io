@@ -3848,7 +3848,7 @@ p.lead {
   color: #777;
 }
 em {
-  font-style: italic;
+  font-style: AvenirNextLTPro-It, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 strong {
   font-family: AvenirNextLTPro-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3923,14 +3923,17 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3953,14 +3956,17 @@ input[type="button"] {
 .button:visited,
 .button-primary:visited {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4019,15 +4025,18 @@ input[type="button"]:active {
 /* Secondary */
 .button-secondary {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   text-decoration: none;
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4075,15 +4084,18 @@ input[type="button"]:active {
 /* Alert */
 .button-alert {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   text-decoration: none;
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4131,15 +4143,18 @@ input[type="button"]:active {
 /* Warning */
 .button-warning {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   text-decoration: none;
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4245,6 +4260,9 @@ select {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 select {
   padding: 0;
@@ -4662,7 +4680,7 @@ label span.form_error {
     width: 460px;
   }
   .container .half.column {
-    width: 350px;
+    width: 340px;
   }
   /* Offsets */
   .container .offset-by-one {

@@ -44,7 +44,6 @@
 			<span class="message-text">This here be a warnin to yuh, just a warnin mind you!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
-		
 		<div class="debug clearfix">
 			<span class="message-text">What kind of bug is a debug?</span>
 			<abbr title="Close" class="message-close">X</abbr>
@@ -60,7 +59,7 @@
 	</div>		
 
 
-	<div class="container">
+	<div class="container add-top">
 
 		<div class="sixteen columns content">
 			<h1>Vísar Style Guide</h1>
@@ -70,36 +69,39 @@
 		<!-- Three Collumns	
 		================================================== -->
 
-		<div class="half column">
-			<h3>About Skeleton?</h3>
-			<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-
-		</div>		
-		<div class="half column">
-			<h3>About Skeleton?</h3>
-			<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-
+		<div class="clearfix">
+			<div class="half column">
+				<h3>This Style Guide</h3>
+				<p>This is a collection of CSS styles and corresponding HTML elements that are currently being styled. Use this code to develop the front-end of your website. A large part of this code was hacked from the <a href="http://www.getskeleton.com">Skeleton Framework</a>. The CSS styles are all broken apart into smaller more easy to manage <a href="http://lesscss.org/" target="_blank">LESS</a> files which need to compiled to see the changes affect the main template.css file. If you're unfamiliar with LESS I suggest <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a> for Mac OS, or <a href="http://gruntjs.com/" target="_blank">Grunt</a> (which uses Node.js) for other platforms</p>
+	
+			</div>		
+			<div class="half column">
+				<h3>About Skeleton?</h3>
+				<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
+	
+			</div>
 		</div>
 
-		<div class="one-third column">
-			<h3>About Skeleton?</h3>
-			<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
+		<div class="clearfix">
+			<div class="one-third column">
+				<h3>3 Core Principles</h3>
+				<p>Skeleton is built on three core principles:</p>
+				<ul class="square">
+					<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
+					<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
+					<li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
+				</ul>
+			</div>
+			<div class="one-third column">
+				<h3>Docs &amp; Support</h3>
+				<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+			</div>
+			<div class="one-third column">
+				<h3>Are You Hip?</h3>
+				<p>Lomo locavore swag retro stumptown four loko keytar polaroid. Portland selfies cray, plaid pop-up salvia sustainable literally. Marfa church-key 3 wolf moon narwhal aesthetic. Hoodie Marfa fixie wayfarers, Pinterest trust fund fanny pack 3 wolf moon dreamcatcher. Echo Park chillwave jean shorts ugh. IPhone Terry Richardson letterpress, literally keytar scenester kale chips tumblr dreamcatcher deep v.</p>
+			</div>			
 		</div>
 
-		<div class="one-third column">
-			<h3>3 Core Principles</h3>
-			<p>Skeleton is built on three core principles:</p>
-			<ul class="square">
-				<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
-				<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
-				<li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
-			</ul>
-		</div>
-
-		<div class="one-third column">
-			<h3>Docs &amp; Support</h3>
-			<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
-		</div>
 		<hr class="medium">
 
 
@@ -314,16 +316,20 @@
 			<div class="doc-section" id="buttons">
 				<h3>Buttons</h3>
 				<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
-				
-				<h5>Normal</h5>
-				<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')">Button Primary</a>
-				<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')">Button Secondary</a>
-				<a href="#buttons" class="button-alert" onclick="javascript:alert('This button uses .button-alert class')">Button Alert</a>
-				<a href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</a>
-				
-				<h5>With Icons</h5>
-				<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')"><span class="icon-community"></span> Button Primary</a>
-				<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')"><span class="icon-brain"></span> Button Secondary</a>
+
+				<div class="add-bottom">
+					<h5>Normal</h5>
+					<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')">Button Primary</a>
+					<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')">Button Secondary</a>
+					<a href="#buttons" class="button-alert" onclick="javascript:alert('This button uses .button-alert class')">Button Alert</a>
+					<a href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</a>
+				</div>
+
+				<div class="add-bottom">			
+					<h5>With Icons</h5>
+					<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')"><span class="icon-community"></span> Button Primary</a>
+					<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')"><span class="icon-brain"></span> Button Secondary</a>
+				</div>
 
 				<div class="hidden-code">
 					<a href="">Code Example</a>

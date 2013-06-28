@@ -3848,7 +3848,7 @@ p.lead {
   color: #777;
 }
 em {
-  font-style: italic;
+  font-style: AvenirNextLTPro-It, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 strong {
   font-family: AvenirNextLTPro-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3962,14 +3962,17 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3992,14 +3995,17 @@ input[type="button"] {
 .button:visited,
 .button-primary:visited {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4058,15 +4064,18 @@ input[type="button"]:active {
 /* Secondary */
 .button-secondary {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   text-decoration: none;
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4114,15 +4123,18 @@ input[type="button"]:active {
 /* Alert */
 .button-alert {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   text-decoration: none;
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4170,15 +4182,18 @@ input[type="button"]:active {
 /* Warning */
 .button-warning {
   color: #ffffff !important;
-  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   text-decoration: none;
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4284,6 +4299,9 @@ select {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 select {
   padding: 0;
@@ -4701,7 +4719,7 @@ label span.form_error {
     width: 460px;
   }
   .container .half.column {
-    width: 350px;
+    width: 340px;
   }
   /* Offsets */
   .container .offset-by-one {
@@ -5118,9 +5136,12 @@ label span.form_error {
 /*	Vísar - Reports - web.less
 ================================================== */
 /* Global Base */
+#wrap {
+  min-height: 100%;
+}
 header {
   width: 100%;
-  min-height: 65px;
+  height: 65px;
   position: fixed;
   background-image: url('/img/background-stone.jpg');
   background-position: 0 0;
@@ -5130,13 +5151,20 @@ header {
 #header {
   height: 65px;
 }
-#header .logo {
-  width: 156px;
-  height: 42px;
-  float: left;
+#header a.logo {
   position: relative;
+  z-index: 1;
   top: 10px;
   left: 15px;
+}
+#header a.logo span {
+  display: inline-block;
+}
+#header a.logo object {
+  position: relative;
+  z-index: -1;
+  width: 156px;
+  height: 42px;
   display: block;
 }
 #header nav {
@@ -5151,18 +5179,19 @@ header {
 }
 #header nav a {
   margin-left: 15px;
-  font-weight: normal;
 }
 #content {
-  padding-top: 65px;
-  padding-bottom: 200px;
+  padding-bottom: 250px;
+  /* must be same height as the footer */
 }
 footer {
-  height: 200px;
+  height: 250px;
   background-image: url('/img/background-stone.jpg');
   background-position: 0 0;
   background-repeat: repeat;
   border-top: 1px solid #b0b1b2;
+  margin-top: -200px;
+  /* negative value of footer height */
 }
 /* Lightbox */
 #lightbox {
@@ -5217,10 +5246,7 @@ footer {
   header {
     position: fixed;
   }
-  #header .logo {
-    width: 156px;
-    height: 42px;
-    float: none;
+  #header a.logo {
     margin: 0 auto;
   }
   #header nav {
@@ -5240,14 +5266,8 @@ footer {
   header {
     position: fixed;
   }
-  #header .logo {
-    width: 156px;
-    height: 42px;
-    float: none;
+  #header a.logo {
     margin: 0 auto;
-    position: relative;
-    top: 14px;
-    left: 0px;
   }
   #header nav {
     display: none;
@@ -5264,10 +5284,7 @@ footer {
   header {
     position: fixed;
   }
-  header .logo {
-    width: 156px;
-    height: 42px;
-    float: none;
+  header a.logo {
     margin: 0 auto;
     position: relative;
     top: 14px;
