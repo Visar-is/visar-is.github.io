@@ -32,7 +32,7 @@
 		}
 		
 		.chart .background {
-			fill: #eee;
+			fill: none;
 		}
 		
 		.body {
@@ -50,10 +50,6 @@
 		.bars .label.in-bar {
 			text-anchor: end;
 		}
-		
-		text.label {
-			dominant-baseline: central;
-		}
 
 		text.bar-name {
 			font-family: AvenirNextLTPro-It;
@@ -62,9 +58,11 @@
 		}
 		
 		text.label {
+			dominant-baseline: central;
 			font-family: AvenirNextLTPro-Demi;
 			font-size: 1.75em;
 			letter-spacing: -1px;
+			fill: #333333;
 		}
 
 		.bars .bar-1 { fill: #334433; }
@@ -79,7 +77,7 @@
 		.bars .label-5.in-bar { fill: #eee }
 
 	</style>
-	<svg class="body" width="90%" height="90%" x="5%">
+	<svg class="body" width="90%" height="93%" x="5%">
 		<g class="bars">
 			<rect class="background" width="10%" height="100%" />
 			<text class="bar-name" x="0.5ex" y="9.0%">Bar 1</text>

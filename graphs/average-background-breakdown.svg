@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<svg version="1.1"
+	baseProfile="full"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="100%"
+	height="100%">
+	<style type="text/css">
+
+		@font-face {
+			font-family: 'AvenirNextLTPro-It';
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.eot');
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.eot?#iefix') format('embedded-opentype'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.woff') format('woff'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_2_0.ttf') format('truetype');
+		}
+		
+		@font-face {
+			font-family: 'AvenirNextLTPro-Demi';
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.eot');
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.eot?#iefix') format('embedded-opentype'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.woff') format('woff'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.ttf') format('truetype');
+		}
+
+		text {
+			font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+			fill: #333333;
+		}
+
+		.chart-name {
+			font-size: 400%;
+			text-anchor: middle;
+		}
+		
+		.background {
+			fill: none;
+		}
+		
+		.chart .background {
+			fill: none;
+		}
+		
+		.body {
+			overflow: visible;
+		}
+		
+		.key .name {
+			baseline-shift: -90%;
+		}.key .key-1 { fill: #333; }.key .key-2 { fill: #03f; }
+
+		.bars .bar {
+			fill: #bbb;
+		}
+		
+		.bars .label.in-bar,
+		.labels-y text {
+			text-anchor: end;
+			dominant-baseline: central;
+		}
+		
+		.labels-x .label {
+			text-anchor: middle;
+		}
+	
+		.labels-x .label.second-row {
+			fill: #666;
+		}
+		
+		.labels-y line {
+			stroke: #333;
+			stroke-width: 3;
+		}
+		
+		svg.labels-y {
+			overflow: visible;
+		}.bars .bar-1 { fill: #333; }.bars .bar-2 { fill: #03f; }.bars .bar-3 { fill: #03f; }
+	</style>
+	<svg width="100%" height="10%" viewBox="0 0 100 100">
+		<text class="chart-name" x="50" y="80">Results by gender</text>
+	</svg>
+	<svg class="key" width="90%" height="10%" y="10%" x="10%">
+		<rect class="key-1" x="0%" y="30%" width="2.5%" height="1em" />
+		<text class="name" x="3.5%" y="30%">Dummy Customer total</text>
+		<rect class="key-2" x="25%" y="30%" width="2.5%" height="1em" />
+		<text class="name" x="28.5%" y="30%">breakdown by gender</text>
+	</svg>
+	<svg class="body" width="95%" height="80%" y="20%"><g>
+		<rect class="background" width="10%" height="80%" />
+			<svg class="labels labels-y" width="10%" height="80%">
+				<line class="axis" x1="100%" y1="100%" x2="100%" y2="0"  />
+				<text x="92%" y="100.0%">0</text>
+				<line class="tick" x1="100%" y1="100.0%" x2="94%" y2="100.0%" />
+				<text x="94%" y="66.6666666667%">1</text>
+				<line class="tick" x1="100%" y1="66.6666666667%" x2="96%" y2="66.6666666667%" />
+				<text x="92%" y="33.3333333333%">2</text>
+				<line class="tick" x1="100%" y1="33.3333333333%" x2="94%" y2="33.3333333333%" />
+				<text x="94%" y="0.0%">3</text>
+				<line class="tick" x1="100%" y1="0.0%" x2="96%" y2="0.0%" />
+			</svg>
+		</g>
+		<g class="chart">
+			<rect class="background" width="90%" height="80%" x="10%" />
+			<svg class="bars" x="10%" width="90%" height="80%">
+				<rect class="bar bar-1" x="0.0%" y="72.7272727273%" width="31.3333333333%" height="27.2727272727%" />
+				<rect class="bar bar-2" x="33.3333333333%" y="70.8333333333%" width="31.3333333333%" height="29.1666666667%" />
+				<rect class="bar bar-3" x="66.6666666667%" y="74.5098039216%" width="31.3333333333%" height="25.4901960784%" />
+			</svg>
+		</g>
+		<g class="labels labels-x">
+			<svg width="90%" height="20%" x="10%" y="80%">
+			<text class="label" x="15.6666666667%" y="20%">Dummy Customer</text>
+			<text class="label" x="49.0%" y="20%">male</text><text class="label" x="82.3333333333%" y="20%">female</text><text class="label second-row" x="15.6666666667%" y="40%">N: 33</text><text class="label second-row" x="49.0%" y="40%">N: 16</text><text class="label second-row" x="82.3333333333%" y="40%">N: 17</text>
+			</svg>
+		</g>
+	</svg>
+</svg>

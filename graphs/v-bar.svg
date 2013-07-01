@@ -52,6 +52,7 @@
 			font-size: 1.25em;
 			font-family: AvenirNextLTPro-It;
 			text-anchor: middle;
+			fill: #333333;
 		}
 		
 		.labels-y line {
@@ -62,17 +63,17 @@
 		svg.labels-y {
 			font-family: AvenirNextLTPro-Demi;
 			overflow: visible;
+			fill: #333333;
 		}
-		
+
 		.bars .bar-1 { fill: #222211; }
 		.bars .bar-2 { fill: #554433; }
 		.bars .bar-3 { fill: #aa6644; }
 		.bars .bar-4 { fill: #99cc44; }
 		.bars .bar-5 { fill: #88bb66; }
-	
 	</style>
 	
-	<svg class="body" width="95%" height="90%" y="10%">
+	<svg class="body" width="95%" height="98%" y="10%">
 		<g>
 			<rect class="background" width="10%" height="80%" />
 			<svg class="labels labels-y" width="10%" height="80%">
