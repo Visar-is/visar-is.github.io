@@ -112,9 +112,10 @@
 		<g class="chart">
 			<rect class="background" width="90%" height="80%" x="10%" y="0%" />
 			<svg class="bars" width="90%" height="80%" x="10.5%" y="0%">
-				<rect class="bar bar-1" width="31.3333333333%" height="42.8571428571%" x="0.0%" y="57.1428571429%" />
-				<rect class="bar bar-2" width="31.3333333333%" height="50.0%" x="33.3333333333%" y="50.0%" />
-				<rect class="bar bar-3" width="31.3333333333%" height="37.5%" x="66.6666666667%" y="62.5%" />
+				<!-- 31.3333333333 / 6.3333333 -->
+				<rect class="bar bar-1" width="25%" height="42.8571428571%" x="6.333333%" y="57.1428571429%" />
+				<rect class="bar bar-2" width="25%" height="50.0%" x="39.666666%" y="50.0%" />
+				<rect class="bar bar-3" width="25%" height="37.5%" x="64.666666%" y="62.5%" />
 			</svg>
 		</g>
 		<g class="labels labels-x">
