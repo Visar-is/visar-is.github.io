@@ -269,18 +269,16 @@
       "outputAbbreviatedPath" : "\/admin\/js\/inlines-min.js",
       "fileType" : 64
     },
-    "\/less\/base\/_lists.less" : {
+    "\/admin\/js\/SelectFilter2.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/base\/_lists.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/_lists.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/admin\/js\/SelectFilter2.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/admin\/js\/SelectFilter2-min.js",
+      "fileType" : 64
     },
     "\/less\/app\/fonts.less" : {
       "ignoreWasSetByUser" : 0,
@@ -317,17 +315,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/admin\/js\/SelectFilter2.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/admin\/js\/SelectFilter2.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/admin\/js\/SelectFilter2-min.js",
-      "fileType" : 64
-    },
     "\/ico\/apple-touch-icon-114-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -348,6 +335,19 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/tablet.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/base\/_lists.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/base\/_lists.less",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/_lists.css",
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
@@ -606,6 +606,17 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/img\/background-blue-dark-stripe.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/background-blue-dark-stripe.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/background-blue-dark-stripe.png",
+      "initialSize" : 2966,
+      "fileType" : 8192
+    },
     "\/less\/pdfs.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -618,17 +629,6 @@
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/img\/background-blue-dark-stripe.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/background-blue-dark-stripe.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/background-blue-dark-stripe.png",
-      "initialSize" : 2966,
-      "fileType" : 8192
     },
     "\/img\/flags\/no.png" : {
       "ignoreWasSetByUser" : 0,
@@ -865,16 +865,14 @@
       "initialSize" : 1318,
       "fileType" : 8192
     },
-    "\/img\/flags\/is.png" : {
+    "\/admin\/css\/widgets.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/flags\/is.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/flags\/is.png",
-      "initialSize" : 532,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/admin\/css\/widgets.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/mountains-2.png" : {
       "ignoreWasSetByUser" : 0,
@@ -909,6 +907,26 @@
       "initialSize" : 2843,
       "fileType" : 8192
     },
+    "\/img\/flags\/is.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/flags\/is.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/flags\/is.png",
+      "initialSize" : 532,
+      "fileType" : 8192
+    },
+    "\/css\/ops.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/ops.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/img\/mountains-4.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -928,28 +946,6 @@
       "inputAbbreviatedPath" : "\/admin\/css\/dashboard.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
-    },
-    "\/ico\/favicon.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/ico\/favicon.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/ico\/favicon.png",
-      "initialSize" : 4902,
-      "fileType" : 8192
-    },
-    "\/img\/mountains-3.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/mountains-3.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/mountains-3.png",
-      "initialSize" : 1362,
-      "fileType" : 8192
     },
     "\/admin\/js\/inlines.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -995,23 +991,27 @@
       "outputAbbreviatedPath" : "\/js\/visar-min-min.js",
       "fileType" : 64
     },
-    "\/less\/css\/tablet.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/css\/tablet.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/admin\/css\/widgets.css" : {
+    "\/img\/mountains-3.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/admin\/css\/widgets.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/img\/mountains-3.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/mountains-3.png",
+      "initialSize" : 1362,
+      "fileType" : 8192
+    },
+    "\/ico\/favicon.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/ico\/favicon.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/ico\/favicon.png",
+      "initialSize" : 4902,
+      "fileType" : 8192
     },
     "\/css\/template.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1019,15 +1019,6 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/template.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/css\/ops.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/ops.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -1229,19 +1220,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/app\/backgrounds.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/app\/backgrounds.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/backgrounds.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
     "\/less\/konnun\/tablet.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1251,6 +1229,19 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/tablet.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/app\/backgrounds.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/app\/backgrounds.less",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/backgrounds.css",
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
@@ -1382,6 +1373,19 @@
       "initialSize" : 1641,
       "fileType" : 8192
     },
+    "\/less\/reports.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/reports.less",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/reports.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
     "\/img\/artwork-devices.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1393,25 +1397,14 @@
       "initialSize" : 6745,
       "fileType" : 8192
     },
-    "\/less\/css\/mobile.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/css\/mobile.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/img\/artwork-flow.png" : {
+    "\/admin\/css\/base.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/artwork-flow.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/artwork-flow.png",
-      "initialSize" : 12723,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/admin\/css\/base.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/js\/reports.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1424,24 +1417,15 @@
       "outputAbbreviatedPath" : "\/js\/reports-min.js",
       "fileType" : 64
     },
-    "\/admin\/css\/base.css" : {
+    "\/img\/artwork-flow.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/admin\/css\/base.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/ico\/apple-touch-icon-144-precomposed.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/ico\/apple-touch-icon-144-precomposed.png",
+      "inputAbbreviatedPath" : "\/img\/artwork-flow.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/ico\/apple-touch-icon-144-precomposed.png",
-      "initialSize" : 11676,
+      "outputAbbreviatedPath" : "\/img\/artwork-flow.png",
+      "initialSize" : 12723,
       "fileType" : 8192
     },
     "\/js\/reports-min.js" : {
@@ -1455,18 +1439,16 @@
       "outputAbbreviatedPath" : "\/js\/reports-min-min.js",
       "fileType" : 64
     },
-    "\/less\/reports.less" : {
+    "\/ico\/apple-touch-icon-144-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/reports.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/reports.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/ico\/apple-touch-icon-144-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/ico\/apple-touch-icon-144-precomposed.png",
+      "initialSize" : 11676,
+      "fileType" : 8192
     },
     "\/less\/mixins\/elements.less" : {
       "ignoreWasSetByUser" : 0,
