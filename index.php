@@ -108,8 +108,7 @@
 		<!-- Wide -->
 		<div class="sixteen columns content">
 
-			
-				<h1>A Beautiful Boilerplate for Responsive, Mobile-Friendly Development</h1>
+			<h1>A Beautiful Boilerplate for Responsive, Mobile-Friendly Development</h1>
 			<hr class="large">
 
 			<div class="doc-section" id="whatAndWhy">
@@ -409,14 +408,71 @@
 				</div>
 			</div>
 
-		</div>
+
+			<!-- Color Palate
+			================================================== -->
+			<div class="doc-section" id="colorPalate">
+				<h3>Color Palate</h3>
+				<p>Click square to copy HEX color value to clipboard</p>
+
+				<div class="color-palate-item" style="background-color:#005283">
+					@blueDarkest
+				</div>
+				<div class="color-palate-item" style="background-color:#3d6088">
+					@blueDarker
+				</div>
+				<div class="color-palate-item" style="background-color:#006daf">
+					@blueDark
+				</div>
+				<div class="color-palate-item" style="background-color:#41c2ff">
+					@blue
+				</div>
+				<div class="color-palate-item" style="background-color:#99d9ff">
+					@blueLight
+				</div>
+				<div class="color-palate-item" style="background-color:#92a3bf">
+					@grayLight
+				</div>
+				<div class="color-palate-item" style="background-color:#8596b3">
+					@gray
+				</div>
+				<div class="color-palate-item" style="background-color:#7f90ac">
+					@grayDark
+				</div>
+				<div class="color-palate-item" style="background-color:#C94D35">
+					@red
+				</div>
+				<div class="color-palate-item" style="background-color:#713c2a">
+					@redBorder
+				</div>
+				<div class="color-palate-item" style="background-color:#9e6727">
+					@orange
+				</div>
+				<div class="color-palate-item" style="background-color:#826f69">
+					@brown
+				</div>
+				<div class="color-palate-item" style="background-color:#7ba2a7">
+					@greenDark
+				</div>
+				<div class="color-palate-item" style="background-color:#abc78a">
+					@green
+				</div>
+				<div class="color-palate-item" style="background-color:#e2e8e3">
+					@greenLight
+				</div>
+				<div class="color-palate-item" style="background-color:#b0b1b2">
+					@greenLightBorder					
+				</div>
+				<div id="color-palate-copy"></div>
+			</div>
 
 	</div><!-- container -->
 
 
 	<!-- JS ================================================== -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>
+    <script type="text/javascript" src="http://jonrohan.github.io/ZeroClipboard/javascripts/ZeroClipboard.js" ></script>
+	<script type="text/javascript">
 
 		$('.gist').hide();
 
@@ -435,7 +491,21 @@
 				$(this).html(originalText);
 			}
 		);
-				
+
+
+
+		$('.color-palate-item').on('click', function() {
+
+			var rgb_color = $(this).css('background-color'),
+			rgb_color = rgb_color.replace('rgb(', ''),
+			rgb_color = rgb_color.replace(')', '');
+		
+			var rgb = rgb_color.split(', ');
+			var hex = "#" + ((1 << 24) + (parseInt(rgb[0]) << 16) + (parseInt(rgb[1]) << 8) + parseInt(rgb[2])).toString(16).slice(1);
+
+			alert('HEX Color is: ' + hex);
+		});
+	
 	</script>
 
 </body>
