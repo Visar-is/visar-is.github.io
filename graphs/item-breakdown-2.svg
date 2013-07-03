@@ -58,6 +58,7 @@
 		}
 	
 		.labels-x .label.second-row {
+			font-family: AvenirNextLTPro-It, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 			fill: #666;
 		}
 		

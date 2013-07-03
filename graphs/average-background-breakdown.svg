@@ -46,8 +46,13 @@
 		}
 		
 		.key .name {
+			font-family: AvenirNextLTPro-It, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 			baseline-shift: -90%;
-		}.key .key-1 { fill: #333; }.key .key-2 { fill: #03f; }
+		}
+
+		.key .key-1 { fill: #abc78a; }
+		.key .key-2a { fill: #006daf; }
+		.key .key-2b { fill: #99d9ff; }
 
 		.bars .bar {
 			fill: #bbb;
@@ -55,6 +60,7 @@
 		
 		.bars .label.in-bar,
 		.labels-y text {
+			font-size:80%;
 			text-anchor: end;
 			dominant-baseline: central;
 		}
@@ -64,28 +70,42 @@
 		}
 	
 		.labels-x .label.second-row {
+			font-family: AvenirNextLTPro-It, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;	
 			fill: #666;
 		}
 		
+		.labels-x line {
+			stroke: #999;
+			stroke-width: 1;
+		}		
+
 		.labels-y line {
-			stroke: #333;
-			stroke-width: 3;
+			stroke: #999;
+			stroke-width: 1;
 		}
 		
 		svg.labels-y {
 			overflow: visible;
-		}.bars .bar-1 { fill: #333; }.bars .bar-2 { fill: #03f; }.bars .bar-3 { fill: #03f; }
+		}
+		
+		.bars .bar-1 { fill: #abc78a; }
+		.bars .bar-2 { fill: #006daf; }
+		.bars .bar-3 { fill: #99d9ff; }
 	</style>
-	<svg width="100%" height="10%" viewBox="0 0 100 100">
-		<text class="chart-name" x="50" y="80">Results by gender</text>
+	<svg width="100%" height="10%" y="3%" viewBox="0 0 100 100">
+		<text class="chart-name" x="50" y="80">Results by Gender</text>
 	</svg>
-	<svg class="key" width="90%" height="10%" y="10%" x="10%">
+	<svg class="key" width="45%" height="5%" y="15%" x="20.5%">
 		<rect class="key-1" x="0%" y="30%" width="2.5%" height="1em" />
-		<text class="name" x="3.5%" y="30%">Dummy Customer total</text>
-		<rect class="key-2" x="25%" y="30%" width="2.5%" height="1em" />
-		<text class="name" x="28.5%" y="30%">breakdown by gender</text>
+		<text class="name" x="4%" y="30%">Dummy Customer Total</text>
 	</svg>
-	<svg class="body" width="95%" height="80%" y="20%"><g>
+	<svg class="key" width="45%" height="5%" y="15%" x="50%">
+		<rect class="key-2a" x="22.5%" y="30%" width="2.5%" height="1em" />
+		<rect class="key-2b" x="25%" y="30%" width="2.5%" height="1em" />
+		<text class="name" x="29%" y="30%">Breakdown by Gender</text>
+	</svg>
+	<svg class="body" width="96%" height="77%" x="0%" y="25%">	
+	<g>
 		<rect class="background" width="10%" height="80%" />
 			<svg class="labels labels-y" width="10%" height="80%">
 				<line class="axis" x1="100%" y1="100%" x2="100%" y2="0"  />
@@ -102,12 +122,13 @@
 		<g class="chart">
 			<rect class="background" width="90%" height="80%" x="10%" />
 			<svg class="bars" x="10%" width="90%" height="80%">
-				<rect class="bar bar-1" x="0.0%" y="72.7272727273%" width="31.3333333333%" height="27.2727272727%" />
-				<rect class="bar bar-2" x="33.3333333333%" y="70.8333333333%" width="31.3333333333%" height="29.1666666667%" />
-				<rect class="bar bar-3" x="66.6666666667%" y="74.5098039216%" width="31.3333333333%" height="25.4901960784%" />
+				<rect class="bar bar-1" width="25%" height="27.2727272727%" x="6.25%" y="72.7272727273%" />
+				<rect class="bar bar-2" width="25%" height="29.1666666667%" x="37.5%" y="70.8333333333%" />
+				<rect class="bar bar-3" width="25%" height="25.4901960784%" x="68.75%" y="74.5098039216%" />
 			</svg>
 		</g>
 		<g class="labels labels-x">
+			<line class="axis" x1="10%" y1="80%" x2="100%" y2="80%" />		
 			<svg width="90%" height="20%" x="10%" y="80%">
 			<text class="label" x="15.6666666667%" y="20%">Dummy Customer</text>
 			<text class="label" x="49.0%" y="20%">male</text><text class="label" x="82.3333333333%" y="20%">female</text><text class="label second-row" x="15.6666666667%" y="40%">N: 33</text><text class="label second-row" x="49.0%" y="40%">N: 16</text><text class="label second-row" x="82.3333333333%" y="40%">N: 17</text>

@@ -85,12 +85,12 @@
 			fill: #666;
 		}
 
-		.labels-y line {
+		.labels-x line {
 			stroke: #999;
 			stroke-width: 1;
 		}
 
-		.labels-x line {
+		.labels-y line {
 			stroke: #999;
 			stroke-width: 1;
 		}
@@ -136,17 +136,12 @@
 			</svg>
 		</g>
 		<g class="labels labels-x">
-
 			<line class="axis" x1="10%" y1="80%" x2="100%" y2="80%" />
-
 			<svg width="90%" height="20%" x="10%" y="80%">
-
 				<text class="label" x="23%" y="22%">Dummy Customer</text>
 				<text class="label second-row" x="23.5%" y="47%">N: 18.0</text>
-
 				<text class="label" x="56.888888%" y="22.5%">Male</text>
 				<text class="label second-row" x="57.0%" y="47%">N: 9.0</text>
-
 				<text class="label" x="82.111111%" y="22.5%">Female</text>
 				<text class="label second-row" x="82.111111%" y="47%">N: 9.0</text>
 			</svg>
