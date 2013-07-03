@@ -23,7 +23,7 @@
 		}
 		
 		.chart-name {
-			font-size: 400%;
+			font-size: 300%;
 			text-anchor: middle;
 		}
 		

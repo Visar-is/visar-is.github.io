@@ -22,6 +22,15 @@
 			url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.woff') format('woff'),
 			url('http://static-visar.herokuapp.com/webfonts/26E8D5_3_0.ttf') format('truetype');
 		}
+
+		@font-face {
+			font-family: 'AvenirNextLTPro-BoldIt';
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_1_0.eot');
+			src: url('http://static-visar.herokuapp.com/webfonts/26E8D5_1_0.eot?#iefix') format('embedded-opentype'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_1_0.woff') format('woff'),
+			url('http://static-visar.herokuapp.com/webfonts/26E8D5_1_0.ttf') format('truetype');
+		}
+	
 	
 		text {
 			font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
@@ -29,7 +38,7 @@
 		}	
 		
 		.chart-name {
-			font-size: 400%;
+			font-size: 300%;
 			text-anchor: middle;
 		}
 		
@@ -46,6 +55,7 @@
 		}
 		
 		.key .name {
+			font-family: AvenirNextLTPro-It, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;		
 			baseline-shift: -90%;
 		}
 		
@@ -60,23 +70,31 @@
 
 		.bars .label.in-bar,
 		.labels-y text {
+			font-size: 80%;
 			text-anchor: end;
-			dominant-baseline: central;
+			dominant-baseline: central;			
 		}
 
 		.labels-x .label {
+			font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 			text-anchor: middle;
 		}
 
 		.labels-x .label.second-row {
+			font-family: AvenirNextLTPro-It, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 			fill: #666;
 		}
 
 		.labels-y line {
-			stroke: #333;
-			stroke-width: 3;
+			stroke: #999;
+			stroke-width: 1;
 		}
 
+		.labels-x line {
+			stroke: #999;
+			stroke-width: 2;
+		}
+		
 		svg.labels-y {
 			overflow: visible;
 		}
@@ -88,16 +106,16 @@
 	<svg width="100%" height="10%" y="3%" viewBox="0 0 100 100">
 		<text class="chart-name" x="50" y="80">Results by Gender</text>
 	</svg>
-	<svg class="key" width="45%" height="5%" y="13%" x="20%">
+	<svg class="key" width="45%" height="5%" y="15%" x="20.5%">
 		<rect class="key-1" x="0%" y="30%" width="2.5%" height="1em" />
 		<text class="name" x="4%" y="30%">Dummy Customer Total</text>
 	</svg>
-	<svg class="key" width="45%" height="5%" y="13%" x="45%">
+	<svg class="key" width="45%" height="5%" y="15%" x="50%">
 		<rect class="key-2a" x="22.5%" y="30%" width="2.5%" height="1em" />
 		<rect class="key-2b" x="25%" y="30%" width="2.5%" height="1em" />
 		<text class="name" x="29%" y="30%">Breakdown by Gender</text>
 	</svg>
-	<svg class="body" width="96%" height="80%" x="1%" y="22%">
+	<svg class="body" width="96%" height="77%" x="0%" y="25%">
 		<g>
 			<rect class="background" width="10%" height="80%" />
 			<svg class="labels labels-y" width="10%" height="80%">
@@ -112,20 +130,23 @@
 		<g class="chart">
 			<rect class="background" width="90%" height="80%" x="10%" y="0%" />
 			<svg class="bars" width="90%" height="80%" x="10.5%" y="0%">
-				<!-- 31.3333333333 / 6.3333333 -->
-				<rect class="bar bar-1" width="25%" height="42.8571428571%" x="6.333333%" y="57.1428571429%" />
-				<rect class="bar bar-2" width="25%" height="50.0%" x="39.666666%" y="50.0%" />
-				<rect class="bar bar-3" width="25%" height="37.5%" x="64.666666%" y="62.5%" />
+				<rect class="bar bar-1" width="25%" height="42.8571428571%" x="9%" y="57.1428571429%" />
+				<rect class="bar bar-2" width="25%" height="50.0%" x="42.333333%" y="50.0%" />
+				<rect class="bar bar-3" width="25%" height="37.5%" x="67.333333%" y="62.5%" />
 			</svg>
 		</g>
 		<g class="labels labels-x">
 			<svg width="90%" height="20%" x="10%" y="80%">
-				<text class="label" x="15.6666666667%" y="20%">Dummy Customer</text>
-				<text class="label" x="49.0%" y="20%">male</text>
-				<text class="label" x="82.3333333333%" y="20%">female</text>
-				<text class="label second-row" x="15.6666666667%" y="40%">N: 18.0</text>
-				<text class="label second-row" x="49.0%" y="40%">N: 9.0</text>
-				<text class="label second-row" x="82.3333333333%" y="40%">N: 9.0</text>
+				<line class="axis" x1="0" y1="0" x2="100%" y2="0" />
+
+				<text class="label" x="23.33333333%" y="22.5%">Dummy Customer</text>
+				<text class="label second-row" x="24.333333%" y="47%">N: 18.0</text>
+
+				<text class="label" x="56.888888%" y="22.5%">Male</text>
+				<text class="label second-row" x="57.0%" y="47%">N: 9.0</text>
+
+				<text class="label" x="82.111111%" y="22.5%">Female</text>
+				<text class="label second-row" x="82.111111%" y="47%">N: 9.0</text>
 			</svg>
 		</g>
 	</svg>

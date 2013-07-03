@@ -1054,9 +1054,18 @@ div.page-section hr {
   border: 1px solid #b0b1b2;
 }
 /* Graphs */
-.graphs-global {
+.graphs-global-normal {
   width: 100%;
   height: 500px;
-  background: #e2e8e3;
+  margin-bottom: 25pt;
+}
+.graphs-global-taller {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 25pt;
+}
+.graphs-global-tallest {
+  width: 100%;
+  height: 700px;
   margin-bottom: 25pt;
 }
