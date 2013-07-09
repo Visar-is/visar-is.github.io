@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Vísar PDF Template</title>
-	<link rel="stylesheet" href="http://visarstatic/css/pdfs.css">
+	<link rel="stylesheet" href="http://static-visar.herokuapp.com/css/pdfs.css">
 </head>
 <body>
 
@@ -83,8 +83,8 @@
 		<h1>Violence at School</h1>
 	</div>
 	<div class="page-section">
-		<object class="graphs-global-normal" data="http://visarstatic/graphs/v-bar.svg"></object>
-		<object class="graphs-global-normal" data="http://visarstatic/graphs/h-bar.svg"></object>
+		<object class="graphs-global-normal" data="http://static-visar.herokuapp.com/graphs/v-bar.svg"></object>
+		<object class="graphs-global-normal" data="http://static-visar.herokuapp.com/graphs/h-bar.svg"></object>
 
 
 	</div>
@@ -97,8 +97,8 @@
 		<h1>Child Happiness Questions</h1>
 	</div>
 	<div class="page-section">
-		<object class="graphs-global-normal" data="http://visarstatic/graphs/average-background-breakdown.svg"></object>
-		<object class="graphs-global-normal" data="http://visarstatic/graphs/average-scale-1-summary.svg"></object>
+		<object class="graphs-global-normal" data="http://static-visar.herokuapp.com/graphs/average-background-breakdown.svg"></object>
+		<object class="graphs-global-normal" data="http://static-visar.herokuapp.com/graphs/average-scale-1-summary.svg"></object>
 
 
 	</div>
@@ -111,8 +111,8 @@
 		<h1>Classroom Size Analysis</h1>
 	</div>
 	<div class="page-section">
-		<object class="graphs-global-normal" data="http://visarstatic/graphs/item-breakdown.svg"></object>
-		<object class="graphs-global-normal" data="http://visarstatic/graphs/item-breakdown-2.svg"></object>
+		<object class="graphs-global-normal" data="http://static-visar.herokuapp.com/graphs/item-breakdown.svg"></object>
+		<object class="graphs-global-normal" data="http://static-visar.herokuapp.com/graphs/item-breakdown-2.svg"></object>
 
 
 	</div>
@@ -125,8 +125,8 @@
 		<h1>School Comparison</h1>	
 	</div>
 	<div class="page-section">
-		<object class="graphs-global-taller" data="http://visarstatic/graphs/scale-1-big-number.svg"></object>
-		<object class="graphs-global-taller" data="http://visarstatic/graphs/scale-2-background-breakdown.svg"></object>
+		<object class="graphs-global-taller" data="http://static-visar.herokuapp.com/graphs/scale-1-big-number.svg"></object>
+		<object class="graphs-global-taller" data="http://static-visar.herokuapp.com/graphs/scale-2-background-breakdown.svg"></object>
 
 
 	</div>
@@ -139,7 +139,7 @@
 		<h1>School Comparison</h1>
 	</div>	
 	<div class="page-section">
-		<object class="graphs-global-taller" data="http://visarstatic/graphs/ranking.svg"></object>
+		<object class="graphs-global-taller" data="http://static-visar.herokuapp.com/graphs/ranking.svg"></object>
 
 
 	</div>
