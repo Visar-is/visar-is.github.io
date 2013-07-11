@@ -9,11 +9,17 @@
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns="http://www.w3.org/2000/svg"
-    width="699.000015259"
-    height="1007.24998474"
-    viewBox="0, 0, 559.200012207, 805.799987793"
+    width="157"
+    height="177"
+    viewBox="0, 0, 157, 179"
     preserveAspectRatio="none"
     id="svg2">
+   <style>
+   line, rect, polyline, polygon {
+   	stroke: #eee;
+   	fill: #eee;
+   }
+   </style>
    <defs
        id="defs_84A74C9E"/>
    <metadata
