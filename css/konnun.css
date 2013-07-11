@@ -1644,6 +1644,9 @@ footer .logo {
 #survey-form input[type=submit] {
   margin-right: 20px;
 }
+#next-button {
+	margin-left: 40%;
+}
 .instructions {
   white-space: pre-wrap;
 }
@@ -1735,4 +1738,7 @@ footer .logo {
     width: 266px;
     margin: 0 auto;
   }
+	#next-button {
+		margin-left: auto;
+	}
 }
