@@ -1,5 +1,11 @@
-<FilesMatch "\.(ttf|otf|eot|woff)$">
-  <IfModule mod_headers.c>
-    Header add Access-Control-Allow-Origin "*"
-  </IfModule>
-</FilesMatch>
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+</IfModule>
+
+<IfModule mod_headers.c>
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+Header add Access-Control-Allow-Headers: "Content-Type"
+</IfModule>
+
