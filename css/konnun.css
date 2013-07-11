@@ -1511,7 +1511,7 @@ label span.form_error {
 /* App */
 @font-face {
   font-family: 'VisarPie';
-  src: url('/webfonts/VisarPies.ttf');
+  src: url('../webfonts/VisarPies.ttf');
 }
 /* Messages - Error, Warning, Debug, Info, Success */
 #messages div {
