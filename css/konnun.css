@@ -1561,7 +1561,7 @@ label span.form_error {
 #messages .success {
   background-color: #abc78a;
 }
-/*	VÃ­sar - Konnun - web.less
+/*	V’sar - Konnun - web.less
 ========================================= */
 /* Global */
 html,
@@ -1641,6 +1641,11 @@ footer .logo {
 #survey-form textarea {
   width: 830px;
 }
+#survey-form .done-image {
+	width: 2em;
+	position: relative;
+	bottom: -0.2em;
+}
 #survey-form input[type=submit] {
   font-size: 2em;
 }
@@ -1685,7 +1690,7 @@ footer .logo {
 	font-size: 1em;
 	margin-left: 0.1em;
 }
-/*	VÃ­sar - Konnun - tablet.less
+/*	V’sar - Konnun - tablet.less
 ========================================= */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   footer .logo {
@@ -1705,7 +1710,7 @@ footer .logo {
     width: 730px;
   }
 }
-/*	VÃ­sar - Konnun - mobile.less
+/*	V’sar - Konnun - mobile.less
 ========================================= */
 /* Mobile Landscape */
 @media only screen and (max-width: 480px) {
