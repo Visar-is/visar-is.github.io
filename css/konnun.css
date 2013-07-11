@@ -1644,6 +1644,9 @@ footer .logo {
 #survey-form input[type=submit] {
   margin-right: 20px;
 }
+#survey-form .pagination {
+	text-align: center;
+}
 .instructions {
   white-space: pre-wrap;
 }
