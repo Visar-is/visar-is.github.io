@@ -1646,7 +1646,7 @@ footer .logo {
 	position: relative;
 	bottom: -0.2em;
 }
-#survey-form input[type=submit] {
+#survey-form button[type=submit] {
   font-size: 2em;
 }
 #survey-form [name=back] {
