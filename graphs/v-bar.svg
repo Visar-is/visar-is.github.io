@@ -22,14 +22,7 @@
 			font-size: 300%;
 			text-anchor: middle;
 		}
-		
-		.background {
-			fill: none;
-		}
-		
-		.chart .background {
-		}
-		
+
 		.body {
 			overflow: visible;
 		}
@@ -44,20 +37,26 @@
 		
 		.bars .label.in-bar,
 		.labels-y text {
+			font-size: 80%;
 			text-anchor: end;
 			dominant-baseline: central;
 		}
 		
 		.labels-x .label {
-			font-size: 1.25em;
+			font-size: 100%;
 			font-family: AvenirNextLTPro-It;
 			text-anchor: middle;
 			fill: #333333;
 		}
-		
+
+		.labels-x line {
+			stroke: #999;
+			stroke-width: 1;
+		}
+
 		.labels-y line {
-			stroke: #333;
-			stroke-width: 3;
+			stroke: #999;
+			stroke-width: 1;
 		}
 		
 		svg.labels-y {
@@ -65,17 +64,16 @@
 			overflow: visible;
 			fill: #333333;
 		}
-
-		.bars .bar-1 { fill: #222211; }
-		.bars .bar-2 { fill: #554433; }
-		.bars .bar-3 { fill: #aa6644; }
-		.bars .bar-4 { fill: #99cc44; }
-		.bars .bar-5 { fill: #88bb66; }
-	</style>
-	
+		
+		.bars .bar-1 { fill: #006daf; }
+		.bars .bar-2 { fill: #7f90ac; }
+		.bars .bar-3 { fill: #abc78a; }
+		.bars .bar-4 { fill: #826f69; }
+		.bars .bar-5 { fill: #99d9ff; }
+		
+	</style>	
 	<svg class="body" width="95%" height="98%" y="10%">
 		<g>
-			<rect class="background" width="10%" height="80%" />
 			<svg class="labels labels-y" width="10%" height="80%">
 				<line class="axis" x1="100%" y1="100%" x2="100%" y2="0"  />
 				<text x="92%" y="100%">0%</text>
@@ -91,7 +89,6 @@
 			</svg>
 		</g>
 		<g class="chart">
-			<rect class="background" width="90%" height="80%" x="10%" />
 			<svg class="bars" x="10%" width="90%" height="80%">
 				<rect class="bar bar-1" x="0.0%" y="90%" width="18.0%" height="10%" />
 				<rect class="bar bar-2" x="20.0%" y="50%" width="18.0%" height="50%" />
@@ -101,6 +98,7 @@
 			</svg>
 		</g>
 		<g class="labels labels-x">
+			<line class="axis" x1="10%" y1="80%" x2="100%" y2="80%" />		
 			<svg width="90%" height="20%" x="10%" y="80%">
 				<text class="label" x="9.0%" y="20%">Bar 1</text>
 				<text class="label" x="29.0%" y="20%">Bar 2</text>

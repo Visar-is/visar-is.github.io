@@ -75,7 +75,7 @@
 		}
 		
 		.labels-y line {
-			stroke: #333;
+			stroke: #999;
 			stroke-width: 1;
 		}
 		
