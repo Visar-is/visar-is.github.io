@@ -63,7 +63,7 @@
 
 		<div class="sixteen columns content">
 			<h1>Vísar Style Guide</h1>
-			<h5>HTML & CSS for Vísar.is</h5>
+			<h5>HTML &amp; CSS for Vísar.is</h5>
 		</div>
 
 		<!-- Three Collumns	
