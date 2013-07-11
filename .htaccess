@@ -1,5 +1,0 @@
-<FilesMatch "\.(ttf|otf|eot|woff)$">
-    <IfModule mod_rewrite.c>
-        Header add Access-Control-Allow-Origin "*"
-    </IfModule>
-</FilesMatch>
