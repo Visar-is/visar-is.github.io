@@ -1678,6 +1678,10 @@ footer .logo {
   margin-bottom: 20px;
   border-radius: 4px;
 }
+.choice-target span {
+	font-size: 1em;
+	margin-left: 0.1em;
+}
 /*	Vísar - Konnun - tablet.less
 ========================================= */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
