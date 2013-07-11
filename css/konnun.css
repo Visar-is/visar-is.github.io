@@ -1642,7 +1642,10 @@ footer .logo {
   width: 830px;
 }
 #survey-form input[type=submit] {
-  margin-right: 20px;
+  font-size: 2em;
+}
+#survey-form [name=back] {
+	margin-right: 0.5em;
 }
 #survey-form .pagination {
 	text-align: center;
