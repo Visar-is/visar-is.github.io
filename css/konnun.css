@@ -1642,7 +1642,10 @@ footer .logo {
   width: 830px;
 }
 #survey-form input[type=submit] {
-  margin-right: 20px;
+  font-size: 2em;
+}
+#survey-form [name=back] {
+	margin-right: 0.5em;
 }
 #survey-form .pagination {
 	text-align: center;
@@ -1677,6 +1680,10 @@ footer .logo {
   background-color: #c94d35;
   margin-bottom: 20px;
   border-radius: 4px;
+}
+.choice-target span {
+	font-size: 1em;
+	margin-left: 0.1em;
 }
 /*	Vísar - Konnun - tablet.less
 ========================================= */
