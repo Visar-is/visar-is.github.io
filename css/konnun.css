@@ -1667,7 +1667,7 @@ footer .logo {
   cursor: pointer;
 }
 .choice-target:hover {
-  background: #abc78a;
+  background: rgb(153,217,255);
 }
 .collapse h1,
 .collapse .instructions {
