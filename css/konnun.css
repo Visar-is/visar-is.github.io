@@ -886,7 +886,7 @@ legend {
   display: block;
   font-weight: normal;
   font-size: 16px;
-  font-style: normal;
+  font-style: italic;
   margin-bottom: 5px;
 }
 select {
@@ -1652,6 +1652,9 @@ footer .logo {
 #survey-form [name=back] {
   margin-right: 0.5em;
 }
+#survey-form [name=finish] {
+  float: right;
+}
 #survey-form .pagination {
   text-align: center;
 }
@@ -1667,7 +1670,7 @@ footer .logo {
   cursor: pointer;
 }
 .choice-target:hover {
-  background: rgb(153,217,255);
+  background: #abc78a;
 }
 .collapse h1,
 .collapse .instructions {
