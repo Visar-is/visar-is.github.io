@@ -1644,6 +1644,7 @@ footer .logo {
 }
 #survey-form button[type=submit] {
   font-size: 2em;
+  width: 2.5em;
 }
 #survey-form [name=back] {
   margin-right: 0.5em;

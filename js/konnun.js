@@ -8,16 +8,16 @@
 	@codekit-prepend "lib/html5shiv.js";
 
 	Import JS App Components
-	@codekit-prepend "global/messages.js";	
+	@codekit-prepend "global/messages.js";
 */
 
 $(document).ready(function() {
-
-
+	
+	
 	// Fix old safari bugs
 	$('label').click(function() {});
-
-
+	
+	
 	// Next In Survey 
 	$('#next-button, #finish-button').click(function(event) {
 
