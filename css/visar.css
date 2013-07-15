@@ -5014,7 +5014,7 @@ footer {
   float: left;
   width: 100px;
   height: 150px;
-  background-image: url('/img/projects-icons.png');
+  background-image: url('../img/projects-icons.png');
   background-repeat: no-repeat;
 }
 .project-icons-skolapulsinn {
