@@ -3760,6 +3760,8 @@ body {
   /* Fix for webkit rendering */
 
   -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* #Links
 ================================================== */
