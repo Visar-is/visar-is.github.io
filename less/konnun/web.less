@@ -28,8 +28,22 @@
 	#survey-form				{ max-width: 860px; margin: 45px auto 0px auto; }
 	#survey-form h1				{ font-size: 2.25em; line-height: 1em; }
 	#survey-form textarea		{ width: 830px; }
-	#survey-form input[type=submit]	{ margin-right: @base-margin; }
-
+	
+	#survey-form .done-image {
+		height: 1em;
+		position: relative;
+		bottom: -0.2em;
+	}
+	#survey-form button[type=submit] {
+		font-size: 2em;
+	}
+	#survey-form [name=back] {
+		margin-right: 0.5em;
+	}
+	#survey-form .pagination {
+		text-align: center;
+	}
+	
 	.instructions				{ white-space: pre-wrap; }
 
 	.choice-target				{ padding: 0.5em; margin-bottom: 0.5em; display: block; background: @white; border: #ccc 1px solid; cursor: pointer; }
@@ -48,4 +62,9 @@
 		background-color: @red;
 		margin-bottom: @base-margin;
 		border-radius: @base-border-radius;
+	}
+
+	.choice-target span {
+		font-size: 1em;
+		margin-left: 0.1em;
 	}
