@@ -6,3 +6,8 @@ lessc less/visar.less css/visar.css
 lessc less/ops.less css/ops.css
 
 echo "Compiled 4 .less files"
+
+
+cat js/lib/jquery.1.9.1.min.js js/global/messages.js | jsmin > js/konnun-min.js
+
+echo "Combined 1 .js files"
