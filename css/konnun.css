@@ -1,7 +1,3 @@
-/*	Visar - Konun v1.0
- *	Designed and built by @brennannovak
- *  Some stuff (mostly grid) taken from Skeleton boilerplate http://www.getskeleton.com
- */
 /* Config */
 /* #Fonts
 ================================================== */
@@ -886,7 +882,7 @@ legend {
   display: block;
   font-weight: normal;
   font-size: 16px;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 5px;
 }
 select {

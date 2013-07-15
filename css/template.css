@@ -4324,7 +4324,7 @@ legend {
   display: block;
   font-weight: normal;
   font-size: 16px;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 5px;
 }
 select {
