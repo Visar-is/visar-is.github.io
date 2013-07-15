@@ -3545,24 +3545,24 @@ body {
 }
 /* Backgrounds */
 .background-stone {
-  background-image: url('/img/background-stone.jpg');
+  background-image: url('../img/background-stone.jpg');
   background-position: 0 0;
   background-repeat: repeat;
 }
 .background-rocks {
-  background-image: url('/img/background-rocks.png');
+  background-image: url('../img/background-rocks.png');
   background-position: 0 0;
   background-repeat: repeat;
 }
 .background-light-blue-stripe {
   border-top: 12px solid #3d6088;
   border-bottom: 12px solid #3d6088;
-  background-image: url('/img/background-blue-light-stripe.png');
+  background-image: url('../img/background-blue-light-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
 }
 .background-graph {
-  background-image: url('/img/background-graph.png');
+  background-image: url('../img/background-graph.png');
   background-position: 0 0;
   background-repeat: repeat;
 }
@@ -3578,21 +3578,21 @@ body {
 .divider-mountain-one {
   height: 84px;
   background-attachment: inherit;
-  background-image: url('/img/divider-mountains.png');
+  background-image: url('../img/divider-mountains.png');
   background-position: center 0px;
   background-repeat: repeat-x;
 }
 .divider-mountain-two {
   height: 53px;
   background-attachment: inherit;
-  background-image: url('/img/divider-mountains.png');
+  background-image: url('../img/divider-mountains.png');
   background-position: center -85px;
   background-repeat: repeat-x;
 }
 .divider-mountain-three {
   height: 51px;
   background-attachment: inherit;
-  background-image: url('/img/divider-mountains.png');
+  background-image: url('../img/divider-mountains.png');
   background-position: center -138px;
   background-repeat: repeat-x;
 }
@@ -3600,7 +3600,7 @@ body {
 hr.divider-dark-blue-stripe {
   height: 12px;
   background: #005283;
-  background-image: url('/img/background-blue-dark-stripe.png');
+  background-image: url('../img/background-blue-dark-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
   margin: 0px;
@@ -3608,7 +3608,7 @@ hr.divider-dark-blue-stripe {
 hr.divider-dark-blue-stripe-medium {
   height: 18px;
   background: #005283;
-  background-image: url('/img/background-blue-dark-stripe.png');
+  background-image: url('../img/background-blue-dark-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
   margin: 0px;
@@ -3616,7 +3616,7 @@ hr.divider-dark-blue-stripe-medium {
 hr.divider-dark-blue-stripe-large {
   height: 25px;
   background: #005283;
-  background-image: url('/img/background-blue-dark-stripe.png');
+  background-image: url('../img/background-blue-dark-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
   margin: 0px;
@@ -5143,7 +5143,7 @@ header {
   width: 100%;
   height: 65px;
   position: fixed;
-  background-image: url('/img/background-stone.jpg');
+  background-image: url('../img/background-stone.jpg');
   background-position: 0 0;
   background-repeat: repeat;
   border-bottom: 1px solid #b0b1b2;
@@ -5186,7 +5186,7 @@ header {
 }
 footer {
   height: 250px;
-  background-image: url('/img/background-stone.jpg');
+  background-image: url('../img/background-stone.jpg');
   background-position: 0 0;
   background-repeat: repeat;
   border-top: 1px solid #b0b1b2;
