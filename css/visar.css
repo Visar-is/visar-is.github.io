@@ -3445,28 +3445,28 @@ body {
 ================================================== */
 @font-face {
   font-family: 'AvenirNextLTPro-Bold';
-  src: url('../webfonts/26E8D5_0_0.eot');
-  src: url('../webfonts/26E8D5_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/26E8D5_0_0.woff') format('woff'), url('../webfonts/26E8D5_0_0.ttf') format('truetype');
+  src: url('webfonts/26E8D5_0_0.eot');
+  src: url('webfonts/26E8D5_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/26E8D5_0_0.woff') format('woff'), url('webfonts/26E8D5_0_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'AvenirNextLTPro-BoldIt';
-  src: url('../webfonts/26E8D5_1_0.eot');
-  src: url('../webfonts/26E8D5_1_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/26E8D5_1_0.woff') format('woff'), url('../webfonts/26E8D5_1_0.ttf') format('truetype');
+  src: url('webfonts/26E8D5_1_0.eot');
+  src: url('webfonts/26E8D5_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/26E8D5_1_0.woff') format('woff'), url('webfonts/26E8D5_1_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'AvenirNextLTPro-It';
-  src: url('../webfonts/26E8D5_2_0.eot');
-  src: url('../webfonts/26E8D5_2_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/26E8D5_2_0.woff') format('woff'), url('../webfonts/26E8D5_2_0.ttf') format('truetype');
+  src: url('webfonts/26E8D5_2_0.eot');
+  src: url('webfonts/26E8D5_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/26E8D5_2_0.woff') format('woff'), url('webfonts/26E8D5_2_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'AvenirNextLTPro-Demi';
-  src: url('../webfonts/26E8D5_3_0.eot');
-  src: url('../webfonts/26E8D5_3_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/26E8D5_3_0.woff') format('woff'), url('../webfonts/26E8D5_3_0.ttf') format('truetype');
+  src: url('webfonts/26E8D5_3_0.eot');
+  src: url('webfonts/26E8D5_3_0.eot?#iefix') format('embedded-opentype'), url('webfonts/26E8D5_3_0.woff') format('woff'), url('webfonts/26E8D5_3_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'AvenirNextLTPro-Regular';
-  src: url('../webfonts/26E8D5_4_0.eot');
-  src: url('../webfonts/26E8D5_4_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/26E8D5_4_0.woff') format('woff'), url('../webfonts/26E8D5_4_0.ttf') format('truetype');
+  src: url('webfonts/26E8D5_4_0.eot');
+  src: url('webfonts/26E8D5_4_0.eot?#iefix') format('embedded-opentype'), url('webfonts/26E8D5_4_0.woff') format('woff'), url('webfonts/26E8D5_4_0.ttf') format('truetype');
 }
 /* Colors */
 /* Margins, Paddings, and Spacings */
@@ -3545,24 +3545,24 @@ body {
 }
 /* Backgrounds */
 .background-stone {
-  background-image: url('/img/background-stone.jpg');
+  background-image: url('img/background-stone.jpg');
   background-position: 0 0;
   background-repeat: repeat;
 }
 .background-rocks {
-  background-image: url('/img/background-rocks.png');
+  background-image: url('img/background-rocks.png');
   background-position: 0 0;
   background-repeat: repeat;
 }
 .background-light-blue-stripe {
   border-top: 12px solid #3d6088;
   border-bottom: 12px solid #3d6088;
-  background-image: url('/img/background-blue-light-stripe.png');
+  background-image: url('img/background-blue-light-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
 }
 .background-graph {
-  background-image: url('/img/background-graph.png');
+  background-image: url('img/background-graph.png');
   background-position: 0 0;
   background-repeat: repeat;
 }
@@ -3578,21 +3578,21 @@ body {
 .divider-mountain-one {
   height: 84px;
   background-attachment: inherit;
-  background-image: url('/img/divider-mountains.png');
+  background-image: url('img/divider-mountains.png');
   background-position: center 0px;
   background-repeat: repeat-x;
 }
 .divider-mountain-two {
   height: 53px;
   background-attachment: inherit;
-  background-image: url('/img/divider-mountains.png');
+  background-image: url('img/divider-mountains.png');
   background-position: center -85px;
   background-repeat: repeat-x;
 }
 .divider-mountain-three {
   height: 51px;
   background-attachment: inherit;
-  background-image: url('/img/divider-mountains.png');
+  background-image: url('img/divider-mountains.png');
   background-position: center -138px;
   background-repeat: repeat-x;
 }
@@ -3600,7 +3600,7 @@ body {
 hr.divider-dark-blue-stripe {
   height: 12px;
   background: #005283;
-  background-image: url('/img/background-blue-dark-stripe.png');
+  background-image: url('img/background-blue-dark-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
   margin: 0px;
@@ -3608,7 +3608,7 @@ hr.divider-dark-blue-stripe {
 hr.divider-dark-blue-stripe-medium {
   height: 18px;
   background: #005283;
-  background-image: url('/img/background-blue-dark-stripe.png');
+  background-image: url('img/background-blue-dark-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
   margin: 0px;
@@ -3616,7 +3616,7 @@ hr.divider-dark-blue-stripe-medium {
 hr.divider-dark-blue-stripe-large {
   height: 25px;
   background: #005283;
-  background-image: url('/img/background-blue-dark-stripe.png');
+  background-image: url('img/background-blue-dark-stripe.png');
   background-position: 0 0;
   background-repeat: repeat;
   margin: 0px;
@@ -5014,7 +5014,7 @@ footer {
   float: left;
   width: 100px;
   height: 150px;
-  background-image: url('/img/projects-icons.png');
+  background-image: url('img/projects-icons.png');
   background-repeat: no-repeat;
 }
 .project-icons-skolapulsinn {
