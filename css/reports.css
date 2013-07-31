@@ -5147,6 +5147,15 @@ header {
 #header {
   height: 65px;
 }
+#header .logo {
+  width: 156px;
+  height: 42px;
+  float: left;
+  position: relative;
+  top: 10px;
+  left: 15px;
+  display: block;
+}
 #header a.logo {
   position: relative;
   z-index: 1;
