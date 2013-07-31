@@ -5186,6 +5186,7 @@ header {
   margin-left: 15px;
 }
 #content {
+  padding-top: 110px;
   padding-bottom: 250px;
   /* must be same height as the footer */
 }
