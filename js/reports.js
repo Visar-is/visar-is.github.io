@@ -2963,5 +2963,4 @@ MediaQuery.prototype = {
 
 
     global.enquire = global.enquire || new MediaQueryDispatch();
-
 }(this));

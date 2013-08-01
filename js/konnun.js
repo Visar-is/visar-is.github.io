@@ -145,5 +145,4 @@ return(!i||i!==r&&!b.contains(r,i))&&(e.type=o.origType,n=o.handler.apply(this,a
 			$('#content').css('padding-top', header_padding());
 		});
 	});
-
 });
