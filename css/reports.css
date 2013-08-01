@@ -1824,14 +1824,8 @@ footer {
   #header a.logo {
     margin: 0 auto;
   }
-  #header nav {
-    display: none;
-  }
   #messages {
     padding-top: 0;
-  }
-  #content {
-    padding-top: 0px;
   }
 }
 /*	Vísar - Reports - mobile.less
@@ -1844,14 +1838,8 @@ footer {
   #header a.logo {
     margin: 0 auto;
   }
-  #header nav {
-    display: none;
-  }
   #messages {
     padding-top: 0;
-  }
-  #content {
-    padding-top: 0px;
   }
 }
 /* Mobile Portrait */
@@ -1865,13 +1853,7 @@ footer {
     top: 14px;
     left: 0px;
   }
-  header nav {
-    display: none;
-  }
   #messages {
     padding-top: 0;
-  }
-  #content {
-    padding-top: 0px;
   }
 }
