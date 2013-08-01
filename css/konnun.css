@@ -416,6 +416,14 @@ strong {
 small {
   font-size: 80%;
 }
+sup,
+sub {
+  font-size: smaller;
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+}
 /* Navigation */
 #navigation {
   background: #222222;
