@@ -8,13 +8,10 @@ lessc less/ops.less css/ops.css
 echo "Compiled 4 .less files"
 
 
-#cat js/lib/jquery.1.9.1.min.js js/global/messages.js >> js/konnun.js
 cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/konnun.js | jsmin > js/konnun-min.js
 
-#cat js/lib/jquery.1.9.1.min.js js/global/messages.js >> js/ops.js
 cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/ops.js | jsmin > js/ops-min.js
 
-#cat js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messages.js >> js/reports.js
 cat js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messages.js js/reports.js | jsmin > js/reports-min.js
 
 echo "Compiled 3 .js files"
