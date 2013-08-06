@@ -22,6 +22,19 @@ $(document).ready(function() {
 			$('#content').css('padding-top', header_padding());
 		});
 	});
+	
+	/* Only make the table clickable/sortable if JS is loaded*/
+	$('.sortable th').css('cursor','pointer');
+	
+    $('#table_search').keyup(function() {
+        var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+        $('.sortable tbody tr').show().filter(function() {
+            var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+            return !~text.indexOf(val);
+        }).hide();
+    });
+	
 });
 
 /*
