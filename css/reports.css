@@ -1822,6 +1822,9 @@ footer {
 .projects-content {
   display: none;
 }
+.sortable th {
+  cursor: pointer;
+}
 /*	Vísar - Reports - tablet.less
 ================================================== */
 /*  (Portrait) Design for a width of 768px  */
