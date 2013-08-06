@@ -1886,7 +1886,7 @@ footer {
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 35%;
+    padding-left: 45%;
   }
   td:before {
     /* Now like a table header */
@@ -1896,7 +1896,7 @@ footer {
   
     top: 6px;
     left: 6px;
-    width: 30%;
+    width: 40%;
     padding-right: 10px;
     white-space: nowrap;
   }
