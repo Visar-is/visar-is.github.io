@@ -1535,7 +1535,7 @@ label span.form_error {
   float: left;
   text-align: left;
 }
-#messages abbr.message-close {
+#messages .message-close {
   cursor: pointer;
   float: right;
   display: block;
@@ -1546,7 +1546,7 @@ label span.form_error {
   font-size: 12px;
   border-radius: 4px;
 }
-#messages abbr.message-close:hover {
+#messages .message-close:hover {
   background: #b0b1b2;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
 }
