@@ -1518,7 +1518,7 @@ label span.form_error {
   src: url('../webfonts/VisarPies.ttf');
 }
 /* Messages - Error, Warning, Debug, Info, Success */
-#messages div {
+#messages li {
   margin: 0px;
   padding: 10px 10px 10px 20px;
   list-style: none;
