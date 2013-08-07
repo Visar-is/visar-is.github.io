@@ -1,9 +1,9 @@
 #!/bin/sh
 
-lessc less/konnun.less css/konnun.css
-lessc less/reports.less css/reports.css
-lessc less/visar.less css/visar.css
-lessc less/ops.less css/ops.css
+lessc -x less/konnun.less css/konnun.css
+lessc -x less/reports.less css/reports.css
+lessc -x less/visar.less css/visar.css
+lessc -x less/ops.less css/ops.css
 
 echo "Compiled 4 .less files"
 
