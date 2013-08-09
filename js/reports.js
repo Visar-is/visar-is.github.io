@@ -33,6 +33,8 @@ $(document).ready(function() {
             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
             return !~text.indexOf(val);
         }).hide();
+        
+        $('#search_text').html($('.sortable tbody tr:visible').length+' reports match.')
     });
 	
 });
