@@ -107,6 +107,7 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 .background-stone{background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat}
 .report-context{background:#eee;padding:1em}
 .report-context .language-form{display:inline;float:right}
+.reply-context .language-form select{display:inline}
 .clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0;clear:both}
 .clearfix:after{clear:both}
 .clearfix{zoom:1;clear:both}
