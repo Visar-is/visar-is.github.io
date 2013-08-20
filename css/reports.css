@@ -103,7 +103,7 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 #messages .debug{background-color:#7ba2a7}
 #messages .info{background-color:#3d6088}
 #messages .success{background-color:#abc78a}
-.graphs-global{width:100%;height:500px;background:#fdfdfd;border:1px solid #dedede}
+.graphs-global{width:100%;height:350px;background:#fdfdfd;border:1px solid #dedede}
 .background-stone{background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat}
 .report-context{background:#eee;padding:1em}
 .report-context .language-form{display:inline;float:right}
