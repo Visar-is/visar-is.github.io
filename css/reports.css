@@ -106,8 +106,9 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 .graphs-global{width:100%;height:500px;background:#fdfdfd;border:1px solid #dedede}
 .owner_content,.staff_content,.owner_content:active,.staff_content:active{width:100%;border:none;padding:0;margin:0}
 .background-stone{background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat}
-.report-context ul{float:right}
-.report-context ul li{margin-right:1em;float:left}
+.report-context{background:#eee;padding:1em}
+.report-context .language-form{display:inline;float:right}
+.report-context .language-form select{display:inline;width:auto}
 .clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0;clear:both}
 .clearfix:after{clear:both}
 .clearfix{zoom:1;clear:both}

@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Vísar PDF Template</title>
-	<link rel="stylesheet" href="http://static-visar.herokuapp.com/css/pdfs.css">
+	<link rel="stylesheet" href="http://static.visar.is/css/pdfs.css">
 </head>
 <body>
 
