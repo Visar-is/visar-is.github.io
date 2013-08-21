@@ -121,13 +121,11 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 #wrap{min-height:100%}
 header{width:100%;height:65px;position:fixed;background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat;border-bottom:1px solid #b0b1b2}
 #header{height:65px}
-#header .logo{width:156px;height:42px;float:left;position:relative;top:10px;left:15px;display:block}
-#header a.logo{position:relative;z-index:1;top:10px;left:15px}
-#header a.logo span{display:inline-block}
-#header a.logo object{position:relative;z-index:-1;width:156px;height:42px;display:block}
-#header nav{float:right;position:relative;top:15px;left:0}
-#header nav ul li{float:left;margin-left:20px}
-#header nav a{margin-left:15px}
+#header ul{margin:0 auto;max-width:1040px;width:90%}
+#header ul li{float:left;height:65px;border-left:1px solid #b0b1b2}
+#header ul li.last{border-right:1px solid #b0b1b2}
+#header a{display:block;height:65px;padding:20px 30px;width:100%}
+#header ul li.logout{position:absolute;top:15px;right:15px;border:none}
 #content{padding-top:110px;padding-bottom:250px;}
 .container{width:90%;max-width:1040px;margin:0 auto}
 footer{height:250px;background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat;border-top:1px solid #b0b1b2;padding-top:1em;margin-top:-200px;}
@@ -137,4 +135,4 @@ footer{height:250px;background-image:url('../img/background-stone.jpg');backgrou
 #lightbox-content{display:block;width:560px;text-align:left;background:#eee;color:#333;margin:20px auto;padding:30px;font-size:18px}
 #lightbox-content .project-icons{margin-right:20px}
 .projects-content{display:none}
-@media only screen and (min-width:768px) and (max-width:959px){header{position:fixed} #header a.logo{margin:0 auto} #messages{padding-top:0}}@media only screen and (min-width:480px) and (max-width:767px){header{position:fixed} #header a.logo{margin:0 auto} #messages{padding-top:0}}@media only screen and (max-width:480px){header{position:fixed} header a.logo{margin:0 auto;position:relative;top:14px;left:0} #messages{padding-top:0}}@media only screen and (max-width:767px){table,thead,tbody,th,td,tr{display:block} thead tr{position:absolute;top:-9999px;left:-9999px} .rounded tr td{border:none;border-bottom:1px solid #eee;position:relative;padding-left:45%} td:before{position:absolute;top:6px;left:6px;width:40%;padding-right:10px;white-space:nowrap} td:before{content:attr(axis)}}
+@media only screen and (min-width:768px) and (max-width:959px){header{position:fixed} #messages{padding-top:0}}@media only screen and (min-width:480px) and (max-width:767px){header{position:fixed} #messages{padding-top:0}}@media only screen and (max-width:480px){header{position:fixed} #messages{padding-top:0}}@media only screen and (max-width:767px){table,thead,tbody,th,td,tr{display:block} thead tr{position:absolute;top:-9999px;left:-9999px} .rounded tr td{border:none;border-bottom:1px solid #eee;position:relative;padding-left:45%} td:before{position:absolute;top:6px;left:6px;width:40%;padding-right:10px;white-space:nowrap} td:before{content:attr(axis)}}
