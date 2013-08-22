@@ -135,4 +135,6 @@ footer{height:250px;background-image:url('../img/background-stone.jpg');backgrou
 #lightbox-content{display:block;width:560px;text-align:left;background:#eee;color:#333;margin:20px auto;padding:30px;font-size:18px}
 #lightbox-content .project-icons{margin-right:20px}
 .projects-content{display:none}
+#overlay-container{background:#000;background:rgba(0,0,0,0.8);position:absolute;position:fixed;cursor:pointer;display:none;height:100%;width:100%;top:0}
+#overlay-content{margin:0 auto;background:#efefef;margin-top:5%;width:80%;padding:2em}
 @media only screen and (min-width:768px) and (max-width:959px){header{position:fixed} #messages{padding-top:0}}@media only screen and (min-width:480px) and (max-width:767px){header{position:fixed} #messages{padding-top:0}}@media only screen and (max-width:480px){header{position:fixed} header a.logo{margin:0 auto;position:relative;top:14px;left:0} #messages{padding-top:0}}@media only screen and (max-width:767px){table,thead,tbody,th,td,tr{display:block} thead tr{position:absolute;top:-9999px;left:-9999px} .rounded tr td{border:none;border-bottom:1px solid #eee;position:relative;padding-left:45%} td:before{position:absolute;top:6px;left:6px;width:40%;padding-right:10px;white-space:nowrap} td:before{content:attr(axis)}}
