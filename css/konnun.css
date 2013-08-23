@@ -187,4 +187,7 @@ footer .logo{width:156px;height:42px;margin-right:30px;float:right}
 .question.collapse{margin-top:.5em}
 .correction-instructions{display:none;padding:10px 10px 10px 20px;font-family:'AvenirNextLTPro-Demi';text-shadow:0 -1px 0 rgba(0,0,0,0.4);color:#fff;background-color:#c94d35;margin-bottom:20px;border-radius:4px}
 .choice-target span{font-size:1em;margin-left:.1em}
+.download-chart-container{height:100%;width:100%;background:#000;display:block;position:absolute}
+.download-chart-instructions{padding:1em 1em 0 1em;background:#eee;border-bottom:#aaa 1px solid}
+.download-chart-chart{width:80%;margin:0 auto;margin-top:5%}
 @media only screen and (min-width:768px) and (max-width:959px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form h1{font-size:2em;line-height:1em;margin-bottom:21px;letter-spacing:-2px} #survey-form textarea{width:730px}}@media only screen and (max-width:480px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form h1{font-size:1.5em;line-height:1em;margin-bottom:18px;letter-spacing:-2px} #survey-form textarea{width:400px}}@media only screen and (max-width:320px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form h1{font-size:1.5em;line-height:1em;margin-bottom:18px;letter-spacing:-2px} #survey-form textarea{width:266px;margin:0 auto}}
