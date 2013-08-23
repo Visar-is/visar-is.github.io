@@ -107,8 +107,9 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 .pseudo-text,.pseudo-text:active,.pseudo-text:focus{width:100%;border:none;padding:.25em;margin:0;font-size:90%}
 .pseudo-text:hover{background-color:#006daf}
 .section{background:#fdfdfd;border:1px solid #dedede;margin-bottom:2em;padding:2em}
+.notes{width:95%;margin-left:5%}
 .notes-save-button{float:right}
-.chart .controls{display:inline}
+.chart .controls{display:inline;width:95%;margin-left:5%}
 .chart .controls li{display:inline;margin-right:1em}
 .background-stone{background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat}
 .report-context{background:#eee;padding:1em;margin-bottom:1em}
