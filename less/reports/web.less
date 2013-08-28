@@ -20,12 +20,19 @@
 	padding: 2em;
 }
 
+.notes {
+	width: 95%;
+	margin-left: 5%;
+}
+
 .notes-save-button {
 	float: right;
 }
 
 .chart .controls {
 	display: inline;
+	width: 95%;
+	margin-left: 5%;
 }
 
 .chart .controls li {
@@ -149,3 +156,48 @@ or wrap each row of columns in a <div class="row"> */
 	.projects-content {
 		display: none;
 	}
+
+
+#overlay-container {
+	background: black;
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	position: fixed;
+	cursor: pointer;
+	display: none;
+	height: 100%;
+	width: 100%;
+	top: 0;
+}
+
+#overlay-content {
+	margin: 0 auto;
+	background: #efefef;
+	margin-top: 5%;
+	width: 80%;
+	padding: 2em;
+}
+
+
+.download-chart-container {
+	height: 100%;
+	width: 100%;
+	background: black;
+	display: block;
+	position: absolute;
+}
+
+.download-chart-instructions {
+	padding: 1em 1em 0 1em;
+	background: #EEE;
+	border-bottom: #AAA 1px solid;
+}
+
+.download-chart-chart {
+	margin-top: 5%;
+}
+
+.download-chart-chart img {
+	display: block;
+	margin: 0 auto;
+}
