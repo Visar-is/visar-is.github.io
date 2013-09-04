@@ -143,4 +143,5 @@ footer{height:250px;background-image:url('../img/background-stone.jpg');backgrou
 .download-chart-instructions{padding:1em 1em 0 1em;background:#eee;border-bottom:#aaa 1px solid}
 .download-chart-chart{margin-top:5%}
 .download-chart-chart img{display:block;margin:0 auto}
+.inline-icon,.inline-icon img{width:1em;position:relative;bottom:-0.3ex;margin-right:.3ex}
 @media only screen and (min-width:768px) and (max-width:959px){header{position:fixed} #messages{padding-top:0}}@media only screen and (min-width:480px) and (max-width:767px){header{position:fixed} #messages{padding-top:0}}@media only screen and (max-width:480px){header{position:fixed} header a.logo{margin:0 auto;position:relative;top:14px;left:0} #messages{padding-top:0}}@media only screen and (max-width:767px){table,thead,tbody,th,td,tr{display:block} thead tr{position:absolute;top:-9999px;left:-9999px} .rounded tr td{border:none;border-bottom:1px solid #eee;position:relative;padding-left:45%} td:before{position:absolute;top:6px;left:6px;width:40%;padding-right:10px;white-space:nowrap} td:before{content:attr(axis)}}
