@@ -124,6 +124,7 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 header{width:100%;height:65px;position:fixed;background-image:url('../img/background-stone.jpg');background-position:0 0;background-repeat:repeat;border-bottom:1px solid #b0b1b2}
 #header{height:65px}
 #header .logo{position:absolute;left:5%;top:10px}
+#header .logo object{pointer-events:none}
 #header ul{margin:0 auto;max-width:1040px;width:90%;position:relative}
 #header ul li{float:left;}
 #header ul li.last{position:absolute;right:125px;top:0}
