@@ -22,17 +22,21 @@
     }
 }
 
-
-.pseudo-text, .pseudo-text:active, .pseudo-text:focus {
+.pseudo-text, .pseudo-text:active, {
 	width: 100%;
-	border: none;
+	border: 1px solid;
+	border-color: white;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: none;
 	padding: 0.25em;
 	margin: 0;
 	font-size: 90%;
 }
 
-.pseudo-text:hover {
-  background-color: #006DAF;
+.pseudo-text:hover, .pseudo-text:focus {
+  border-color: #777;
+	border-style: inset;
+	box-shadow: inset #444 0 0 0.5em;
 }
 
 .section {
