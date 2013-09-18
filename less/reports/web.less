@@ -7,11 +7,12 @@
 .breadcrumbs ol li:before { content: " | "; }
 .breadcrumbs { width: 100%; overflow: hidden; white-space: nowrap;}
 .dimmer { display: none;}
-@media (max-width: 570px) {
-.dimmer { display: block;}
 
-.breadcrumbs ol li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
-.breadcrumbs  .dimmer {
+@media (max-width: 570px) {
+	.dimmer { display: block;}
+	
+	.breadcrumbs ol li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
+	.breadcrumbs  .dimmer {
 		display: block; position: absolute; right: 0; top: 0; bottom: 0; width: 30px;
 		background-image: linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
 		background-image: -o-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
@@ -47,22 +48,22 @@
 	padding: 2em;
 }
 
-.notes {
-	width: 95%;
-	margin-left: 5%;
-}
-
 .notes-save-button {
 	float: right;
 }
 
-.chart .controls {
-	display: inline;
+/* Offsetting of things to line up with 5% chart left margin */
+.chart-section .notes {
 	width: 95%;
 	margin-left: 5%;
 }
 
-.chart .controls li {
+.chart-section .controls {
+	width: 95%;
+	margin: 0.5em auto 0.5em 5%;
+}
+
+.chart-section .controls li {
 	display: inline;
 	margin-right: 1em;
 }
