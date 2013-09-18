@@ -153,7 +153,7 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 .text-center{text-align:center}
 .text-right{text-align:right}
 .hide{display:none}
-@font-face{font-family:'VisarPie';src:url('../webfonts/VisarPies.ttf')}#messages li{margin:0;padding:10px 10px 10px 20px;list-style:none;font-family:'AvenirNextLTPro-Demi';text-shadow:0 -1px 0 rgba(0,0,0,0.4);color:#fff;border-bottom:1px solid #b0b1b2;background-color:#b0b1b2}
+@font-face{font-family:'VisarPie';src:url('../webfonts/VisarPies.ttf')}#messages li{margin:0;padding:10px 10px 10px 20px;list-style:none;text-shadow:0 -1px 0 rgba(0,0,0,0.4);color:#fff;border-bottom:1px solid #b0b1b2;background-color:#b0b1b2}
 #messages span.message-text{width:90%;padding-top:3px;display:block;float:left;text-align:left}
 #messages .message-close{cursor:pointer;float:right;display:block;background:#e2e8e3;color:#333;box-shadow:0 -1px 0 rgba(0,0,0,0.6);padding:2px 10px;font-size:12px;border-radius:4px}
 #messages .message-close:hover{background:#b0b1b2;box-shadow:0 -1px 0 rgba(0,0,0,0.6)}
