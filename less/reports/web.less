@@ -247,16 +247,16 @@ a .inline-icon {
 }
 
 
-.breadcrumbs ol li { display: inline;  }
-.breadcrumbs ol li a { padding: 0 0.5em 0 0;}
-.breadcrumbs ol li:before { content: " | "; }
+.breadcrumbs li { display: inline;  }
+.breadcrumbs li a { padding: 0 0.5em 0 0;}
+.breadcrumbs li:before { content: " | "; }
 .breadcrumbs { width: 100%; overflow: hidden; white-space: nowrap;}
-.dimmer { display: none;}
+.breadcrumbs .dimmer { display: none;}
 @media (max-width: 570px) {
-	.dimmer { display: block;}
+	.breadcrumbs .dimmer { display: block;}
 
-	.breadcrumbs ol li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
-	.breadcrumbs  .dimmer {
+	.breadcrumbs li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
+	.breadcrumbs .dimmer {
 		display: block;
 		position: absolute;
 		right: 0;
