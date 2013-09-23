@@ -245,3 +245,36 @@ or wrap each row of columns in a <div class="row"> */
 a .inline-icon {
 	cursor: pointer;
 }
+
+
+.breadcrumbs ol li { display: inline;  }
+.breadcrumbs ol li a { padding: 0 0.5em 0 0;}
+.breadcrumbs ol li:before { content: " | "; }
+.breadcrumbs { width: 100%; overflow: hidden; white-space: nowrap;}
+.dimmer { display: none;}
+@media (max-width: 570px) {
+	.dimmer { display: block;}
+
+	.breadcrumbs ol li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
+	.breadcrumbs  .dimmer {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 30px;
+		background-image: linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -o-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -moz-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -webkit-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -ms-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			right bottom,
+			color-stop(0, rgba(255,255,255,0)),
+			color-stop(1, #fdfdfd)
+			);
+	}
+}

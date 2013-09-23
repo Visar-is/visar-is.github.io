@@ -1,4 +1,5 @@
 .DS_Store
 /netbeans/
+/nbproject/
 serve
 watch
