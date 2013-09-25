@@ -7,11 +7,12 @@
 .breadcrumbs ol li:before { content: " | "; }
 .breadcrumbs { width: 100%; overflow: hidden; white-space: nowrap;}
 .dimmer { display: none;}
-@media (max-width: 570px) {
-.dimmer { display: block;}
 
-.breadcrumbs ol li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
-.breadcrumbs  .dimmer {
+@media (max-width: 570px) {
+	.dimmer { display: block;}
+	
+	.breadcrumbs ol li { width: 25%; display: block; float: left; overflow: hidden;  position: relative;}
+	.breadcrumbs  .dimmer {
 		display: block; position: absolute; right: 0; top: 0; bottom: 0; width: 30px;
 		background-image: linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
 		background-image: -o-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
@@ -31,14 +32,20 @@
 
 .pseudo-text, .pseudo-text:active, .pseudo-text:focus {
 	width: 100%;
-	border: none;
+	border: 1px solid;
+	border-color: #eee;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: none;
 	padding: 0.25em;
-	margin: 0;
+	margin: 0.5em 0;
 	font-size: 90%;
+	background: #efefef;
 }
 
-.pseudo-text:hover {
-  background-color: #006DAF;
+.pseudo-text:hover, .pseudo-text:focus {
+  border-color: #777;
+	box-shadow: inset #777 0 0 0.3em;
+	background: #eaeaea;
 }
 
 .section {
@@ -48,22 +55,22 @@
 	padding: 2em;
 }
 
-.notes {
-	width: 95%;
-	margin-left: 5%;
-}
-
 .notes-save-button {
 	float: right;
 }
 
-.chart .controls {
-	display: inline;
+/* Offsetting of things to line up with 5% chart left margin */
+.chart-section .notes {
 	width: 95%;
 	margin-left: 5%;
 }
 
-.chart .controls li {
+.chart-section .controls {
+	width: 95%;
+	margin: 0.5em auto 0.5em 5%;
+}
+
+.chart-section .controls li {
 	display: inline;
 	margin-right: 1em;
 }
@@ -122,11 +129,12 @@ or wrap each row of columns in a <div class="row"> */
 
 	header 					{ width: 100%; height: 65px; position: fixed; .background-stone; border-bottom: 1px solid @greenLightBorder; }
 	#header					{ height: 65px; }
-	#header .logo, 			{ position: absolute; left: 5%; top: 10px; }
+	#header .logo			{ position: absolute; left: 9%; top: 10px; }
+	#header .logo object { pointer-events: none; }
 	#header ul 				{ margin: 0 auto; max-width: 1040px; width: 90%; position: relative; }
-	#header ul li			{ float: left; height: 65px; border-left: 1px solid #B0B1B2; }
-	#header ul li.last		{ border-right: 1px solid #B0B1B2; position: absolute; right: 125px; top: 0; }
-	#header a				{ display: block; height: 65px; padding: 20px 30px; width: 100%; }
+	#header ul li			{ float: left; /*border-left: 1px solid #B0B1B2;*/ }
+	#header ul li.last		{ /*border-right: 1px solid #B0B1B2;*/ position: absolute; right: 125px; top: 0; }
+	#header ul li a				{ display: block; padding: 20px 30px; width: 100%; }
 	#header ul li.logout 	{ position: absolute; top: 15px; right: 15px; border: none; }
 
 	#content 				{ padding-top: 110px; padding-bottom: 250px; /* must be same height as the footer */ }
@@ -229,4 +237,51 @@ or wrap each row of columns in a <div class="row"> */
 .download-chart-chart img {
 	display: block;
 	margin: 0 auto;
+}
+
+/* Settings icon, maybe others in the future */
+.inline-icon,
+.inline-icon img {
+	width: 1em;
+	height: 1em;
+	position: relative;
+	bottom: -0.3ex;
+	margin-right: 0.3ex;
+}
+
+a .inline-icon {
+	cursor: pointer;
+}
+
+
+.breadcrumbs li { display: inline;  }
+.breadcrumbs li a { padding: 0 0.5em 0 0;}
+.breadcrumbs li:before { content: " | "; }
+.breadcrumbs { width: 100%; overflow: hidden; white-space: nowrap;}
+.breadcrumbs .dimmer { display: none;}
+@media (max-width: 570px) {
+	.breadcrumbs .dimmer { display: block;}
+
+	.breadcrumbs li { width: 33%; display: block; float: left; overflow: hidden;  position: relative;}
+	.breadcrumbs .dimmer {
+		pointer-events: none;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 30px;
+		background-image: -o-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -moz-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -webkit-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -ms-linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			right bottom,
+			color-stop(0, rgba(255,255,255,0)),
+			color-stop(1, #fdfdfd)
+			);
+		background-image: linear-gradient(left , rgba(255,255,255,0) 0%, #fdfdfd 100%);
+	}
 }

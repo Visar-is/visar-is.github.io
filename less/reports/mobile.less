@@ -19,32 +19,34 @@
 }
 
 @media only screen and (max-width: 767px) {
-	table, thead, tbody, th, td, tr { 
+	/* Collapsing Responsive Tables */
+	
+	table.collapse,
+	.collapse thead,
+	.collapse tbody,
+	.collapse th,
+	.collapse td,
+	.collapse tr { 
 		display: block; 
 	}
 	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
+	.collapse thead tr { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
-	.rounded tr td { 
+	.collapse .rounded tr td { 
 		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 45%; 
 	}
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
+	
+	.collapse td:before { 
 		width: 40%; 
 		padding-right: 10px; 
 		white-space: nowrap;
+		content: attr(axis) ':';
 	}
-
-	td:before { content: attr(axis); }
 }

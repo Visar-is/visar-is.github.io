@@ -30,6 +30,16 @@
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;        
 	}
+
+	.inline-form input[type="text"],
+	.inline-form input[type="password"],
+	.inline-form input[type="email"],
+	.inline-form input[type="url"],
+	.inline-form input[type="phone"],
+	.inline-form input[type="address"],
+	.inline-form select {
+		display: inline;
+	}
 	
 	select { padding: 0; }
 	input[type="text"]:focus,
@@ -44,7 +54,7 @@
 	}
 
 	textarea { min-height: 60px; }
-	label,
+	
 	legend {
 		display: block;
 		font-weight: normal;
