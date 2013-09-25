@@ -112,8 +112,12 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 .breadcrumbs{width:100%;overflow:hidden;white-space:nowrap}
 .dimmer{display:none}
 @media (max-width:570px){.dimmer{display:block} .breadcrumbs ol li{width:25%;display:block;float:left;overflow:hidden;position:relative} .breadcrumbs .dimmer{display:block;position:absolute;right:0;top:0;bottom:0;width:30px;background-image:linear-gradient(left, rgba(255,255,255,0) 0, #fdfdfd 100%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0, #fdfdfd 100%);background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0, #fdfdfd 100%);background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0, #fdfdfd 100%);background-image:-ms-linear-gradient(left, rgba(255,255,255,0) 0, #fdfdfd 100%);background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0, rgba(255,255,255,0)), color-stop(1, #fdfdfd))}}#pdf-builder label{display:block;cursor:pointer}
-#pdf-builder li label:hover{background-color:#ccc}
+#pdf-builder li label:hover{background-color:#eee}
 #pdf-builder li ul{margin-left:1.25em}
+#pdf-builder li label{padding:2px}
+#pdf-builder .collapse{float:right;margin-top:-26px;padding-right:1em;cursor:pointer;color:#006daf;font-weight:bold}
+#pdf-builder .collapse:hover{text-decoration:underline}
+#pdf-builder .collapsible{font-weight:bold;border-bottom:1px solid #eee}
 .pseudo-text,.pseudo-text:active,.pseudo-text:focus{width:100%;border:1px solid;border-color:#eee;border-color:rgba(0,0,0,0);border-radius:none;padding:.25em;margin:.5em 0;font-size:90%;background:#efefef}
 .pseudo-text:hover,.pseudo-text:focus{border-color:#777;box-shadow:inset #777 0 0 .3em;background:#eaeaea}
 .section{background:#fdfdfd;border:1px solid #dedede;margin-bottom:2em;padding:2em}
