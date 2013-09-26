@@ -106,11 +106,11 @@ sup,sub{font-size:smaller;vertical-align:super}
 sub{vertical-align:sub}
 strong{font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif}
 .page{page-break-after:always}
-.report-cover{clear:both;border-top:#000 solid 4px;border-bottom:#000 solid 8px}
+.report-cover{clear:both;border-top:#000 solid 4px;border-bottom:#000 solid 8px;margin-bottom:800px}
 .report-cover h1{margin-bottom:15pt;font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:4em;line-height:1.4}
 .report-cover h2,h3,h4{font-family:AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif}
 .report-cover h2{color:#7f90ac;font-size:21pt;line-height:24pt}
-.cover-footer{position:absolute;bottom:0;width:100%;font-size:12px;line-height:14px;height:45px;background:url('http://static-visar.herokuapp.com/img/logo-reports.png') left top no-repeat;padding-top:5pt}
+.cover-footer{width:100%;font-size:12px;line-height:14px;height:45px;background:url('http://static-visar.herokuapp.com/img/logo-reports.png') left top no-repeat;padding-top:5pt}
 .category-cover-page h1{border-bottom:solid #000 8px;padding-bottom:.1em}
 .cover-footer a{font-size:12px;line-height:14px}
 .cover-footer-left{width:25%;float:right;text-align:center}
