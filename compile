@@ -4,8 +4,9 @@ lessc -x less/konnun.less css/konnun.css
 lessc -x less/reports.less css/reports.css
 lessc -x less/visar.less css/visar.css
 lessc -x less/ops.less css/ops.css
+lessc -x less/pdfs.less css/pdfs.css
 
-echo "Compiled 4 .less files"
+echo "Compiled 5 .less files"
 
 
 cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/konnun.js | jsmin > js/konnun-min.js
