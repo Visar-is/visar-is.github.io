@@ -15,4 +15,6 @@ cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/ops.js | jsmin > js/ops-
 
 cat js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messages.js js/reports.js | jsmin > js/reports-min.js
 
-echo "Compiled 3 .js files"
+cat js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/lib/html5shiv.js js/visar.js | jsmin > js/reports-min.js
+
+echo "Compiled 4 .js files"
