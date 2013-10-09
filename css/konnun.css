@@ -164,6 +164,7 @@ label span.form_error{margin:0 0 0 3px;color:#3d6088}
 #messages .success{background-color:#abc78a}
 html,body{height:100%}
 body{background-color:#e2e8e3}
+a object[type="image/svg+xml"],button object[type="image/svg+xml"]{pointer-events:none}
 #wrap{min-height:100%}
 header{width:100%;min-height:48px}
 #header{height:48px;display:block;background:#e2e8e3}
