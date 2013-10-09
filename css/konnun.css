@@ -186,6 +186,7 @@ footer .logo{width:156px;height:42px;margin-right:30px;float:right}
 .choice-target:hover{background:#cdc9c9}
 .radio-target{display:block}
 .checkbox.collapse h1,.collapse .instructions{display:none}
+.question{padding-top:2em}
 .question.collapse{margin-top:.5em}
 .correction-instructions{display:none;padding:10px 10px 10px 20px;font-family:'AvenirNextLTPro-Demi';text-shadow:0 -1px 0 rgba(0,0,0,0.4);color:#fff;background-color:#c94d35;margin-bottom:20px;border-radius:4px}
 .choice-target span{font-size:.9em;margin-left:.1em}
