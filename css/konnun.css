@@ -190,6 +190,6 @@ footer .logo{width:156px;height:42px;margin-right:30px;float:right}
 .correction-instructions{display:none;padding:10px 10px 10px 20px;font-family:'AvenirNextLTPro-Demi';text-shadow:0 -1px 0 rgba(0,0,0,0.4);color:#fff;background-color:#c94d35;margin-bottom:20px;border-radius:4px}
 .choice-target span{font-size:.9em;margin-left:.1em}
 input.optional-text{display:inline;margin:0 0 0 10px;padding:0}
-@media only screen and (min-width:768px) and (max-width:959px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form textarea{width:730px}}#survey-form h1{font-size:1.5em;line-height:1em;margin-bottom:18px;letter-spacing:-2px}
+@media only screen and (min-width:768px) and (max-width:959px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form textarea{width:730px}}#survey-form h1{font-size:1.5em;line-height:1em;margin-bottom:18px}
 footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none}
 #survey-form textarea{width:266px;margin:0 auto}
