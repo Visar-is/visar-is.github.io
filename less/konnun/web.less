@@ -61,10 +61,13 @@ line-height: 1.25em;
 }
 
 
-.choice-target				{ margin-bottom: 0.5em; display: block; background: @white; border: #ccc 1px solid; cursor: pointer; }
-.choice-target:hover		{ background: #CDC9C9; }
-.radio-target				{ padding: 0.5em; display: block; cursor: pointer; }
-.radio-optional-target      { padding: 0.5em; }
+.choice-target { margin-bottom: 0.5em; display: block; background: @white; border: #ccc 1px solid; cursor: pointer; }
+
+.no-touch .choice-target:hover,
+.choice-target.selected { background: #CDC9C9; }
+
+.radio-target { padding: 0.5em; display: block; cursor: pointer; }
+.radio-optional-target { padding: 0.5em; }
 
 .checkbox.collapse h1,
 .collapse .instructions	{ display: none; }
