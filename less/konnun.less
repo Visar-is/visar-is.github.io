@@ -1,7 +1,6 @@
 /* Config */
 @import "app/fonts.less";
 @import "app/config.less";
-@import "app/icons.less";
 @import "app/backgrounds.less";
 
 /* Base */
@@ -18,8 +17,11 @@
 
 /* App */
 @font-face {
-	font-family: 'VisarPie';
-	src: url('../webfonts/VisarPies.ttf'); 
+	font-family: 'VisarPies';
+	src: url('../webfonts/VisarPies.eot');
+	src: url('../webfonts/VisarPies.eot?#iefix') format('embedded-opentype'), 
+	url('../webfonts/VisarPies.woff') format('woff'),
+	url('../webfonts/VisarPies.ttf') format('truetype');
 }
 
 @import "app/messages.less";
