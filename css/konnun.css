@@ -178,7 +178,7 @@ body #survey-form [name=finish]{margin-left:150px;width:8em}
 #survey-form .pagination .button_container{width:50%;text-align:left;float:left}
 #survey-form .pagination .button_container.back{text-align:right}
 #survey-form h1{font-size:1.1em;line-height:1.3em;margin-bottom:18px}
-.instructions{white-space:pre-wrap;font-size:2em;line-height:1.25em;font-weight:bold;padding-bottom:20px}
+.instructions{white-space:pre-wrap;font-size:1.3em;line-height:1.2em;font-weight:bold;padding-bottom:20px}
 .choice-target{margin-bottom:.5em;display:block;background:#fff;border:#ccc 1px solid;cursor:pointer}
 .no-touch .choice-target:hover,.choice-target.selected{background:#cdc9c9}
 .radio-target{padding:.5em;display:block;cursor:pointer}
