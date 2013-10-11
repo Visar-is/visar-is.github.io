@@ -168,7 +168,7 @@ header{width:100%;min-height:48px}
 #content{text-align:center;overflow:auto;padding-bottom:65px;}
 footer{width:100%;clear:both;text-align:right}
 footer .logo{width:156px;height:42px;padding-right:30px;padding-bottom:30px}
-#survey-form{max-width:860px;margin:auto}
+#survey-form{max-width:860px;margin:auto;text-align:left}
 #survey-form textarea{width:830px}
 #survey-form .done-image{height:1em;position:relative;bottom:-0.2em}
 #survey-form button[type="submit"]{height:3em;width:6em;padding:.5em}
