@@ -171,7 +171,7 @@ footer .logo{width:156px;height:42px;margin-right:30px;float:right}
 #survey-form{max-width:860px;margin:auto}
 #survey-form textarea{width:830px}
 #survey-form .done-image{height:1em;position:relative;bottom:-0.2em}
-#survey-form button[type=submit]{height:45px;width:6em}
+#survey-form button[type="submit"]{height:3em;width:6em;padding:.5em}
 #survey-form [name=back]{margin-right:.5em}
 #survey-form [name=finish]{margin-left:150px;width:150px;text-align:center}
 #survey-form .pagination{text-align:center}
