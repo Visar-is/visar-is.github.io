@@ -21,20 +21,11 @@ h6{font-size:18px;line-height:24px;margin-bottom:10px}
 p{margin:0 0 20px 0}
 p img{margin:0}
 p.lead{font-size:21px;line-height:27px;color:#777}
-em{font-style:AvenirNextLTPro-It,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif}
-strong{font-family:AvenirNextLTPro-Bold,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;color:#333}
+em{font-style:AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif}
+strong{font-family:AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;color:#333}
 small{font-size:80%}
 sup,sub{font-size:smaller;vertical-align:super}
 sub{vertical-align:sub}
-#navigation{background:#222;z-index:10;color:#eee}
-#navigation a{color:#eee;text-decoration:none}
-#navigation a:hover{color:#aaa}
-#navigation span.name_ome{color:#818181}
-#navigation_logo{display:none}
-.navigation-sub{background:#d9d9d9;border-radius:10px}
-ul,ol{margin:;padding:}
-ul li,ol li{margin:;padding:}
-ul li{list-style-type:}
 blockquote,blockquote p{font-size:90%;line-height:24px;color:#aaa;font-style:normal;margin:0 0 10px 0}
 blockquote{margin:0 0 10px;padding:.25em;border-left:4px solid #c9c9c9}
 blockquote cite{display:block;font-size:12px;color:#555}
