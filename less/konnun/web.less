@@ -2,6 +2,19 @@
 ========================================= */
 
 /* Global */
+.container			{ width: 1040px; margin: 0px auto; }
+.text-center		{ text-align: center; }
+.container:after 	{ content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.center			{ margin-left: auto; margin-right: auto; }
+
+/* App */
+@font-face {
+	font-family: 'VisarPies';
+	src: url('../webfonts/VisarPies.eot');
+	src: url('../webfonts/VisarPies.eot?#iefix') format('embedded-opentype'), 
+	url('../webfonts/VisarPies.woff') format('woff'),
+	url('../webfonts/VisarPies.ttf') format('truetype');
+}
 
 html, body { height: 100%;}
 body { background-color: @greenLight; }
