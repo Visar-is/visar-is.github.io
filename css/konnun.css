@@ -94,6 +94,7 @@ body #survey-form [name=finish]{margin-left:150px;width:8em}
 .invalid .correction-instructions{display:block}
 .choice-target span{font-size:.9em;margin-left:.1em}
 input.optional-text{display:inline;margin:.5em 0 .5em 10px;padding:0}
+body{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 ::selection{background:none;}
 ::-moz-selection{background:none;}
 @media only screen and (min-width:768px) and (max-width:959px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form textarea{width:730px}}@media only screen and (min-width:480px) and (max-width:959px){body #survey-form [name=finish]{margin-left:0}}@media only screen and (max-width:480px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form textarea{width:266px;margin:0 auto} body #survey-form [name=finish]{margin-left:0}}
