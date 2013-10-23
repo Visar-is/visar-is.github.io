@@ -21,12 +21,13 @@ def application( # It accepts two arguments:
    # HTTP response code and message
    status = '200 OK'
 
-   d = parse_qs(environ['QUERY_STRING'])
-   text = d.get('text', 'Something went wrong')
-   lang = d.get('lang', 'is')
-   salt = 'hy89ry7dbu3e8932hio!/(9!!78!gy8!790)'
-
-   out = text+lang+salt
+   out = 'Foobar'
+   #d = parse_qs(environ['QUERY_STRING'])
+   #text = d.get('text', 'Something went wrong')
+   #lang = d.get('lang', 'is')
+   #salt = 'hy89ry7dbu3e8932hio!/(9!!78!gy8!790)'
+   #
+   #out = text+lang+salt
    #c = Client("brian@suda.co.uk", "i4lMC3tJ5KVlAPwKQHVnwk0XSF3yOgQt")
    #c.Start()
    #
