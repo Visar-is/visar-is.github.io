@@ -27,28 +27,28 @@ def application( # It accepts two arguments:
    salt = 'hy89ry7dbu3e8932hio!/(9!!78!gy8!790)'
 
    out = text+lang+salt
-   c = Client("brian@suda.co.uk", "i4lMC3tJ5KVlAPwKQHVnwk0XSF3yOgQt")
-   c.Start()
-   
-   #get URL to the generated sound file
-   soundUrl = c.CreateSpeechFile(text, "text/plain", "is_dora", "wav/22050")
-
-   retry = 0
-   while retry < 3:
-       try:
-           response = urllib.request.urlopen(soundUrl)
-           wav = response.read()
-           open(out, "wb").write( wav )
-           break
-       except HTTPError as e:
-           retry += 1
-
+   #c = Client("brian@suda.co.uk", "i4lMC3tJ5KVlAPwKQHVnwk0XSF3yOgQt")
+   #c.Start()
+   #
+   ##get URL to the generated sound file
+   #soundUrl = c.CreateSpeechFile(text, "text/plain", "is_dora", "wav/22050")
+   #
+   #retry = 0
+   #while retry < 3:
+   #    try:
+   #        response = urllib.request.urlopen(soundUrl)
+   #        wav = response.read()
+   #        open(out, "wb").write( wav )
+   #        break
+   #    except HTTPError as e:
+   #        retry += 1
+   #
 
    # These are HTTP headers expected by the client.
    # They must be wrapped as a list of tupled pairs:
    # [(Header name, Header value)].
-   response_headers = [('Content-Type', 'audio/x-wav'),
-                       ('Content-Length', str(len(wav)))]
+   response_headers = [('Content-Type', 'text/plain'),
+                       ('Content-Length', str(len(out)))]
 
    # Send them to the server using the supplied function
    start_response(status, response_headers)
