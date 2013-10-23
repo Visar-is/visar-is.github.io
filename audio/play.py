@@ -17,39 +17,38 @@ def application( # It accepts two arguments:
       # which will be used to send the HTTP status and headers to the server
       start_response):
 
-   # build the response body possibly using the environ dictionary
-   response_body = 'The request method was %s' % environ['wsgi.input']['text']
 
    # HTTP response code and message
    status = '200 OK'
 
-   #text = ''
-   #lang = ''
-   #salt = 'hy89ry7dbu3e8932hio!/(9!!78!gy8!790)'
-   #
-   #out = text
-   #c = Client("brian@suda.co.uk", "i4lMC3tJ5KVlAPwKQHVnwk0XSF3yOgQt")
-   #c.Start()
-   #
-   ##get URL to the generated sound file
-   #soundUrl = c.CreateSpeechFile(text, "text/plain", "is_dora", "wav/22050")
-   #
-   #retry = 0
-   #while retry < 3:
-   #    try:
-   #        response = urllib.request.urlopen(soundUrl)
-   #        wav = response.read()
-   #        open(out, "wb").write( wav )
-   #        break
-   #    except HTTPError as e:
-   #        retry += 1
+   d = parse_qs(environ['QUERY_STRING'])
+   text = d.get('text', 'Something went wrong')
+   lang = d.get('lang', 'is')
+   salt = 'hy89ry7dbu3e8932hio!/(9!!78!gy8!790)'
+
+   out = text+lang+salt
+   c = Client("brian@suda.co.uk", "i4lMC3tJ5KVlAPwKQHVnwk0XSF3yOgQt")
+   c.Start()
+   
+   #get URL to the generated sound file
+   soundUrl = c.CreateSpeechFile(text, "text/plain", "is_dora", "wav/22050")
+
+   retry = 0
+   while retry < 3:
+       try:
+           response = urllib.request.urlopen(soundUrl)
+           wav = response.read()
+           open(out, "wb").write( wav )
+           break
+       except HTTPError as e:
+           retry += 1
 
 
    # These are HTTP headers expected by the client.
    # They must be wrapped as a list of tupled pairs:
    # [(Header name, Header value)].
-   response_headers = [('Content-Type', 'text/plain'),
-                       ('Content-Length', str(len(response_body)))]
+   response_headers = [('Content-Type', 'audio/x-wav'),
+                       ('Content-Length', str(len(wav)))]
 
    # Send them to the server using the supplied function
    start_response(status, response_headers)
