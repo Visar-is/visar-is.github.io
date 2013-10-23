@@ -1,3 +1,12 @@
+import http.client, urllib.parse
+import hashlib
+import json
+import urllib.request
+from urllib.error import HTTPError
+import sys
+import getopt
+
+
 # This is our application object. It could have any name,
 # except when using mod_wsgi where it must be "application"
 def application( # It accepts two arguments:
@@ -9,10 +18,32 @@ def application( # It accepts two arguments:
       start_response):
 
    # build the response body possibly using the environ dictionary
-   response_body = 'The request method was %s' % environ['REQUEST_METHOD']
+   response_body = 'The request method was %s' % environ['wsgi.input']['text']
 
    # HTTP response code and message
    status = '200 OK'
+
+   #text = ''
+   #lang = ''
+   #salt = 'hy89ry7dbu3e8932hio!/(9!!78!gy8!790)'
+   #
+   #out = text
+   #c = Client("brian@suda.co.uk", "i4lMC3tJ5KVlAPwKQHVnwk0XSF3yOgQt")
+   #c.Start()
+   #
+   ##get URL to the generated sound file
+   #soundUrl = c.CreateSpeechFile(text, "text/plain", "is_dora", "wav/22050")
+   #
+   #retry = 0
+   #while retry < 3:
+   #    try:
+   #        response = urllib.request.urlopen(soundUrl)
+   #        wav = response.read()
+   #        open(out, "wb").write( wav )
+   #        break
+   #    except HTTPError as e:
+   #        retry += 1
+
 
    # These are HTTP headers expected by the client.
    # They must be wrapped as a list of tupled pairs:
@@ -26,6 +57,72 @@ def application( # It accepts two arguments:
    # Return the response body.
    # Notice it is wrapped in a list although it could be any iterable.
    return [response_body]
+
+class Client(object):
+    __web_comm = None
+
+    def __init__(self, email, password):
+        self.__web_comm = Communicator(email, password)
+
+    def Start(self):
+        self.__web_comm.Start()
+
+    def CreateSpeechFile(self, text, ctype, voice_id, codec_id, additional={}):
+        params={"text": text,
+                "contentType": ctype,
+                "voiceId": voice_id,
+                "codecId": codec_id,
+                "params": additional}
+        content = self.__web_comm.CallMethod("/api/saas/rest/speechfiles/", params)
+        content = json.loads( content )
+        return content["soundUrl"]
+
+class Communicator(object):
+    __rest = None
+    __login = ""
+    __password = ""
+    __gettoken_params = None
+    __headers = {"Content-type": "application/x-www-form-urlencoded"}
+
+    def __init__(self, email, password):
+        self.__login = email
+        md5 = hashlib.md5()
+        md5.update(password.encode())
+        self.__password = md5.hexdigest()
+        self.__gettoken_params = urllib.parse.urlencode({'email': email})
+
+    def __del__(self):
+        if self.__rest != None:
+            self.__rest.close()
+
+    def Start(self):
+        try:
+            self.__rest = http.client.HTTPConnection('api.ivona.com', 80) 
+        except http.client.HTTPException as ex: 
+            print(ex, "\n")
+
+    def CallMethod(self, method_url, params={}, method="POST"):
+        #get token     
+        self.__rest.request("POST", "/api/saas/rest/tokens/", self.__gettoken_params, self.__headers)
+        token = eval(self.__rest.getresponse().read().decode())
+
+        #compute md5
+        md5 = hashlib.md5()
+        md5.update(self.__password.encode())
+        md5.update(token.encode())    
+        tokenized_pass = md5.hexdigest()
+
+        params["token"] = token
+        params["md5"] = tokenized_pass
+
+        #call mathod
+        if method == "GET" or method == "PUT" or method == "DELETE":
+            method_url += "?" + urllib.parse.urlencode(params)
+            self.__rest.request(method, method_url)
+        else:
+            self.__rest.request(method, method_url, urllib.parse.urlencode(params), self.__headers)
+
+        return self.__rest.getresponse().read().decode()
 
 '''
 <?php
