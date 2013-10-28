@@ -2,7 +2,7 @@
 ========================================= */
 
 /* Global */
-.container			{ width: 1040px; margin: 0px auto; }
+.container			{ padding: 0 0.5em; margin: 0px auto; }
 .text-center		{ text-align: center; }
 .container:after 	{ content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
 .center			{ margin-left: auto; margin-right: auto; }
@@ -93,11 +93,10 @@ padding-bottom: 20px;
 
 .choice-target { margin-bottom: 0.5em; display: block; background: @white; border: #ccc 1px solid; cursor: pointer; }
 
-.no-touch .choice-target:hover,
-.choice-target.selected { background: #CDC9C9; }
+.no-touch .choice-target:hover, .choice-target.selected { background: #CDC9C9; }
 
-.radio-target { padding: 0.5em; display: block; cursor: pointer; }
-.radio-optional-target { padding: 0.5em; }
+.checkbox-target, .radio-target { padding: 0.5em; display: block; cursor: pointer; }
+.checkbox-optional-target, .radio-optional-target { padding: 0.5em; }
 
 .checkbox.collapse h1,
 .collapse .instructions	{ display: none; }
@@ -106,6 +105,7 @@ padding-bottom: 20px;
 .question:first-of-type { padding-top: 0; }
 
 .question.collapse { margin-top: 0.5em; }
+.question.checkbox.collapse { padding-top: 0; }
 
 .correction-instructions {
 	display: none;
@@ -130,3 +130,29 @@ input.optional-text {
 	margin: 0.5em 0 0.5em 10px;
 	padding: 0;
 }
+
+body{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+}
+
+::selection {
+	background: none; /* Safari */
+	}
+::-moz-selection {
+	background: none; /* Firefox */
+}
+
+.greetings { 
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+    white-space: pre-wrap;
+}
+

@@ -1,3 +1,10 @@
+.-white-sp{background-color:#80c860}
+.-white-sp .choice-target{background-color:#d4e8c1;border:1px solid #d4e8c1}
+.-white-sp .choice-target.selected,.-white-sp .choice-target:hover,.no-touch .-white-sp .choice-target:hover{background-color:#fefcd7;-webkit-transition:all .1s linear}
+.-white-sp #header{background:none}
+.-white-sp button,.-white-sp input[type="button"]{background-color:#071;border-left:1px solid #418223;border-top:1px solid #418223;border-right:1px solid #22692f;border-bottom:1px solid #22692f}
+.-white-sp button:hover,.-white-sp input[type="button"]:hover{background-color:#051;border-left:1px solid #418223;border-top:1px solid #418223;border-right:1px solid #22692f;border-bottom:1px solid #22692f}
+.-white-sp button:active,.-white-sp input[type="button"]:active{background-color:#041;border-left:1px solid #418223;border-top:1px solid #418223;border-right:1px solid #22692f;border-bottom:1px solid #22692f}
 @font-face{font-family:'AvenirNextLTPro-Demi';src:url('../webfonts/26E8D5_3_0.eot');src:url('../webfonts/26E8D5_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26E8D5_3_0.woff') format('woff'),url('../webfonts/26E8D5_3_0.ttf') format('truetype')}@font-face{font-family:'AvenirNextLTPro-Regular';src:url('../webfonts/26E8D5_4_0.eot');src:url('../webfonts/26E8D5_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26E8D5_4_0.woff') format('woff'),url('../webfonts/26E8D5_4_0.ttf') format('truetype')}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1}
@@ -18,8 +25,8 @@ h6{font-size:18px;line-height:24px;margin-bottom:10px}
 p{margin:0 0 20px 0}
 p img{margin:0}
 p.lead{font-size:21px;line-height:27px;color:#777}
-em{font-style:AvenirNextLTPro-It,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif}
-strong{font-family:AvenirNextLTPro-Bold,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;color:#333}
+em{font-style:AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif}
+strong{font-family:AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;color:#333}
 small{font-size:80%}
 sup,sub{font-size:smaller;vertical-align:super}
 sub{vertical-align:sub}
@@ -53,7 +60,7 @@ input[type="checkbox"]{display:inline}
 label span,legend span{font-weight:normal;font-size:14px;color:#444}
 a{font-style:normal}
 label span.form_error{margin:0 0 0 3px;color:#3d6088}
-.container{width:1040px;margin:0 auto}
+.container{padding:0 .5em;margin:0 auto}
 .text-center{text-align:center}
 .container:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden}
 .center{margin-left:auto;margin-right:auto}
@@ -83,14 +90,19 @@ body #survey-form [name=finish]{margin-left:150px;width:8em}
 .instructions{white-space:pre-wrap;font-size:1.3em;line-height:1.2em;font-weight:bold;padding-bottom:20px}
 .choice-target{margin-bottom:.5em;display:block;background:#fff;border:#ccc 1px solid;cursor:pointer}
 .no-touch .choice-target:hover,.choice-target.selected{background:#cdc9c9}
-.radio-target{padding:.5em;display:block;cursor:pointer}
-.radio-optional-target{padding:.5em}
+.checkbox-target,.radio-target{padding:.5em;display:block;cursor:pointer}
+.checkbox-optional-target,.radio-optional-target{padding:.5em}
 .checkbox.collapse h1,.collapse .instructions{display:none}
 .question{padding-top:2em}
 .question:first-of-type{padding-top:0}
 .question.collapse{margin-top:.5em}
+.question.checkbox.collapse{padding-top:0}
 .correction-instructions{display:none;padding:10px 10px 10px 20px;font-family:'AvenirNextLTPro-Demi';text-shadow:0 -1px 0 rgba(0,0,0,0.4);color:#fff;background-color:#c94d35;margin-bottom:20px;border-radius:4px}
 .invalid .correction-instructions{display:block}
 .choice-target span{font-size:.9em;margin-left:.1em}
 input.optional-text{display:inline;margin:.5em 0 .5em 10px;padding:0}
+body{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+::selection{background:none;}
+::-moz-selection{background:none;}
+.greetings{font-size:1.8em;font-weight:bold;line-height:1.2em;padding-bottom:20px;white-space:pre-wrap}
 @media only screen and (min-width:768px) and (max-width:959px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form textarea{width:730px}}@media only screen and (min-width:480px) and (max-width:959px){body #survey-form [name=finish]{margin-left:0}}@media only screen and (max-width:480px){footer .logo{width:156px;height:42px;margin-right:auto;margin-left:auto;float:none} #survey-form textarea{width:266px;margin:0 auto} body #survey-form [name=finish]{margin-left:0}}
