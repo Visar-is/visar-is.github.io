@@ -82,12 +82,19 @@ body #survey-form [name=finish] {
 #survey-form h1 { font-size: 1.1em; line-height: 1.3em; margin-bottom: 18px; }
 
 
-.instructions { 
+.primer { 
 white-space: pre-wrap; 
 font-size: 1.3em;
 line-height: 1.2em;
 font-weight: bold;
 padding-bottom: 20px;
+}
+
+.instructions { 
+white-space: pre-wrap; 
+font-size: 1.1em;
+line-height: 1.3em;
+padding-bottom: 18px;
 }
 
 
@@ -99,7 +106,7 @@ padding-bottom: 20px;
 .checkbox-optional-target, .radio-optional-target { padding: 0.5em; }
 
 .checkbox.collapse h1,
-.collapse .instructions	{ display: none; }
+.collapse .instructions, .collapse .primer { display: none; }
 
 .question { padding-top: 2em; }
 .question:first-of-type { padding-top: 0; }
