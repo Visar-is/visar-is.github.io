@@ -9,14 +9,14 @@ body{background: #fff;font-size:18px;font-weight:normal;font-family:AvenirNextLT
 a,a:visited{font-size:18px;color:#006daf;font-weight:bold;text-decoration:none;outline:0}
 a:hover,a:focus{color:#005283;text-decoration:underline}
 p a,p a:visited{line-height:inherit}
-h1,h2,h3,h4,h5,h6{color:#333;font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;letter-spacing:0}
+h1,h2,h3,h4,h5,h6{color:#333;font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;letter-spacing:0;line-height:1.4;margin-bottom:10px}
+h1{font-size:60px;margin-bottom:21px}
+h2{font-size:28px}
+h3{font-size:22px;margin-bottom:8px}
+h4{font-size:30px}
+h5{font-size:24px}
+h6{font-size:18px}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
-h1{font-size:60px;line-height:70px;margin-bottom:21px}
-h2{font-size:28px;line-height:38px;margin-bottom:10px}
-h3{font-size:22px;line-height:28px;margin-bottom:8px}
-h4{font-size:30px;line-height:36px;margin-bottom:10px}
-h5{font-size:24px;line-height:30px;margin-bottom:10px}
-h6{font-size:18px;line-height:24px;margin-bottom:10px}
 .subheader{color:#777}
 p{margin:0 0 20px 0}
 p img{margin:0}

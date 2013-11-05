@@ -28,14 +28,14 @@ body{background: #fff;font-size:18px;font-weight:normal;font-family:AvenirNextLT
 a,a:visited{font-size:18px;color:#006daf;font-weight:bold;text-decoration:none;outline:0}
 a:hover,a:focus{color:#005283;text-decoration:underline}
 p a,p a:visited{line-height:inherit}
-h1,h2,h3,h4,h5,h6{color:#333;font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;letter-spacing:0}
+h1,h2,h3,h4,h5,h6{color:#333;font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;letter-spacing:0;line-height:1.4;margin-bottom:10px}
+h1{font-size:60px;margin-bottom:21px}
+h2{font-size:28px}
+h3{font-size:22px;margin-bottom:8px}
+h4{font-size:30px}
+h5{font-size:24px}
+h6{font-size:18px}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
-h1{font-size:60px;line-height:70px;margin-bottom:21px}
-h2{font-size:28px;line-height:38px;margin-bottom:10px}
-h3{font-size:22px;line-height:28px;margin-bottom:8px}
-h4{font-size:30px;line-height:36px;margin-bottom:10px}
-h5{font-size:24px;line-height:30px;margin-bottom:10px}
-h6{font-size:18px;line-height:24px;margin-bottom:10px}
 .subheader{color:#777}
 p{margin:0 0 20px 0}
 p img{margin:0}
@@ -45,6 +45,14 @@ strong{font-family:AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helv
 small{font-size:80%}
 sup,sub{font-size:smaller;vertical-align:super}
 sub{vertical-align:sub}
+blockquote,blockquote p{font-size:90%;line-height:24px;color:#aaa;font-style:normal;margin:0 0 10px 0}
+blockquote{margin:0 0 10px;padding:.25em;border-left:4px solid #c9c9c9}
+blockquote cite{display:block;font-size:12px;color:#555}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited,blockquote cite a:visited{color:#555}
+hr{border:solid #b0b1b2;border-width:1px 0 0;clear:both;margin:0;height:0}
+hr.medium{border:none;height:4px;background:#000}
+hr.large{border:none;height:8px;background:#000}
 #navigation{background:#222;z-index:10;color:#eee}
 #navigation a{color:#eee;text-decoration:none}
 #navigation a:hover{color:#aaa}
@@ -54,14 +62,6 @@ sub{vertical-align:sub}
 ul,ol{margin:;padding:}
 ul li,ol li{margin:;padding:}
 ul li{list-style-type:}
-blockquote,blockquote p{font-size:90%;line-height:24px;color:#aaa;font-style:normal;margin:0 0 10px 0}
-blockquote{margin:0 0 10px;padding:.25em;border-left:4px solid #c9c9c9}
-blockquote cite{display:block;font-size:12px;color:#555}
-blockquote cite:before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited,blockquote cite a:visited{color:#555}
-hr{border:solid #b0b1b2;border-width:1px 0 0;clear:both;margin:0;height:0}
-hr.medium{border:none;height:4px;background:#000}
-hr.large{border:none;height:8px;background:#000}
 img{max-width:100%;height:auto}
 img.scale-with-grid{max-width:100%;height:auto}
 .button,.button-primary,button,input[type="submit"],input[type="reset"],input[type="button"]{color:#fff !important;font-family:AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif !important;font-size:16px;font-weight:normal !important;line-height:normal;text-shadow:0 -1px 0 rgba(0,0,0,0.4);text-decoration:none;padding:5px 15px;display:inline-block;cursor:pointer;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;transition-duration:.2s;border:1px solid #005283;border-top:1px solid #2274a5;border-left:1px solid #2274a5;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;background:#006daf;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.4),0 1px 1px rgba(0,0,0,0.2);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.4),0 1px 1px rgba(0,0,0,0.2);box-shadow:inset 0 1px 0 rgba(255,255,255,0.4),0 1px 1px rgba(0,0,0,0.2);text-decoration:none}
