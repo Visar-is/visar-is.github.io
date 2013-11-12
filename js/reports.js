@@ -2,9 +2,10 @@ $(document).ready(function() {
 
 	// Determine if Header is Fixed
 	// Return corresponding height value
+	// This is to add dynamic height when Messages are injected
 	var header_padding = function() {
 		if ($('header').css('position') === 'fixed') {
-			var padding = $('header').height() + 45;
+			var padding = $('header').height();
 		}
 		else {
 			var padding = 0;
