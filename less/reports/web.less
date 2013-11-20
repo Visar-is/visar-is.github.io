@@ -4,7 +4,7 @@
 /* special code for the breadcrumbs */
 .breadcrumbs ol li { display: inline;  }
 .breadcrumbs ol li a { padding: 0 0.5em 0 0;}
-.breadcrumbs ol li:before { content: " | "; }
+.breadcrumbs ol li:not(first-child):before { content: " ➜ "; }
 .breadcrumbs { width: 100%; overflow: hidden; white-space: nowrap;}
 .dimmer { display: none;}
 
