@@ -1,0 +1,183 @@
+/*	Unsorted/Specific reports app styles */
+
+body { .background-stone; }
+
+.pseudo-text, .pseudo-text:active, .pseudo-text:focus {
+	width: 100%;
+	border: 1px solid;
+	border-color: #eee;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: none;
+	padding: 0.25em;
+	margin: 0.5em 0;
+	font-size: 90%;
+	background: #efefef;
+}
+
+.pseudo-text:hover, .pseudo-text:focus {
+  border-color: #777;
+	box-shadow: inset #777 0 0 0.3em;
+	background: #eaeaea;
+}
+
+.section {
+	margin-bottom: 2em;
+}
+
+.chart-section, .message-section {
+	background: #FFFEFF;
+	border: 1px solid #dedede;
+	margin-bottom: 2em;
+	padding: 2em;
+}
+
+.notes-save-button {
+	float: right;
+}
+
+/* Offsetting of things to line up with 5% chart left margin */
+.message-section .notes, .chart-section .notes {
+	width: 95%;
+	margin-left: 5%;
+}
+
+.message-section .controls, .chart-section .controls {
+	width: 95%;
+	margin: 0.5em auto 0.5em 5%;
+}
+
+.chart-section .controls li {
+	display: inline;
+	margin-right: 1em;
+}
+
+.list-section li {
+	padding-bottom: .5em;
+}
+
+.background-stone {
+	background-image: url('../img/background-stone.jpg');
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+
+.report-context {
+	background: #EEE;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.report-context .language-form {
+	display: inline;
+	float: right;
+}
+
+.report-context .language-form select {
+	display: inline;
+	width: auto;
+}
+
+/* Use clearfix class on parent to clear nested columns,
+or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	clear: both;      
+}
+
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; clear: both; }
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.download-chart-container {
+	height: 100%;
+	width: 100%;
+	background: black;
+	display: block;
+	position: absolute;
+}
+
+.download-chart-instructions {
+	padding: 1em 1em 0 1em;
+	background: #EEE;
+	border-bottom: #AAA 1px solid;
+}
+
+.download-chart-chart {
+	margin-top: 5%;
+}
+
+.download-chart-chart img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Settings icon, maybe others in the future */
+.inline-icon,
+.inline-icon img {
+	width: 1em;
+	height: 1em;
+	position: relative;
+	bottom: -0.3ex;
+	margin-right: 0.3ex;
+}
+
+a .inline-icon {
+	cursor: pointer;
+}
+
+/* Global Base */
+	
+#wrap 					{ min-height: 100%; }
+
+header 					{ width: 100%; height: 65px; position: fixed; .background-stone; border-bottom: 1px solid @greenLightBorder; }
+#header					{ height: 65px; }
+#header .logo			{ position: absolute; left: 9%; top: 10px; }
+#header .logo object { pointer-events: none; }
+#header ul 				{ margin: 0 auto; max-width: 1040px; width: 90%; position: relative; }
+#header ul li			{ float: left; /*border-left: 1px solid #B0B1B2;*/ }
+#header ul li.last		{ /*border-right: 1px solid #B0B1B2;*/ position: absolute; right: 125px; top: 0; }
+#header ul li a				{ display: block; padding: 20px 30px; width: 100%; }
+#header ul li.logout 	{ position: absolute; top: 15px; right: 15px; border: none; }
+
+#content 				{ background-color: #fff; padding-top: 66px; padding-bottom: 25px; /* must be same height as the footer */ }
+.container              { width: 90%; max-width: 1040px; margin: 0px auto; }
+
+footer					{  border-top: 1px solid @greenLightBorder; padding: 1em 0; /* negative value of footer height */ }
+
+/* Mobile Landscape */
+	
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	header { position: fixed; }
+	#messages { padding-top: 0; }
+}
+
+/* Mobile Portrait */
+
+@media only screen and (max-width: 480px) {
+	header { position: fixed; }
+	header a.logo { margin: 0 auto; position: relative; top: 14px; left: 0px; }
+
+	#messages { padding-top: 0; }
+}
+
+/*  (Portrait) Design for a width of 768px  */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	header 			{ position: fixed; }
+	#messages 		{ padding-top: 0; }
+}
