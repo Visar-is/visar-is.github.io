@@ -19,7 +19,14 @@ strong {
 }
 
 .section {
-	page-break-inside: avoid;
+	/* page-break-inside: avoid; */
+	display:inline-block;
+}
+
+.section:after {
+	display:block;
+	height:0px;
+	visibility: hidden;
 }
 
 /* Cover Pages */
