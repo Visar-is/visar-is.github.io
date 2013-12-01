@@ -19,7 +19,15 @@ strong {
 }
 
 .section {
-	page-break-inside: avoid;
+	/* page-break-inside: avoid; */
+	display:inline-block;
+	width: 100%;
+}
+
+.section:after {
+	display:block;
+	height:0px;
+	visibility: hidden;
 }
 
 /* Cover Pages */
@@ -28,7 +36,7 @@ strong {
 	clear: both;
 	border-top: black solid 4px;
 	border-bottom: black solid 8px;
-	margin-bottom: 400px;
+	margin-bottom: 600px;
 }
 
 .report-cover h1 {
@@ -41,7 +49,7 @@ strong {
 .report-cover h2, h3, h4 { font-family: @text-font-family; }
 
 .report-cover h2 {
-	color: @grayDark;
+	color: #007722;
 	font-size: 21pt;
 	line-height: 24pt;
 }
@@ -62,6 +70,7 @@ strong {
 .cover-footer a {
 	font-size: 12px;
 	line-height: 14px;
+	color: #007722;
 }
 
 .cover-footer-left { 
@@ -70,10 +79,10 @@ strong {
 	text-align: center;
 }
 
-.cover-footer-right {
+.cover-footer-contact-info {
 	width: 30%;
-	float: right;
-	text-align: right;
+	float: left;
+	text-align: left;
 }
 
 .cover-footer .p-author .p-tel { display: block }
@@ -176,3 +185,5 @@ strong {
 	color: #777;
 	font-weight: normal;
 }
+
+body { margin: 0 1cm; }

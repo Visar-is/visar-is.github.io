@@ -39,8 +39,8 @@ body { .background-stone; }
 
 /* Offsetting of things to line up with 5% chart left margin */
 .message-section .notes, .chart-section .notes {
-	width: 95%;
-	margin-left: 5%;
+	width: 90%;
+	margin: 0% 5%;
 }
 
 .message-section .controls, .chart-section .controls {
@@ -152,9 +152,9 @@ header 					{ width: 100%; height: 65px; position: fixed; .background-stone; bor
 #header .logo object { pointer-events: none; }
 #header ul 				{ margin: 0 auto; width: 90%; position: relative; }
 #header ul li			{ float: left; /*border-left: 1px solid #B0B1B2;*/ }
-#header ul li.last		{ /*border-right: 1px solid #B0B1B2;*/ position: absolute; right: 125px; top: 0; }
-#header ul li a				{ display: block; padding: 20px 30px; width: 100%; }
-#header ul li.logout 	{ position: absolute; top: 15px; right: 15px; border: none; }
+#header ul li.last		{ /*border-right: 1px solid #B0B1B2;*/ position: absolute; right: 100px; top: 0; -webkit-font-smoothing: auto; }
+#header ul li a			{ display: block; padding: 20px 0; width: 100%; font-size: 16px; }
+#header ul li.logout 	{ position: absolute; top: 20px; right: 15px; border: none; }
 
 #content 				{ background-color: #fff; padding-top: 66px; padding-bottom: 25px; /* must be same height as the footer */ }
 .container              { width: 90%; max-width: 1040px; margin: 0px auto; padding-top: 1em; }
@@ -166,6 +166,9 @@ footer					{  border-top: 1px solid @greenLightBorder; padding: 1em 0; /* negati
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	header { position: fixed; }
 	#messages { padding-top: 0; }
+	.last span { display: none; }
+	#header ul li a { padding: 20px 0; }
+	#header ul li.last { right: 90px; }
 }
 
 /* Mobile Portrait */
@@ -175,6 +178,9 @@ footer					{  border-top: 1px solid @greenLightBorder; padding: 1em 0; /* negati
 	header a.logo { margin: 0 auto; position: relative; top: 14px; left: 0px; }
 
 	#messages { padding-top: 0; }
+	.last span { display: none; }
+	#header ul li a { padding: 20px 0; }
+	#header ul li.last { right: 90px; }
 }
 
 /*  (Portrait) Design for a width of 768px  */
@@ -185,4 +191,4 @@ footer					{  border-top: 1px solid @greenLightBorder; padding: 1em 0; /* negati
 }
 
 .greeting { font-size: 28px; margin:0; padding: 0.5em 0; line-height: 34px; font-family: AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif }
-button.logout, button.logout:hover, button.logout:active { background: none; border: none; box-shadow: none; }
+.logout button, .logout button:hover, .logout button:active { background: none; border: none; box-shadow: none; padding: 0; margin: 0;  text-shadow: none; font-family: AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif }
