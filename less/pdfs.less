@@ -19,7 +19,8 @@ strong {
 }
 
 .section {
-	/* page-break-inside: avoid; */
+	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
+	page-break-inside: avoid;
 	display:inline-block;
 	width: 100%;
 }
@@ -195,6 +196,9 @@ body { margin: 0 1cm; }
 	padding: 0.2em;
 	margin-bottom: 0.5em;
 	background: #efefef;
+
+	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
+	page-break-inside: avoid;
 	display:inline-block;
 	width: 100%;
 }
