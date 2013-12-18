@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'AvenirNextLTProRegular';
+	src: url('{{ static_base }}/webfonts/26E8D5_4_0.eot');
+	src: url('{{ static_base }}/webfonts/26E8D5_4_0.eot?#iefix') format('embedded-opentype'),
+	url('{{ static_base }}/webfonts/26E8D5_4_0.woff') format('woff'),
+	url('{{ static_base }}/webfonts/26E8D5_4_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'AvenirNextLTPro-Regular';
+	src: url('{{ static_base }}/webfonts/26E8D5_4_0.eot');
+	src: url('{{ static_base }}/webfonts/26E8D5_4_0.eot?#iefix') format('embedded-opentype'),
+	url('{{ static_base }}/webfonts/26E8D5_4_0.woff') format('woff'),
+	url('{{ static_base }}/webfonts/26E8D5_4_0.ttf') format('truetype');
+}
+
+.chart { width: 100%; position: relative;  padding: 0; margin:0; font-size: 16px; font-family: AvenirNextLTPro-Regular, AvenirNextLTProRegular,"HelveticaNeue","Helvetica Neue",Helvetica,ArialMT,sans-serif; }
+.title { text-align: center; font-size: 16px; padding: 1em; font-size: 120%; }
+.data { font-size: 80%; position: relative; }
+ol, ul, li { padding: 0; margin:0; list-style-type: none;}
+.key .you:before {  content: "◼"; color: #65DB65; padding-right: 0.25em; font-family: Helvetica,ArialMT,sans-serif;  }
+.key .compare:before {  content: "◼"; color: #dc3912; padding-right: 0.25em; font-family: Helvetica,ArialMT,sans-serif;  }
+.key ul { display: block; }
+.key li { width: 50%; float: left; }
+.key { padding: .25em; margin-left: 60px; font-size: 80%; }
+
+.x-axis { padding-left: 60px; font-size: 80%;  }
+.x-axis ol.row1 { border-top: 1px solid #ccc; }
+.x-axis ol.row1, .x-axis ol.row2, .x-axis ol.row3  { padding: 0 1%; width:98%;  }
+.x-axis ol.row1 li { color: #333; line-height: 20px;  }
+.x-axis ol.row2 li, .x-axis ol.row3 li { color: #ccc; line-height: 20px;  }
+
+.x-axis ol li { float: left; text-align: center; color: #ccc; }
+.x-axis ol.compare li:nth-child(odd) { margin-left: 1%; }
+.x-axis ol.compare li:nth-child(even) { margin-right: 1%; }
+
+.notes { clear: both;  }
+
+.y-axis { float:left; border-right: 1px solid #ccc; width: 60px; color: #ccc; text-align: right; height: 200px; position: relative;}
+.y-axis li { margin:0; padding:0; position: absolute; right: 0px;}
+.y-axis .major:after { content: "—"; color: #ccc; padding-left: 0.2em; margin-right: -0.07em; font-family: Helvetica,ArialMT,sans-serif;   }
+.y-axis .minor:after { content: "-"; color: #ccc; padding-left: 0.3em; margin-right: -0.1em; font-family: Helvetica,ArialMT,sans-serif;   }
+
+@media screen and (min-width: 900px) {
+	.key { padding: 0.25em; width: 140px; position: absolute; top: 8em; right: 0;}
+	.key li { width: 100%; float: none; }
+	.x-axis { margin-right: 160px; }
+}
+@media screen and (max-width: 600px) {
+	.chart { font-size: 90%; }
+}
+@media screen and (max-width: 400px) {
+	.chart { font-size: 80%; }
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+
+/* Add in specific chart type styling */
+@import "charts/bars.less";
+@import "charts/scatter.less";
+@import "charts/line.less";
