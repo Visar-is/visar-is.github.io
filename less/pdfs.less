@@ -1,7 +1,6 @@
 /* Config */
 @import "app/fonts.less";
 @import "app/config.less";
-@import "app/backgrounds.less";
 
 /* Base */
 @import "base/_base.less";
@@ -19,14 +18,14 @@ strong {
 	clear: both;
 }
 
-.section {
+.chart-section, .survey-metadata-section, .html-section {
 	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
 	display:inline-block;
 	width: 100%;
 }
 
-.section:after {
+.chart-section:after, .survey-metadata-section:after, .html-section:after {
 	display:block;
 	height:0px;
 	visibility: hidden;
