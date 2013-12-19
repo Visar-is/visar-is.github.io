@@ -193,25 +193,6 @@ body { margin: 0 1cm; }
 
 /* section-specific styles */
 
-.list-section .response-list li, .list-section .response-list p {
-	padding: 0.2em;
-	margin-bottom: 0.5em;
-	background: #efefef;
-	font-size: 0.7em;
-
-	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
-	page-break-inside: avoid;
-	display:inline-block;
-	width: 100%;
-}
-
-.list-section .response-list li:after, .list-section .response-list p:after { 
-content: '';
-display:block;
-height:0px;
-visibility: hidden;
-}
-
 .survey-metadata-section {
 	font-size: 0.7em;
 }
