@@ -21,7 +21,8 @@ strong {
 .chart-section, .survey-metadata-section, .html-section {
 	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
-	display:inline-block;
+	-webkit-region-break-inside: avoid;
+	display:inline-block !important;
 	width: 100%;
 }
 
