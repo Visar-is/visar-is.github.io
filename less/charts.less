@@ -4,8 +4,8 @@
 ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 .fixed-key .you span, .key .you span {  color: #65DB65; padding-right: 0.25em;  }
 .fixed-key .compare span, .key .compare span {  color: #dc3912; padding-right: 0.25em;  }
-.fixed-key .li, .key ul { display: block; }
-.fixed-key .li, .key li { width: 50%; float: left; }
+.fixed-key ul, .key ul { display: block; }
+.fixed-key li, .key li { width: 50%; float: left; }
 .fixed-key, .key { padding: .25em; margin-left: 60px; font-size: 80%; }
 
 .x-axis { padding-left: 60px; font-size: 80%;  }
@@ -29,6 +29,7 @@ ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 	.key { padding: 0.25em; width: 140px; position: absolute; top: 8em; right: 0;}
 	.key li { width: 100%; float: none; }
 	.x-axis { margin-right: 160px; }
+	div.h-x-axis { margin-right: 0px; }
 }
 @media screen and (max-width: 600px) {
 	.chart { font-size: 90%; }
@@ -57,5 +58,6 @@ html[xmlns] .clearfix {
 
 /* Add in specific chart type styling */
 @import "charts/bars.less";
+@import "charts/h_bars.less";
 @import "charts/scatter.less";
 @import "charts/line.less";
