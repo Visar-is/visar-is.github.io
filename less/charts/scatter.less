@@ -1,0 +1,29 @@
+
+.scatter { height: 200px; margin-left: 60px; margin-right: 0px; }
+.scatter ol { margin-right: 0px; height: 200px; }
+.group { position: relative; }
+.group li { position: absolute; margin: 0; padding: 0;  text-align: center; }
+
+.group li:before {  content: "◆"; font-size: 1em; color: #ccc; z-index:90 }
+.group li.you:before { color: #65DB65; z-index: 100 }
+
+
+.group li span { display: none; }
+
+.lines { 
+    margin-left: 60px;
+    margin-right: 0px;
+    margin-top: -200px;
+ 	z-index:80
+ }
+.scatter ol.lines { height: 0 }
+.lines div {  border: 1px solid red; margin: 0; padding: 0; width: 100%; }
+.lines div span { display: none; }
+
+
+.line .national { background-color: #dc3912; }
+
+@media screen and (min-width: 900px) {
+	.scatter { margin-right: 160px; }
+	.lines { margin-right: 160px; }
+}

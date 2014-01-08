@@ -1,8 +1,6 @@
 /* Config */
 @import "app/fonts.less";
 @import "app/config.less";
-@import "app/icons.less";
-@import "app/backgrounds.less";
 
 /* Base */
 @import "base/_base.less";
@@ -16,16 +14,19 @@ strong {
 
 .page {
 	page-break-after: always;
+	width: 100%;
+	clear: both;
 }
 
-.section {
+.chart-section, .survey-metadata-section, .html-section {
 	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
-	display:inline-block;
+	-webkit-region-break-inside: avoid;
+	display:inline-block !important;
 	width: 100%;
 }
 
-.section:after {
+.chart-section:after, .survey-metadata-section:after, .html-section:after {
 	display:block;
 	height:0px;
 	visibility: hidden;
@@ -37,7 +38,7 @@ strong {
 	clear: both;
 	border-top: black solid 4px;
 	border-bottom: black solid 8px;
-	margin-bottom: 600px;
+	margin-bottom: 10px;
 }
 
 .report-cover h1 {
@@ -191,18 +192,12 @@ strong {
 body { margin: 0 1cm; }
 
 /* section-specific styles */
-
-.list-section .response-list li {
-	padding: 0.2em;
-	margin-bottom: 0.5em;
-	background: #efefef;
-	font-size: 0.7em;
-
-	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
-	page-break-inside: avoid;
-	display:inline-block;
-	width: 100%;
+.list-section .response-list li { 
+padding: 0.2em;
+margin-bottom: 0.5em;
+background: #efefef;
 }
+
 
 .survey-metadata-section {
 	font-size: 0.7em;

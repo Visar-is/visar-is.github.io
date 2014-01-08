@@ -1,6 +1,6 @@
 /*	Unsorted/Specific reports app styles */
 
-body { .background-stone; }
+body { background-color: #CEECFF; }
 
 .pseudo-text, .pseudo-text:active, .pseudo-text:focus {
 	width: 100%;
@@ -31,7 +31,7 @@ body { .background-stone; }
 	background: #FFFEFF;
 	border: 1px solid #dedede;
 	margin-bottom: 2em;
-	padding: 1em;
+	padding: 1em 0;
 }
 
 .section-note { white-space: pre-wrap; font-size: 0.9em; }
@@ -76,13 +76,15 @@ body { .background-stone; }
 
 .report-context {
 	background: #EEE;
-	padding: 0.5em;
+	padding: 0;
 	margin-bottom: 1em;
+	width: 100%;
 }
 
 .report-context .language-form {
 	display: inline;
 	float: right;
+	padding: 0.5em
 }
 
 .report-context .language-form select {
@@ -157,7 +159,7 @@ a .inline-icon {
 	
 #wrap 					{ min-height: 100%; }
 
-header 					{ width: 100%; height: 65px; position: fixed; .background-stone; border-bottom: 1px solid @greenLightBorder; z-index: 999999999; }
+header 					{ background-color: #CEECFF; width: 100%; height: 65px; position: fixed; z-index: 999999999; }
 #header					{ height: 65px; }
 #header .logo			{ position: absolute; left: 9%; top: 10px; }
 #header .logo object { pointer-events: none; }
@@ -165,12 +167,13 @@ header 					{ width: 100%; height: 65px; position: fixed; .background-stone; bor
 #header ul li			{ float: left; /*border-left: 1px solid #B0B1B2;*/ }
 #header ul li.last		{ /*border-right: 1px solid #B0B1B2;*/ position: absolute; right: 100px; top: 0; -webkit-font-smoothing: auto; }
 #header ul li a			{ display: block; padding: 20px 0; width: 100%; font-size: 16px; }
-#header ul li.logout 	{ position: absolute; top: 20px; right: 15px; border: none; }
+#header ul li.logout 	{ position: absolute; top: 20px; right: 15px; border: none;  }
+#header ul li button.logout {color: #006DAF;}
 
 #content 				{ background-color: #fff; padding-top: 66px; padding-bottom: 25px; /* must be same height as the footer */ }
 .container              { width: 90%; max-width: 1040px; margin: 0px auto; padding-top: 1em; }
 
-footer					{  border-top: 1px solid @greenLightBorder; padding: 1em 0; /* negative value of footer height */ }
+footer					{  padding: 1em 0; }
 
 /* Mobile Landscape */
 	
@@ -210,3 +213,4 @@ footer					{  border-top: 1px solid @greenLightBorder; padding: 1em 0; /* negati
 	font-style: normal;
 	line-height: 1.4;
 }
+
