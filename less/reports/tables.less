@@ -10,12 +10,14 @@
 	.collapse tr { 
 		display: block; 
 	}
+	
 	/* Hide table headers (but not display: none;, for accessibility) */
 	.collapse thead tr { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
+	
 	.collapse .rounded tr td { 
 		/* Behave  like a "row" */
 		border: none;
@@ -34,3 +36,8 @@
 
 td.significant { font-weight: bold; color: #010871;  }
 td.significant:after { content: "*"; }
+
+td[axis=N] sub {
+	color: rgb(85, 85, 85);
+	font-size: 0.7em;
+}
