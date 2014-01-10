@@ -22,8 +22,8 @@ ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 
 .y-axis { float:left; border-right: 1px solid #ccc; width: 60px; color: #ccc; text-align: right; height: 200px; position: relative;}
 .y-axis li { margin:0; padding:0; position: absolute; right: 0px;}
-.y-axis .major:after { content: "—"; color: #ccc; padding-left: 0.2em; /* margin-right: -0.07em; */ }
-.y-axis .minor:after { content: "-"; color: #ccc; padding-left: 0.3em; /* margin-right: -0.1em;  */ }
+/* .y-axis .major:after { content: "—"; color: #ccc; padding-left: 0.2em; } */
+.y-axis .major:after, .y-axis .minor:after { content: "-"; color: #ccc; padding-left: 0.3em; /* margin-right: -0.1em;  */ }
 
 @media screen and (min-width: 900px) {
 	.key { padding: 0.25em; width: 140px; position: absolute; top: 8em; right: 0;}
