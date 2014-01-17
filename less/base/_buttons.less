@@ -79,17 +79,17 @@
 
 
 	/* Warning */
-	.button-warning {
+	body button.button-warning {
 		.button-globals(@button-warning-color, @button-warning-shadow);
 		.button-border(@button-warning-border);
 		.button-background(@button-warning-top, @button-warning-bottom);
 	}
-	.button-warning:hover {
+	body button.button-warning:hover {
 		.button-border(@button-warning-border-hover);
 		.button-background(@button-warning-top-hover, @button-warning-bottom-hover);
 		text-decoration: none;
 	}
-	.button-warning:active {
+	body button.button-warning:active {
 		.button-border(@button-warning-border-hover);
 		.button-background(@button-warning-top-hover, @button-warning-top-hover);
 		text-decoration: none;
