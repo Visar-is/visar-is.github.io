@@ -22,31 +22,4 @@ $(document).ready(function() {
 			$('#content').css('padding-top', header_padding());
 		});
 	});
-	
-	var csvFileInput = $('.create-customer-form [name=pull_list]');
-	var csvPreviewTable;
-	csvFileInput.change(function () {
-		// reset preview table
-		csvPreviewTable = csvFileInput.after('<table></table>');
-		csvFileInput.parse({
-			config: {
-				header: false,
-				dynamicTyping: false,
-				preview: 10
-			},
-			complete: function (data) {
-				console.log('Completed CSV file parsing');
-				for (var i=0;i<data.results.length;i++) {(function (row) {
-					var row = csvPreviewTable.append('<tr></tr>');
-					for (var j=0; j<row.length; j++) {(function (column) {
-						if (i === 0) {
-							row.append('<th></th>').text(column);
-						} else {
-							row.append('<td></td>').text(column);
-						}
-					}(row[j]));}
-				}(data.results[i]));}
-			}
-		});
-	});
 });
