@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>table-headers.js test</title>
+</head>
+
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Sex</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Jón</td>
+				<td>kk</td>
+				<td>15</td>
+			</tr>
+			<tr>
+				<td>Jón</td>
+				<td>kk</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Jón</td>
+				<td>kk</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td>Jón</td>
+				<td>kk</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Jón</td>
+				<td>kk</td>
+				<td>12</td>
+			</tr>
+		</tbody>
+	</table>
+<script src="table-headers.js"></script>
+<script>
+	(function () {
+		var table = document.querySelector('table');
+		var tableEditor = TableEditor(table, {
+			options: {
+				'name': {
+					name: "Name",
+					synonymns: ["nafn"],
+					maxInstances: 1,
+					icon: "http://waterpigs.co.uk/photo.png"
+				},
+				'sex': {
+					name: "Sex",
+					synonyms: ["kyn", "gender"],
+					maxInstances: 1,
+					icon: "http://waterpigs.co.uk/photo.png"
+				},
+				'age': {
+					name: "Age",
+					synonyms: ["ar"]
+				}
+			}
+		});
+		
+		tableEditor.options.grade.on('assigned', function (column) {
+			column.index;
+			column.name;
+			// listen on this event to, e.g. dynamically update previews
+		});
+		
+		tableEditor.columns[0]; // obj with name, index, option: Option | null
+		
+		tableEditor.columns; // [Column, Column, Column]
+	}());
+</script>
+</body>
+</html>
