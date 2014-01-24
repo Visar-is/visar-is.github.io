@@ -94,8 +94,15 @@
 		.button-background(@button-warning-top-hover, @button-warning-top-hover);
 		text-decoration: none;
 	}
-
-
+	
+	/* disabled */
+	button:disabled,
+	button.disabled,
+	.button.disabled {
+		background: #555;
+		cursor: normal;
+	}
+	
 	/* Icons */
 	.button span,
 	.button-secondary span,

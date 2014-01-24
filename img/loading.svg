@@ -14,7 +14,7 @@ date: 2012 Oct 07
 			<path d="M 50 50 L 35 0 L 65 0 z" />
 		</clipPath>
 		
-		<ellipse id= "MyEllipse" clip-path="url(#clip)" cx="50" cy="50" rx="40" ry="40" style="fill:none; stroke:#aaa" stroke-width="10" />
+		<ellipse id="MyEllipse" clip-path="url(#clip)" cx="50" cy="50" rx="40" ry="40" style="fill:none; stroke:#aaa" stroke-width="10" />
 	</defs>
 	
 	<use xlink:href="#MyEllipse" />
