@@ -12,26 +12,30 @@ ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 .x-axis ol.row1 { border-top: 1px solid #ccc; }
 .x-axis ol.row1, .x-axis ol.row2, .x-axis ol.row3  { padding: 0 1%; width:98%;  }
 .x-axis ol.row1 li { color: #333; line-height: 20px;  }
-.x-axis ol.row2 li, .x-axis ol.row3 li { color: #ccc; line-height: 20px;  }
+.x-axis ol.row2 li, .x-axis ol.row3 li { color: #333; line-height: 20px;  }
 
-.x-axis ol li { float: left; text-align: center; color: #ccc; }
+.x-axis ol li { float: left; text-align: center; color: #333; }
 .x-axis ol.compare li:nth-child(odd) { margin-left: 1%; }
 .x-axis ol.compare li:nth-child(even) { margin-right: 1%; }
+
+.plot { margin-left: 60px; margin-right: 0px; }
+.plot .error-message { margin-right: 0px; }
 
 .notes { clear: both;  }
 .error { max-width:600px !important; }
 .error-message { margin-left: 60px; margin-right: 0px; text-align: center; padding: 0 .5em; }
 	
-.y-axis { float:left; border-right: 1px solid #ccc; width: 60px; color: #ccc; text-align: right; height: 200px; position: relative;}
+.y-axis { float:left; border-right: 1px solid #333; width: 60px; color: #333; text-align: right; height: 200px; position: relative;}
 .y-axis li { margin:0; padding:0; position: absolute; right: 0px;}
-/* .y-axis .major:after { content: "—"; color: #ccc; padding-left: 0.2em; } */
-.y-axis .major:after, .y-axis .minor:after { content: "-"; color: #ccc; padding-left: 0.3em; /* margin-right: -0.1em;  */ }
+/* .y-axis .major:after { content: "—"; color: #333; padding-left: 0.2em; } */
+.y-axis .major:after, .y-axis .minor:after { content: "-"; color: #333; padding-left: 0.3em; /* margin-right: -0.1em;  */ }
 
 @media screen and (min-width: 900px) {
 	.key { padding: 0.25em; width: 140px; position: absolute; top: 8em; right: 0;}
 	.key li { width: 100% !important; float: none; }
 	.x-axis { margin-right: 160px; }
 	div.h-x-axis { margin-right: 0px; }
+	.plot { margin-right: 160px; }
 }
 @media screen and (max-width: 600px) {
 	.chart { font-size: 90%; }
