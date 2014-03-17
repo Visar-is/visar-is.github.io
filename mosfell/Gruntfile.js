@@ -104,12 +104,6 @@ module.exports = function (grunt) {
                         src: ['**'],
                         dest: 'build/img/'
                     },
-                    {
-                        expand: true,
-                        cwd: 'assets/webfonts/',
-                        src: ['**'],
-                        dest: 'build/webfonts/'
-                    },
                 ]
             }
         }
