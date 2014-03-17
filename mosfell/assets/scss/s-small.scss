@@ -1,0 +1,124 @@
+@import "config";
+
+body {
+    font-size: 0.9em;
+}
+
+.core {
+    width: 98%;
+}
+
+header {
+    padding: 0 2em;
+
+    .stamp--box {
+        font-size: 1.6em;
+        margin-top: -3.5em;
+    }
+
+    .tagline {
+        top: auto;
+        left: 110%;
+        bottom: 0;
+        font-size: 0.5em;
+        margin-bottom: 0;
+    }
+    .tagline-part1 {
+        display: block;
+
+        &:after {
+            display: none;
+        }
+    }
+    .tagline-part2 {
+
+    }
+
+}
+
+nav {
+    padding: 0;
+
+    ul.core {
+        width: auto;
+
+        li {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+    a,
+    button {
+        padding: 0.5em 0.7em 0.4em;
+        font-size: 13px;
+        font-size: 0.85em;
+        white-space: nowrap;
+        border-bottom: 0;
+    }
+}
+
+main {
+    padding-top: 6em;
+}
+
+.how {
+    .pullquote {
+        width: auto;
+        float: none;
+        padding: 0;
+
+        + * {
+            width: auto;
+        }
+    }
+    .pullquote p:first-of-type {
+        padding: 0.5em 1em 0;
+    }
+}
+
+.price .pricing_plan {
+    width: 100%;
+    padding: 0;
+}
+
+
+.message-list-item { 
+    margin-left: 0;
+    margin-top: 3em;
+
+    &.t-dashed .section-title,
+    .section-title {
+        top: -3em;
+        left: 0;
+        height: 3em;        
+        line-height: 3;
+        border-right-width: 1px;
+        border-bottom-width: 0;
+    }
+    .message--meta {
+        dt {
+            clear: left;
+        }
+        dd + dt {
+           margin-left: 0;
+        }
+    }
+    .message--list-of-contacts img {
+        height: 23px;
+    }
+    .message--name {
+        white-space: normal;
+        display: block;
+    }
+}
+
+.contact-details {
+    .p-name  {
+        float: none;
+    }
+}
+
+.frm-message, .frm-recipients {
+    float: none;
+    width: 100%;
+}

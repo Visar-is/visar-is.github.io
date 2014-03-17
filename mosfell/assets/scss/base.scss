@@ -1,0 +1,278 @@
+@import "config";
+
+* {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.assist {
+    position: absolute;
+    left: -9999em;
+    direction: ltr;
+    font-size: 0.01em;
+    height: 0;
+}
+
+body {
+    background-color: #eee;
+    line-height: 1.5;
+    padding: 0 0 10em;
+}
+
+a {
+    text-decoration: none;
+    color: #325E94;
+}
+
+p,
+li {
+    margin-bottom: 1em;
+}
+
+.rock {
+    display: block;
+}
+
+.help {
+    font-size: 0.85em;
+    opacity: 0.5;
+    max-width: 38em;
+    margin: 0.5em 0 1em;
+}
+
+button {
+    cursor: pointer;
+    cursor: hand;
+}
+
+em {
+    font-style: normal;
+    &.highlight {
+        background-color: color1_rgba(0.10);
+        padding: 0.1em 0.3em;
+        color: $color1_dark;
+        white-space: nowrap;
+
+        &.inverted {
+            background-color: rgba(255,255,255,0.10);
+            color: white;
+        }
+    }
+}
+
+h2,
+.h2 {
+    font-size: 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.3em;
+    color: $color2;
+}
+
+h3,
+.h3,
+thead th {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-size: 1.15rem;
+}
+
+table {
+    width: 100%;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 1.5em 2em 1.3em;
+    text-transform: uppercase;
+    background-color: $color1;
+    color: white;
+    min-width: 10em;
+    max-width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+    border: none;
+
+    &:focus,
+    &:hover {
+        background-color: $color1_dark;
+    }
+    &:active {
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+
+    &.secondary {
+        background: none;
+        color: $color1;
+        text-decoration: underline;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &.t-mini,
+    &.mini {
+        padding: 0.8em 2em 0.7em;
+    }
+    &.t-tiny,
+    &.tiny {
+        padding: 0.4em 2em 0.3em;
+    }
+
+    &.t-main {
+        background-color: $color1_dark;
+
+        &:hover {
+            background-color: black;
+        }
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; /* IE < 8 */
+}
+
+
+.tooltip {
+    position: relative;
+    cursor: help;
+
+    .tooltip--content {
+        position: absolute;
+        top: 0em;
+        left: -1000em;
+        opacity: 0;
+        background-color: $color2_dark;
+        color: white;
+        padding: 0.3em 1em;
+        transition: top 0.25s,
+                    opacity 0.25s;
+
+        &:before {
+            content: ' ';
+            display: block;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom: 5px solid $color2_dark;
+
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+    }
+
+    &:hover .tooltip--content {
+        left: -5px;
+        top: 100%;
+        margin-top: 5px;
+        opacity: 1;
+    }
+}
+
+.avatar {
+    width: auto;
+    height: 26px;
+}
+
+
+
+.messages {
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.9);
+
+    > li {
+        padding: 1em 0.5em 0.9em;
+        list-style-type: none;
+    }
+    .success {
+        color: $color_success;
+    }
+    .error {
+        color: $color_error;
+    }
+}
+.t-success[class] {
+    color: $color_success;
+}
+
+.info {
+    color: #999;
+    font-size: 13px;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.back-to {
+    font-size: 0.9em;
+    color: #999;
+    text-transform: lowercase;
+    position: relative;
+    padding-left: 2em;
+
+    &:before {
+        content: '\261C ';
+        font-size: 1.8em;
+        position: absolute;
+        top: -0.3em;
+        left: 0;
+    }
+    * {
+        color: inherit;
+    }
+    a {
+        text-decoration: underline;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.js-only {
+    visibility: hidden;
+
+    .js-ready & {
+        visibility: visible;
+    }
+}
+
+
+
+.link {
+    border: 0;
+    background: none;
+    text-decoration: underline;
+    color: $color1;
+    padding: 0.3em 0.4em;
+    margin-top: -0.3em;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        outline: none;
+        color: $color1_dark;
+    }
+}

@@ -1,0 +1,141 @@
+@import "config";
+
+.contact-details {
+    .contact--photo-box {
+        height: 128px;
+        width: 128px;
+        overflow: hidden;
+        float: left;
+        margin-right: 1em;
+        margin-left: 1em;
+
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    header {
+        position: relative;
+        padding-left: 150px;
+        background: white;
+        padding: 0.5em 1em 0.5em 0;
+    }
+    .p-name {
+        font-size: 2em;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        float: left;
+        margin-right: 0.4em;
+    }
+
+    .contact--main-info {
+        padding-top: 0.65em;
+        color: #999;
+        margin-bottom: 0;
+    }
+    .contact--edit {
+        text-align: center;
+        padding-bottom: 0;
+        margin: 0;
+
+        a {
+            display: block;
+            background-color: darken($color1,10%);
+            color: lighten($color1_light, 5%);
+            font-size: 14px;
+            font-size: .9rem;
+            padding: 0.4em 1em 0.3em;
+            letter-spacing: 0;
+            text-transform: uppercase;
+
+            span {
+                background-color: rgba(0,0,0,0.1);
+                padding: 0.2em 1em 0.2em;
+                border-radius: 4px;
+            }
+
+            &:hover {
+                background-color: $color1;
+            }
+            &:active {
+                span {
+                    position: relative;
+                    top: 1px;
+                    left: 1px;
+                }
+            }
+        }
+    }
+
+    .contact--actions {
+        li {
+            font-size: 13px;
+            font-size: 0.8rem;
+        }
+        li + li {
+            margin-left: 1em;
+        }
+    }
+    .contact--actions--group {
+        font-size: 1.3em;
+        text-transform: uppercase;
+        color: #999;
+        margin-right: 0.5em;
+        line-height: 1.7;
+    }
+
+    .contact--property-list {
+        background-color: #333;
+        color: white;
+
+        li {
+            margin-bottom: 1em;
+            list-style-type: none;
+            padding: 0.4em 1em;
+
+            width: 50%;
+            float: left;
+
+            &:nth-child(2n+1) {
+                clear: left;
+            }
+        }
+    }
+    .contact--property-list b {
+        display: block;
+        color: rgb(230,230,230);
+        color: rgba(255,255,255,0.6);
+        font-size: 0.7em;
+        text-transform: uppercase;
+    }
+    .contact--property--value {
+        color: white;
+
+        &:empty:before {
+            content: 'not specified';
+            color: #666;
+        }
+    }
+}
+
+.contact--form {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .avatar {
+        width: 128px;
+        height: 128px;
+    }
+    .contact--photo-box {
+        float: right;
+        width: 128px;
+        text-align: right;
+    }
+}
+
+.frm-recipients .info {
+    float: right;
+}
