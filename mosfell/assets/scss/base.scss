@@ -109,6 +109,7 @@ table {
         left: 2px;
     }
 
+    &.t-secondary,
     &.secondary {
         background: none;
         color: $color1;
@@ -132,7 +133,7 @@ table {
         background-color: $color1_dark;
 
         &:hover {
-            background-color: black;
+            background-color: darken($color1_dark, 10%);
         }
     }
 }
@@ -182,7 +183,13 @@ table {
             left: 10px;
         }
     }
+    &.tooltip__large {
+        .tooltip--content {
+            min-width: 20em;
+        }
+    }
 
+    &:focus .tooltip--content,
     &:hover .tooltip--content {
         left: -5px;
         top: 100%;
@@ -322,4 +329,9 @@ table {
         outline: none;
         color: $color1_dark;
     }
+}
+
+
+time[title] {
+    cursor: help;
 }

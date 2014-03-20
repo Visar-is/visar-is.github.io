@@ -1,5 +1,5 @@
 $color1: #EF4323;
-    $color1_light: lighten($color1, 25%);
+    $color1_light: lighten($color1, 15%);
     $color1_dark: darken($color1, 25%);
 
     @function color1_rgba($alpha: 0.2) {

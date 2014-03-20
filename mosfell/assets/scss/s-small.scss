@@ -5,7 +5,7 @@ body {
 }
 
 .core {
-    width: 98%;
+    width: 95%;
 }
 
 header {
@@ -122,3 +122,32 @@ main {
     float: none;
     width: 100%;
 }
+
+.contact--form .contact--photo-box {
+    float: none;
+    text-align: left;
+    width: auto;
+}
+
+.contact-list.t-mini > li {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.page-actions .button {
+    font-size: 0.7em;
+    padding: 0.7em 1em 0.5em;
+}
+
+@media only screen and (max-width: 400px) {
+    .contact-list.t-mini {
+        .contact--actions  > li {
+            display: block;
+        }
+        .contact--actions-group--export {
+            display: block;
+            margin-left: 0;
+        }
+    }
+}
+

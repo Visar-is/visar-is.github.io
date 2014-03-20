@@ -28,6 +28,7 @@
         line-height: 1;
         float: left;
         margin-right: 0.4em;
+        text-transform: none;
     }
 
     .contact--main-info {
@@ -116,6 +117,66 @@
         &:empty:before {
             content: 'not specified';
             color: #666;
+        }
+    }
+
+    .contact--last-updated {
+        font-size: 0.8em;
+        color: #666;
+        display: block;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        line-height: 1;
+        text-align: right;
+
+        span {
+            display: block;
+            text-transform: uppercase;
+            color: #aaa;
+            font-size: 0.8em;
+        }
+    }
+    &.t-mini {
+        .contact--photo-box {
+            width: 37px;
+            height: 37px;
+            position: relative;
+            top: 2px;
+        }
+        .contact--actions--group {
+            font-size: .9em;
+            position: relative;
+            top: 6px;
+
+            + .list-of {
+                position: relative;
+                top: 5px;
+            }
+        }
+        .p-name {
+            font-size: 20px;
+            font-size: 1.3rem;
+            margin: 0 1em 0 0;
+            padding: 0;
+            float: none;
+            letter-spacing: -0.05em;
+            color: black;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        a:hover .p-name {
+            color: $color1;
+        }
+        a {
+            display: block;
+            position: relative;
+
+            .help {
+                text-decoration: none;
+            }
         }
     }
 }

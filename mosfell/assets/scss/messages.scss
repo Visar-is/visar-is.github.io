@@ -1,11 +1,5 @@
 @import "config";
 
-
-.new-message {
-    text-align: right;
-}
-
-
 .message-list-item {
     margin-left: 170px;
     margin-bottom: 4em;
@@ -50,7 +44,14 @@
     &.t-sent {
         &,
         .section-title {
-            background-color: white;
+            background-color: $color1;
+            color: white;
+        }
+        .section-title {
+            span {
+                color: rgb(255,255,255);
+                color: rgba(255,255,255,0.7);
+            }
         }
     }
     &.t-dashed {
@@ -88,11 +89,12 @@
 
     > a {
         display: block;
-        padding: 0.5em 1em 1.2em;
-        background: RGBA(239, 67, 35, .03);
+        padding: 0.5em 1em 1.2em 2em;
+        background: white;
+        position: relative;
 
         &:hover {
-            background: RGBA(239, 67, 35, .1);        
+            background: RGBA(255,255,255, .95);        
         }
     }
     li + li & {
@@ -102,14 +104,15 @@
     &:before {
         position: absolute;
         top: -0.1em;
-        left: 1.2em;
+        left: 2.6em;
         content: "#" attr(data-id);
         transition: opacity 0.2s;
 
         font-size: 0.8em;
         color: rgb(153,153,153);
         color: rgba(0,0,0,0.2);
-        opacity: 0;
+        opacity: 0.0001;
+        z-index: 10;
     }
     &:hover::before {
         opacity: 1;
@@ -125,6 +128,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 0 0 0.3em;
+        position: relative;
 
         > * {
             display: inline-block;
@@ -228,6 +232,238 @@
     a:hover {
         .message--name {
             color: $color1_dark;
+        }
+    }
+    a:hover,
+    &.message__full { 
+        .message--progress[class] {
+            width: 2em;
+
+            .message--progress--value span {
+                opacity: 1;
+            }
+        }
+    }
+
+    .message--progress[class] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 2em;
+        background: rgba(0,0,0,0.1);
+
+        width: 2px;
+        transition: width 0.5s;
+        font-size: 13px;
+        font-size: 0.8rem;
+
+        .message--progress--value {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            background-color: $color1_dark;
+            color: white;
+            font-size: 0.75em;
+            letter-spacing: -1px;
+
+            /** the label with X% **/
+            span {
+                position: relative;
+                left: 0em;
+                text-align: center;
+                width: 2em;
+                opacity: 0;
+                padding:2px;
+                display: block;
+
+                transition: opacity 1s;
+            }
+        }
+    }
+
+    &.message__full {
+        &:before {
+            opacity: 1;
+            z-index: 1;
+            left: 2.4em;
+        }
+        a {
+            padding-bottom: 0.5em;
+        }
+        .empty {
+            font-size: 0.8em;
+            color: rgba(255,255,255,0.5);
+            display: block;
+        }
+        .message--message {
+            background-color: #dfdfdf;
+            color: #333;
+            padding: 2em;
+
+            h3 {
+                font-size: 0.8em;
+                margin-bottom: .5em;
+                color: #AAA;
+            }
+        }
+
+        .message--extra-info {
+            background-color: #333;
+            color: #eee;
+            padding: 2em;
+            list-style-type: none;
+
+            a {
+                color: $color1_light;
+            }
+            h3 > span,
+            .message--contacts--count {
+                font-size: 13px;
+                font-size: 0.8rem;
+                background-color: #444;
+                color: #eee;
+                width: 2em;
+                height: 2em;
+                display: inline-block;
+                border-radius: 500em;
+                text-align: center;
+                line-height: 2;
+                vertical-align: top;
+                position: relative;
+                top: -1em;
+                white-space: nowrap;
+                position: relative;
+
+                span {
+                    font-size: .8em;
+                    position: absolute;
+                    left: 100%;
+                    color: #666;
+                    top: 50%;
+                    margin-top: -0.5em;
+                    margin-left: .5em;
+                }
+            }
+            > li {
+                padding-bottom: 2em;
+                margin-bottom: 2em;
+                border-bottom: 1px solid #777;
+
+
+                h3 {
+                    font-size: 2em;
+                    line-height: 1;
+                }
+
+                h4 {
+                    font-size: 1.2em;
+                    line-height: 1.2;
+                    margin-bottom: 0.3em;
+                    text-transform: uppercase;
+                }
+                .bounced {
+                    background-color: rgba(255,255,255,0.8);
+                    padding: 1em 2em;
+                    margin: 1em 0;
+                    color: $color_error;
+
+                    a {
+                        color: darken($color_error, 15%);
+                    }
+                }
+                &:nth-child(2n+1),
+                &.odd {
+                    clear: left;
+                }
+                .contact-list li {
+                    border: 0;
+                    margin-right: 1em;
+                    font-size: 19px;
+                    font-size: 1.2rem;
+
+                    a {
+                        text-decoration: underline;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .avatar {
+                width: 14px; 
+                height: auto;
+                margin-right: 0.2em;
+            }
+        }
+        
+        .message--name {
+            display: block;
+            font-size: 2.3em;
+        }
+        .message--date {
+            color: #999;
+        }
+        .message--contact--count {
+
+        }
+        .message--contact--stats {
+            list-style-type: none;
+            background-color: rgba(255,255,255,0.1);
+            margin: 1em 0 1.5em;
+
+            li {
+                width: 33.333%;
+                float: left;
+                padding: 1.5em 2em;
+            }
+            &[data-number="2"] {
+                li {
+                    width: 50%;
+                }
+            }
+            &[data-number="4"] {
+                li {
+                    width: 25%;
+                }
+            }
+
+        }
+        .message--stats--value {
+            font-size: 2.3em;
+            float: left;
+            margin-right: 0.2em;
+        }
+        .message--stats--description {
+
+            .tooltip {
+                color: $color1_light;
+                border-bottom: 1px dotted $color1_light;
+                opacity: 0.8;
+                font-size: 0.75em;
+            }
+        }
+
+        .message--contacts--unopened {
+            .empty {
+                margin-top: 2em;
+            }
+            a {
+                color: #888;
+            }
+        }
+        .message--contacts--unsubscribed,
+        .message--contacts--updated {
+            width: 50%;
+            float: left;
+
+            .contact-list,
+            .empty {
+                padding: 1em 0;
+            }
         }
     }
 }

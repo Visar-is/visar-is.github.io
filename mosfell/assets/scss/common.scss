@@ -138,6 +138,12 @@ nav {
             color: white;
         }
     }
+    .t-active {
+        a {
+            background-color: $color1;
+            color: white;
+        }
+    }
 }
 
 /* inline-block list of stuff */
@@ -422,9 +428,21 @@ main {
         list-style-type: none;
         margin-bottom: 0;
         position: relative;
+    }
 
-        + li {
-            border-top: 1px solid rgba(239, 67, 35, 0.2);
+    > li + li {
+        border-top: 1px solid rgba(239, 67, 35, 0.2);
+    }
+    &.t-mini > li {
+        width: 49.5%;
+        float: left;
+        border-top: 0;
+        margin-right: 0.5%;
+        margin-bottom: 2%;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+            margin-left: 0.5%;
         }
     }
     li > input[type=checkbox],
@@ -525,6 +543,21 @@ main {
     box-shadow: 3px 3px 0px rgba(0,0,0,0.05);
 
     a {
+        color: $color1;
+    }
+}
+
+.page-actions {
+    text-align: right;
+
+    li + li {
+        margin-left: 1em;
+    }
+    .list-of--subtitle {
+        padding: 0.8em .5em 0.5em 1em;
+        display: inline-block;
+        font-size: 0.8em;
+        text-transform: uppercase;
         color: $color1;
     }
 }

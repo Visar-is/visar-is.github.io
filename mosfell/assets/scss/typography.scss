@@ -25,7 +25,8 @@
 body,
 .tagline,
 h3, .h3,
-.signup-links .rock {
+.signup-links .rock,
+.contact-details.t-mini .contact--actions--group {
     font-family: 'AvenirNextLTPro-Regular', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -38,7 +39,10 @@ h4, .h4,
 h5, .h5,
 h6, .h6,
 .signup-links a,
-.errorlist li {
+.errorlist li,
+.list-of--subtitle,
+.message--extra-info h3,
+.message--extra-info h4 {
     font-family: 'AvenirNextLTPro-Demi', sans-serif;
     font-weight: 400;
     font-style: normal;   
