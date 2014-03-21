@@ -151,3 +151,32 @@ main {
     }
 }
 
+
+/** Message details **/
+.mosfell-message.message__full {
+    .message--extra-info>li .contact-list li {
+        width: 100%;
+    }
+    .message--contacts--unsubscribed,
+    .message--contacts--updated,
+    .unopened-contacts,
+    .message--extra-info>li .bounced {
+        width: 100%;
+        float: none;
+    }
+    .message--stats--value {
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+    em.highlight {
+        white-space: normal;
+        padding: 0;
+        background-color: none;
+    }
+
+    .message--extra-info>li .bounced {
+        margin-top: 1em;
+    }  
+}

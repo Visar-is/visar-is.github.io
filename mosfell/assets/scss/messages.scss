@@ -297,6 +297,7 @@
             font-size: 0.8em;
             color: rgba(255,255,255,0.5);
             display: block;
+            text-align: center;
         }
         .message--message {
             background-color: #dfdfdf;
@@ -367,8 +368,11 @@
                 .bounced {
                     background-color: rgba(255,255,255,0.8);
                     padding: 1em 2em;
-                    margin: 1em 0;
+                    margin: 0 0 1em;
                     color: $color_error;
+
+                    float: left;
+                    width: 50%;
 
                     a {
                         color: darken($color_error, 15%);
@@ -380,23 +384,47 @@
                 }
                 .contact-list li {
                     border: 0;
-                    margin-right: 1em;
                     font-size: 19px;
                     font-size: 1.2rem;
+                    float: left;
+                    width: 50%;
+                    border-right: 1px solid transparent;
+                    border-bottom: 1px solid transparent;
+
 
                     a {
-                        text-decoration: underline;
+                        background-color: rgb(20,20,20);
+                        background-color: rgba(0,0,0,0.5);
+                        padding: 0.2em 0.5em;
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        letter-spacing: -1px;
+                        line-height: 1.4;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
 
                         &:hover {
                             text-decoration: none;
                         }
                     }
+                    .email {
+                        font-size: 0.7em;
+                        letter-spacing: 0;
+                        color: #666;   
+                        display: block;
+                        margin-left: 2em;
+                    }
                 }
             }
             .avatar {
-                width: 14px; 
-                height: auto;
+                width: 24px;
+                height: 24px;
                 margin-right: 0.2em;
+                position: relative;
+                top: 4px;
+                display: inline-block;
             }
         }
         
@@ -450,6 +478,7 @@
         .message--contacts--unopened {
             .empty {
                 margin-top: 2em;
+                text-align: center;
             }
             a {
                 color: #888;
@@ -463,6 +492,42 @@
             .contact-list,
             .empty {
                 padding: 1em 0;
+            }
+        }
+
+        .unopened-contacts {
+            width: 50%;
+            float: left;
+        }
+
+        .updated-contacts {
+            a {
+                color: #B4EA5D;
+            }
+        }
+        .unsubscribed-contacts {
+            a {
+                color: #E85E60;
+
+                .fn {
+                    text-decoration: line-through;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .avatar {
+                -webkit-filter: grayscale(1);
+                -webkit-transform: translateZ(0); /* this is the magic line! */
+                opacity: 0.5;
+            }
+        }
+        
+        .message--extra-info .contact-list.bounced-contacts {
+            a {
+                background: rgb(255,255,255);
+                background: rgba(255,255,255,0.8);
+                color: $color_error;
             }
         }
     }
