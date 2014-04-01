@@ -134,7 +134,7 @@ nav {
         color: $color1;
 
         &:hover {
-            background-color: $color1;
+            background-color: $color1_dark;
             color: white;
         }
     }
@@ -160,6 +160,9 @@ nav {
     .list-of {
         display: inline-block;
         vertical-align: top;
+    }
+    &[data-number="3"] li {
+        width: 33.33%;
     }
 }
 
@@ -389,7 +392,7 @@ main {
     padding: 2em 0;
     background-color: $color1;
     margin-bottom: 5em;
-    color: $color1_light;
+    color: lighten($color1_light, 15%);
 
     .first-of-all {
         text-transform: uppercase;
@@ -429,6 +432,18 @@ main {
         margin-bottom: 0;
         position: relative;
     }
+    > .empty[class] {
+        text-align: center;
+        padding: 3em 0;
+        color: #999;
+        width: auto;
+        float: none;
+        text-transform: uppercase;
+
+        a {
+            font-size: 0.8em;
+        }
+    }
 
     > li + li {
         border-top: 1px solid rgba(239, 67, 35, 0.2);
@@ -443,6 +458,9 @@ main {
         &:nth-child(2n) {
             margin-right: 0;
             margin-left: 0.5%;
+        }
+        &:nth-child(2n+1) {
+            clear: left;
         }
     }
     li > input[type=checkbox],
@@ -462,6 +480,24 @@ main {
             }
             &:hover {
 
+            }
+        }
+    }
+    input:disabled {
+        + label {
+            &,
+            &:hover {
+                color: #999;
+                background-color: white;
+                cursor: default;
+            }
+
+            .fn {
+                text-decoration: line-through;
+                color: #CCC;
+            }
+            .error {
+                color: $color_error;
             }
         }
     }
@@ -503,7 +539,8 @@ main {
         left: 3.2em;
 
         .email {
-            color: #999;
+            color: rgb(175, 146, 140);
+            color: rgba(0,0,0,0.3);
         }
         a {
             color: $color1;
@@ -559,5 +596,211 @@ main {
         font-size: 0.8em;
         text-transform: uppercase;
         color: $color1;
+    }
+}
+
+
+
+.main-area {
+    width: 63%;
+    float: left;
+    padding-right: 1%;
+}
+.secondary-area {
+    width: 37%;
+    float: left;
+    padding-left: 1%;
+}
+
+
+.dashboard--sent {
+    background-color: $color1;
+    padding: 0.5em 1em 1em;
+
+    h2 {
+        color: white;
+    }
+}
+
+
+.dashboard--sent {
+    padding-bottom: 0;
+
+    .see-more .link {
+        padding: 0.5em 1em;
+        display: block;
+        margin: 0 -1em;
+
+        &:focus,
+        &:hover {
+            background: rgba(0,0,0,0.2);
+        }
+    }
+}
+
+.subscription-info {
+    background-color: $color1_dark;
+    color: white;
+    padding: 1em 0.5em 0.1em;
+    border-top: 5px solid darken($color1, 20%);
+    margin-top: 4em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+
+    .subscription--credit--label {
+        font-size: 0.8em;
+        margin-bottom: 0.5em;
+        display: block;
+    }
+    .subscription--credit--value {
+        display: block;
+        padding-top: 0.3em;
+
+        .credit {
+            float: left;
+            margin-right: 0.2em;
+            background: white;
+            color: #891E0A;
+            border-radius: 400em;
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5;
+            text-align: center;
+            font-size: 1.4em;
+            position: relative;
+            top: -0.2em;
+            padding: 0 0 0 0px;
+        }
+        a {
+            margin-left: 1em;
+        }
+        .help {
+            display: block;
+            text-transform: none;
+            font-size: 0.8em;
+            margin: -0.5em 0 0;
+
+        }
+    }
+    a {
+        color: $color1_light;
+        text-decoration: underline;
+        letter-spacing: 1px;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+
+.tips-area {
+    margin-top: 2em;
+    padding: 1em 0.5em;
+    font-size: 0.85em;
+    color: #777;
+}
+
+
+.mosfell-message .export,
+.export {
+    font-size: 0.8em;
+    color: #888;
+    padding: 0.5em 0 0;
+    margin-bottom: 1em;
+
+    .export--label {
+
+    }
+    a {
+        text-decoration: underline;
+        color: inherit;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $color1;
+        }
+    }
+}
+
+
+.messages {
+    .logout,
+    &.logout {
+        margin: 3em auto 0;
+        padding: 0.5em 1em 0.5em;
+        background: rgba(255,255,255,0.7);
+        max-width: 500px;
+        color: #891E0A;
+        border-top: 4px solid #891E0A;
+
+        a {
+            margin: 1em auto;
+            display: block;
+        }
+    }
+}
+
+
+.simple-page {
+    margin: 0 auto;
+    width: 80%;
+    padding: 2em 10%;
+    background-color: white;
+    position: relative;
+    
+    &.login {
+        padding: 2em 20%;
+    }
+}
+.h1,
+.simple-page h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin: 0 0 1em;
+}
+
+.avatar.login {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: -80px;
+    
+    &[data-status="on"] {
+        opacity: 1;
+
+        .js-ready & {
+            transition: opacity 1s;
+        }
+    }
+}
+.username-field {
+    position: relative;
+}
+
+
+.import-page {
+    .tabs--content li {
+        min-height: 23em;
+    }
+    .example {
+        float: right;
+        padding: 1em 1em 0;
+        margin-bottom: 1em;
+        width: 45%;
+    }
+    #manual_bulk {
+        width:45%;
+        min-height: 10em;
+    }
+    .contact-list .email {
+        color:inherit;
     }
 }

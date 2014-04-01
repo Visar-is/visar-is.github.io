@@ -169,6 +169,7 @@ table {
         padding: 0.3em 1em;
         transition: top 0.25s,
                     opacity 0.25s;
+        z-index: 100;
 
         &:before {
             content: ' ';
@@ -208,6 +209,7 @@ table {
 .messages {
     background-color: rgb(255,255,255);
     background-color: rgba(255,255,255,0.9);
+    margin-bottom: 1em;
 
     > li {
         padding: 1em 0.5em 0.9em;
@@ -223,6 +225,10 @@ table {
 .t-success[class] {
     color: $color_success;
 }
+.t-error[class] {
+    color: $color_error;
+}
+
 
 .errorlist {
     margin-top: -0.5em;
@@ -329,9 +335,28 @@ table {
         outline: none;
         color: $color1_dark;
     }
+    &.link__inverted {
+        color: white;
+    }
 }
 
+.see-more {
+    text-align: center;
+}
 
 time[title] {
     cursor: help;
+}
+
+
+code {
+    color: $color1_dark;
+}
+
+
+[data-toggle-status="closed"]  {
+    display: none;
+}
+[data-toggle-status="opened"]  {
+    display: block;
 }

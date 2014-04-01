@@ -26,7 +26,9 @@ body,
 .tagline,
 h3, .h3,
 .signup-links .rock,
-.contact-details.t-mini .contact--actions--group {
+.contact-details.t-mini .contact--actions--group,
+input,
+input[type="file"]  {
     font-family: 'AvenirNextLTPro-Regular', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -42,15 +44,9 @@ h6, .h6,
 .errorlist li,
 .list-of--subtitle,
 .message--extra-info h3,
-.message--extra-info h4 {
+.message--extra-info h4,
+.subscription--credit--value {
     font-family: 'AvenirNextLTPro-Demi', sans-serif;
     font-weight: 400;
     font-style: normal;   
 }
-
-/** Moved to svg
-h1 {
-    font-family: 'Avenir Next Condensed', 'AvenirNextLTPro-Demi', sans-serif;
-    font-weight: 900;
-}
-**/
