@@ -804,3 +804,28 @@ main {
         color:inherit;
     }
 }
+
+#csv_preview {
+    overflow: hidden;
+}
+.csv-preview-table {
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    border-top: 1px solid #ddd;
+
+    tr {
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #eee;
+
+        span {
+            display: block;
+        }
+    }
+    th,
+    td {
+        vertical-align: top;
+        padding: 0.5em 1em 1em;
+    }
+}
