@@ -28,7 +28,9 @@ h3, .h3,
 .signup-links .rock,
 .contact-details.t-mini .contact--actions--group,
 input,
-input[type="file"]  {
+input[type="file"],
+.csv-preview-table .empty,
+.csv-preview-table thead .help {
     font-family: 'AvenirNextLTPro-Regular', sans-serif;
     font-weight: 400;
     font-style: normal;

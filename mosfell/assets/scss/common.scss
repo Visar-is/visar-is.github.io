@@ -393,7 +393,17 @@ main {
     background-color: $color1;
     margin-bottom: 5em;
     color: lighten($color1_light, 15%);
+    margin-left: 2em;
 
+    a {
+        color: white;
+        text-decoration: underline;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
     .first-of-all {
         text-transform: uppercase;
         font-size: 0.8em;
@@ -807,11 +817,13 @@ main {
 
 #csv_preview {
     overflow: hidden;
+    clear: both;
 }
 .csv-preview-table {
     border-collapse: collapse;
     margin-bottom: 2em;
     border-top: 1px solid #ddd;
+    font-size: 0.9em;
 
     tr {
         border-bottom: 1px solid #ddd;
@@ -827,5 +839,35 @@ main {
     td {
         vertical-align: top;
         padding: 0.5em 1em 1em;
+    }
+    td {
+        width: 180px;
+    }
+    .empty {
+        color: rgb(200,200,200);
+        color: rgba(0,0,0,.35);
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+    thead {
+        th {
+            background-color: white;
+            line-height: 1;
+        }
+        .first-line {
+            background-color: #eee;
+            
+        }
+        .help {
+            margin-bottom: 0;
+            font-size: 0.7em;
+            text-transform: none;
+        }
+    }
+    select {
+        font-size: 1.1em;
+    }
+    tr:hover * {
+        color: $color1;
     }
 }
