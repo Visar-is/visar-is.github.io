@@ -38,6 +38,9 @@ $(document).ready(function() {
         $('#search_text').html($('.sortable tbody tr:visible').length+' reports match.')
     });
 	
+	// Solves Chrome Bug #350893
+	$("#header object").each(function(){ $(this).load($(this).attr("data")); })
+	
 });
 
 

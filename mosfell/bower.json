@@ -1,0 +1,26 @@
+{
+  "name": "mosfell",
+  "version": "0.1",
+  "authors": [
+    "André Luís <me@andr3.net>"
+  ],
+  "description": "Static assets for Mosfell by Optional.is",
+  "license": "MIT",
+  "homepage": "http://mosfell.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.0"
+  },
+  "devDependencies": {
+    "animate.css": "~3.1.0",
+    "papa-parse": "~2.0.7"
+  }
+}
