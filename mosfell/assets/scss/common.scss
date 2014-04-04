@@ -826,7 +826,8 @@ main {
         color: #666;
     }
     .contact-list input:checked + label + .contact--property-list {
-        background-color: $color1_light;
+        background-color: lighten($color1_light, 20%);
+        color: rgba(0,0,0,0.5);
     }
 }
 
