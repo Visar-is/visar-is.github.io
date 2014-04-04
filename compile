@@ -19,6 +19,6 @@ cat js/lib/bean.js js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messag
 
 cat js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/lib/html5shiv.js js/visar.js | jsmin > js/visar-min.js
 
-cat js/lib/jquery.1.9.1.min.js js/lib/html5shiv.js js/visar.js js/global/messages.js js/lib/sort-table.js | jsmin > js/crm-min.js
+cat js/lib/jquery.1.9.1.min.js js/visar.js js/global/messages.js js/lib/sort-table.js | jsmin > js/crm-min.js
 
 echo "Compiled 4 .js files"
