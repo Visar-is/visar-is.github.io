@@ -73,7 +73,7 @@
         padding: 5% 0;
         text-align: center;
         text-transform: lowercase;
-        color: white;
+        color: #999;
         margin-bottom: 0;
 
         a {
@@ -523,6 +523,14 @@
             }
         }
 
+        .message--extra-info .message--contacts--justopened {
+            width: auto;
+            padding: 0 0 2em;
+
+            .contact-list > li {
+                width: 25%;
+            }
+        }
         .unopened-contacts {
             width: 50%;
             float: left;
