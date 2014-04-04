@@ -110,6 +110,8 @@ header .info {
 nav {
     text-align: right;
     padding: 0 1em;
+    position: relative;
+    z-index: 10;
 
     * {
         text-align: inherit;
@@ -393,7 +395,6 @@ main {
     background-color: $color1;
     margin-bottom: 5em;
     color: lighten($color1_light, 15%);
-    margin-left: 2em;
 
     a {
         color: white;
@@ -805,6 +806,7 @@ main {
         padding: 1em 1em 0;
         margin-bottom: 1em;
         width: 33%;
+        margin-left: 2em;
     }
     #manual_bulk {
         width:45%;
@@ -907,4 +909,10 @@ main {
 }
 #csv_preview .contacts-count {
     float: right;
+}
+
+
+#recipients-list {
+    max-height: 17.4em;
+    overflow: auto;
 }
