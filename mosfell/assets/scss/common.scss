@@ -804,7 +804,7 @@ main {
         float: right;
         padding: 1em 1em 0;
         margin-bottom: 1em;
-        width: 45%;
+        width: 33%;
     }
     #manual_bulk {
         width:45%;
@@ -812,6 +812,21 @@ main {
     }
     .contact-list .email {
         color:inherit;
+    }
+    .contact-list > li {
+        margin-bottom: 0.75em;
+    }
+
+    .contact--property-list {
+        margin-left: 48px;
+        border-bottom: 1px solid $color1;
+        background: white;
+        padding: 0.5em 1em .5em 3em;
+        font-size: 0.8em;
+        color: #666;
+    }
+    .contact-list input:checked + label + .contact--property-list {
+        background-color: $color1_light;
     }
 }
 
@@ -856,7 +871,7 @@ main {
         }
         .first-line {
             background-color: #eee;
-            
+
         }
         .help {
             margin-bottom: 0;
@@ -867,7 +882,28 @@ main {
     select {
         font-size: 1.1em;
     }
-    tr:hover * {
+    tbody tr:hover * {
         color: $color1;
     }
+}
+
+
+.import-option {
+    label {
+        margin: 2em 0;
+    }
+}
+
+
+.contacts-count {
+    color: $color1;
+    text-align: right;
+
+    .number {
+        font-size: 1.4em;
+        letter-spacing: -0.1em;
+    }
+}
+#csv_preview .contacts-count {
+    float: right;
 }
