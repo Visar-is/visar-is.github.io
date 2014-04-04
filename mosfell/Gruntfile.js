@@ -104,7 +104,18 @@ module.exports = function (grunt) {
                         src: ['**'],
                         dest: 'build/img/'
                     },
-                ]
+                ],
+            },
+            vendors: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'vendor/',
+                        src: ['**'],
+                        dest: 'build/vendor/'
+                    },
+                ],
+
             }
         }
     });
