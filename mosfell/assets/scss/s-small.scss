@@ -180,3 +180,75 @@ main {
         margin-top: 1em;
     }  
 }
+
+.main-area,
+.secondary-area {
+    width: auto;
+    float: none;
+}
+
+.secondary-area {
+    padding-top: 2em;
+}
+
+.message--list-of-contacts {
+    display: none;
+}
+.mosfell-message {
+    .message--name {
+        display: block;
+    }
+    .message--contact-count {
+        min-height: 0;
+    }
+}
+
+
+
+.messages {
+    .logout,
+    &.logout {
+        strong {
+            display: block;
+        }
+    }
+}
+
+.simple-page {
+    width: auto;
+    padding: 2em 5% 2em 5%;    
+
+    &.login {
+        padding: 2em 5% 2em 25%;    
+    }
+}
+.import-page {
+    .example {
+        float: none;
+        width: auto;
+        margin-left: 0;
+        padding-bottom: 0.1em;
+    }
+    .tabs .tabs--triggers{
+        li {
+            float: none;
+        }
+        a {
+            display: block;
+            font-size: 0.8em;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+    #manual_bulk {
+        width: 100%;
+    }
+    .contact--property-list {
+        margin-left: 43px;
+    }
+}
+
+.contact-details .contact--actions {
+    padding-right: 103px;
+}
+

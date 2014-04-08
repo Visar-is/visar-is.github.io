@@ -71,6 +71,9 @@
     }
 
     .contact--actions {
+        position: relative;
+        padding-right: 46px;
+
         li {
             font-size: 13px;
             font-size: 0.8rem;
@@ -138,6 +141,43 @@
             font-size: 0.8em;
         }
     }
+    .contact--actions-group--delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+
+        [data-toggle-id] {
+            margin-right: -0em;
+            margin-top: 0;
+            padding: .9em 0.5em 0.7em;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            color: #555;
+            text-decoration: underline;
+
+            &:hover {
+                background-color: $color_error;
+                color: white;
+                text-decoration: none;
+            }
+        }
+        [data-toggle-status="open"] + button {
+            display: none;
+        }
+        form button[type=submit] {
+            padding: 0.8em 0;
+        }
+        .no-js & {
+            [data-toggle-status="closed"] {
+                display: block;
+            }
+            [data-toggle-id] {
+                display: none;
+            }
+        }
+    }
+
     &.t-mini {
         .contact--photo-box {
             width: 37px;
@@ -166,6 +206,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            line-height: 1.2;
         }
         a:hover .p-name {
             color: $color1;
@@ -178,6 +219,67 @@
                 text-decoration: none;
             }
         }
+    }
+
+    &.contact__deleted {
+        * {
+            color: #ccc;
+        }
+        .contact--property-list {
+            * {
+                color: #666;
+            }
+        }
+        img {
+            opacity: 0.2;
+        }
+    }
+
+    header,
+    .contact--actions  {
+        transition: opacity 0.5s,
+                    left 0 0.5s;
+        opacity: 1;
+        position: relative;
+        left: 0;
+        z-index: 9;
+    }
+    .contact--actions > li {
+        transition: opacity 0.5s;
+    }
+
+
+    &:before {
+        content: ' ';
+        display: block;
+        width: 100%;
+        padding: 2em 0 3em;
+        text-align: center;
+        color: rgb(200,200,200);
+        color: rgba(0,0,0,0.4);
+        text-transform: lowercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-shadow: 0px 1px 0px white;
+    }
+    &.contact__removed {
+        pointer-events: none;
+        overflow: hidden;
+
+        header,
+        .contact--actions {
+            left: 15000px;
+        }
+        header,
+        .contact--actions > li {
+            opacity: 0;
+        }
+        &:before {
+            content: 'Contact deleted';
+            z-index: 10;
+        }
+        
     }
 }
 

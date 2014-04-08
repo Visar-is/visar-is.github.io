@@ -26,13 +26,18 @@ body,
 .tagline,
 h3, .h3,
 .signup-links .rock,
-.contact-details.t-mini .contact--actions--group {
+.contact-details.t-mini .contact--actions--group,
+input,
+input[type="file"],
+.csv-preview-table .empty,
+.csv-preview-table thead .help {
     font-family: 'AvenirNextLTPro-Regular', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 nav a,
 strong,
+b,
 h1, .h1,
 h2, .h2,
 h4, .h4,
@@ -42,15 +47,10 @@ h6, .h6,
 .errorlist li,
 .list-of--subtitle,
 .message--extra-info h3,
-.message--extra-info h4 {
+.message--extra-info h4,
+.subscription--credit--value,
+.csv-preview-table th {
     font-family: 'AvenirNextLTPro-Demi', sans-serif;
     font-weight: 400;
     font-style: normal;   
 }
-
-/** Moved to svg
-h1 {
-    font-family: 'Avenir Next Condensed', 'AvenirNextLTPro-Demi', sans-serif;
-    font-weight: 900;
-}
-**/

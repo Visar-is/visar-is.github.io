@@ -3071,14 +3071,17 @@ table {
   left: 2px;
 }
 
-.button.secondary {
+.button.secondary,
+.button.t-secondary {
   background: 0 0;
   color: #ef4323;
   text-decoration: underline;
 }
 
 .button.secondary:focus,
-.button.secondary:hover {
+.button.secondary:hover,
+.button.t-secondary:focus,
+.button.t-secondary:hover {
   text-decoration: none;
 }
 
@@ -3097,7 +3100,7 @@ table {
 }
 
 .button.t-main:hover {
-  background-color: #000;
+  background-color: #591306;
 }
 
 .clearfix:after,
@@ -3131,6 +3134,7 @@ table {
   padding: .3em 1em;
   -webkit-transition: top .25s,opacity .25s;
   transition: top .25s,opacity .25s;
+  z-index: 100;
 }
 
 .tooltip .tooltip--content:before {
@@ -3145,6 +3149,11 @@ table {
   left: 10px;
 }
 
+.tooltip.tooltip__large .tooltip--content {
+  min-width: 20em;
+}
+
+.tooltip:focus .tooltip--content,
 .tooltip:hover .tooltip--content {
   left: -5px;
   top: 100%;
@@ -3160,6 +3169,7 @@ table {
 .messages {
   background-color: #fff;
   background-color: rgba(255,255,255,.9);
+  margin-bottom: 1em;
 }
 
 .messages>li {
@@ -3177,6 +3187,51 @@ table {
 
 .t-success[class] {
   color: #93b410;
+}
+
+.t-error[class] {
+  color: #c00;
+}
+
+.errorlist {
+  margin-top: -.5em;
+  font-size: .85em;
+}
+
+.errorlist li {
+  color: #c00;
+  list-style-type: none;
+  max-width: 500px;
+  padding: .4em 1em .3em;
+  border: 3px solid #c00;
+  border-width: 3px 0 0;
+  position: relative;
+  background-color: rgba(255,255,255,.6);
+}
+
+.errorlist li:before {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-bottom-color: #c00;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.contact--personal [for=id_email]:after,
+.contact--personal [for=id_fn]:after {
+  content: 'required';
+  text-transform: uppercase;
+  background-color: rgba(255,255,255,.7);
+  font-size: .7em;
+  position: relative;
+  top: -.5em;
+  margin-left: .5em;
+  padding: .3em .4em .1em;
+  color: #ef4323;
 }
 
 .info {
@@ -3237,6 +3292,30 @@ table {
   text-decoration: none;
   outline: 0;
   color: #891e0a;
+}
+
+.link.link__inverted {
+  color: #fff;
+}
+
+.see-more {
+  text-align: center;
+}
+
+time[title] {
+  cursor: help;
+}
+
+code {
+  color: #891e0a;
+}
+
+[data-toggle-status=closed] {
+  display: none;
+}
+
+[data-toggle-status=opened] {
+  display: block;
 }
 
 .core {
@@ -3310,7 +3389,7 @@ a:hover text {
   text-transform: uppercase;
   font-size: 14px;
   font-size: .9rem;
-  color: #f8a99a;
+  color: #f4806a;
   padding: .5em 11px;
   line-height: 1;
   position: absolute;
@@ -3355,6 +3434,11 @@ nav button {
 
 nav a:hover,
 nav button:hover {
+  background-color: #891e0a;
+  color: #fff;
+}
+
+nav .t-active a {
   background-color: #ef4323;
   color: #fff;
 }
@@ -3374,6 +3458,10 @@ nav button:hover {
 .list-of .list-of {
   display: inline-block;
   vertical-align: top;
+}
+
+.list-of[data-number="3"] li {
+  width: 33.33%;
 }
 
 .how {
@@ -3539,7 +3627,7 @@ nav button:hover {
 }
 
 .signup-links a:hover .rock {
-  color: #f8a99a;
+  color: #f4806a;
 }
 
 .signup-links a .rock {
@@ -3574,7 +3662,7 @@ nav button:hover {
   padding: 2em 0;
   background-color: #ef4323;
   margin-bottom: 5em;
-  color: #f8a99a;
+  color: #f9bdb2;
 }
 
 .example .first-of-all {
@@ -3613,8 +3701,36 @@ nav button:hover {
   position: relative;
 }
 
-.contact-list li+li {
+.contact-list>.empty[class] {
+  text-align: center;
+  padding: 3em 0;
+  color: #999;
+  width: auto;
+  float: none;
+  text-transform: uppercase;
+}
+
+.contact-list>.empty[class] a {
+  font-size: .8em;
+}
+
+.contact-list>li+li {
   border-top: 1px solid rgba(239,67,35,.2);
+}
+
+.contact-list.t-mini>li {
+  float: left;
+  border-top: 0;
+  margin-right: .5%;
+}
+
+.contact-list.t-mini>li:nth-child(2n) {
+  margin-right: 0;
+  margin-left: .5%;
+}
+
+.contact-list.t-mini>li:nth-child(2n+1) {
+  clear: left;
 }
 
 .contact-list li>input[type=checkbox],
@@ -3626,12 +3742,28 @@ nav button:hover {
 }
 
 .contact-list input:checked+label {
-  background-color: #fffaf9;
+  background-color: #fbd1c9;
   color: #891e0a;
 }
 
 .contact-list input:checked+label img {
   opacity: 1;
+}
+
+.contact-list input:disabled+label,
+.contact-list input:disabled+label:hover {
+  color: #999;
+  background-color: #fff;
+  cursor: default;
+}
+
+.contact-list input:disabled+label .fn {
+  text-decoration: line-through;
+  color: #CCC;
+}
+
+.contact-list input:disabled+label .error {
+  color: #c00;
 }
 
 .contact-list label {
@@ -3677,7 +3809,8 @@ nav button:hover {
 }
 
 .contact-list .extra .email {
-  color: #999;
+  color: #af928c;
+  color: rgba(0,0,0,.3);
 }
 
 .contact-list .extra a {
@@ -3721,6 +3854,214 @@ nav button:hover {
   color: #ef4323;
 }
 
+.page-actions {
+  text-align: right;
+}
+
+.page-actions li+li {
+  margin-left: 1em;
+}
+
+.page-actions .list-of--subtitle {
+  padding: .8em .5em .5em 1em;
+  display: inline-block;
+  font-size: .8em;
+  text-transform: uppercase;
+  color: #ef4323;
+}
+
+.main-area {
+  padding-right: 1%;
+}
+
+.secondary-area {
+  padding-left: 1%;
+}
+
+.dashboard--sent {
+  background-color: #ef4323;
+  padding: .5em 1em 1em;
+}
+
+.dashboard--sent h2 {
+  color: #fff;
+}
+
+.dashboard--sent {
+  padding-bottom: 0;
+}
+
+.dashboard--sent .see-more .link {
+  padding: .5em 1em;
+  display: block;
+  margin: 0 -1em;
+}
+
+.dashboard--sent .see-more .link:focus,
+.dashboard--sent .see-more .link:hover {
+  background: rgba(0,0,0,.2);
+}
+
+.subscription-info {
+  background-color: #891e0a;
+  color: #fff;
+  padding: 1em .5em .1em;
+  border-top: 5px solid #a0230c;
+  margin-top: 4em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.subscription-info .subscription--credit--label {
+  font-size: .8em;
+  margin-bottom: .5em;
+  display: block;
+}
+
+.subscription-info .subscription--credit--value {
+  display: block;
+  padding-top: .3em;
+}
+
+.subscription-info .subscription--credit--value .credit {
+  float: left;
+  margin-right: .2em;
+  background: #fff;
+  color: #891E0A;
+  -moz-border-radius: 400em;
+  border-radius: 400em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.4em;
+  position: relative;
+  top: -.2em;
+  padding: 0;
+}
+
+.subscription-info .subscription--credit--value a {
+  margin-left: 1em;
+}
+
+.subscription-info .subscription--credit--value .help {
+  display: block;
+  text-transform: none;
+  font-size: .8em;
+  margin: -.5em 0 0;
+}
+
+.subscription-info a {
+  color: #f4806a;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.subscription-info a:focus,
+.subscription-info a:hover {
+  text-decoration: none;
+}
+
+.tips-area {
+  margin-top: 2em;
+  padding: 1em .5em;
+  font-size: .85em;
+  color: #777;
+}
+
+.export,
+.mosfell-message .export {
+  font-size: .8em;
+  color: #888;
+  padding: .5em 0 0;
+  margin-bottom: 1em;
+}
+
+.export a,
+.mosfell-message .export a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.export a:focus,
+.export a:hover,
+.mosfell-message .export a:focus,
+.mosfell-message .export a:hover {
+  text-decoration: none;
+  color: #ef4323;
+}
+
+.messages .logout,
+.messages.logout {
+  margin: 3em auto 0;
+  padding: .5em 1em;
+  background: rgba(255,255,255,.7);
+  max-width: 500px;
+  color: #891E0A;
+  border-top: 4px solid #891E0A;
+}
+
+.messages .logout a,
+.messages.logout a {
+  margin: 1em auto;
+  display: block;
+}
+
+.simple-page {
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.h1,
+.simple-page h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: .1em;
+  margin: 0 0 1em;
+}
+
+.avatar.login {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+}
+
+.avatar.login[data-status=on] {
+  opacity: 1;
+}
+
+.js-ready .avatar.login[data-status=on] {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.username-field {
+  position: relative;
+}
+
+.import-page .tabs--content li {
+  min-height: 23em;
+}
+
+.import-page .example {
+  padding: 1em 1em 0;
+  margin-bottom: 1em;
+}
+
+.import-page #manual_bulk {
+  min-height: 10em;
+}
+
+.import-page .contact-list .email {
+  color: inherit;
+}
+
 .contact-details .contact--photo-box {
   height: 128px;
   width: 128px;
@@ -3737,7 +4078,6 @@ nav button:hover {
 }
 
 .contact-details header {
-  position: relative;
   background: #fff;
   padding: .5em 1em .5em 0;
 }
@@ -3747,6 +4087,7 @@ nav button:hover {
   letter-spacing: -.05em;
   line-height: 1;
   margin-right: .4em;
+  text-transform: none;
 }
 
 .contact-details .contact--main-info {
@@ -3764,7 +4105,7 @@ nav button:hover {
 .contact-details .contact--edit a {
   display: block;
   background-color: #d02d0f;
-  color: #f9bdb2;
+  color: #f69482;
   font-size: 14px;
   font-size: .9rem;
   padding: .4em 1em .3em;
@@ -3840,6 +4181,171 @@ nav button:hover {
   color: #666;
 }
 
+.contact-details .contact--last-updated {
+  font-size: .8em;
+  color: #666;
+  display: block;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  line-height: 1;
+  text-align: right;
+}
+
+.contact-details .contact--last-updated span {
+  display: block;
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: .8em;
+}
+
+.contact-details .contact--actions-group--delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
+.contact-details .contact--actions-group--delete [data-toggle-id] {
+  margin-right: -0em;
+  margin-top: 0;
+  padding: .9em .5em .7em;
+  font-size: .8em;
+  text-transform: uppercase;
+  color: #555;
+  text-decoration: underline;
+}
+
+.contact-details .contact--actions-group--delete [data-toggle-id]:hover {
+  background-color: #c00;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-details .contact--actions-group--delete [data-toggle-status=open]+button {
+  display: none;
+}
+
+.contact-details .contact--actions-group--delete form button[type=submit] {
+  padding: .8em 0;
+}
+
+.no-js .contact-details .contact--actions-group--delete [data-toggle-status=closed] {
+  display: block;
+}
+
+.no-js .contact-details .contact--actions-group--delete [data-toggle-id] {
+  display: none;
+}
+
+.contact-details.t-mini .contact--photo-box {
+  width: 37px;
+  height: 37px;
+  position: relative;
+  top: 2px;
+}
+
+.contact-details.t-mini .contact--actions--group {
+  font-size: .9em;
+  position: relative;
+  top: 6px;
+}
+
+.contact-details.t-mini .contact--actions--group+.list-of {
+  position: relative;
+  top: 5px;
+}
+
+.contact-details.t-mini .p-name {
+  font-size: 20px;
+  font-size: 1.3rem;
+  margin: 0 1em 0 0;
+  padding: 0;
+  float: none;
+  letter-spacing: -.05em;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.contact-details.t-mini a:hover .p-name {
+  color: #ef4323;
+}
+
+.contact-details.t-mini a {
+  display: block;
+  position: relative;
+}
+
+.contact-details.t-mini a .help {
+  text-decoration: none;
+}
+
+.contact-details.contact__deleted * {
+  color: #ccc;
+}
+
+.contact-details.contact__deleted .contact--property-list * {
+  color: #666;
+}
+
+.contact-details.contact__deleted img {
+  opacity: .2;
+}
+
+.contact-details .contact--actions,
+.contact-details header {
+  -webkit-transition: opacity .5s,left 0 .5s;
+  transition: opacity .5s,left 0 .5s;
+  opacity: 1;
+  position: relative;
+  left: 0;
+  z-index: 9;
+}
+
+.contact-details .contact--actions>li {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.contact-details:before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  padding: 2em 0 3em;
+  text-align: center;
+  color: #c8c8c8;
+  color: rgba(0,0,0,.4);
+  text-transform: lowercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.contact-details.contact__removed {
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.contact-details.contact__removed .contact--actions,
+.contact-details.contact__removed header {
+  left: 15000px;
+}
+
+.contact-details.contact__removed .contact--actions>li,
+.contact-details.contact__removed header {
+  opacity: 0;
+}
+
+.contact-details.contact__removed:before {
+  content: 'Contact deleted';
+  z-index: 10;
+}
+
 .contact--form {
   max-width: 700px;
   margin-left: auto;
@@ -3849,12 +4355,6 @@ nav button:hover {
 .contact--form .avatar {
   width: 128px;
   height: 128px;
-}
-
-.contact--form .contact--photo-box {
-  float: right;
-  width: 128px;
-  text-align: right;
 }
 
 .frm-recipients .info {
@@ -3870,10 +4370,11 @@ form label {
 form input[type=date],
 form input[type=email],
 form input[type=number],
+form input[type=password],
 form input[type=text],
 form input[type=url],
 form textarea {
-  padding: .2em .4em .1em;
+  padding: .5em .4em .4em;
   border: 1px solid #595959;
   font: inherit;
   width: 100%;
@@ -3884,6 +4385,7 @@ form textarea {
 form input[type=date]:focus,
 form input[type=email]:focus,
 form input[type=number]:focus,
+form input[type=password]:focus,
 form input[type=text]:focus,
 form input[type=url]:focus,
 form textarea:focus {
@@ -3910,8 +4412,8 @@ form fieldset legend {
   color: #888;
 }
 
-.new-message {
-  text-align: right;
+form .buttons {
+  padding: 1em 0;
 }
 
 .message-list-item {
@@ -3953,7 +4455,13 @@ form fieldset legend {
 
 .message-list-item.t-sent,
 .message-list-item.t-sent .section-title {
-  background-color: #fff;
+  background-color: #ef4323;
+  color: #fff;
+}
+
+.message-list-item.t-sent .section-title span {
+  color: #fff;
+  color: rgba(255,255,255,.7);
 }
 
 .message-list-item.t-dashed,
@@ -3966,9 +4474,18 @@ form fieldset legend {
   padding: 5% 0;
   text-align: center;
   text-transform: lowercase;
-  text-shadow: 0 1px 0 rgba(255,255,255,.6);
-  color: #999;
+  color: #fff;
   margin-bottom: 0;
+}
+
+.message-list-item .empty a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.message-list-item .empty a:focus,
+.message-list-item .empty a:hover {
+  text-decoration: none;
 }
 
 .message-list li {
@@ -3981,12 +4498,13 @@ form fieldset legend {
 
 .mosfell-message>a {
   display: block;
-  padding: .5em 1em 1.2em;
-  background: RGBA(239,67,35,.03);
+  padding: .5em 1em 1.2em 2em;
+  background: #fff;
+  position: relative;
 }
 
 .mosfell-message>a:hover {
-  background: RGBA(239,67,35,.1);
+  background: RGBA(255,255,255,.95);
 }
 
 li+li .mosfell-message {
@@ -3996,14 +4514,15 @@ li+li .mosfell-message {
 .mosfell-message:before {
   position: absolute;
   top: -.1em;
-  left: 1.2em;
+  left: 2.6em;
   content: "#" attr(data-id);
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
   font-size: .8em;
   color: #999;
   color: rgba(0,0,0,.2);
-  opacity: 0;
+  opacity: .0001;
+  z-index: 10;
 }
 
 .mosfell-message:hover::before {
@@ -4021,6 +4540,7 @@ li+li .mosfell-message {
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 0 .3em;
+  position: relative;
 }
 
 .mosfell-message header>* {
@@ -4042,6 +4562,7 @@ li+li .mosfell-message {
   font-size: .8em;
   min-width: 8em;
   text-align: right;
+  border-bottom: 1px solid #fff;
 }
 
 .mosfell-message .message--contact-count span {
@@ -4052,7 +4573,7 @@ li+li .mosfell-message {
 
 .mosfell-message .message--list-of-contacts {
   height: 100%;
-  float: left;
+  max-width: 100%;
 }
 
 .mosfell-message .message--list-of-contacts img {
@@ -4100,7 +4621,7 @@ li+li .mosfell-message {
   color: rgba(0,0,0,.4);
   text-transform: uppercase;
   float: left;
-  width: 7em;
+  width: 4em;
 }
 
 .mosfell-message .message--meta dd {
@@ -4110,7 +4631,19 @@ li+li .mosfell-message {
 }
 
 .mosfell-message .message--meta dd+dt {
-  margin-left: 2em;
+  margin-left: 0;
+  clear: left;
+  position: relative;
+}
+
+.mosfell-message .message--meta dd+dt:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #fff;
 }
 
 .mosfell-message .message--meta .message--date {
@@ -4130,12 +4663,305 @@ li+li .mosfell-message {
   color: #891e0a;
 }
 
+.mosfell-message a:hover .message--progress[class],
+.mosfell-message.message__full .message--progress[class] {
+  width: 2em;
+}
+
+.mosfell-message a:hover .message--progress[class] .message--progress--value span,
+.mosfell-message.message__full .message--progress[class] .message--progress--value span {
+  opacity: 1;
+}
+
+.mosfell-message .message--progress[class] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0,0,0,.1);
+  width: 2px;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  font-size: 13px;
+  font-size: .8rem;
+}
+
+.mosfell-message .message--progress[class] .message--progress--value {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  background-color: #891e0a;
+  color: #fff;
+  font-size: .75em;
+  letter-spacing: -1px;
+}
+
+.mosfell-message .message--progress[class] .message--progress--value span {
+  position: relative;
+  left: 0;
+  text-align: center;
+  width: 2em;
+  opacity: 0;
+  padding: 2px;
+  display: block;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.mosfell-message .message--progress[class] progress[value='0.0']+.message--progress--value span {
+  bottom: 1.5em;
+  color: #891e0a;
+}
+
+.mosfell-message.message__full:before {
+  opacity: 1;
+  z-index: 1;
+  left: 2.4em;
+}
+
+.mosfell-message.message__full a {
+  padding-bottom: .5em;
+}
+
+.mosfell-message.message__full .empty {
+  font-size: .8em;
+  color: rgba(255,255,255,.5);
+  display: block;
+  text-align: center;
+}
+
+.mosfell-message.message__full .message--message {
+  background-color: #dfdfdf;
+  color: #333;
+  padding: 2em;
+}
+
+.mosfell-message.message__full .message--message h3 {
+  font-size: .8em;
+  margin-bottom: .5em;
+  color: #AAA;
+}
+
+.mosfell-message.message__full .message--extra-info {
+  background-color: #333;
+  color: #eee;
+  padding: 2em;
+  list-style-type: none;
+}
+
+.mosfell-message.message__full .message--extra-info a {
+  color: #f4806a;
+}
+
+.mosfell-message.message__full .message--extra-info .message--contacts--count,
+.mosfell-message.message__full .message--extra-info h3>span {
+  font-size: 13px;
+  font-size: .8rem;
+  background-color: #444;
+  color: #eee;
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+  -moz-border-radius: 500em;
+  border-radius: 500em;
+  text-align: center;
+  line-height: 2;
+  vertical-align: top;
+  top: -1em;
+  white-space: nowrap;
+  position: relative;
+}
+
+.mosfell-message.message__full .message--extra-info .message--contacts--count span,
+.mosfell-message.message__full .message--extra-info h3>span span {
+  font-size: .8em;
+  position: absolute;
+  left: 100%;
+  color: #666;
+  top: 50%;
+  margin-top: -.5em;
+  margin-left: .5em;
+}
+
+.mosfell-message.message__full .message--extra-info>li {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #777;
+}
+
+.mosfell-message.message__full .message--extra-info>li h3 {
+  font-size: 2em;
+  line-height: 1;
+}
+
+.mosfell-message.message__full .message--extra-info>li h4 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin-bottom: .3em;
+  text-transform: uppercase;
+}
+
+.mosfell-message.message__full .message--extra-info>li .bounced {
+  background-color: rgba(255,255,255,.8);
+  padding: 1em 2em;
+  margin: 0 0 1em;
+  color: #c00;
+}
+
+.mosfell-message.message__full .message--extra-info>li .bounced a {
+  color: maroon;
+}
+
+.mosfell-message.message__full .message--extra-info>li.odd,
+.mosfell-message.message__full .message--extra-info>li:nth-child(2n+1) {
+  clear: left;
+}
+
+.mosfell-message.message__full .message--extra-info>li .contact-list li {
+  border: 0;
+  font-size: 19px;
+  font-size: 1.2rem;
+  float: left;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.mosfell-message.message__full .message--extra-info>li .contact-list li a {
+  background-color: #141414;
+  background-color: rgba(0,0,0,.5);
+  padding: .2em .5em;
+  position: relative;
+  display: block;
+  width: 100%;
+  letter-spacing: -1px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mosfell-message.message__full .message--extra-info>li .contact-list li a:hover {
+  text-decoration: none;
+}
+
+.mosfell-message.message__full .message--extra-info>li .contact-list li .email {
+  font-size: .7em;
+  letter-spacing: 0;
+  color: #666;
+  display: block;
+  margin-left: 2em;
+}
+
+.mosfell-message.message__full .message--extra-info .avatar {
+  width: 38px;
+  height: 38px;
+  margin-right: .2em;
+  position: relative;
+  top: 0;
+  display: inline-block;
+  float: left;
+  left: -6px;
+}
+
+.mosfell-message.message__full .message--name {
+  display: block;
+  font-size: 2.3em;
+}
+
+.mosfell-message.message__full .message--date {
+  color: #999;
+}
+
+.mosfell-message.message__full .message--contact--stats {
+  list-style-type: none;
+  background-color: rgba(255,255,255,.1);
+  margin: 1em 0 1.5em;
+}
+
+.mosfell-message.message__full .message--contact--stats li {
+  width: 33.333%;
+  float: left;
+  padding: 1.5em 2em;
+}
+
+.mosfell-message.message__full .message--contact--stats[data-number="2"] li {
+  width: 50%;
+}
+
+.mosfell-message.message__full .message--contact--stats[data-number="4"] li {
+  width: 25%;
+}
+
+.mosfell-message.message__full .message--stats--value {
+  font-size: 2.3em;
+  margin-right: .2em;
+}
+
+.mosfell-message.message__full .message--stats--description .tooltip {
+  color: #f4806a;
+  border-bottom: 1px dotted #f4806a;
+  opacity: .8;
+  font-size: .75em;
+}
+
+.mosfell-message.message__full .message--contacts--unopened .empty {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.mosfell-message.message__full .message--contacts--unopened a {
+  color: #888;
+}
+
+.mosfell-message.message__full .message--contacts--unsubscribed .empty,
+.mosfell-message.message__full .message--contacts--updated .empty {
+  padding: 1em 0;
+}
+
+.mosfell-message.message__full .updated-contacts a {
+  color: #B4EA5D;
+}
+
+.mosfell-message.message__full .unsubscribed-contacts a {
+  color: #E85E60;
+}
+
+.mosfell-message.message__full .unsubscribed-contacts a .fn {
+  text-decoration: line-through;
+}
+
+.mosfell-message.message__full .unsubscribed-contacts a:hover {
+  text-decoration: none;
+}
+
+.mosfell-message.message__full .unsubscribed-contacts .avatar {
+  -webkit-filter: grayscale(1);
+  -webkit-transform: translateZ(0);
+  opacity: .5;
+}
+
+.mosfell-message.message__full .message--extra-info .contact-list.bounced-contacts a {
+  background: #fff;
+  background: rgba(255,255,255,.8);
+  color: #c00;
+}
+
+.mosfell-message .more {
+  line-height: 2.7;
+  font-size: 12px;
+  font-size: .75rem;
+  padding: 0 .5em;
+  color: #aaa;
+}
+
 body {
   font-size: .9em;
 }
 
 .core {
-  width: 98%;
+  width: 95%;
 }
 
 header {
@@ -4250,6 +5076,181 @@ main {
   width: 100%;
 }
 
+.contact--form .contact--photo-box {
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+.contact-list.t-mini>li {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.page-actions .button {
+  font-size: .7em;
+  padding: .7em 1em .5em;
+}
+
+@media only screen and (max-width:400px) {
+  .contact-list.t-mini .contact--actions>li {
+    display: block;
+  }
+
+  .contact-list.t-mini .contact--actions-group--export {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+.mosfell-message.message__full .message--extra-info>li .contact-list li {
+  width: 100%;
+}
+
+.mosfell-message.message__full .message--contacts--unsubscribed,
+.mosfell-message.message__full .message--contacts--updated,
+.mosfell-message.message__full .message--extra-info>li .bounced,
+.mosfell-message.message__full .unopened-contacts {
+  width: 100%;
+  float: none;
+}
+
+.mosfell-message.message__full .message--stats--value {
+  float: none;
+  width: auto;
+  text-align: center;
+}
+
+.mosfell-message.message__full em.highlight {
+  white-space: normal;
+  padding: 0;
+  background-color: none;
+}
+
+.mosfell-message.message__full .message--extra-info>li .bounced {
+  margin-top: 1em;
+}
+
+.main-area,
+.secondary-area {
+  width: auto;
+  float: none;
+}
+
+.secondary-area {
+  padding-top: 2em;
+}
+
+.message--list-of-contacts {
+  display: none;
+}
+
+.mosfell-message .message--name {
+  display: block;
+}
+
+.mosfell-message .message--contact-count {
+  min-height: 0;
+}
+
+.messages .logout strong,
+.messages.logout strong {
+  display: block;
+}
+
+.simple-page {
+  width: auto;
+  padding: 2em 5%;
+}
+
+.simple-page.login {
+  padding: 2em 5% 2em 25%;
+}
+
+.import-page .example {
+  float: none;
+  width: auto;
+}
+
+.import-page .tabs .tabs--triggers li {
+  float: none;
+}
+
+.import-page .tabs .tabs--triggers a {
+  display: block;
+  font-size: .8em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.import-page #manual_bulk {
+  width: 100%;
+}
+
+.contact-details .contact--actions {
+  padding-right: 103px;
+}
+
+.tabs li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.tabs .tabs--triggers {
+  font-size: 0;
+  border-bottom: 4px solid #ef4323;
+}
+
+.tabs .tabs--triggers li {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.tabs .tabs--triggers a {
+  display: inline-block;
+  padding: 1em 2em .7em;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #ef4323;
+}
+
+.tabs .tabs--triggers a:focus,
+.tabs .tabs--triggers a:hover {
+  background-color: #891e0a;
+  color: #fff;
+}
+
+.tabs .tabs--triggers .active a {
+  background-color: #ef4323;
+  color: #fff;
+}
+
+.tabs .tabs--content {
+  margin-bottom: 1em;
+}
+
+.tabs .tabs--content li {
+  display: none;
+  background-color: #fff;
+  padding: 1.5em 2em;
+}
+
+.tabs .tabs--content .active,
+.tabs .tabs--content :target {
+  display: block;
+}
+
+.js-ready .tabs--content :target {
+  display: none;
+}
+
+.js-ready .tabs--content .active {
+  display: block;
+}
+
 @font-face {
   font-family: AvenirNextLTPro-Demi;
   src: url(/webfonts/26E8D5_3_0.eot);
@@ -4268,22 +5269,30 @@ main {
   src: url(/webfonts/VisarPies.eot?#iefix) format("embedded-opentype"),url(/webfonts/VisarPies.woff) format("woff"),url(/webfonts/VisarPies.ttf) format("truetype");
 }
 
+.contact-details.t-mini .contact--actions--group,
 .h3,
 .signup-links .rock,
 .tagline,
 body,
-h3 {
+h3,
+input,
+input[type=file] {
   font-family: AvenirNextLTPro-Regular,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+.errorlist li,
 .h1,
 .h2,
 .h4,
 .h5,
 .h6,
+.list-of--subtitle,
+.message--extra-info h3,
+.message--extra-info h4,
 .signup-links a,
+.subscription--credit--value,
 h1,
 h2,
 h4,
