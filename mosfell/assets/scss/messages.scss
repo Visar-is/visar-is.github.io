@@ -53,6 +53,9 @@
                 color: rgba(255,255,255,0.7);
             }
         }
+        .empty {
+            color: rgba(255,255,255,0.7);
+        }
     }
     &.t-dashed {
         &,
@@ -89,9 +92,21 @@
 }
 
 
-.message-list li {
-    margin-bottom: 0;
+.message-list {
+    li {
+        margin-bottom: 0;
+        list-style-type: none;
+    }
+    .dashboard--sent & {
+        .empty {
+            padding: 4em 0em;
+            background-color: white;
+            text-align: center;
+            color: #999;
+        }
+    }
 }
+
 
 .mosfell-message {
     position: relative;

@@ -430,7 +430,8 @@ main {
     padding: 0 2%;
 }
 .frm-recipients .button {
-    margin-right: 2em;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 .frm-recipients .info {
@@ -915,4 +916,18 @@ main {
 #recipients-list {
     max-height: 30em;
     overflow: auto;
+}
+
+
+
+.dashboard__new {
+    .tips-area {
+        background-color: white;
+        padding: 2em 3em;
+        margin-bottom: 2em;
+
+        > * {
+            max-width: 40em;
+        }
+    }
 }
