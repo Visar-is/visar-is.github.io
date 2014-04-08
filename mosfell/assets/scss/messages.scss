@@ -189,7 +189,6 @@
         clear: both;
         padding: 1em 0em;
         font-size: 0.8em;
-        color: $color2_dark;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -197,6 +196,7 @@
 
         padding: 0;
         color: #999;
+
     }
     .message--meta {
         dl {
@@ -264,6 +264,16 @@
 
             .message--progress--value span {
                 opacity: 1;
+            }
+        }
+        .message--preview {
+            color: #333;
+
+            p {
+                margin-bottom: 1em;
+                line-height: 1.6;
+                max-width: 40em;
+                white-space: normal;
             }
         }
     }
@@ -475,7 +485,7 @@
             li {
                 width: 33.333%;
                 float: left;
-                padding: 1.5em 2em;
+                padding: 1.5em 0em 1.5em 0.5em;
             }
             &[data-number="2"] {
                 li {
@@ -573,5 +583,59 @@
         font-size: 0.75rem;
         padding: 0 0.5em;
         color: #aaa;
+    }
+    .highlight {
+        white-space: normal;
+    }
+}
+
+
+.message--message-box {
+    padding: 0.5em 1em;
+    margin: 0 -1em;
+    background-color: #e3e3e3;
+    margin-bottom: 1em;
+}
+.message--preview--fixed-text {
+    font-size: 0.8em;
+    color: #444;
+    background-color: #ccc;
+    border: 1px solid #999;
+    padding: 1em;
+    max-width: 500px;
+    max-height: 21em;
+    overflow: auto;
+    margin-bottom: 1em;
+
+    h3,
+    .h3 {
+        font-size: 1.15em;
+        margin-bottom: 0.5em;
+    }
+    .fake-link {
+        background-color: #999;
+        color: white;
+        padding: 0.4em 0.6em;
+        white-space: nowrap;
+        display: inline-block;
+    }
+    .message--preview--header {
+        p {
+            line-height: 1.5;
+        }
+    }
+    .message--preview--fields {
+        strong {
+            text-transform: uppercase;
+        }
+        p,
+        li {
+            list-style-type: none;
+            margin-bottom: 1em;
+            line-height: 1.1;
+        }
+    }
+    .empty {
+        color: #999;
     }
 }
