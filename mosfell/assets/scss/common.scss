@@ -916,6 +916,10 @@ main {
 #recipients-list {
     max-height: 30em;
     overflow: auto;
+
+    :disabled + label .fn {
+        text-decoration: line-through;
+    }
 }
 
 
@@ -931,3 +935,4 @@ main {
         }
     }
 }
+
