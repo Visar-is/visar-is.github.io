@@ -115,8 +115,18 @@ module.exports = function (grunt) {
                         dest: 'build/vendor/'
                     },
                 ],
+            },
+            icons: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'assets/icons/',
+                        src: ['**'],
+                        dest: 'build/icons/'
+                    },
+                ],
+            },
 
-            }
         }
     });
 
