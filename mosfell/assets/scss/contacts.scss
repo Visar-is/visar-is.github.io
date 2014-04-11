@@ -281,6 +281,18 @@
         }
         
     }
+    &.unsubscribed {
+        header *,
+        &.t-mini .p-name {
+            color: #999;
+        }
+        .p-name .small-label.unsubscribed {
+            color: $color_error;
+        }
+        .contact--photo-box {
+            opacity: 0.3;
+        }
+    }
 }
 
 .contact--form {

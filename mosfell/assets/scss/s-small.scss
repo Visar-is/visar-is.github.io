@@ -252,3 +252,35 @@ main {
     padding-right: 103px;
 }
 
+
+.page-simple-page .messages {
+    max-width: none;
+}
+
+nav {
+    position: static;
+
+    ul.core .profile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3em;
+        text-align: center;
+
+        a {
+            height: 39px;
+            line-height: 29px;
+            
+            &:focus,
+            &:hover {
+            }
+        }
+        &.t-active {
+            a {
+                background-color: $color1_dark;
+            }
+        }
+    }
+}
+
+
