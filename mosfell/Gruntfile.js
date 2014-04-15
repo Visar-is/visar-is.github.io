@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     //"vendor/jquery2/jquery.js"
-                    "assets/js/*.js"
+                    "build/js/src/*.js"
                 ],
                 dest: "build/js/production.js"
             },
@@ -41,8 +41,8 @@ module.exports = function (grunt) {
                 livereload: true
             },
             scripts: {
-                files: ["assets/js/*.js"],
-                tasks: ["concat", "uglify"],
+                files: ["assets/js/**/*.js"],
+                tasks: ["copy", "concat", "uglify"],
                 options: {
                     spawn: false
                 }
@@ -96,13 +96,23 @@ module.exports = function (grunt) {
         },
 
         copy: {
-            main: {
+            img: {
                 files: [
                     {
                         expand: true,
                         cwd: 'assets/img/',
                         src: ['**'],
                         dest: 'build/img/'
+                    },
+                ]
+            },
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'assets/js/',
+                        src: ['**'],
+                        dest: 'build/js/src/'
                     },
                 ],
             },
