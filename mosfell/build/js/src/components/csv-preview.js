@@ -1,45 +1,11 @@
 "use strict";
 
-var forEach = function (list, callback) {
-    for (var i = 0; i < list.length; i++) {
-        callback(list[i], i, list);
-    }
-};
-
-var $1 = document.querySelector;
-
-var AjaxReq = function (url, callback, method) {
-    var httpRequest;
-    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-        httpRequest = new XMLHttpRequest();
-    } else if (window.ActiveXObject) { // IE 8 and older
-        httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    httpRequest.onreadystatechange = function (xhr) {
-        if (xhr.currentTarget.readyState === 4) {
-            callback(xhr.currentTarget);
-        }
-    };
-
-    httpRequest.open(method || "GET", url, true);
-    httpRequest.send(null);
-
-    return httpRequest;
-};
-
-var body = document.querySelector('body');
-body.className += (body.className != '' ? ' ':'') + 'js-ready';
-
-"use strict";
-
 // Import CSV / Excel
-var csvPreview = function (element) {
+var PreviewCSV = function (element) {
     var csvPreviewTable,
         field,
         headerFields = [],
-        previewLimit = 5,
-        input = $(element),
-        previewIn = $('#' + input.attr('data-preview-in') || 'csv_preview' ),
+        
         defaultHeaderFields = [
             {key: 'fn', value: 'Full name'},
             {key: 'email', value: 'Email'},
@@ -53,11 +19,15 @@ var csvPreview = function (element) {
             {key: 'region', value: 'Region'},
             {key: 'country', value: 'Country'},
             {key: 'private_notes', value: 'Notes'}
-        ],
-        currentHeaderFields = defaultHeaderFields,
-        defaultHeaderSelect = $('<select class="header-select"></select>'),
-        columnListEl = input.closest('form').find('[name=csv_columns_list]')
+        ]
     ;
+
+    this.defaultHeaderSelect = $('<select class="header-select"></select>');
+    this.currentHeaderFields = this.defaultHeaderFields;
+    this.input = $(element);
+    this.previewIn = $('#' + this.input.attr('data-preview-in') || 'csv_preview' );
+    this.columnListEl = this.input.closest('form').find('[name=csv_columns_list]');
+    this.previewLimit = 5;
 
     this.init(element);
 };
@@ -69,39 +39,57 @@ PreviewCSV.autoInit = function () {
     }
 };
 
-$.extend(csvPreview, {
+$.extend(PreviewCSV.prototype, {
+    defaultHeaderFields: [
+        {key: 'fn', value: 'Full name'},
+        {key: 'email', value: 'Email'},
+        {key: 'phone', value: 'Phone'},
+        {key: 'job_title', value: 'Job Title'},
+        {key: 'organization', value: 'Organization'},
+        {key: 'street_address', value: 'Street Address'},
+        {key: 'additional_address', value: 'Additional Address'},
+        {key: 'postal_code', value: 'Postal Code'},
+        {key: 'city', value: 'City'},
+        {key: 'region', value: 'Region'},
+        {key: 'country', value: 'Country'},
+        {key: 'private_notes', value: 'Notes'}
+    ],
 
     init: function (element) {
 
         // Prepare header select
-        var defaultHeaderFieldsNumbered = [];
-        for (field in defaultHeaderFields) {
-            defaultHeaderSelect.append($('<option />').val(defaultHeaderFields[field].key).text(defaultHeaderFields[field].value));
-        }
-        defaultHeaderSelect.append($('<option/>').val('skip').text('(Don\'t import this)'));
+        var defaultHeaderFieldsNumbered = [],
+            field,
+            previewIn = this.previewIn,
+            self = this;
 
-        input.change(function (event) {
+        for (field in this.defaultHeaderFields) {
+            this.defaultHeaderSelect.append($('<option />').val(this.defaultHeaderFields[field].key).text(this.defaultHeaderFields[field].value));
+        }
+        this.defaultHeaderSelect.append($('<option/>').val('skip').text('(Don\'t import this)'));
+
+        this.input.change(function (event) {
             if (previewIn) {
                 previewIn.html('');
 
                 previewIn.append($('<p class="contacts-count"><span class="number"></span> <span class="words"></span></p>'));
                 previewIn.append($('<p><strong>Please, check if the columns are correct.</strong> If not, pick the correct one for each line.</p>'));
 
-                csvPreviewTable = $('<table class="csv-preview-table"></table>').appendTo(previewIn);
+                self.csvPreviewTable = $('<table class="csv-preview-table"></table>').appendTo(previewIn);
 
-                csvPreviewTable.append($('<thead><tr><th class="first-line">First line<span class="help rock">(confirm the fields are correctly applied)</span></th><th colspan="5">Other lines</th></tr></thead>'));
-                var updateColumnList = function () {
+                self.csvPreviewTable.append($('<thead><tr><th class="first-line">First line<span class="help rock">(confirm the fields are correctly applied)</span></th><th colspan="5">Other lines</th></tr></thead>'));
+                var updateColumnList = $.proxy(function () {
                     //console.log(currentHeaderFields);
                     var str = '';
-                    for (field in currentHeaderFields) {
-                        str += (str==''?'':',') + currentHeaderFields[field].key;
+                    for (field in self.currentHeaderFields) {
+                        str += (str==''?'':',') + self.currentHeaderFields[field].key;
                     }
-                    columnListEl.val(str);
-                }
+                    self.columnListEl.val(str);
+                }, this);
                 
                 updateColumnList();
 
-                input.parse({
+                self.input.parse({
                     config: {
                         header: false,
                         dynamicTyping: false,
@@ -110,8 +98,8 @@ $.extend(csvPreview, {
                     complete: function (data) {
                         console.log('Completed CSV file parsing');
                         var rows = [];
-                        var tbody = csvPreviewTable.append($('tbody'));
-                        var counter = previewIn.find('.contacts-count');
+                        var tbody = self.csvPreviewTable.append($('tbody'));
+                        var counter = self.previewIn.find('.contacts-count');
                         var count = data.results.length;
                         counter
                             .find('.number')
@@ -122,19 +110,19 @@ $.extend(csvPreview, {
                             .html(' ' + (count != 1 ? 'items detected':'item detected') )
                         ;
 
-                        for (var i=0;i<data.results.length && i<previewLimit;i++) {(function (row) {
+                        for (var i=0;i<data.results.length && i<self.previewLimit;i++) {(function (row) {
                             for (var j=0; j<row.length; j++) {(function (column) {
                                 
                                 if (i === 0) {
                                     var rowEl = rows[j] = $('<tr></tr>').appendTo(tbody);
                                     var header = $('<th></th>');
-                                    var columnSelect = defaultHeaderSelect.clone();
+                                    var columnSelect = self.defaultHeaderSelect.clone();
                                     header.append($('<span />').html(column == '' ? '<span class="empty">empty</span>':column));
                                     header.append(columnSelect);
-                                    columnSelect.val(defaultHeaderFields[j].key);
+                                    columnSelect.val(self.defaultHeaderFields[j].key);
                                     columnSelect.attr('data-index', j);
                                     columnSelect.change(function () {
-                                        currentHeaderFields[columnSelect.attr('data-index')] = { key: columnSelect.val(), value: columnSelect.html() };
+                                        self.currentHeaderFields[columnSelect.attr('data-index')] = { key: columnSelect.val(), value: columnSelect.html() };
                                         updateColumnList();
                                     });
                                     
