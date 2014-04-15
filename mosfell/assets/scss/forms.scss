@@ -28,6 +28,11 @@ form {
             color: $color1;
         }
     }
+    input[type=checkbox],
+    input[type=radio] {
+        cursor: pointer;
+        cursor: hand;
+    }
 
     .form-actions {
         line-height: 3;
