@@ -430,7 +430,8 @@ main {
     padding: 0 2%;
 }
 .frm-recipients .button {
-    margin-right: 2em;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 .frm-recipients .info {
@@ -913,6 +914,51 @@ main {
 
 
 #recipients-list {
-    max-height: 17.4em;
+    max-height: 30em;
     overflow: auto;
+
+    :disabled + label .fn {
+        text-decoration: line-through;
+    }
+}
+
+
+
+.dashboard__new {
+    .tips-area {
+        background-color: white;
+        padding: 2em 3em;
+        margin-bottom: 2em;
+
+        > * {
+            max-width: 40em;
+        }
+    }
+}
+
+
+.page-simple-page .messages {
+    max-width: 80%;
+    margin: 0 auto 1em;
+}
+
+.profile-password {
+    background-color: #eee;
+    padding: 1em;
+}
+
+.subscription-info .subscription--credit--value a.buy-credit,
+.buy-credit {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    margin: 0.5em 0 -0.5em;
+    background-color: rgba(255,255,255,0.1);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: white;
+        background-color: rgba(255,255,255,0.4);        
+    }
 }

@@ -10,7 +10,16 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     //"vendor/jquery2/jquery.js"
-                    "assets/js/*.js"
+                    "vendor/jquery/dist/jquery.js",
+                    "vendor/papa-parse/jquery.parse.js",
+
+                    "build/js/src/base.js",
+                    "build/js/src/components/toggles.js",
+                    "build/js/src/components/tabs.js",
+                    "build/js/src/components/avatar-preview.js",
+                    "build/js/src/components/csv-preview.js",
+                    "build/js/src/pages/messages.js",
+                    "build/js/src/pages/contacts.js"
                 ],
                 dest: "build/js/production.js"
             },
@@ -18,9 +27,17 @@ module.exports = function (grunt) {
                 src: [
                     "vendor/normalize-css/normalize.css",
                     "vendor/animate.css/animate.css",
-                    "build/css/*.css"
+                    "build/css/src/base.css",
+                    "build/css/src/common.css",
+                    "build/css/src/typography.css",
+                    "build/css/src/icons.css",
+                    
+                    "build/css/src/messages.css",
+                    "build/css/src/forms.css",
+                    "build/css/src/contacts.css",
+                    "build/css/src/tabs.css"
                 ],
-                dest: "build/all.css"
+                dest: "build/css/min/all.css"
             }
         },
 
@@ -41,8 +58,8 @@ module.exports = function (grunt) {
                 livereload: true
             },
             scripts: {
-                files: ["assets/js/*.js"],
-                tasks: ["concat", "uglify"],
+                files: ["assets/js/**/*.js"],
+                tasks: ["copy", "concat", "uglify"],
                 options: {
                     spawn: false
                 }
@@ -67,7 +84,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: "assets/scss/",
                         src: ["*.scss"],
-                        dest: "build/css",
+                        dest: "build/css/src/",
                         ext: ".css"
                     }
                 ]
@@ -81,28 +98,38 @@ module.exports = function (grunt) {
                 diff: 'build/autoprefixer.diff'
             },
             dist: {
-                src: 'build/*.css'
+                src: 'build/css/min/*.css'
             }
         },
 
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'build/',
+                cwd: 'build/css/min/',
                 src: ['*.css', '!*.min.css'],
-                dest: 'build/',
+                dest: 'build/css/',
                 ext: '.min.css'
             }
         },
 
         copy: {
-            main: {
+            img: {
                 files: [
                     {
                         expand: true,
                         cwd: 'assets/img/',
                         src: ['**'],
                         dest: 'build/img/'
+                    },
+                ]
+            },
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'assets/js/',
+                        src: ['**'],
+                        dest: 'build/js/src/'
                     },
                 ],
             },
@@ -115,8 +142,26 @@ module.exports = function (grunt) {
                         dest: 'build/vendor/'
                     },
                 ],
-
+            },
+            icons: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'assets/icons/',
+                        src: ['**'],
+                        dest: 'build/icons/'
+                    },
+                ],
+            },
+            "css-mq": {
+                files: [{
+                        expand: true,
+                        cwd: 'build/css/src/',
+                        src: ['**'],
+                        dest: 'build/css/min/'
+                }]
             }
+
         }
     });
 
