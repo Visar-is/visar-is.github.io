@@ -1,0 +1,59 @@
+.tabs li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.tabs .tabs--triggers {
+  font-size: 0;
+  border-bottom: 4px solid #ef4323;
+}
+
+.tabs .tabs--triggers li {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.tabs .tabs--triggers a {
+  display: inline-block;
+  padding: 1em 2em 0.7em;
+  background-color: white;
+  text-transform: uppercase;
+  color: #ef4323;
+}
+
+.tabs .tabs--triggers a:focus,
+.tabs .tabs--triggers a:hover {
+  background-color: #891e0a;
+  color: white;
+}
+
+.tabs .tabs--triggers .active a {
+  background-color: #ef4323;
+  color: white;
+}
+
+.tabs .tabs--content {
+  margin-bottom: 1em;
+}
+
+.tabs .tabs--content li {
+  display: none;
+  background-color: white;
+  padding: 1.5em 2em;
+}
+
+.tabs .tabs--content :target,
+.tabs .tabs--content .active {
+  display: block;
+}
+
+.js-ready .tabs--content :target {
+  display: none;
+}
+
+.js-ready .tabs--content .active {
+  display: block;
+}

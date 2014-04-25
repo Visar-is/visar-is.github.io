@@ -654,3 +654,20 @@
         color: #999;
     }
 }
+
+
+.not-allowed {
+    background: rgb(234, 231, 231);
+    background: rgba(110,0,0,0.025);
+    color: $color_error;
+    padding: 0em 2em 1em;
+    margin: 1em 0;
+    border: 1px solid $color_error;
+
+    .button[disabled],
+    .button[disabled]:focus ,
+    .button[disabled]:hover {
+        background-color: rgba(0,0,0,0.1);
+        color: rgba(0,0,0,0.4);
+    }
+}

@@ -25,6 +25,16 @@ body {
 a {
     text-decoration: none;
     color: #325E94;
+
+    &.contextual {
+        color: inherit;
+        text-decoration: underline;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 p,
@@ -103,6 +113,16 @@ table {
     transition: background-color 0.3s;
     border: none;
 
+    &[class] {
+        &[disabled],
+        &[disabled]:focus,
+        &[disabled]:hover {
+            background: #ddd;
+            color: #AAA;
+            cursor: default;
+            position: static;
+        }
+    }
     &:focus,
     &:hover {
         background-color: $color1_dark;
