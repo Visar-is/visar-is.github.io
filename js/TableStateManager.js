@@ -102,6 +102,13 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			previewCustomerEl.append('<option value="' + customerId + '">' + customerNames[val] + '</option>');
 		});
 	});
+	
+	emailBackdropEl.click(function (event) {
+		if (event.target === emailBackdropEl[0]) {
+			emailBackdropEl.addClass('hidden');
+			// TODO: clear out the form fields here too.
+		}
+	});
 
 	// Triggers change .multi-select.checkbox, doesn’t have to call updateStatus manually.
 	selectAllEl.change(function () {
@@ -194,6 +201,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 
 	var updateEmailPreview = function () {
 		var payload = getMessagePayload();
+		sendPreviewButton.text('Send Preview');
 
 		// TODO: insert time delay.
 		previewIframe.attr('src', '/preview-email' + '?message_template=' + encodeURIComponent(payload.message_template) + '&preview_id=' + previewCustomerEl.val() + '&subject_template=' + encodeURIComponent(payload.subject_template));
@@ -210,17 +218,25 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		payload['preview_id'] = previewCustomerEl.val();
 
 		console.log(payload);
-
+		
+		sendPreviewButton.prop('disabled', true);
+		sendPreviewButton.text('Sending…');
+		
 		$.ajax('/send-email', {
 			method: 'POST',
 			data: payload,
-			done: function () {
+			success: function () {
 				console.log('Sent preview!');
+				sendPreviewButton.text('Sent!');
 			},
 			error: function () {
 				console.log('Got an error when trying to send a preview');
+				sendPreviewButton.text('Preview send failed');
 			},
-			complete: function () { console.log('AJAX finished'); }
+			complete: function () {
+				console.log('AJAX finished');
+				sendPreviewButton.prop('disabled', false);
+			}
 		});
 	});
 	
@@ -229,17 +245,24 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		payload['ids'] = Object.keys(selectedIds);
 		
 		console.log(payload);
+		sendButton.prop('disabled', true);
+		sendButton.text('Sending…');
 
 		$.ajax('/send-email', {
 			method: 'POST',
 			data: payload,
-			done: function () {
+			success: function () {
 				console.log('Started batch send!');
+				sendButton.text('Started batch send');
 			},
 			error: function (err) {
 				console.log('Got an error when trying to send a preview', err.responseText, err);
+				sendButton.text('Starting batch send failed');
 			},
-			complete: function () { console.log('AJAX finished'); }
+			complete: function () {
+				console.log('AJAX finished');
+				sendButton.prop('disabled', false);
+			}
 		});
 	});
 };
