@@ -48,9 +48,9 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		var text = [];
 		if (multiSelectMode) {
 			text.push(Object.keys(selectedIds).length + ' selected');
-			composeEmailButton.show();
+			composeEmailButton.prop('disabled', false);
 		} else {
-			composeEmailButton.hide();
+			composeEmailButton.prop('disabled', true);
 		}
 		if (numHidden > 0) {
 			text.push(numHidden + ' hidden');
@@ -100,7 +100,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		updateStatus();
 	};
 
-	composeEmailButton.hide();
+	composeEmailButton.prop('disabled', true);
 	composeEmailButton.click(function () {
 		emailBackdropEl.removeClass('hidden');
 		// Update previewable schools list.
