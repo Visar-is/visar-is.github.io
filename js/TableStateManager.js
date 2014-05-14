@@ -65,7 +65,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		});
 
 		numHidden = 0;
-
+		
 		participationEls.each(function () {
 			var el = $(this);
 			var show = true;
@@ -73,10 +73,18 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 				if (value == 'all') {
 					return;
 				}
-
-				var state = el.find('input[name=' + key + ']').prop('checked');
-				if (state != (value == 'true')) {
-					show = false;
+				
+				// Logic for showing/hiding differs depending on type of relevant input.
+				var stateEl = el.find('[name=' + key + ']');
+				if (stateEl.attr('type') == 'checkbox') {
+					// The state is a boolean checkbox.
+					var state = stateEl.prop('checked');
+					if (state != (value == 'true')) {
+						show = false;
+					}
+				} else {
+					// The state is a string comparison.
+					show = stateEl.text() == value;
 				}
 			});
 
