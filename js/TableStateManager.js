@@ -19,6 +19,8 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var columnFilters = $('.column-filter');
 	var csrfToken = $('[name=csrfmiddlewaretoken]').val();
 	var composeEmailButton = $('.compose-email-button');
+	var exportCsvButton = $('.export-csv-button');
+	var enabledWhenSelected = $('.enable-when-selected');
 	var composeEmailEl = $('.email');
 	var emailBackdropEl = $('.email-backdrop');
 	var previewEmailEl = $('[name=preview-email]');
@@ -48,9 +50,9 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		var text = [];
 		if (multiSelectMode) {
 			text.push(Object.keys(selectedIds).length + ' selected');
-			composeEmailButton.prop('disabled', false);
+			enabledWhenSelected.prop('disabled', false);
 		} else {
-			composeEmailButton.prop('disabled', true);
+			enabledWhenSelected.prop('disabled', true);
 		}
 		if (numHidden > 0) {
 			text.push(numHidden + ' hidden');
@@ -99,8 +101,14 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 
 		updateStatus();
 	};
-
-	composeEmailButton.prop('disabled', true);
+	
+	exportCsvButton.mousedown(function () {
+		Object.keys(selectedIds).forEach(function (val, i) {
+			exportCsvButton.parent().append('<input type="hidden" name="ids[]" value="' + val + '" />');
+		});
+	});
+	
+	enabledWhenSelected.prop('disabled', true);
 	composeEmailButton.click(function () {
 		emailBackdropEl.removeClass('hidden');
 		// Update previewable schools list.
