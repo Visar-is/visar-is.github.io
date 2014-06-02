@@ -12,6 +12,10 @@
 @import "reports/tables.less";
 
 
+body {
+	font-size: 16px;
+}
+
 strong {
 	font-family: @text-font-family-bold;
 }
@@ -22,17 +26,39 @@ strong {
 	clear: both;
 }
 
-.chart-section, .survey-metadata-section, .html-section {
+.section h3 {
+	font-size: 1.2em;
+}
+
+.chart-section,
+.survey-metadata-section,
+.html-section,
+.table-section {
 	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 	width: 100%;
 }
 
-.chart-section:after, .survey-metadata-section:after, .html-section:after {
+.chart-section:after,
+.survey-metadata-section:after,
+.html-section:after,
+.table-section:after {
 	display:block;
 	height:0px;
 	visibility: hidden;
+}
+
+
+.list-section .response-list li { 
+	padding: 0.2em;
+	margin-bottom: 0.5em;
+	background: #efefef;
+	font-size: 0.6em;
+}
+
+.survey-metadata-section {
+	font-size: 0.7em;
 }
 
 .table-section {
@@ -181,32 +207,19 @@ strong {
  * #abc78a
  * #826f69 
  */
+
 .toc ul,
 .toc ul li {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: bold;
 	font-size: 14px;
-	line-height: 1.4
+	line-height: 1.4;
+	margin-left: 0.5em;
 }
 
 .muted,
 .toc li .muted {
 	color: #777;
 	font-weight: normal;
-}
-
-body { margin: 0 1cm; }
-
-/* section-specific styles */
-.list-section .response-list li { 
-padding: 0.2em;
-margin-bottom: 0.5em;
-background: #efefef;
-font-size: 0.6em;
-}
-
-
-.survey-metadata-section {
-	font-size: 0.7em;
 }
