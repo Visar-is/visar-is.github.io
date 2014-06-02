@@ -1,29 +1,26 @@
-@scatter-data-height: 300px;
-@scatter-data-line-offset: -300px;
-
 .key-scatter li.you span {  color: #2f502f; }
 .scatter .group li.you::before { color: #2f502f; }
 
-.scatter .y-axis { height: @scatter-data-height; }
+.scatter .y-axis { height: 350px; }
 
-.scatter { margin-right: 0px; }
-.scatter ol { margin-right: 0px; height: @scatter-data-height; }
+.scatter { height: 200px; margin-right: 0px; }
+.scatter ol { margin-right: 0px; height: 350px; }
 
 .group { position: relative; }
-.group li { position: absolute; margin: 0; padding: 0; text-align: center; }
+.group li { position: absolute; margin: 0; padding: 0;  text-align: center; }
 
-.group li:before { content: "◆"; font-size: 1em; color: #ccc; z-index:90 }
+.group li:before {  content: "◆"; font-size: 1em; color: #ccc; z-index:90 }
 .group li.you:before { color: #65DB65; z-index: 100 }
+
 
 .group li span { display: none; }
 
 .lines { 
 	margin-left: 65px;
 	margin-right: 0px;
-	margin-top: @scatter-data-line-offset;
-	z-index: 80;
-}
-
+	margin-top: -350px;
+	z-index:80
+ }
 .scatter ol.lines { height: 0 }
 .lines div {  border: 1px solid red; margin: 0; padding: 0; width: 100%; }
 .lines div span { display: none; }
