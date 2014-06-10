@@ -48,10 +48,6 @@ body {
 }
 
 
-/* Attempt to prevent page breaks in the middle of open responses */
-.response-list li { display: block; page-break-inside: avoid; }
-
-
 /* In print, all links should be body text colour. */
 a, a:hover, a:focus { color: inherit; }
 
@@ -76,7 +72,8 @@ strong {
 .chart-section,
 .survey-metadata-section,
 .html-section,
-.table-section {
+.table-section,
+.response-list li {
 	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
