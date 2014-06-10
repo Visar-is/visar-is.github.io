@@ -23,6 +23,12 @@ body {
 	font-size: 11px !important;
 }
 
+.chart-section .chart .x-axis ol.row2 li,
+.chart-section .chart .x-axis ol.row3 li {
+	font-size: 9px !important;
+	color: #666;
+}
+
 .section h3,
 .chart-section .chart .title {
 	font-size: 16px;
@@ -42,7 +48,15 @@ body {
 }
 
 
+/* In print, all links should be body text colour. */
+a, a:hover, a:focus { color: inherit; }
 
+
+/* Override table top margin */
+.full-width-table {
+	margin-top: 0;
+	margin-top: 16px;
+}
 
 
 strong {
@@ -139,13 +153,16 @@ strong {
 	margin-bottom: 25pt;
 }
 
+.section-note {
+	white-space: pre-wrap;
+}
+
 .toc ul,
 .toc ul li {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: bold;
-	font-size: 14px;
-	margin-left: 0.5em;
+	margin-left: 0.6em;
 }
 
 .muted,
