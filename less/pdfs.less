@@ -69,12 +69,16 @@ strong {
 	clear: both;
 }
 
+/**
+ * These values are optimistic, in the hope that future versions of Phantom (>1.9) will support them.
+ * Until then, gnarly CSS selectors are used to apply display: inline-block to non-list sections, and to list section responses.
+ * Note that no display: value is set as that is set dynamically when creating customised PDFs.
+ */
 .chart-section,
 .survey-metadata-section,
 .html-section,
 .table-section,
 .response-list li {
-	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 	width: 100%;
