@@ -17,27 +17,10 @@
 @greenLightBorder: #b0b1b2;
 @white: #FFFFFF;
 
-@muted-color: #777;
-
-@konnonhover: rgb(145,233,248);	
-
-
 /* Margins, Paddings, and Spacings */
 
-@base-line-height: 20px;
 @base-margin: 20px;
 @base-margin-bottom: @base-margin * 1.5;
-@base-padding: 20px;
-@base-border-radius: 4px;
-
-
-/* Body */
-
-@body-background-color: #ffffff;
-@body-background-image: ~'';
-@body-background-repeat: ~'';
-@body-background-position: ~'';
-
 
 /* Text */
 
@@ -46,53 +29,9 @@
 @text-font-family: AvenirNextLTPro-Regular, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @text-font-family-italic: AvenirNextLTPro-Regular, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @text-font-family-bold: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@text-line-height: 1.45;
 @text-color: #333333;
-@text-color-light: #999999;
 
-@text-shadow-on-light: 1px 1px 1px #888888;
 @text-shadow-on-dark: 0 -1px 0 rgba(0, 0, 0, 0.4);
-
-
-/* Links */
-
-@link-font-size: 18px;
-@link-font-wieght: bold;
-@link-color: #006daf;
-@link-color-hover: @blueDarkest;
-@link-decoration: none;
-@link-decoration-hover: underline;
-
-
-/* Headings */
-
-@headings-color: #333333;
-@headings-font-family: @text-font-family-bold;
-@headings-font-weight: normal;
-@headings-letter-spacing: 0;
-@headings-size-h1: 60px;
-@headings-size-h3: 36px;
-@headings-size-h4: 30px;
-@headings-size-h5: 24px;
-@headings-size-h6: 18px;
-@headings-line-height: 1.4;
-
-
-/* Navigation */
-
-@navigation-background: #222222;
-@navigation-text: #EEEEEE;
-@navigation-text-hover: #AAAAAA;
-@navigation-text-dark: #818181;
-@navigation-elements: #AAAAAA;
-@navigation-shadows: #EEEEEE;
-
-@navigation-sub-background: #d9d9d9;
-@navigation-sub-text: #EEEEEE;
-@navigation-sub-text-hover: #AAAAAA;
-@navigation-sub-text-dark: #818181;
-@navigation-sub-elements: #AAAAAA;
-@navigation-sub-shadows: #EEEEEE;
 
 
 /* Lists */
@@ -104,23 +43,9 @@
 @list-item-type: ~'';
 
 
-/* Elements */
-
-@blockquote-font-size: 90%;
-@blockquote-font-style: normal;
-@blockquote-line-height: 1.45;
-@blockquote-color: #aaaaaa;
-
-@hr-border-type: solid;
-@hr-border-color: @greenLightBorder;
-@hr-border-width: 1px 0 0;
-@hr-border-margin: 0px;
-
-
-/* Buttons */
+/* Button config+mixins */
 
 .button-globals(@color: #eeeeee, @shadow: 1px 1px 1px #333333) {
-
 	// Font
 	color: @color;
 	font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;	
@@ -204,35 +129,3 @@
 @button-warning-shadow: @text-shadow-on-dark;
 @button-warning-border: #713c2a;
 @button-warning-border-hover: @blueDarkest;
-
-
-/* Forms */
-
-@form-elements-background: #FFFFFF;
-@form-elements-color: #666666;
-@form-elements-color-focus: #333333;
-@form-elements-font-size: 18px;
-@form-elements-font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-@form-border-size: 1px;
-@form-border-color: #999999;
-@form-border-radius: 4px;
-@form-border-color-focus: #666666;
-
-@form-select-color: @blueDarker;
-@form-label-color: @blueDarker;
-
-
-/* Tables */
-
-@table-background-color: @greenLight;
-@table-background-color-striped: #FEFEFE;
-
-@table-margins: @base-line-height;	
-@table-padding: 15px;
-
-@table-border: 1px solid @greenLightBorder;
-@table-border-radius: 5px;
-
-@table-td-border-top: 1px solid @greenLightBorder;
-@table-line-height: 18px;

@@ -9,23 +9,22 @@
 	input[type="address"],
 	textarea,
 	select {
-		padding: 10px 12px;
-		outline: none;
-		font-size: @form-elements-font-size;
-		font-family: @form-elements-font-family;
-		color: @form-elements-color;
+		display: block
 		width: 210px;
 		max-width: 100%;
-		display: block;
 		margin-top: 0px;
-		background: @form-elements-background;
-		-moz-border-radius: @form-border-radius;
-		-webkit-border-radius: @form-border-radius;
-		border-radius: @form-border-radius;
-		border: @form-border-size solid @form-border-color;
+		padding: 10px 12px;
+		outline: none;
+		border: 1px solid #999999;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
-		box-sizing: border-box;        
+		box-sizing: border-box;
+		
+		color: #666666;
+		background: #FFFFFF;
 	}
 
 	.inline-form input[type="text"],
@@ -43,8 +42,8 @@
 	input[type="password"]:focus,
 	input[type="email"]:focus,
 	textarea:focus {
-		border: @form-border-size solid @form-border-color-focus;
-		color: @form-elements-color-focus;
+		border: 1px solid #666666;
+		color: #333333;
  		-moz-box-shadow: 0 0 5px rgba(0,0,0,.2);
 		-webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);
 		box-shadow:  0 0 5px rgba(0,0,0,.2);
@@ -59,7 +58,7 @@
 	}
 
 	select {
-		color: @form-select-color;
+		color: @blueDarker;
 		width: 220px;
 	}
 
@@ -80,5 +79,5 @@
 
 	label span.form_error {
 		margin: 0 0 0 3px;
-		color: @form-label-color;
+		color: @blueDarker;
 	}

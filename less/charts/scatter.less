@@ -1,16 +1,19 @@
+@scatter-data-height: 250px;
+@scatter-data-line-offset: -250px;
+
 .key-scatter li.you span {  color: #2f502f; }
 .scatter .group li.you::before { color: #2f502f; }
 
 .scatter .y-axis { height: 350px; }
 
 .scatter { height: 200px; margin-right: 0px; }
-.scatter ol { margin-right: 0px; height: 350px; }
+.scatter ol { margin-right: 0px; height: @scatter-data-height; }
 
 .group { position: relative; }
 .group li { position: absolute; margin: 0; padding: 0;  text-align: center; }
 
-.group li:before {  content: "◆"; font-size: 1em; color: #ccc; z-index:90 }
-.group li.you:before { color: #65DB65; z-index: 100 }
+.group li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; }
+.group li.you:before { color: #65DB65; z-index: 100; }
 
 
 .group li span { display: none; }
@@ -21,7 +24,7 @@
 	margin-top: -350px;
 	z-index:80
  }
-.scatter ol.lines { height: 0 }
+ 
 .lines div {  border: 1px solid red; margin: 0; padding: 0; width: 100%; }
 .lines div span { display: none; }
 
