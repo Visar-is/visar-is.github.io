@@ -4,7 +4,7 @@
 .key-scatter li.you span {  color: #2f502f; }
 .scatter .group li.you::before { color: #2f502f; }
 
-.scatter .y-axis { height: 350px; }
+.scatter .y-axis { height: @scatter-data-height; }
 
 .scatter { height: 200px; margin-right: 0px; }
 .scatter ol { margin-right: 0px; height: @scatter-data-height; }
@@ -21,7 +21,7 @@
 .lines { 
 	margin-left: 65px;
 	margin-right: 0px;
-	margin-top: -350px;
+	margin-top: @scatter-data-line-offset;
 	z-index:80
  }
  
