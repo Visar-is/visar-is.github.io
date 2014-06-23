@@ -10,11 +10,10 @@
 .scatter ol { margin-right: 0px; height: @scatter-data-height; }
 
 .group { position: relative; }
-.group li { position: absolute; margin: 0; padding: 0;  text-align: center; }
+.group li { position: absolute; margin: 0; padding: 0; text-align: center; }
 
 .group li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; }
 .group li.you:before { color: #65DB65; z-index: 100; }
-
 
 .group li span { display: none; }
 
@@ -22,9 +21,10 @@
 	margin-left: 65px;
 	margin-right: 0px;
 	margin-top: @scatter-data-line-offset;
-	z-index:80
- }
- 
+	z-index: 80;
+}
+
+.scatter ol.lines { height: 0 }
 .lines div {  border: 1px solid red; margin: 0; padding: 0; width: 100%; }
 .lines div span { display: none; }
 

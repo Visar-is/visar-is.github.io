@@ -67,6 +67,7 @@ a, a:hover, a:focus { color: inherit; }
 	margin-top: 16px;
 }
 
+
 strong {
 	font-family: @text-font-family-bold;
 }
@@ -92,7 +93,10 @@ strong {
 	width: 100%;
 }
 
-.chart-section:after, .survey-metadata-section:after, .html-section:after {
+.chart-section:after,
+.survey-metadata-section:after,
+.html-section:after,
+.table-section:after {
 	display:block;
 	height:0px;
 	visibility: hidden;
@@ -180,19 +184,4 @@ strong {
 .toc li .muted {
 	color: #777;
 	font-weight: normal;
-}
-
-body { margin: 0 1cm; }
-
-/* section-specific styles */
-.list-section .response-list li { 
-padding: 0.2em;
-margin-bottom: 0.5em;
-background: #efefef;
-font-size: 0.6em;
-}
-
-
-.survey-metadata-section {
-	font-size: 0.7em;
 }
