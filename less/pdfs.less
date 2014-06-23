@@ -1,6 +1,8 @@
-@import "app/config.less";
+/* Config */
 @import "app/fonts.less";
+@import "app/config.less";
 
+/* Base */
 @import "base/_base.less";
 @import "base/_links.less";
 @import "base/_skeleton.less";
@@ -8,64 +10,6 @@
 @import "base/_tables.less";
 
 @import "reports/tables.less";
-
-
-body {
-	font-size: 11px;
-	margin-left: 2em;
-}
-
-.chart-section .chart .data,
-.chart-section .chart .key,
-.chart-section .chart .x-axis,
-.chart-section .chart .x-axis ol li {
-	font-size: 11px !important;
-	font-family: Geneva sans-serif !important;
-}
-
-.chart-section .chart .x-axis ol.row2 li,
-.chart-section .chart .x-axis ol.row3 li {
-	font-size: 9px !important;
-	color: #666;
-}
-
-.chart-section {
-	margin: 1em 0 !important;
-}
-
-td[axis="N"] sub {
-	font-size: 9px !important;
-}
-
-.section h3,
-.chart-section .chart .title {
-	font-size: 16px;
-}
-
-.page-heading h1 {
-	font-family: @text-font-family-bold;
-	font-size: 28px;
-}
-
-.survey-metadata-section {
-	font-size: 11px;
-}
-
-.table-section {
-	font-size: 11px;
-	font-family: Geneva sans-serif !important;
-}
-
-
-/* In print, all links should be body text colour. */
-a, a:hover, a:focus { color: inherit; }
-
-
-/* Override table top margin */
-.full-width-table {
-	margin-top: 0;
-	margin-top: 16px;
-}
 
 
 strong {
@@ -78,34 +22,21 @@ strong {
 	clear: both;
 }
 
-/**
- * These values are optimistic, in the hope that future versions of Phantom (>1.9) will support them.
- * Until then, gnarly CSS selectors are used to apply display: inline-block to non-list sections, and to list section responses.
- * Note that no display: value is set as that is set dynamically when creating customised PDFs.
- */
-.chart-section,
-.survey-metadata-section,
-.html-section,
-.table-section,
-.response-list li {
+.chart-section, .survey-metadata-section, .html-section {
+	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 	width: 100%;
 }
 
-.chart-section:after,
-.survey-metadata-section:after,
-.html-section:after,
-.table-section:after {
+.chart-section:after, .survey-metadata-section:after, .html-section:after {
 	display:block;
 	height:0px;
 	visibility: hidden;
 }
 
-.list-section .response-list li { 
-	padding: 0.2em;
-	margin-bottom: 0.5em;
-	background: #efefef;
+.table-section {
+	font-size: 0.8em;
 }
 
 /* Cover Pages */
@@ -118,22 +49,26 @@ strong {
 }
 
 .report-cover h1 {
-	margin-bottom: 1em;
-	font-size: 64px;
+	margin-bottom: 15pt; 
 	font-family: @text-font-family-bold;
+	font-size: 4em;
+	line-height: 1.4;
 }
 
 .report-cover h2, h3, h4 { font-family: @text-font-family; }
 
 .report-cover h2 {
 	color: #007722;
-	font-size: 28px;
+	font-size: 21pt;
+	line-height: 24pt;
 }
 
 .cover-footer {
 	width: 100%;
+	font-size: 12px;
+	line-height: 14px;
 	height: 45px;
-	padding-top: 1em;
+	padding-top: 5pt;
 }
 
 .category-cover-page h1 {
@@ -142,6 +77,8 @@ strong {
 }
 
 .cover-footer a {
+	font-size: 12px;
+	line-height: 14px;
 	color: #007722;
 }
 
@@ -157,7 +94,9 @@ strong {
 	text-align: left;
 }
 
-.cover-footer .p-author .p-tel { display: block; }
+.cover-footer .p-author .p-tel { display: block }
+
+
 
 /* Page Elements */
 
@@ -167,21 +106,107 @@ strong {
 	margin-bottom: 25pt;
 }
 
-.section-note {
-	white-space: pre-wrap;
+.page-heading h1 {
+	font-family: @text-font-family-bold;
+	font-size: 21pt;
+	line-height: 24pt;
 }
 
+.page-heading h1 small {
+	display: block;
+	font-family: @text-font-family;
+	font-size: 13pt;
+	line-height: 13pt;
+	margin-top: 5pt;
+}
+
+.page-heading h2 {
+	font-family: @text-font-family;
+	font-size: 21pt;
+	line-height: 24pt;
+}
+
+.page-section {
+	margin-bottom: 45pt;
+}
+
+.page-section h3 {
+	font-family: @text-font-family-bold;
+	font-size: 18pt;
+	line-height: 18pt;
+	margin: 0 15pt 10pt 15pt;
+}
+
+.page-section p {
+	margin: 0 15pt 10pt 15pt;
+}
+
+.page-section ul {
+	margin: 25pt 15pt 25pt 40pt;
+	list-style: square;
+}
+
+.page-section ul li {
+	margin: 5pt 0pt;
+}
+
+.page-section hr {
+	border: 1px solid @greenLightBorder;
+}
+
+
+
+/* Graphs */
+
+.graphs-global-normal {
+	width: 100%;
+	height: 250px;
+	margin-bottom: 1em;
+}
+
+.graphs-global-taller {
+	width: 100%;
+	height: 300px;
+}
+
+.graphs-global-tallest {
+	width: 100%;
+	height: 350px;
+}
+
+/**
+ * Graph Colors:
+ * #006daf
+ * #7f90ac
+ * #abc78a
+ * #826f69 
+ */
 .toc ul,
 .toc ul li {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: bold;
-	margin-left: 0.6em;
-	letter-spacing: 0.01em;
+	font-size: 14px;
+	line-height: 1.4
 }
 
 .muted,
 .toc li .muted {
 	color: #777;
 	font-weight: normal;
+}
+
+body { margin: 0 1cm; }
+
+/* section-specific styles */
+.list-section .response-list li { 
+padding: 0.2em;
+margin-bottom: 0.5em;
+background: #efefef;
+font-size: 0.6em;
+}
+
+
+.survey-metadata-section {
+	font-size: 0.7em;
 }

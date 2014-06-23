@@ -1,32 +1,15 @@
 /* Navigation */
 
-	#navigation {
-		background: #222222;
-		z-index: 10;
-		color: #EEEEEE;
-	}
-	
-	#navigation a {
-		color: #EEEEEE;
-		text-decoration: none;
-	}
-	
-	#navigation a:hover {
-		color: #AAAAAA;
-	}
-	
-	#navigation span.name_ome {
-		color: #818181;
-	}
-	
-	#navigation_logo {
-		display: none;
-	}
+	#navigation 					{ background: @navigation-background; z-index: 10; color: @navigation-text; }
+	#navigation a					{ color: @navigation-text; text-decoration: none; }
+	#navigation a:hover 			{ color: @navigation-text-hover; }
+	#navigation span.name_ome		{ color: #818181; }
+	#navigation_logo 				{ display: none; }
 	
 
 /* Navigation Sub */
 
 	.navigation-sub	{ 
-		background: #d9d9d9;
+		background: @navigation-sub-background;
 		border-radius: 10px;
 	}

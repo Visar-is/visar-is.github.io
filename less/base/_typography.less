@@ -3,30 +3,30 @@
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-	color: #333333;
-	font-family: @text-font-family-bold;
-	font-weight: normal;
-	letter-spacing: 0;
-	line-height: 1.4;
+	color: @headings-color;
+	font-family: @headings-font-family;
+	font-weight: @headings-font-weight;
+	letter-spacing: @headings-letter-spacing;
+	line-height: @headings-line-height;
 	margin-bottom: 10px;
 }
 
-h1 { font-size: 60px; margin-bottom: 21px; }
+h1 { font-size: @headings-size-h1; margin-bottom: 21px; }
 h2 { font-size: 28px; }
 h3 { font-size: 22px; margin-bottom: 8px; }
-h4 { font-size: 30px; }
-h5 { font-size: 24px; }
-h6 { font-size: 18px; }
+h4 { font-size: @headings-size-h4; }
+h5 { font-size: @headings-size-h5; }
+h6 { font-size: @headings-size-h6; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 
-.subheader { color: #777; }
+.subheader { color: @muted-color; }
 
 /* Body Text */
 
 p { margin: 0 0 20px 0; }
 p img { margin: 0; }
-p.lead { font-size: 21px; line-height: 27px; color: #777; }
+p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
 em { font-style: italic; }
 
@@ -42,12 +42,12 @@ sup, sub {
 	font-size: smaller;
 	vertical-align: super;
 }
-sub { vertical-align: sub; }
+sub { vertical-align: sub }
 
 
 /*	Blockquotes  */
 
-blockquote, blockquote p { color: #333; margin: 0 0 10px 0; }
+blockquote, blockquote p { font-size: 70%; line-height: 1.4; color: #333; font-style: @blockquote-font-style; margin: 0 0 10px 0; }
 blockquote { margin: 0 0 10px; padding: 0.25em; }
 blockquote.owner-notes { border-left: 4px solid #c9c9c9; }
 blockquote cite { display: block; font-size: 12px; color: #555; }
@@ -58,10 +58,10 @@ blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color:
 /* Lines */
 
 hr {
-	border: solid @greenLightBorder;
-	border-width: 1px 0 0;
-	clear: both;
-	margin: 0px;
+	border: @hr-border-type @hr-border-color; 
+	border-width: @hr-border-width; 
+	clear: both; 
+	margin: @hr-border-margin; 
 	height: 0;
 }
 
