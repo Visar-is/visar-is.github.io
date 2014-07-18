@@ -1,5 +1,7 @@
-.bars { height: 200px; margin-left: 60px; }
-.bars ol { margin-right: 0px; position: relative; height: 200px; }
+@bar-data-height: 120px;
+
+.bars { height: @bar-data-height; margin-left: 65px; }
+.bars ol { margin-right: 0px; position: relative; height: @bar-data-height; }
 .bar { position: absolute; bottom: 0; margin: 0; padding: 0; background-color: #ccc; text-align: center;}
 .bar span { display: none; }
 .bars li.you { background-color: #65DB65; outline: 1px solid #65DB65; }

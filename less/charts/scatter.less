@@ -1,35 +1,50 @@
 .key-scatter li.you span {  color: #2f502f; }
-.scatter .group li.you::before { color: #2f502f; }
 
-.scatter .y-axis { height: 350px; }
-
-.scatter { height: 200px; margin-right: 0px; }
-.scatter ol { margin-right: 0px; height: 350px; }
-
-.group { position: relative; }
-.group li { position: absolute; margin: 0; padding: 0;  text-align: center; }
-
-.group li:before {  content: "◆"; font-size: 1em; color: #ccc; z-index:90 }
-.group li.you:before { color: #65DB65; z-index: 100 }
-
-
-.group li span { display: none; }
-
-.lines { 
-	margin-left: 65px;
-	margin-right: 0px;
-	margin-top: -350px;
-	z-index:80
- }
-.scatter ol.lines { height: 0 }
-.lines div {  border: 1px solid red; margin: 0; padding: 0; width: 100%; }
-.lines div span { display: none; }
-
-.scatter .plot { margin-right: 0px; }
-
-.line .national { background-color: #dc3912; }
-
-@media screen and (min-width: 900px) {
-	.scatter { margin-right: 160px; }
-	.lines { margin-right: 160px; }
+.scatter {
+	.points li.you::before { color: #2f502f; }
+	
+	/* Y-axis consistent areas have the same height, their children have height: 100% */
+	.y-axis,
+	.plot {
+		height: 250px;
+	}
+	
+	.plot {
+		position: relative;
+	}
+	
+	/* Percentage-accurate canvasses inside .plot overlap and fill all the available space */
+	.plot .points,
+	.plot .lines {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
+	.points li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; }
+	.points li.you:before { z-index: 100; }
+	.points li span { display: none; }
+	
+	.lines {
+		z-index: 80;
+	}
+	
+	/* Individual line styling */
+	.lines .line {
+		border: 1px solid red;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		position: absolute;
+	}
+	.lines .line span { display: none; }
+	
+	.line.national { background-color: #dc3912; }
+	
+	@media screen and (min-width: 900px) {
+		margin-right: 160px;
+		
+		.lines { margin-right: 160px; }
+	}
 }
