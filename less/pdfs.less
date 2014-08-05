@@ -21,6 +21,11 @@ strong {
 	clear: both;
 }
 
+.table-section,
+.section-note {
+	font-size: 11px;
+}
+
 .chart-section, .survey-metadata-section, .html-section, .table-section {
 	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
@@ -35,12 +40,17 @@ strong {
 }
 
 .chart {
-	font-size: 12px;
-}
-
-.table-section {
 	font-size: 11px;
 }
+
+/* Override chart sizes */
+
+.chart .bars,
+.chart .bars ol,
+.bar-chart .y-axis { height: 100px; }
+
+.scatter .y-axis, .scatter .plot { height: 200px; }
+
 
 /* Cover Pages */
 
