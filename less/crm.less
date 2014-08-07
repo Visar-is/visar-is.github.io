@@ -3,6 +3,7 @@
 @import "app/config.less";
 @import "app/fonts.less";
 @import "app/django-forms.less";
+@import "base/_buttons.less";
 
 /* Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -27,4 +28,18 @@ q:before, q:after {
 table {
 	border-collapse: separate;
 	border-spacing: 0; 
+}
+
+/* Skolapúlsinn colours on buttons */
+.button,
+.button-primary,
+button,
+input[type="button"],
+input[type="submit"] {
+	background-color: #071;
+	border-left: 1px solid #418223;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #418223 #22692F #22692F #418223;
+	color: #FFF;
 }
