@@ -29,6 +29,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var sendButton = $('[name=send]');
 	var previewCustomerEl = $('[name=preview-customer]');
 	var emailComposeTextarea = $('.email [name=message]');
+	var tokenEls = $('.email .token-list .token');
 	var subjectEl = $('[name=subject]');
 	var previewIframe = $('.preview-iframe');
 
@@ -229,11 +230,16 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			console.log('XHR Complete');
 		});
 	};
-
+	
+	// Insert ready-made tokens into the editor on click.
+	tokenEls.click(function (event) {
+		editor.getDoc().replaceRange('{{ ' + event.target.textContent + ' }}', editor.getDoc().getCursor());
+	});
+	
 	editor.on('change', updateEmailPreview);
 	subjectEl.keyup(updateEmailPreview);
 	previewCustomerEl.change(updateEmailPreview);
-
+	
 	sendPreviewButton.click(function () {
 		var payload = getMessagePayload();
 		payload['preview_email'] = previewEmailEl.val();
