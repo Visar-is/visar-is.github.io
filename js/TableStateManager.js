@@ -220,8 +220,14 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		sendPreviewButton.text('Send Preview');
 
 		// TODO: insert time delay.
-		previewIframe.attr('src', '/preview-email' + '?message_template=' + encodeURIComponent(payload.message_template) + '&preview_id=' + previewCustomerEl.val() + '&subject_template=' + encodeURIComponent(payload.subject_template));
-		previewIframe[0].style.height = previewIframe[0].contentWindow.document.documentElement.scrollHeight + 'px';
+		previewIframe.load('/preview-email', {
+			'message_template': payload.message_template,
+			'subject_templates': payload.subject_template,
+			'preview_id': previewCustomerEl.val(),
+			csrfmiddlewaretoken: csrfToken
+		}, function () {
+			console.log('XHR Complete');
+		});
 	};
 
 	editor.on('change', updateEmailPreview);
