@@ -26,6 +26,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var previewEmailEl = $('[name=preview-email]');
 	var previewEmailPluralEl = $('.send-preview-plural').hide();
 	var sendPreviewButton = $('[name=send-preview]');
+	var audienceEl = $('[name=audience]');
 	var sendButton = $('[name=send]');
 	var previewCustomerEl = $('[name=preview-customer]');
 	var emailComposeTextarea = $('.email [name=message]');
@@ -212,7 +213,8 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		return {
 			subject_template: subjectEl.val(),
 			message_template: emailComposeTextarea.val(),
-			csrfmiddlewaretoken: csrfToken
+			csrfmiddlewaretoken: csrfToken,
+			audience: audienceEl.val()
 		};
 	};
 
