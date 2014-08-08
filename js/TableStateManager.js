@@ -223,7 +223,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		// TODO: insert time delay.
 		previewIframe.load('/preview-email', {
 			'message_template': payload.message_template,
-			'subject_templates': payload.subject_template,
+			'subject_template': payload.subject_template,
 			'preview_id': previewCustomerEl.val(),
 			csrfmiddlewaretoken: csrfToken
 		}, function () {
