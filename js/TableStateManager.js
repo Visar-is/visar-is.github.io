@@ -20,7 +20,6 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var csrfToken = $('[name=csrfmiddlewaretoken]').val();
 	var composeEmailButton = $('.compose-email-button');
 	var exportCsvButton = $('.export-csv-button');
-	var enabledWhenSelected = $('.enable-when-selected');
 	var composeEmailEl = $('.email');
 	var emailBackdropEl = $('.email-backdrop');
 	var previewEmailEl = $('[name=preview-email]');
@@ -36,6 +35,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 
 	var multiSelectMode = false;
 	var selectedIds = {};
+	var allCustomerIds = [];
 	var editor = CodeMirror.fromTextArea(emailComposeTextarea[0], {
 		mode: 'text/html',
 		viewportMargin: Infinity,
@@ -46,15 +46,21 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var customerNames = {};
 	participationEls.each(function () {
 		customerNames[$(this).attr('data-id')] = $(this).find('.customer-name').text();
+		allCustomerIds.push($(this).attr('data-id'));
 	});
+	
+	var activeIds = function () {
+		if (Object.keys(selectedIds).length > 0) {
+			return Object.keys(selectedIds);
+		} else {
+			return allCustomerIds;
+		}
+	};
 
 	var updateStatus = function () {
 		var text = [];
 		if (multiSelectMode) {
 			text.push(Object.keys(selectedIds).length + ' selected');
-			enabledWhenSelected.prop('disabled', false);
-		} else {
-			enabledWhenSelected.prop('disabled', true);
 		}
 		if (numHidden > 0) {
 			text.push(numHidden + ' hidden');
@@ -105,17 +111,16 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	};
 	
 	exportCsvButton.mousedown(function () {
-		Object.keys(selectedIds).forEach(function (val, i) {
+		activeIds().forEach(function (val, i) {
 			exportCsvButton.parent().append('<input type="hidden" name="ids[]" value="' + val + '" />');
 		});
 	});
 	
-	enabledWhenSelected.prop('disabled', true);
 	composeEmailButton.click(function () {
 		emailBackdropEl.removeClass('hidden');
 		// Update previewable schools list.
 		previewCustomerEl.html('');
-		Object.keys(selectedIds).forEach(function (val, i) {
+		activeIds().forEach(function (val, i) {
 			var customerId = $(rowSelector + '[data-id=' + val + ']').attr('data-customer-id');
 			previewCustomerEl.append('<option value="' + customerId + '">' + customerNames[val] + '</option>');
 		});
@@ -272,7 +277,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	
 	sendButton.click(function () {
 		var payload = getMessagePayload();
-		payload['ids'] = Object.keys(selectedIds);
+		payload['ids'] = activeIds();
 		
 		console.log(payload);
 		sendButton.prop('disabled', true);
