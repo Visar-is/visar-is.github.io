@@ -20,6 +20,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var csrfToken = $('[name=csrfmiddlewaretoken]').val();
 	var composeEmailButton = $('.compose-email-button');
 	var exportCsvButton = $('.export-csv-button');
+	var asPlainTableButton = $('.plain-table-button');
 	var composeEmailEl = $('.email');
 	var emailBackdropEl = $('.email-backdrop');
 	var previewEmailEl = $('[name=preview-email]');
