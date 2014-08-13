@@ -178,16 +178,20 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			data['csrfmiddlewaretoken'] = csrfToken;
 
 			if (multiSelectMode) {
-				// Batch-update all the currently selected rows.
-				data['ids'] = Object.keys(selectedIds);
-				$.each(data['ids'], function (i, value) {
-					var rowEquivalentCheckbox = $(rowSelector + '[data-id=' + value + '] input[name=' + checkbox.attr('name') + ']');
-					if (checkbox.prop('checked')) {
-						rowEquivalentCheckbox.prop('checked', true);
-					} else {
-						rowEquivalentCheckbox.removeProp('checked');
-					}
-				});
+				// Batch-update all the currently selected rows after confirmation
+				if (confirm("This action will affect all " + Object.keys(selectedIds).length + " currently selected rows. Proceed?")) {
+					data['ids'] = Object.keys(selectedIds);
+					$.each(data['ids'], function (i, value) {
+						var rowEquivalentCheckbox = $(rowSelector + '[data-id=' + value + '] input[name=' + checkbox.attr('name') + ']');
+						if (checkbox.prop('checked')) {
+							rowEquivalentCheckbox.prop('checked', true);
+						} else {
+							rowEquivalentCheckbox.removeProp('checked');
+						}
+					});
+				} else {
+					return;
+				}
 			}
 
 			$.ajax(multiSelectMode ? batchUpdateUrl : url, {
