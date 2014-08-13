@@ -1,14 +1,46 @@
 /*	Vísar - Konnun - tablet.less
 ========================================= */
 
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-		footer .logo 			{ width: 156px; height: 42px; margin-right: auto; margin-left: auto; float: none; }
-    	#survey-form textarea	{ width: 730px; }
-    }
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	footer .logo { width: 156px; height: 42px; margin-right: auto; margin-left: auto; float: none; }
+	#survey-form textarea	{ width: 730px; }
+	#survey-form { margin-top: 1.5em; }
+}
 
-    @media only screen and (min-width: 480px) and (max-width: 959px) {
-		body #survey-form [name=finish] {
-			margin-left: 0;
-		}
-    }
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+	body #survey-form [name=finish] {
+		margin-left: 0;
+	}
+}
 
+@media only screen and (max-width: 1020px) {
+	.global-speech-toggle-button,
+	.global-speech-toggle-button:hover,
+	.global-speech-toggle-button:active,
+	.-white-sp .global-speech-toggle-button,
+	.-white-sp .global-speech-toggle-button:hover,
+	.-white-sp .global-speech-toggle-button:active {
+		left: 0.45em !important;
+	}
+	
+	/* #content added to selector to (yuk) increase specificity. */
+	#content .speech-button,
+	#content .speech-button:hover,
+	#content .speech-button:active,
+	#content .-white-sp .speech-button,
+	#content .-white-sp .speech-button:hover,
+	#content .-white-sp .speech-button:active {
+		left: -3.2em !important;
+		width: 2.5em !important;
+	}
+	
+	.speech-active .question {
+		padding-left: 3em;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	#survey-form {
+		margin-top: 1.5em !important;
+	}
+}
