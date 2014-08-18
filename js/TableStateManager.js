@@ -291,9 +291,14 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		$.ajax('/send-email', {
 			method: 'POST',
 			data: payload,
-			success: function () {
-				console.log('Started batch send!');
-				sendButton.text('Started batch send');
+			success: function (data, textStatus, xhr) {
+				if (xhr.status == 200) {
+					console.log('Started batch send!');
+					sendButton.text('Started batch send');
+				} else {
+					console.log('Got an error when trying to send a preview', xhr);
+					sendButton.text('Failed to start batch send');
+				}
 			},
 			error: function (err) {
 				console.log('Got an error when trying to send a preview', err.responseText, err);
