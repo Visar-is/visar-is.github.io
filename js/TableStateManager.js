@@ -54,7 +54,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		if (Object.keys(selectedIds).length > 0) {
 			return Object.keys(selectedIds);
 		} else {
-			return allCustomerIds;
+			return participationEls.not('.hidden').map(function () { return $(this).attr('data-id'); });
 		}
 	};
 
