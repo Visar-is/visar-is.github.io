@@ -33,6 +33,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	var tokenEls = $('.email .token-list .token');
 	var subjectEl = $('[name=subject]');
 	var previewIframe = $('.preview-iframe');
+	var templateChooser = $('[name=template_id]');
 
 	var multiSelectMode = false;
 	var selectedIds = {};
@@ -251,6 +252,11 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	editor.on('change', updateEmailPreview);
 	subjectEl.keyup(updateEmailPreview);
 	previewCustomerEl.change(updateEmailPreview);
+	
+	templateChooser.change(function (event) {
+		editor.getDoc().setValue(templateChooser.val());
+		subjectEl.val(templateChooser.find(':selected').text());
+	});
 	
 	sendPreviewButton.click(function () {
 		var payload = getMessagePayload();
