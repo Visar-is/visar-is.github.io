@@ -290,30 +290,38 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		var payload = getMessagePayload();
 		payload['ids'] = activeIds();
 		
-		console.log(payload);
-		sendButton.prop('disabled', true);
-		sendButton.text('Sending…');
-
-		$.ajax('/send-email', {
-			method: 'POST',
-			data: payload,
-			success: function (data, textStatus, xhr) {
-				if (xhr.status == 200) {
-					console.log('Started batch send!');
-					sendButton.text('Started batch send');
-				} else {
-					console.log('Got an error when trying to send a preview', xhr);
-					sendButton.text('Failed to start batch send');
-				}
-			},
-			error: function (err) {
-				console.log('Got an error when trying to send a preview', err.responseText, err);
-				sendButton.text('Starting batch send failed');
-			},
-			complete: function () {
-				console.log('AJAX finished');
-				sendButton.prop('disabled', false);
+		if (editor.getDoc().getValue().search('/choose-services') !== -1) {
+			if (!confirm('Your messages contains a hard-coded service choosing URL. The same one will be sent to all customers! Proceed?')) {
+				return;
 			}
-		});
+		}
+		
+		if (confirm('This will send email to ' + payload['ids'].length + ' customers. Continue?')) {
+			console.log(payload);
+			sendButton.prop('disabled', true);
+			sendButton.text('Sending…');
+	
+			$.ajax('/send-email', {
+				method: 'POST',
+				data: payload,
+				success: function (data, textStatus, xhr) {
+					if (xhr.status == 200) {
+						console.log('Started batch send!');
+						sendButton.text('Started batch send');
+					} else {
+						console.log('Got an error when trying to send a preview', xhr);
+						sendButton.text('Failed to start batch send');
+					}
+				},
+				error: function (err) {
+					console.log('Got an error when trying to send a preview', err.responseText, err);
+					sendButton.text('Starting batch send failed');
+				},
+				complete: function () {
+					console.log('AJAX finished');
+					sendButton.prop('disabled', false);
+				}
+			});
+		}
 	});
 };
