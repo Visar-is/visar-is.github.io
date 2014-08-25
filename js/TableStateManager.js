@@ -52,15 +52,13 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	});
 	
 	var activeIds = function () {
-		if (Object.keys(selectedIds).length > 0) {
-			return Object.keys(selectedIds);
-		} else {
-			return participationEls.not('.hidden').map(function () { return $(this).attr('data-id'); });
-		}
+		return Object.keys(selectedIds);
 	};
 
 	var updateStatus = function () {
 		var text = [];
+		composeEmailButton.prop('disabled', !multiSelectMode);
+		exportCsvButton.prop('disabled', !multiSelectMode);
 		if (multiSelectMode) {
 			text.push(Object.keys(selectedIds).length + ' selected');
 		}
@@ -69,6 +67,8 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		}
 		tableStateEl.text(text.join(', '));
 	};
+	
+	updateStatus();
 
 	var updateFilters = function () {
 		var filterStates = {};
