@@ -113,8 +113,9 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	};
 	
 	exportCsvButton.mousedown(function () {
+		$('.hidden-customer-id').remove();
 		activeIds().forEach(function (val, i) {
-			exportCsvButton.parent().append('<input type="hidden" name="ids[]" value="' + val + '" />');
+			exportCsvButton.parent().append('<input class="hidden-customer-id" type="hidden" name="ids[]" value="' + val + '" />');
 		});
 	});
 	
