@@ -289,7 +289,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	
 	sendButton.click(function () {
 		var payload = getMessagePayload();
-		payload['ids'] = activeIds();
+		payload['ids'] = activeIds().map(function (pId) { return $(rowSelector + '[data-id=' + pId + ']').attr('data-customer-id'); });
 		
 		if (editor.getDoc().getValue().search('/choose-services') !== -1) {
 			if (!confirm('Your messages contains a hard-coded service choosing URL. The same one will be sent to all customers! Proceed?')) {
