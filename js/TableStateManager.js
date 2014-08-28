@@ -60,12 +60,13 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		composeEmailButton.prop('disabled', !multiSelectMode);
 		exportCsvButton.prop('disabled', !multiSelectMode);
 		if (multiSelectMode) {
-			text.push(Object.keys(selectedIds).length + ' selected');
+			text.push(activeIds().length + ' selected');
 		}
 		if (numHidden > 0) {
 			text.push(numHidden + ' hidden');
 		}
 		tableStateEl.text(text.join(', '));
+		console.log('Selected IDs: ', activeIds());
 	};
 	
 	updateStatus();
@@ -108,7 +109,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 				el.find('.multi-select-checkbox').prop('checked', false).change();
 			}
 		});
-
+		
 		updateStatus();
 	};
 	
@@ -163,7 +164,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		} else {
 			delete selectedIds[id];
 		}
-		multiSelectMode = Object.keys(selectedIds).length > 0;
+		multiSelectMode = activeIds().length > 0;
 		updateStatus();
 	});
 
@@ -181,8 +182,8 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 
 			if (multiSelectMode) {
 				// Batch-update all the currently selected rows after confirmation
-				if (confirm("This action will affect all " + Object.keys(selectedIds).length + " currently selected rows. Proceed?")) {
-					data['ids'] = Object.keys(selectedIds);
+				if (confirm("This action will affect all " + activeIds().length + " currently selected rows. Proceed?")) {
+					data['ids'] = activeIds();
 					$.each(data['ids'], function (i, value) {
 						var rowEquivalentCheckbox = $(rowSelector + '[data-id=' + value + '] input[name=' + checkbox.attr('name') + ']');
 						if (checkbox.prop('checked')) {
@@ -297,8 +298,9 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			}
 		}
 		
+		console.log(payload);
+		
 		if (confirm('This will send email to ' + payload['ids'].length + ' customers. Continue?')) {
-			console.log(payload);
 			sendButton.prop('disabled', true);
 			sendButton.text('Sending…');
 	
