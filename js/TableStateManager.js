@@ -193,6 +193,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 						}
 					});
 				} else {
+					checkbox.prop('checked', !checkbox.prop('checked'));
 					return;
 				}
 			}
