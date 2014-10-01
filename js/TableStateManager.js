@@ -106,6 +106,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			} else {
 				el.addClass('hidden');
 				numHidden += 1;
+				// If this row is hidden, remove it from the current multi-selection (if any).
 				el.find('.multi-select-checkbox').prop('checked', false).change();
 			}
 		});
