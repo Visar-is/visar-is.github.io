@@ -58,13 +58,18 @@
 	height: 100%;
 	width: 100%;
 	top: 0;
-	z-index: 101;
+	z-index: 1000;
 }
 
-#overlay-content {
-	margin: 0 auto;
-	background: #ffffff;
-	margin-top: 5%;
-	width: 80%;
-	padding: 2em;
+#overlay-container.active {
+	display: block;
+}
+
+.in-fullscreen {
+	z-index: 999999999;
+	position: relative;
+}
+
+.in-fullscreen .hide-in-fullscreen {
+	visibility: hidden;
 }
