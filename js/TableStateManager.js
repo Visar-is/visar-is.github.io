@@ -66,11 +66,8 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			text.push(numHidden + ' hidden');
 		}
 		tableStateEl.text(text.join(', '));
-		console.log('Selected IDs: ', activeIds());
 	};
 	
-	updateStatus();
-
 	var updateFilters = function () {
 		var filterStates = {};
 		columnFilters.each(function () {
@@ -214,6 +211,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		});
 	});
 
+
 	// Tiny feedback loop reinforcing multiple email addresses in preview field.
 	previewEmailEl.keyup(function () {
 		if (previewEmailEl.val().indexOf(' ') !== -1) {
@@ -329,4 +327,13 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			});
 		}
 	});
+	
+	// Initialization code
+	(function init() {
+		// Read current page state, sync with internal state.
+		selectAllEl.change();
+		$('.multi-select-checkbox').change();
+		
+		updateStatus();
+	}());
 };
