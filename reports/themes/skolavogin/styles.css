@@ -9,7 +9,9 @@ body header {
 }
 
 body #header a,
-body footer a {
+body #header a:hover,
+body footer a,
+body footer a:hover {
 	color: #FFFFFF;
 }
 
