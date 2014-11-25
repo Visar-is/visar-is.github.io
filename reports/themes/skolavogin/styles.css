@@ -1,0 +1,85 @@
+body {
+	background-image: none;
+	background: #4159A8;
+}
+
+body header {
+	background-image: none;
+	background-color: #4159A8;
+}
+
+body #header a,
+body footer a {
+	color: #FFFFFF;
+}
+
+body footer {
+	background-color: #4159A8;
+	color: #fff;
+}
+
+a, a:visited { color: #006DAF; }
+a:hover { color: #4159A8; }
+
+.collection .collection-header {
+	background: #F7F7FA;
+}
+
+.collection .collection-reports {
+	background: #FAFAFD;
+}
+
+/*
+.button,
+.button-primary,
+button,
+input[type="button"],
+input[type="submit"] {
+	background-color: #007711;
+	border-left: 1px solid #418223;
+	border-top: 1px solid #418223;
+	border-right: 1px solid #22692F;
+	border-bottom: 1px solid #22692F;
+	color: #FFFFFF;
+}
+
+.button:hover,
+.button-primary:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+	background-color: #005511;
+	border-left: 1px solid #418223;
+	border-top: 1px solid #418223;
+	border-right: 1px solid #22692F;
+	border-bottom: 1px solid #22692F;
+	color: #FFFFFF;
+}
+
+.button:active,
+.button-primary:active,
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+	background-color: #004411;
+	border-left: 1px solid #418223;
+	border-top: 1px solid #418223;
+	border-right: 1px solid #22692F;
+	border-bottom: 1px solid #22692F;
+	color: #FFFFFF;
+}
+
+button:disabled,
+button.disabled,
+.button.disabled {
+	cursor: normal;
+	background-color: #555;
+}*/
+
+th span { color: #80c860; }
+nav li { color: #80c860; }
+
+#header ul li button.logout 	{ color: #ffffff; }
+
+#pdf-builder .collapse { color: #007711; }
+
