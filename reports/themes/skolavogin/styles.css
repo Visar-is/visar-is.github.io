@@ -78,7 +78,7 @@ button.disabled,
 	background-color: #555;
 }*/
 
-th span { color: #80c860; }
+/* Appears to be unused styling: th span { color: #80c860; }*/
 nav li { color: #80c860; }
 
 #header ul li button.logout 	{ color: #ffffff; }

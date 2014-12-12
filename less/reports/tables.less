@@ -41,3 +41,23 @@ td[axis=N] sub {
 	color: rgb(85, 85, 85);
 	font-size: 0.7em;
 }
+
+.summary-table .header-text {
+	font-size: 0.7em;
+}
+
+.summary-table .negatively-significant {
+	background: rgba(255, 0, 0, 0.2);
+}
+.summary-table .negatively-significant:after {
+	content: ' ⬇';
+	color: rgba(200, 0, 0, 0.7);
+}
+
+.summary-table .positively-significant {
+	background: rgba(0, 255, 0, 0.2);
+}
+.summary-table .positively-significant:after {
+	content: ' ⬆';
+	color: rgba(0, 200, 0, 0.7);
+}
