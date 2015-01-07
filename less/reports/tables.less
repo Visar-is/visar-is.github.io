@@ -42,8 +42,48 @@ td[axis=N] sub {
 	font-size: 0.7em;
 }
 
+.summary-table {
+	table-layout: fixed;
+}
+
+.summary-table td,
+.summary-table th {
+	position: relative;
+}
+
 .summary-table .header-text {
 	font-size: 0.7em;
+	position: absolute;
+	bottom: 0;
+}
+
+.summary-table .data-column-cell {
+	width: 3.5em;
+	position: relative;
+}
+
+.summary-table .scale-name-column-cell {
+	width: 100%;
+	font-size: 0.9em;
+	white-space: pre;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.summary-table th.data-column-cell {
+	height: 6em;
+	text-align: bottom;
+}
+
+.summary-table th.data-column-cell .header-text {
+	font-size: 0.7em;
+	display: inline-block;
+	position: absolute;
+	left: 1em;
+	bottom: 0;
+	max-width: 7em;
+	transform-origin: left bottom 0px;
+	transform: translate(3.5em, -0.5em) rotate(-90deg);
 }
 
 .summary-table .negatively-significant {

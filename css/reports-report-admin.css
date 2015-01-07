@@ -1,0 +1,20 @@
+/* Django admin CSS insert stylesheet for improving the styling of user multi-select checkbox lists */
+/* See also js/reports-report-admin.js — add new field classnames there and .multi-select-list will automatically be added to them. */
+
+.multi-select-list {
+	max-height: 20em;
+	overflow-y: scroll;
+	box-shadow: inset 0 0 0.2em #333;
+	background: #f1f1f1;
+	padding: 1em;
+}
+
+.multi-select-list li {
+	list-style: none;
+}
+
+.multi-select-status {
+	max-height: 1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
