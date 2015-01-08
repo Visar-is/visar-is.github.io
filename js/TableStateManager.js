@@ -209,6 +209,28 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 
 			updateFilters();
 		});
+		
+		el.find('.participation-text').each(function(i, el) {
+			var el = $(el);
+			var participationElTimeout = null;
+			el.keyup(function (event) {
+				window.clearTimeout(participationElTimeout);
+				participationElTimeout = window.setTimeout(function () {
+					var data = {'csrfmiddlewaretoken': csrfToken}
+					data[el.attr('name')] = el.val();
+					$.ajax(url, {
+						'method': 'POST',
+						'data': data,
+						'success': function () {
+							console.log('Saved participation text state');
+						},
+						'error': function () {
+							console.log('Participation state save failed!');
+						}
+					});
+				}, 500);
+			});
+		});
 	});
 
 
