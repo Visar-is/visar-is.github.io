@@ -1,6 +1,6 @@
 .chart { width: 100%; position: relative;  padding: 0; margin:0; font-size: 16px;  }
-.title { text-align: center; font-size: 16px; padding: 1em; font-size: 120%; }
-.data { font-size: 80%; position: relative; }
+.title { text-align: center; font-size: 16px; margin: 0.5em 0.5em 0 0.5em; font-size: 120%; }
+.data { font-size: 80%; position: relative; margin-top: 0.5em; }
 ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 .fixed-key .you span, .key .you span {  color: #65DB65; padding-right: 0.25em;  }
 .fixed-key .compare span, .key .compare span {  color: #dc3912; padding-right: 0.25em;  }
@@ -28,8 +28,15 @@ ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 .plot { margin-left: 65px; }
 
 .notes { clear: both;  }
-.error { max-width:600px !important; }
-.error-message { margin-left: 65px; margin-right: 0px; text-align: center; padding: 0 .5em; width: 100%; min-width: 20em; position: absolute; }
+
+.error-message {
+	margin-right: 0px;
+	text-align: center;
+	min-width: 20em;
+	font-size: 0.77em;
+	margin-bottom: 0.77em;
+	color: #888;
+}
 	
 .y-axis { float:left; border-right: 1px solid #CCC; width: 65px; color: #333; text-align: right; height: 200px; position: relative; }
 .y-axis li { margin:0; padding:0; position: absolute; right: -1px; }
