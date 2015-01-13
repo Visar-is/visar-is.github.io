@@ -54,7 +54,7 @@
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
 		<div class="success clearfix">
-			<span class="message-text">Success, you sly dog you, keep killin those ladies!</span>
+			<span class="message-text">Success!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
 	</div>		
