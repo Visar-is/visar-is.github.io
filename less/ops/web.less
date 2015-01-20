@@ -97,3 +97,49 @@ input[type="submit"]:visited {
 	border-bottom: 1px solid #22692F;
 	color: #FFFFFF;
 }
+
+
+.collapsible {
+	margin-bottom: 1.5em;
+	clear: both;
+}
+
+.collapsible-header {
+	max-width: 100%;
+	background: #F7FAF7;
+	border-top-right-radius: 0.3em;
+	border-top-left-radius: 0.3em;
+	padding: 0.3em 0.3em 0px;
+	cursor: pointer;
+	border-bottom: #EEE 1px solid;
+}
+
+.collapsible.collapsed .collapsible-header {
+	border-radius: 0.3em;
+	border-bottom: none;
+}
+
+.collapsible-header .collapsible-name {
+	display: inline;
+	display: inline-block;
+}
+
+.collapsible-expanded-indicator {
+	display: inline;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	padding: 0.2em;
+}
+
+.collapsible .collapsible-content {
+	padding: 0.5em 1.5em 1em 1.5em;
+	margin-top: 0;
+	background: #FAFDFA;
+	border-bottom-right-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+}
+
+.collapsible.collapsed .collapsible-content {
+	display: none;
+}
