@@ -106,8 +106,10 @@ padding-bottom: 18px;
 .checkbox-target, .radio-target { padding: 0.5em; display: block; cursor: pointer; }
 .checkbox-optional-target, .radio-optional-target { padding: 0.5em; }
 
+/* Always hide primers on collapsed questions, only hide instructions and h1 on collapsed checkboxes. */
 .checkbox.collapse h1,
-.collapse .instructions, .collapse .primer { display: none; }
+.checkbox.collapse .instructions,
+.collapse .primer { display: none; }
 
 .question { padding-top: 2em; }
 .question:first-of-type { padding-top: 0; }

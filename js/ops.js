@@ -12,8 +12,10 @@ $(document).ready(function() {
 		return padding;
 	};
 
+
 	// Set Padding Top for #content
 	$('#content').css('padding-top', header_padding());
+
 
 	// Hide Message
 	$('.message-close').on('click', function() {
@@ -22,7 +24,8 @@ $(document).ready(function() {
 			$('#content').css('padding-top', header_padding());
 		});
 	});
-	
+
+
 	// Solves Chrome Bug #350893.
 	$("object").each(function() { $(this).load(this.getAttribute("data")); });
 	
@@ -43,6 +46,7 @@ $(document).ready(function() {
 		});
 	}());
 	$('.collapsible.collapse-on-load:not(.collapsed) .collapsible-header').click();
+
 
 	// Apply default sort.
 	window.setTimeout(function () {
@@ -81,4 +85,5 @@ $(document).ready(function() {
 			}
 		});
 	});
+
 });
