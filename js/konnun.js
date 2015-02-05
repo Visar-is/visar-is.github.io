@@ -40,7 +40,16 @@ $('.response-input').click(function (event) {
 	var inputEl = $(event.target),
 		questionEl = inputEl.closest('.question'),
 		responseEl = inputEl.closest('.response'),
-		optionalTextEl = responseEl.find('.optional-text');
+		optionalTextEl = responseEl.find('.optional-text'),
+		now = new Date().getTime();
+	
+	// If the response has been clicked before, make sure there’s been a >200ms delay before accepting further clicks.
+	// This prevents double-clicking from accidentally de-selecting deselectable radio buttons.
+	if (responseEl.attr('data-last-click') != null) {
+		if (now - responseEl.attr('data-last-click') < 200) {
+			return;
+		}
+	}
 	
 	if (responseEl.hasClass('selected')) {
 		// The participant has clicked an already selected item. Ensure it is unselected, even if it is a radio button.
@@ -65,13 +74,23 @@ $('.response-input').click(function (event) {
 			optionalTextEl.focus();
 		}
 	}
+	
+	// Record the time this most recent response click took place.
+	responseEl.attr('data-last-click', now);
 });
 
+// Ensure that the relevant input is selected when an optional input is focused.
 $('.optional-text').click(function (event) {
 	var responseEl = $(event.target).closest('.response');
 	if (!responseEl.hasClass('selected')) {
 		responseEl.find('.response-input').click();
 	}
+});
+
+// Expand optional text boxes to fill the space they’re in.
+$('.optional-text').each(function (i, el) {
+	var el = $(el);
+	el.css('width', (el.parent().width() - el.prev().width() - 40) + 'px');
 });
 
 
