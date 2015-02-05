@@ -36,56 +36,42 @@ if (!('ontouchstart' in document.documentElement)) {
 $('#wrap').css('padding-bottom', '10em');
 
 
-// Autoscroll to next question on click
-$('.advance-on-click').click(function (event) {
-	var currentQuestion = $(event.target).closest('.question');
-	var offset = currentQuestion.offset().top + currentQuestion.outerHeight();
+$('.response-input').click(function (event) {
+	var inputEl = $(event.target),
+		questionEl = inputEl.closest('.question'),
+		responseEl = inputEl.closest('.response'),
+		optionalTextEl = responseEl.find('.optional-text');
 	
-	// If the clicked option is already selected, un-select it and take no further action.
-	if (currentQuestion.find(':checked').closest('.choice-target').hasClass('selected')) {
-		currentQuestion.find(':checked').prop('checked', false);
-		currentQuestion.find('.choice-target').removeClass('selected');
-		return;
-	}
-	
-	
-	if ($(this).hasClass('radio-target') || $(this).hasClass('radio-optional-target')) {
-		$(event.target).closest('.choice-target').addClass('selected');
-	}
-	
-	if ($(this).hasClass('checkbox-target') || $(this).hasClass('checkbox-optional-target')) {
-		if($(this).find('input').prop('checked')) {
-			$(event.target).closest('.choice-target').addClass('selected');
-		} else {
-			$(event.target).closest('.choice-target').removeClass('selected');
+	if (responseEl.hasClass('selected')) {
+		// The participant has clicked an already selected item. Ensure it is unselected, even if it is a radio button.
+		inputEl.prop('checked', false);
+		questionEl.find('.selected').removeClass('selected');
+	} else {
+		// The participant has clicked an unselected item.
+		if (inputEl.prop('type') == 'radio') {
+			questionEl.find('.response.selected').removeClass('selected');
+		}
+		responseEl.addClass('selected');
+		
+		// If the response requires an advance, scroll to the next question.
+		if (responseEl.hasClass('advance-on-click')) {
+			var offset = questionEl.offset().top + questionEl.outerHeight();
+			if ($('.question').length > 1) {
+				$('body,html').animate({
+					scrollTop: offset
+				}, 290);
+			}
+		} else if (optionalTextEl.length > 0) {
+			optionalTextEl.focus();
 		}
 	}
-	
-	if ($('.question').length > 1) {
-		if (!($(this).hasClass('radio-optional-target') || $(this).hasClass('checkbox-optional-target') || $(this).hasClass('checkbox-target'))) {
-			$('body,html').animate({
-				scrollTop: offset
-			}, 290);
-		}
-	}
-});
-
-
-// Set checkbox/choice open response option target elements.
-$('.radio-optional-target').parent().click(function (event) {
-	$(this).parent().addClass('selected');
-	$(this).find('.optional-text').focus();
-	$(this).find('input[type=radio]').prop('checked', true);
-});
-$('.checkbox-optional-target').parent().click(function (event) {
-	$(this).find('.optional-text').focus();
-	$(this).find('input[type=checkbox]').prop('checked');
 });
 
 $('.optional-text').click(function (event) {
-	$(this).parent().addClass('selected');
-	$(this).parent().find('input[type=checkbox]').prop('checked', true);
-	$(this).parent().find('input[type=radio]').prop('checked', true);
+	var responseEl = $(event.target).closest('.response');
+	if (!responseEl.hasClass('selected')) {
+		responseEl.find('.response-input').click();
+	}
 });
 
 
