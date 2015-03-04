@@ -14,7 +14,7 @@ echo "Compiled 6 .less files"
 cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/lib/soundmanager/soundmanager2-nodebug-jsmin.js js/konnun.js | jsmin > js/konnun-min.js
 # cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/lib/soundmanager/soundmanager2-jsmin.js js/konnun.js | jsmin > js/konnun-min.js
 
-cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/lib/papa-parse.js js/lib/sort-table.js js/ops.js | jsmin > js/ops-min.js
+cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/lib/papa-parse.js js/lib/sort-table.js js/lib/jsdifflib/difflib.js js/lib/jsdifflib/diffview.js js/ops.js | jsmin > js/ops-min.js
 
 cat js/lib/bean.js js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
 

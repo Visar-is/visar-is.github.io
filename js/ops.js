@@ -65,7 +65,7 @@ $(document).ready(function() {
 		console.log(data);
 
 		callStatusEl.prop('disabled', true);
-		// This call not working due to jQuery apparently changing the contents of .serialize()
+		
 		$.ajax({
 			url: callStatusForm.attr('action'),
 			type: callStatusForm.attr('method'),

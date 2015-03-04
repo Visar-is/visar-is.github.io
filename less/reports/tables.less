@@ -19,7 +19,7 @@
 	}
 	
 	.collapse .rounded tr td { 
-		/* Behave  like a "row" */
+		/* Behave like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
@@ -65,6 +65,7 @@ td[axis=N] sub {
 .summary-table .scale-name-column-cell {
 	width: 100%;
 	font-size: 0.9em;
+	font-weight: bold;
 	white-space: pre;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -100,4 +101,16 @@ td[axis=N] sub {
 .summary-table .positively-significant:after {
 	content: ' ⬆';
 	color: rgba(0, 200, 0, 0.7);
+}
+
+
+/* Rank Cells */
+.rank-cell.highest-quartile {
+	color: #0B0;
+	font-weight: bold;
+}
+
+.rank-cell.lowest-quartile {
+	color: #D00;
+	font-weight: bold;
 }
