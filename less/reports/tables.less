@@ -92,13 +92,15 @@ td[axis=N] sub {
 	max-width: 7em;
 	transform-origin: left bottom 0px;
 	transform: translate(3.5em, -0.5em) rotate(-90deg);
+	-webkit-transform-origin: left bottom 0px;
+	-webkit-transform: translate(3.5em, -0.5em) rotate(-90deg);
 }
 
 .summary-table .negatively-significant {
 	background: rgba(255, 0, 0, 0.2);
 }
 .summary-table .negatively-significant:after {
-	content: ' \2B07';
+	content: ' ▼';
 	color: rgba(200, 0, 0, 0.7);
 }
 
@@ -106,7 +108,7 @@ td[axis=N] sub {
 	background: rgba(0, 255, 0, 0.2);
 }
 .summary-table .positively-significant:after {
-	content: ' \2B06';
+	content: ' ▲';
 	color: rgba(0, 200, 0, 0.7);
 }
 
