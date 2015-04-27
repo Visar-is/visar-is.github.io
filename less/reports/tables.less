@@ -66,13 +66,17 @@ td[axis=N] sub {
 	font-size: 0.7em;
 }
 
-.summary-table .scale-name-column-cell {
+.summary-table .scale-name-column-cell,
+.summary-table .category-cell {
 	width: 100%;
 	font-size: 0.9em;
-	font-weight: bold;
 	white-space: pre;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.summary-table .category-cell {
+	font-weight: bold;
 }
 
 .summary-table th.data-column-cell {
