@@ -11,7 +11,7 @@
 
 @import "reports/tables.less";
 
-body { margin-left: 1cm; }
+body { margin-left: 0.5cm; }
 
 strong {
 	font-family: @text-font-family-bold;
@@ -178,4 +178,11 @@ div.longitudinal-lines { margin-top: 3px; }
 
 .section-note {
 	white-space: pre-wrap;
+}
+
+/* Skólavogin Summary Table PDF Styling */
+
+/* The 3.5em translation right which was required in the web view is too much for the PDFs. 1em works better. */
+.summary-table th.data-column-cell .header-text {
+	transform: translate(1em, -0.5em) rotate(-90deg);
 }
