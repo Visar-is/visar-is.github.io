@@ -191,3 +191,11 @@ div.longitudinal-lines { margin-top: 3px; }
 	white-space: nowrap;
 	max-width: 8em;
 }
+
+/* As an entire summary table is a block item which will try to flow onto a new page if it would be chopped up on it’s own
+ * page, Phantom JS cannot guarantee clean breaks within it. This is an attempt to hack summary tables breaking in approximately
+ * the right place.
+ */
+.summary-table tr:nth-child(19) {
+	page-break-after: always;
+}
