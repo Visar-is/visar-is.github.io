@@ -182,7 +182,10 @@ div.longitudinal-lines { margin-top: 3px; }
 
 /* Skólavogin Summary Table PDF Styling */
 
-/* The 3.5em translation right which was required in the web view is too much for the PDFs. 1em works better. */
+/* The 3.5em translation right which was required in the web view is too much for the PDFs. 1em works better. 
+ * Phantom JS will likely only ever use -webkit, but the standards compliant declaration is left in for completeness.
+ */
 .summary-table th.data-column-cell .header-text {
 	transform: translate(1em, -0.5em) rotate(-90deg);
+	-webkit-transform: translate(1em, -0.5em) rotate(-90deg);
 }
