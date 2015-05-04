@@ -1,3 +1,3 @@
 /* Skolavogin-specific PDF Styling */
 
-a, a:visited { color: #006DAF; }
+a, a:visited, .report-cover h2 { color: #006DAF; }
