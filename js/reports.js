@@ -27,21 +27,18 @@ $(document).ready(function() {
 	/* Only make the table clickable/sortable if JS is loaded*/
 	$('.sortable th').css('cursor','pointer');
 	
-    $('#table_search').keyup(function() {
-        var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-
-        $('.sortable tbody tr').show().filter(function() {
-            var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-            return !~text.indexOf(val);
-        }).hide();
-        
-        $('#search_text').html($('.sortable tbody tr:visible').length+' reports match.')
-    });
+	$('#table_search').keyup(function() {
+		var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+		
+		$('.sortable tbody tr').show().filter(function() {
+			var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+			return !~text.indexOf(val);
+		}).hide();
+		
+		$('#search_text').html($('.sortable tbody tr:visible').length+' reports match.')
+	});
 	
 	// Solves Chrome Bug #350893
 	// Causes a flicker, should only do this for Chrome browsers!
 	$("#header object").each(function(){ $(this).load($(this).attr("data")); })
-	
 });
-
-
