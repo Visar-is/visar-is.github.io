@@ -19,7 +19,6 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		z-index: 90;
 	}
 	
 	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
@@ -27,7 +26,11 @@
 	.points li.you:before { z-index: 100; }
 	.points li span { display: none; }
 	
-	.lines {
+	.plot .points {
+		z-index: 90;
+	}
+	
+	.plot .lines {
 		z-index: 80;
 	}
 	
