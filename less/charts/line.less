@@ -8,6 +8,7 @@
 	
 	.longitudinal-points {
 		position: absolute;
+		pointer-events: none; /* Allow pointer events through to lines underneath. */
 	}
 	
 	.longitudinal-points li.compare:before {
@@ -16,16 +17,20 @@
 	}
 	
 	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
-	.points li:before { content: "◆"; font-size: 1.5em; color: #dc3912; z-index:90; }
-	.points li.you:before { z-index: 100; color: #65DB65; }
+	.points li:before { content: "◆"; font-size: 1em; color: #ccc; z-index:90; position: relative; }
 	.points li span { display: none; }
+	
+	.points li.you:before { z-index: 9000000; color: #65DB65; font-size: 1.5em; }
+	.points li.compare:before { z-index: 8000000; color: #dc3912; font-size: 1.5em; }
+	.points li.you_schools:before { z-index: 7000000; color: #555; font-size: 1.5em; }
+	.points li.compare_schools:before { z-index: 6000000; color: #bbb; color: rgba(210, 210, 210, 0.3); font-size: 1.25em; }
 	
 	@media screen and (min-width: 900px) {
 		.longitudinal-lines { margin-right: 160px; }
 	}
 	
 	line {
-		stroke: #ccc;
+		stroke: rgba(210, 210, 210, 0.2);
 	}
 	
 	line.you {
@@ -34,6 +39,27 @@
 	
 	line.compare {
 		stroke: #dc3912;
+	}
+	
+	line.you_schools { stroke: #555; }
+	
+	/* Line Hover Effects */
+	.point.hovered:before {
+		z-index: 9999999999999 !important;
+		text-shadow: #FFFAD4 0 0 2px, #FFFAD4 0 -2px 1px, #FFFAD4 0 2px 1px, #FFFAD4 -2px 0 1px, #FFFAD4 2px 0 1px;
+		color: #000 !important;
+	}
+
+	.point.hovered.last span,
+	.point:hover span {
+		display: inline;
+		position: absolute;
+		background: #FFFAD4 none repeat scroll 0% 0%;
+		float: left;
+	}
+
+	line.hovered {
+		stroke-width: 4px;
 	}
 }
 

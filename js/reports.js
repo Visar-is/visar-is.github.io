@@ -41,4 +41,23 @@ $(document).ready(function() {
 	// Solves Chrome Bug #350893
 	// Causes a flicker, should only do this for Chrome browsers!
 	$("#header object").each(function(){ $(this).load($(this).attr("data")); })
+	
+	// Longitudinal chart hover effects.
+	(function () {
+		var yslines = $('line.you_schools');
+
+		yslines.each(function(i, ysline) {
+			var schoolClass = ysline.getAttribute('class').split(' ').filter(function (c) { return c[0] == 's'; })[0];
+			var styledElements = $('.point.' + schoolClass + ', .longitudinal-lines line.' + schoolClass);
+			$('.point.' + schoolClass).last().addClass('last');
+
+			$(ysline).on('mouseover', function (event) {
+				styledElements.addClass('hovered');
+			});
+
+			$(ysline).on('mouseout', function (event) {
+				styledElements.removeClass('hovered');
+			});
+		});
+	}());
 });
