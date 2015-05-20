@@ -40,7 +40,7 @@ $(document).ready(function() {
 	
 	// Solves Chrome Bug #350893
 	// Causes a flicker, should only do this for Chrome browsers!
-	$("#header object").each(function(){ $(this).load($(this).attr("data")); })
+	$("#header object").each(function() { $(this).load($(this).attr("data")); });
 	
 	// Longitudinal chart hover effects.
 	(function () {
