@@ -48,15 +48,22 @@ $(document).ready(function() {
 
 		yslines.each(function(i, ysline) {
 			var schoolClass = ysline.getAttribute('class').split(' ').filter(function (c) { return c[0] == 's'; })[0];
-			var styledElements = $('.point.' + schoolClass + ', .longitudinal-lines line.' + schoolClass);
+			var points = $('.point.' + schoolClass);
+			var lines = $('.longitudinal-lines line.' + schoolClass);
 			$('.point.' + schoolClass).last().addClass('last');
 
 			$(ysline).on('mouseover', function (event) {
-				styledElements.addClass('hovered');
+				points.addClass('hovered');
+				lines.each(function (i, line) {
+					line.setAttribute('class', line.getAttribute('class') + ' hovered');
+				});
 			});
 
 			$(ysline).on('mouseout', function (event) {
-				styledElements.removeClass('hovered');
+				points.removeClass('hovered');
+				lines.each(function (i, line) {
+					line.setAttribute('class', line.getAttribute('class').split(' ').filter(function (c) { return c != 'hovered'; }).join(' '));
+				});
 			});
 		});
 	}());
