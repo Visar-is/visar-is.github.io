@@ -39,18 +39,6 @@
 		color: #000;
 	}
 	
-	/* Disable hover on pre-2015 reports */
-	.year-2011, .year-2012, .year-2013, .year-2014 {
-		.points li.you:hover span {
-			display: none !important;
-		}
-		
-		.points li.you:hover:before {
-			z-index: auto;
-			font-size: auto;
-		}
-	}
-	
 	.plot .points {
 		z-index: 90;
 	}
@@ -75,5 +63,19 @@
 		margin-right: 160px;
 		
 		.lines { margin-right: 160px; }
+	}
+}
+
+/* Disable hover on pre-2015 reports */
+.year-2011, .year-2012, .year-2013, .year-2014 {
+	.scatter {
+		.points li.you:hover span {
+			display: none !important;
+		}
+		
+		.points li.you:hover:before {
+			z-index: auto;
+			font-size: auto;
+		}
 	}
 }
