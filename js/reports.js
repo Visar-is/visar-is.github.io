@@ -24,7 +24,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	/* Only make the table clickable/sortable if JS is loaded*/
+	/* Only make the table clickable/sortable if JS is loaded */
 	$('.sortable th').css('cursor','pointer');
 	
 	$('#table_search').keyup(function() {

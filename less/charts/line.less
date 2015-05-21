@@ -65,6 +65,13 @@
 		stroke-width: 4px;
 	}
 	
+	/* Disable hover on pre-2015 reports */
+	.year-2011, .year-2012, .year-2013, .year-2014 {
+		.point.hovered.last span {
+			display: none !important;
+		}
+	}
+	
 	.y-axis {
 		height: @line-data-height;
 	}
