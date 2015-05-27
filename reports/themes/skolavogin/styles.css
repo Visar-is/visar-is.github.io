@@ -84,3 +84,14 @@ nav li { color: #4159A8; }
 #header ul li button.logout { color: #ffffff; }
 
 #pdf-builder .collapse { color: #4159A8; }
+
+
+/* Skolavogin-specific chart styling
+ * At the moment, skolavogin-specific chart styling is done as far as possible in the base chart styles,
+ * with overrides here where required.
+ */
+
+.bn-compare-line .points li.you:before { color: #00f; }
+.bn-compare-line line.you { stroke: #00f; }
+.bn-compare-line-x-axis .you { color: #00f; }
+.fixed-key .you span, .key .you span { color: #00f; }
