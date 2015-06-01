@@ -18,6 +18,8 @@ cat js/lib/jquery.1.9.1.min.js js/global/messages.js js/lib/papa-parse.js js/lib
 
 cat js/lib/bean.js js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
 
+cat js/lib/bean.js js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js > js/reports-debug.js
+
 cat js/lib/jquery.1.9.1.min.js js/lib/enquire.js js/lib/html5shiv.js js/visar.js | jsmin > js/visar-min.js
 
 cat js/lib/jquery.1.9.1.min.js js/lib/html5shiv.js js/global/messages.js js/lib/sort-table.js js/lib/papa-parse.js | jsmin > js/crm-min.js
