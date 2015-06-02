@@ -57,16 +57,30 @@ a {	color: #007722; }
 	font-size: 11px;
 }
 
-/* Override chart sizes */
+/* Override chart styles
+ * Typically sizes and offsets, tweaked by a few pixels to ensure everything lines up perfectly.
+ */
 
 .chart .bars,
 .chart .bars ol,
 .bar-chart .y-axis { height: 100px; }
 
 .scatter .y-axis, .scatter .plot { height: 200px; }
+.scatter .y-axis ol { top: -1.5px; }  /* The offset required for scatter charts in the PDFs is smaller than on the web. */
 
-/* when we shrink the font, our diamonds shift to the top-left, this compensates the SVG lines */
-div.longitudinal-lines { margin-top: 3px; }
+/* Longitudinal y axes require a slight offset in PDFs. */
+.bn-compare-line .y-axis ol {
+	height: 100%;
+	position: relative;
+	top: 3px;
+}
+
+/* Bar chart y axes require a slight offset in PDFs. */
+.bar-chart .y-axis ol {
+	height: 100%;
+	position: relative;
+	top: 1.5px;
+}
 
 
 /* Cover Pages */
@@ -201,12 +215,4 @@ div.longitudinal-lines { margin-top: 3px; }
 
 .summary-table th.data-column-cell {
 	height: 8em;
-}
-
-/* As an entire summary table is a block item which will try to flow onto a new page if it would be chopped up on it’s own
- * page, Phantom JS cannot guarantee clean breaks within it. This is an attempt to hack summary tables breaking in approximately
- * the right place.
- */
-.summary-table tr:nth-child(19) {
-	page-break-after: always;
 }
