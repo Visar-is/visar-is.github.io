@@ -75,9 +75,9 @@ a {	color: #007722; }
 	top: 3px;
 }
 
-/* Longitudinal charts have a tendency to overflow unless hard limits are set on the container element. */
+/* Longitudinal charts have a tendency to overflow unless hard limits are set on the container element. !important lets us override the max-width in the element style attribute. */
 .bn-longitudinal-chart {
-	max-width: 450px;
+	max-width: 450px !important;
 }
 
 /* longitudinal points requires an offset to move the points up to the (correct) line positions */
