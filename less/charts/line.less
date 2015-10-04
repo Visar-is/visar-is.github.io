@@ -20,32 +20,34 @@
 	}
 	
 	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
-	.points li:before { content: "◆"; font-size: 1em; color: #ccc; z-index:90; position: relative; }
+	.points li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; position: relative; }
 	.points li span { display: none; }
 	
-	.points li.you:before { z-index: 9000000; color: #65DB65; font-size: 1.5em; }
-	.points li.compare:before { z-index: 8000000; color: #dc3912; font-size: 1.5em; }
-	.points li.you_schools:before { z-index: 7000000; color: #555; font-size: 1.5em; }
+	.points li.you:before { z-index: 9000000; color: #65DB65; }
+	.points li.compare:before { z-index: 8000000; color: #dc3912; }
+	.points li.you_schools:before { z-index: 7000000; color: #555; }
 	.points li.compare_schools:before { z-index: 6000000; color: #bbb; color: rgba(190, 190, 190, 0.4); font-size: 1.25em; }
+	.points li.cohort-grade-6:before { z-index: 9000000; color: #4886CE; }
+	.points li.cohort-grade-7:before { z-index: 9000000; color: #E9681B; }
+	.points li.cohort-grade-8:before { z-index: 9000000; color: #949494; }
+	.points li.cohort-grade-9:before { z-index: 9000000; color: #FFB600; }
+	.points li.cohort-grade-10:before { z-index: 9000000; color: #3359BA; }
 	
 	@media screen and (min-width: 900px) {
 		.longitudinal-lines { margin-right: 160px; }
 	}
 	
-	line {
-		stroke: rgba(210, 210, 210, 0.2);
-	}
+	line { stroke: rgba(210, 210, 210, 0.2); }
 	
-	line.you {
-		stroke: #65DB65;
-	}
-	
-	line.compare {
-		stroke: #dc3912;
-	}
-	
+	line.you { stroke: #65DB65; }
+	line.compare { stroke: #dc3912; }
 	line.you_schools { stroke: #555; }
-	
+	line.cohort-grade-6 { stroke: #4886CE; }
+	line.cohort-grade-7 { stroke: #E9681B; }
+	line.cohort-grade-8 { stroke: #949494; }
+	line.cohort-grade-9 { stroke: #FFB600; }
+	line.cohort-grade-10 { stroke: #3359BA; }
+										
 	/* Line Hover Effects */
 	.point.hovered:before {
 		z-index: 9999999999999 !important;
