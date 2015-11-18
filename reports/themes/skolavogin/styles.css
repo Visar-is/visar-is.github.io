@@ -95,3 +95,10 @@ nav li { color: #4159A8; }
 .bn-compare-line line.you { stroke: #00f; }
 .bn-compare-line-x-axis .you { color: #00f; }
 .fixed-key .you span, .key .you span { color: #00f; }
+
+/* Bar Charts */
+
+.bars li.you { background-color: #00f; outline: 1px solid #00f; }
+
+.fixed-key .you span,
+.key .you span { color: #00f; }
