@@ -103,6 +103,7 @@ td[axis=N] sub {
 	content: ' ▼';
 	color: rgba(200, 0, 0, 0.7);
 }
+.summary-table .negatively-significant.inverted:after { content: ' ▲'; }
 
 .summary-table .positively-significant {
 	background: rgba(0, 255, 0, 0.2);
@@ -111,6 +112,7 @@ td[axis=N] sub {
 	content: ' ▲';
 	color: rgba(0, 200, 0, 0.7);
 }
+.summary-table .positively-significant.inverted:after { content: ' ▼'; }
 
 .summary-table td.muni-data-column,
 .summary-table th.muni-data-column,
