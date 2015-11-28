@@ -1,21 +1,21 @@
-body {
+.web body {
 	background-image: none;
 	background: #4159A8;
 }
 
-body header {
+.web body header {
 	background-image: none;
 	background-color: #4159A8;
 }
 
-body #header a,
-body #header a:hover,
-body footer a,
-body footer a:hover {
+.web body #header a,
+.web body #header a:hover,
+.web body footer a,
+.web body footer a:hover {
 	color: #FFFFFF;
 }
 
-body footer {
+.web body footer {
 	background-color: #4159A8;
 	color: #fff;
 }
@@ -23,11 +23,11 @@ body footer {
 a, a:visited { color: #006DAF; }
 a:hover { color: #4159A8; }
 
-.collection .collection-header {
+.web .collection .collection-header {
 	background: #F7F7FA;
 }
 
-.collection .collection-reports {
+.web .collection .collection-reports {
 	background: #FAFAFD;
 }
 
@@ -79,9 +79,9 @@ button.disabled,
 }*/
 
 
-nav li { color: #4159A8; }
+.web nav li { color: #4159A8; }
 
-#header ul li button.logout { color: #ffffff; }
+.web #header ul li button.logout { color: #ffffff; }
 
 #pdf-builder .collapse { color: #4159A8; }
 
