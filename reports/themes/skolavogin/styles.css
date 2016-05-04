@@ -96,6 +96,9 @@ button.disabled,
 .bn-compare-line-x-axis .you { color: #31419A; }
 .fixed-key .you span, .key .you span { color: #31419A; }
 
+.bn-compare-line-x-axis .you_school { color: #65DB65; }
+.fixed-key .you_school span, .key .you_school span { color: #65DB65; }
+
 /* Bar Charts */
 
 .bars li.you { background-color: #31419A; outline: 1px solid #31419A; }

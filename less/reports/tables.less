@@ -21,20 +21,20 @@
 	.collapse .rounded tr td { 
 		/* Behave like a "row" */
 		border: none;
-		border-bottom: 1px solid #eee; 
+		border-bottom: 1px solid #eee;
 		position: relative;
 		padding-left: 45%; 
 	}
 	
-	.collapse td:before { 
-		width: 40%; 
-		padding-right: 10px; 
+	.collapse td:before {
+		width: 40%;
+		padding-right: 10px;
 		white-space: nowrap;
 		content: attr(axis) ':';
 	}
 }
 
-td.significant { font-weight: bold; color: #010871;  }
+td.significant { font-weight: bold; color: #010871; }
 td.significant:after { content: "*"; }
 
 td[axis=N] sub {
