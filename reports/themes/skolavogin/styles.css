@@ -96,7 +96,7 @@ button.disabled,
 .bn-compare-line-x-axis .you { color: #31419A; }
 .fixed-key .you span, .key .you span { color: #31419A; }
 
-.bn-compare-line .points li.you_school:before { color: #65DB65; }
+.bn-compare-line .points li.you_school:before { color: #65DB65; z-index: 9000001; }
 .bn-compare-line line.you_school { stroke: #65DB65; }
 .bn-compare-line-x-axis .you_school { color: #65DB65; }
 .fixed-key .you_school span, .key .you_school span { color: #65DB65; }
