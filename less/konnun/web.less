@@ -99,7 +99,7 @@ padding-bottom: 18px;
 }
 
 
-.choice-target { margin-bottom: 0.5em; display: block; background: @white; border: #ccc 1px solid; cursor: pointer; }
+.choice-target { margin-bottom: 0.5em; display: block; background: @white; outline: #ccc 1px solid; cursor: pointer; }
 
 .no-touch .response .choice-target:hover,
 .response.selected .choice-target {
@@ -116,7 +116,7 @@ padding-bottom: 18px;
 .checkbox.collapse .instructions,
 .collapse .primer { display: none; }
 
-.question { padding-top: 2em; }
+.question { padding-top: 2em; clear: both }
 .question:first-of-type { padding-top: 0; }
 
 .question.collapse { margin-top: 0.5em; }
@@ -154,3 +154,7 @@ input.optional-text {
 	margin: 0 auto;
 }
 .open { padding-bottom: 0.5em; }
+
+.choice-image .radio-target input { display: none; }
+.choice-image .radio-target img { width: 100% }
+.choice-image .choice-target { width: 25%; float: left }
