@@ -33,6 +33,16 @@ input[type="submit"] {
 	color: #FFFFFF;
 }
 
+.button:visited,
+.button-primary:visited {
+	background-color: #007711;
+	border-left: 1px solid #418223;
+	border-top: 1px solid #418223;
+	border-right: 1px solid #22692F;
+	border-bottom: 1px solid #22692F;
+	color: #FFFFFF;
+}
+
 .button:hover,
 .button-primary:hover,
 button:hover,
