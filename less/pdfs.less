@@ -25,6 +25,9 @@ a {	color: #007722; }
 	clear: both;
 }
 
+/* Temporary fix for overlapping table header bug described (along with various other potential fixes) here: https://github.com/ariya/phantomjs/issues/10927 */
+.table-section thead { display: table-row-group; }
+
 .table-section,
 .section-note { font-size: 11px; }
 
