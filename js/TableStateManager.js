@@ -258,7 +258,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		sendPreviewButton.text('Send Preview');
 
 		// TODO: insert time delay.
-		previewIframe.load('/preview-email', {
+		previewIframe.load('/crm/preview-email', {
 			'message_template': payload.message_template,
 			'subject_template': payload.subject_template,
 			'preview_id': previewCustomerEl.val(),
@@ -292,7 +292,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 		sendPreviewButton.prop('disabled', true);
 		sendPreviewButton.text('Sending…');
 		
-		$.ajax('/send-email', {
+		$.ajax('/crm/send-email', {
 			method: 'POST',
 			data: payload,
 			success: function () {
@@ -326,7 +326,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 			sendButton.prop('disabled', true);
 			sendButton.text('Sending…');
 	
-			$.ajax('/send-email', {
+			$.ajax('/crm/send-email', {
 				method: 'POST',
 				data: payload,
 				success: function (data, textStatus, xhr) {
