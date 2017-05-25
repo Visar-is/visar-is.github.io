@@ -260,7 +260,7 @@ function SoundManager(smURL, smID) {
   this.flash = {};
 
   // determined at init time
-  this.html5Only = false;
+  this.html5Only = true;
 
   // used for special cases (eg. iPad/iPhone/palm OS?)
   this.ignoreFlash = false;
@@ -1457,8 +1457,8 @@ function SoundManager(smURL, smID) {
     sm2.flash = {};
 
     // reset device-specific HTML/flash mode switches
-
-    sm2.html5Only = false;
+    // Manually changed this to TRUE
+    sm2.html5Only = true;
     sm2.ignoreFlash = false;
 
     window.setTimeout(function() {
