@@ -254,16 +254,19 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 	};
 
 	var updateEmailPreview = function () {
-		var payload = getMessagePayload();
+		var payload = getMessagePayload(),
+			ajaxPayload = {
+				'message_template': payload.message_template,
+				'subject_template': payload.subject_template,
+				'preview_id': previewCustomerEl.val(),
+				csrfmiddlewaretoken: csrfToken
+			};
+		
 		sendPreviewButton.text('Send Preview');
 
-		// TODO: insert time delay.
-		previewIframe.load('/crm/preview-email', {
-			'message_template': payload.message_template,
-			'subject_template': payload.subject_template,
-			'preview_id': previewCustomerEl.val(),
-			csrfmiddlewaretoken: csrfToken
-		}, function () {
+		console.log("Starting XHR to /crm/preview-email with payload:");
+		console.log(ajaxPayload);
+		previewIframe.load('/crm/preview-email', ajaxPayload, function () {
 			console.log('XHR Complete');
 		});
 	};
