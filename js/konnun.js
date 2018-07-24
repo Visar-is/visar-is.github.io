@@ -148,6 +148,9 @@ $('#next-button').click(function (event) {
 		}
 	}
 	
+	var anonymPopupContainer = document.getElementById('continue_anonymously_popup_container');
+	var isAnonymPopupContainerVisible = anonymPopupContainer.offsetHeight > 0 || anonymPopupContainer.offsetWidth > 0;
+
 	// if there are any unfulfilled questions:
 	if (unfulfilled.length !== 0) {
 		// Mark them as invalid, show their correction instructions
@@ -159,6 +162,21 @@ $('#next-button').click(function (event) {
 		document.location.hash = $(unfulfilled[0]).attr('id');
 		
 		// Prevent form submit
+		event.preventDefault();
+		return false;
+	} else if (document.getElementById('continue_anonymously_popup_container') && !document.getElementsByName('informed_consent_keep_personal_information')[0].checked && !isAnonymPopupContainerVisible) {
+		
+		// The user pressed next on the informed consent page without choosing to save personal information.
+		// Display the warning popup and prevent form submission.
+		$('#continue_anonymously_popup_container').show();
+		
+		// Attach event handlers to keep personal information button.
+		$('[name=continue_keeping_personal_information]').click(function (event) {
+			document.getElementsByName('informed_consent_keep_personal_information')[0].checked = true;
+			
+			// Allow the form to submit after changing the checkbox status.
+		});
+		
 		event.preventDefault();
 		return false;
 	} else {
