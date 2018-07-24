@@ -148,8 +148,13 @@ $('#next-button').click(function (event) {
 		}
 	}
 	
-	var anonymPopupContainer = document.getElementById('continue_anonymously_popup_container');
-	var isAnonymPopupContainerVisible = anonymPopupContainer.offsetHeight > 0 || anonymPopupContainer.offsetWidth > 0;
+	var anonymPopupContainer = document.getElementById('continue_anonymously_popover_container'),
+		isAnonymPopupContainerVisible;
+		
+	if (anonymPopupContainer) {
+		isAnonymPopupContainerVisible = anonymPopupContainer.offsetHeight > 0 || anonymPopupContainer.offsetWidth > 0;
+	}
+	
 
 	// if there are any unfulfilled questions:
 	if (unfulfilled.length !== 0) {
@@ -164,11 +169,11 @@ $('#next-button').click(function (event) {
 		// Prevent form submit
 		event.preventDefault();
 		return false;
-	} else if (document.getElementById('continue_anonymously_popup_container') && !document.getElementsByName('informed_consent_keep_personal_information')[0].checked && !isAnonymPopupContainerVisible) {
+	} else if (anonymPopupContainer && !document.getElementsByName('informed_consent_keep_personal_information')[0].checked && !isAnonymPopupContainerVisible) {
 		
 		// The user pressed next on the informed consent page without choosing to save personal information.
 		// Display the warning popup and prevent form submission.
-		$('#continue_anonymously_popup_container').show();
+		$('#continue_anonymously_popover_container').show();
 		
 		// Attach event handlers to keep personal information button.
 		$('#continue_keeping_personal_information').click(function (event) {
@@ -183,4 +188,21 @@ $('#next-button').click(function (event) {
 		// this should lock the button so it cannot be pressed twice.
 		$(this).attr('data','disabled');
 	}
+});
+
+
+$('#pause-button').click(function (event) {
+	var pausePopoverContainer = document.getElementById('pause_popover_container');
+	var pausePopoverContainerVisible = pausePopoverContainer.offsetHeight > 0 || pausePopoverContainer.offsetWidth > 0;
+
+	if (pausePopoverContainer && !pausePopoverContainerVisible) {
+		$(pausePopoverContainer).show();
+		
+		event.preventDefault();
+		return false;
+	}
+});
+
+$('#pause_popover_container').click(function (event) {
+	$(this).hide();
 });
