@@ -171,7 +171,7 @@ $('#next-button').click(function (event) {
 		$('#continue_anonymously_popup_container').show();
 		
 		// Attach event handlers to keep personal information button.
-		$('[name=continue_keeping_personal_information]').click(function (event) {
+		$('#continue_keeping_personal_information').click(function (event) {
 			document.getElementsByName('informed_consent_keep_personal_information')[0].checked = true;
 			
 			// Allow the form to submit after changing the checkbox status.

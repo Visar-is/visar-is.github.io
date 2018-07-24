@@ -51,8 +51,8 @@ footer .logo { height: 42px; padding-right: 30px; padding-bottom: 30px; }
 }
 
 #survey-form button[type="submit"] {
-	height: 3em;
-	width: 6em;
+	min-height: 3em;
+	min-width: 6em;
 	padding: 0.5em;
 }
 
@@ -184,4 +184,24 @@ input.optional-text {
 	position: relative;
 	left: 0em;
 	margin-bottom: 0.7em
+}
+
+/* Informed Consent */
+
+#continue_anonymously_popup_container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	height: 100%;
+	width: 100%;
+}
+
+#continue_anonymously_popup {
+	max-width: 30em;
+	padding: 2em;
+	margin: 5em auto;
+	background: #efefef;
+	adding: 1em;
+	margin: 5em auto;
 }
