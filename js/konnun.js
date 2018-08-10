@@ -206,3 +206,7 @@ $('#pause-button').click(function (event) {
 $('#pause_popover_container').click(function (event) {
 	$(this).hide();
 });
+
+$('#continue_anonymously_popover_container').click(function (event) {
+	$(this).hide();
+});
