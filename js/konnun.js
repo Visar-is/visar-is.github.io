@@ -210,3 +210,9 @@ $('#pause_popover_container').click(function (event) {
 $('#continue_anonymously_popover_container').click(function (event) {
 	$(this).hide();
 });
+
+$('.popover-container .close').click(function (event) {
+	$(this).closest('.popover-container').hide();
+	event.preventDefault();
+	return false;
+});
