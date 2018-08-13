@@ -25,6 +25,13 @@ $(document).ready(function() {
 	
 	
 	$('<style />').html($('#webfonts').html()).appendTo($('head'));
+	
+	// Set up (or hide) copy to clipboard buttons.
+	if (ClipboardJS.isSupported()) {
+		new ClipboardJS('.copy-to-clipboard');
+	} else {
+		$('.copy-to-clipboard').hide();
+	}
 });
 
 if (!('ontouchstart' in document.documentElement)) {
