@@ -211,11 +211,15 @@ $('#pause-button').click(function (event) {
 });
 
 $('#pause_popover_container').click(function (event) {
-	$(this).hide();
+	if (event.target === event.currentTarget) {
+		$(this).hide();
+	}
 });
 
 $('#continue_anonymously_popover_container').click(function (event) {
-	$(this).hide();
+	if (event.target === event.currentTarget) {
+		$(this).hide();
+	}
 });
 
 $('.popover-container .close').click(function (event) {
