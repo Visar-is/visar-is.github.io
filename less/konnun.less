@@ -39,7 +39,47 @@
 .-white-st button:visited,
 .-white-st input[type="button"]:visited { background-color: #004411; border-left: 1px solid #418223; border-top: 1px solid #418223;  border-right: 1px solid #22692F; border-bottom: 1px solid #22692F;}
 
-.-white-sp a, .-white-sp a:visited { color: #005511 }
+.-white-sp a, .-white-sp a:visited, .-white-st a, .-white-st a:visited  { color: #005511 }
+
+	.language-container {
+		display: inline;
+		display: inline-block;
+		position: relative;
+	}
+
+	.global-speech-toggle-button,
+	.global-speech-toggle-button:hover,
+	.global-speech-toggle-button:active,
+	.-white-sp .global-speech-toggle-button,
+	.-white-sp .global-speech-toggle-button:hover,
+	.-white-sp .global-speech-toggle-button:active,
+	.-white-st .global-speech-toggle-button,
+	.-white-st .global-speech-toggle-button:hover,
+	.-white-st .global-speech-toggle-button:active {
+		background: none repeat scroll 0% 0% transparent;
+		border: medium none;
+		box-shadow: none;
+		width: 1.5em;
+		padding: 0px;
+	}
+
+	.speech-button img,
+	.global-speech-toggle-button img {
+		width: 100%;
+	}
+
+	.response .speech-button {
+		top: 0.05em;
+	}
+
+	.speech-button.speech-button-inline,
+	.speech-button.speech-button-inline:hover,
+	.speech-button.speech-button-inline:active {
+		display: inline;
+		position: static;
+		padding: 0.2em 0.2em 0.2em;
+		width: 2em !important;
+	}
 
 h1 ol, h1 ul { margin: 0 0 20px 20px; list-style: disc; }
 
