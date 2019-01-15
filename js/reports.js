@@ -66,7 +66,7 @@ $(document).ready(function() {
 			
 			var points = $('.point.' + lineClass);
 			var lines = $('.longitudinal-lines line.' + lineClass);
-			$('.point.' + schoolClass).last().addClass('last');
+			$('.point.' + lineClass).last().addClass('last');
 
 			$(ysline).on('mouseover', function (event) {
 				points.addClass('hovered');
