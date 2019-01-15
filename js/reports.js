@@ -44,7 +44,7 @@ $(document).ready(function() {
 	
 	// Longitudinal chart hover effects.
 	(function () {
-		var yslines = $('longitudinal-lines line');
+		var yslines = $('.longitudinal-lines line');
 
 		yslines.each(function(i, ysline) {
 			var schoolClass = ysline.getAttribute('class').split(' ').filter(function (c) { return c[0] == 's'; })[0];
