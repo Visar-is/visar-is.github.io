@@ -45,7 +45,6 @@ $(document).ready(function() {
 	// Longitudinal chart hover effects.
 	(function () {
 		var yslines = $('.longitudinal-lines line');
-		var processedClasses = [];
 
 		yslines.each(function(i, ysline) {
 			// We need a classname which identifies lines of the same class as the one we’re processing right now.
@@ -57,12 +56,6 @@ $(document).ready(function() {
 				// i.e. of the form `s\d+` for longitudinal schools or `cohort-grade-\d+` for grade cohort charts.
 				return c[0] == 's' || c.indexOf('cohort-grade-') != -1;
 			})[0];
-			
-			if (processedClasses.indexOf(lineClass) != -1) {
-				return; // Don’t double-process the same classname.
-			} else {
-				processedClasses.push(lineClass);
-			}
 			
 			var points = $('.point.' + lineClass);
 			var lines = $('.longitudinal-lines line.' + lineClass);
