@@ -176,7 +176,7 @@ $('#next-button').click(function (event) {
 		// Prevent form submit
 		event.preventDefault();
 		return false;
-	} else if (anonymPopupContainer && (document.getElementsByName('informed_consent_keep_personal_information').length == 0 || !document.getElementsByName('informed_consent_keep_personal_information')[0].checked)  && !isAnonymPopupContainerVisible) {
+	} else if (anonymPopupContainer && (document.getElementsByName('informed_consent_keep_personal_information').length != 0 || !document.getElementsByName('informed_consent_keep_personal_information')[0].checked)  && !isAnonymPopupContainerVisible) {
 		
 		// Two different cases can lead here. Either the user pressed next on the informed consent page without choosing
 		// to save personal information in a survey where that’s possible, or the survey has 
