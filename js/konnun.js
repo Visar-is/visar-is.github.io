@@ -204,32 +204,55 @@ $('#next-button').click(function (event) {
 });
 
 
-$('#pause-button').click(function (event) {
+(function () {
 	var pausePopoverContainer = document.getElementById('pause_popover_container');
-	var pausePopoverContainerVisible = pausePopoverContainer.offsetHeight > 0 || pausePopoverContainer.offsetWidth > 0;
-
-	if (pausePopoverContainer && !pausePopoverContainerVisible) {
-		$(pausePopoverContainer).show();
+	var ppStartButton = $('#pause-popover-start-button');
+	var ppPauseButton = $('#pause-popover-pause-button');
+	
+	$('#pause-button').click(function (event) {
+		var pausePopoverContainerVisible = pausePopoverContainer.offsetHeight > 0 || pausePopoverContainer.offsetWidth > 0;
 		
+		if (pausePopoverContainer && !pausePopoverContainerVisible) {
+			$(pausePopoverContainer).show();
+			
+			event.preventDefault();
+			return false;
+		}
+	});
+	
+	$(pausePopoverContainer).click(function (event) {
+		if (event.target === event.currentTarget) {
+			$(this).hide();
+		}
+	});
+	
+	$('#continue_anonymously_popover_container').click(function (event) {
+		if (event.target === event.currentTarget) {
+			$(this).hide();
+		}
+	});
+	
+	$('.popover-container .close').click(function (event) {
+		$(this).closest('.popover-container').hide();
 		event.preventDefault();
 		return false;
-	}
-});
-
-$('#pause_popover_container').click(function (event) {
-	if (event.target === event.currentTarget) {
-		$(this).hide();
-	}
-});
-
-$('#continue_anonymously_popover_container').click(function (event) {
-	if (event.target === event.currentTarget) {
-		$(this).hide();
-	}
-});
-
-$('.popover-container .close').click(function (event) {
-	$(this).closest('.popover-container').hide();
-	event.preventDefault();
-	return false;
-});
+	});
+	
+	$(document).ready(function () {
+		if (document.getElementById('pause-popover-start-button')) {
+			// If the pause popover contains a start button, the survey has just started. We should display the survey start
+			// variant of the pause popover, to encourage participants to write down their access key.
+			ppStartButton.show();
+			ppPauseButton.hide();
+			$(pausePopoverContainer).show();
+		}
+	});
+	
+	ppStartButton.click(function (event) {
+	 	// Don’t allow the pause dialog start button to submit the page form, just hide the modal and swap the buttons around.
+		event.preventDefault();
+		$(pausePopoverContainer).hide();
+		ppStartButton.hide();
+		ppPauseButton.show();
+	});
+}());
