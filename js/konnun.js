@@ -67,9 +67,6 @@ $('.response-input').click(function (event) {
 		if (inputEl.prop('type') == 'radio') {
 			questionEl.find('.response.selected').removeClass('selected');
 			inputEl.prop('checked', 'checked');
-			console.log(inputEl)
-			console.log(inputEl.prop('className'))
-			console.log(inputEl.prop('checked'))
 		}
 		responseEl.addClass('selected');
 		
