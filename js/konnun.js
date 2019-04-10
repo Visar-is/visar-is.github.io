@@ -68,6 +68,8 @@ $('.response-input').click(function (event) {
 			questionEl.find('.response.selected').removeClass('selected');
 			inputEl.attr('checked', 'checked');
 			inputEl.prop('checked', true);
+			console.log(inputEl)
+			inputEl.prop('checked')
 		}
 		responseEl.addClass('selected');
 		
