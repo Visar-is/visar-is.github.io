@@ -66,6 +66,8 @@ $('.response-input').click(function (event) {
 		// The participant has clicked an unselected item.
 		if (inputEl.prop('type') == 'radio') {
 			questionEl.find('.response.selected').removeClass('selected');
+			// This is probably redundant if inside a label element
+			inputEl.prop('checked', true);
 		}
 		responseEl.addClass('selected');
 		
