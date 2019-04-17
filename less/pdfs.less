@@ -25,6 +25,11 @@ a {	color: #007722; }
 	clear: both;
 }
 
+/* Page break for question response rate table */
+[data-name="question-response-rates"] {
+	page-break-before: always;
+}
+
 /* Temporary fix for overlapping table header bug described (along with various other potential fixes) here: https://github.com/ariya/phantomjs/issues/10927 */
 .table-section thead, .table-section tfoot { display: table-row-group; }
 
