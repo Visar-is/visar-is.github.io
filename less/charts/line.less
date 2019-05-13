@@ -27,11 +27,11 @@
 	.points li.compare:before { z-index: 8000000; color: #dc3912; }
 	.points li.you_schools:before { z-index: 7000000; color: #555; }
 	.points li.compare_schools:before { z-index: 6000000; color: #bbb; color: rgba(190, 190, 190, 0.4); font-size: 1.25em; }
-	.points li.cohort-grade-6:before { z-index: 9000000; color: #712F0A; }
-	.points li.cohort-grade-7:before { z-index: 8000000; color: #E9681B; }
-	.points li.cohort-grade-8:before { z-index: 7000000; color: #65DB65; }
-	.points li.cohort-grade-9:before { z-index: 6000000; color: #FFB600; }
-	.points li.cohort-grade-10:before { z-index: 5000000; color: #3359BA; }
+	.points li.cohort-grade-6:before, .points li.cohort-grade-1:before { z-index: 9000000; color: #712F0A; }
+	.points li.cohort-grade-7:before, .points li.cohort-grade-2:before { z-index: 8000000; color: #E9681B; }
+	.points li.cohort-grade-8:before, .points li.cohort-grade-3:before { z-index: 7000000; color: #65DB65; }
+	.points li.cohort-grade-9:before, .points li.cohort-grade-4:before { z-index: 6000000; color: #FFB600; }
+	.points li.cohort-grade-10:before, .points li.cohort-grade-5:before { z-index: 5000000; color: #3359BA; }
 	
 	@media screen and (min-width: 900px) {
 		.longitudinal-lines { margin-right: 160px; }
@@ -42,11 +42,11 @@
 	line.you { stroke: #65DB65; }
 	line.compare { stroke: #dc3912; }
 	line.you_schools { stroke: #555; }
-	line.cohort-grade-6 { stroke: #712F0A; }
-	line.cohort-grade-7 { stroke: #E9681B; }
-	line.cohort-grade-8 { stroke: #65DB65; }
-	line.cohort-grade-9 { stroke: #FFB600; }
-	line.cohort-grade-10 { stroke: #3359BA; }
+	line.cohort-grade-6, line.cohort-grade-1 { stroke: #712F0A; }
+	line.cohort-grade-7, line.cohort-grade-2 { stroke: #E9681B; }
+	line.cohort-grade-8, line.cohort-grade-3 { stroke: #65DB65; }
+	line.cohort-grade-9, line.cohort-grade-4 { stroke: #FFB600; }
+	line.cohort-grade-10, line.cohort-grade-5 { stroke: #3359BA; }
 										
 	/* Line Hover Effects */
 	.point.hovered:before {
@@ -82,11 +82,11 @@
 .bn-compare-line-x-axis {
 	.you { color: #65DB65; }
 	.compare { color: #dc3912; }
-	.cohort-grade-6 { color: #712F0A; }
-	.cohort-grade-7 { color: #E9681B; }
-	.cohort-grade-8 { color: #65DB65; }
-	.cohort-grade-9 { color: #FFB600; }
-	.cohort-grade-10 { color: #3359BA; }
+	.cohort-grade-6, .cohort-grade-1 { color: #712F0A; }
+	.cohort-grade-7, .cohort-grade-2 { color: #E9681B; }
+	.cohort-grade-8, .cohort-grade-3 { color: #65DB65; }
+	.cohort-grade-9, .cohort-grade-4 { color: #FFB600; }
+	.cohort-grade-10, .cohort-grade-5 { color: #3359BA; }
 }
 
 /* Disable hover on pre-2015 reports */
