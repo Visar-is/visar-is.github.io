@@ -1,6 +1,6 @@
 /* make the first column have a down arrow so you know it is sorted */
-table.sortable th:first:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \21E1;" 
+table.sortable th:first:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort) { 
+    color: red
 }
 
 @media only screen and (max-width: 767px) {
