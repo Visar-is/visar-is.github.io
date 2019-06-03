@@ -10,14 +10,14 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="58---Settings">
             <g id="Rectangle-2">
-                <use fill="#8EC26B" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <rect stroke="#8DC16B" stroke-width="2" x="6" y="21" width="37.7246518" height="30.5622028"></rect>
+                <use fill="#2C6520" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#2C6520" stroke-width="2" x="6" y="21" width="37.7246518" height="30.5622028"></rect>
             </g>
             <g id="Rectangle">
-                <use fill="#8EC26B" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="#2C6520" fill-rule="evenodd" xlink:href="#path-2"></use>
                 <path stroke="#FFFFFF" stroke-width="2" d="M16.4927684,28 L56.2556716,28 L46.266509,51.8251953 L6.50360571,51.8251953 L16.4927684,28 Z"></path>
             </g>
-            <rect id="Rectangle-3" fill="#8EC26B" x="5" y="17" width="14.3450132" height="3.36850374"></rect>
+            <rect id="Rectangle-3" fill="#2C6520" x="5" y="17" width="14.3450132" height="3.36850374"></rect>
         </g>
     </g>
 </svg>
