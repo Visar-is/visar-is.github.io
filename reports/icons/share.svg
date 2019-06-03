@@ -4,22 +4,18 @@
     <title>58 - Settings</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="5" y="21" width="48" height="32.5622028"></rect>
-        <rect id="path-2" x="22" y="14" width="12" height="15"></rect>
+        <rect id="path-1" x="22" y="14" width="12" height="15"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="58---Settings">
-            <g id="Rectangle-2">
-                <use fill="#2C6520" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <rect stroke="#FFFFFF" stroke-width="2" x="6" y="22" width="46" height="30.5622028"></rect>
-            </g>
+            <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="2" fill="#2C6520" x="5" y="21" width="48" height="32.5622028"></rect>
             <g id="Rectangle-4">
-                <use fill="#2C6520" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="#2C6520" fill-rule="evenodd" xlink:href="#path-1"></use>
                 <rect stroke="#FFFFFF" stroke-width="2" x="23" y="15" width="10" height="13"></rect>
             </g>
             <polygon id="Triangle" fill="#2C6520" points="28 7 36 17 20 17"></polygon>
-            <polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" points="6.67285156 22.390625 28.3710938 41.1650391 52.3710938 22.2841797"></polyline>
-            <path d="M6.62402344,52.4716797 L23.9208984,37.2724609" id="Path-3" stroke="#FFFFFF"></path>
+            <polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" points="4.37109375 21.6108663 27.4608612 41.1650391 53 21.5"></polyline>
+            <path d="M6.62402344,52.4716797 L22.5,36.5" id="Path-3" stroke="#FFFFFF"></path>
             <path d="M51.8818359,52.5341797 L34.6953125,36.6904297" id="Path-4" stroke="#FFFFFF"></path>
         </g>
     </g>
