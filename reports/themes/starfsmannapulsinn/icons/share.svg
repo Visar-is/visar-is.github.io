@@ -1,22 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>58 - Settings</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="22" y="14" width="12" height="15"></rect>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="58---Settings">
-            <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="2" fill="#2C6520" x="5" y="21" width="48" height="32.5622028"></rect>
-            <g id="Rectangle-4">
-                <use fill="#2C6520" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <rect stroke="#FFFFFF" stroke-width="2" x="23" y="15" width="10" height="13"></rect>
-            </g>
-            <polygon id="Triangle" fill="#2C6520" points="28 7 36 17 20 17"></polygon>
-            <polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" points="4.37109375 21.6108663 27.4608612 41.1650391 53 21.5"></polyline>
-            <path d="M6.62402344,52.4716797 L22.5,36.5" id="Path-3" stroke="#FFFFFF"></path>
-            <path d="M51.8818359,52.5341797 L34.6953125,36.6904297" id="Path-4" stroke="#FFFFFF"></path>
-        </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 71 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.557491,0,0,0.557491,1.56,49.701)">
+        <path id="Semibold-S" d="M64.404,4.59C86.279,4.59 104.248,-13.379 104.248,-35.254C104.248,-57.08 86.231,-75.049 64.404,-75.049C44.629,-75.049 27.979,-60.254 25.049,-41.211C37.94,-41.748 49.268,-32.617 51.709,-20.117C55.469,-21.68 59.766,-22.559 64.404,-22.559C73.779,-22.559 81.592,-19.141 86.963,-13.135C81.494,-7.227 72.656,-3.809 64.404,-3.809C59.766,-3.809 55.029,-4.883 50.83,-6.836C49.902,-4.199 48.535,-1.758 46.826,0.488C52.197,3.125 58.154,4.59 64.404,4.59ZM64.404,-29.297C56.738,-29.297 50.977,-35.938 50.977,-44.092C50.977,-51.856 56.885,-58.643 64.404,-58.643C71.924,-58.643 77.832,-51.856 77.832,-44.092C77.832,-35.938 72.022,-29.297 64.404,-29.297ZM26.074,5.078C37.061,5.078 46.24,-4.15 46.24,-15.137C46.24,-26.221 37.109,-35.352 26.074,-35.352C14.99,-35.352 5.859,-26.221 5.859,-15.137C5.859,-4.102 14.99,5.078 26.074,5.078ZM26.074,-1.953C24.414,-1.953 22.9,-3.223 22.9,-4.98L22.9,-12.06L16.211,-12.06C14.551,-12.06 13.135,-13.525 13.135,-15.137C13.135,-16.797 14.551,-18.262 16.211,-18.262L22.9,-18.262L22.9,-25.293C22.9,-27.1 24.365,-28.369 26.074,-28.369C27.783,-28.369 29.248,-27.1 29.248,-25.293L29.248,-18.262L35.938,-18.262C37.598,-18.262 39.014,-16.846 39.014,-15.137C39.014,-13.525 37.598,-12.06 35.938,-12.06L29.248,-12.06L29.248,-4.98C29.248,-3.223 27.734,-1.953 26.074,-1.953Z" style="fill:rgb(44,101,32);fill-rule:nonzero;"/>
     </g>
 </svg>
