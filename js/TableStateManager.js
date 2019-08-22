@@ -86,6 +86,8 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 				
 				// Logic for showing/hiding differs depending on type of relevant input.
 				var stateEl = el.find('[name="' + key + '"]');
+				console.log(key)
+				console.log(value)
 				if (stateEl.attr('type') == 'checkbox') {
 					// The state is a boolean checkbox.
 					var state = stateEl.prop('checked');
