@@ -94,9 +94,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 					}
 				} else if (key.includes('count')) {
 					parts = value.split('-')
-					if (parseInt(stateEl.text()) >= parts[0] && parseInt(stateEl.text()) <= parts[1]) {
-						show = true
-					} else {
+					if !(parseInt(stateEl.text()) >= parts[0] && parseInt(stateEl.text()) <= parts[1]) {
 						show = false
 					}
 				} else {
