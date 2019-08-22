@@ -94,15 +94,11 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 					}
 				} else if (key.includes('count')) {
 					parts = value.split('-')
-					console.log(parts)
-
 					if (parseInt(stateEl.text()) >= parts[0] && parseInt(stateEl.text()) <= parts[1]) {
 						show = true
 					} else {
 						show = false
 					}
-					console.log(parseInt(stateEl.text()))
-					console.log(show)
 				} else {
 					// The state is a string comparison.
 					show = stateEl.text() == value;
