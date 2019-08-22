@@ -86,8 +86,6 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 				
 				// Logic for showing/hiding differs depending on type of relevant input.
 				var stateEl = el.find('[name="' + key + '"]');
-				console.log(key)
-				console.log(value)
 				if (stateEl.attr('type') == 'checkbox') {
 					// The state is a boolean checkbox.
 					var state = stateEl.prop('checked');
@@ -96,9 +94,15 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 					}
 				} else if (key.includes('count')) {
 					parts = value.split('-')
+					console.log(parts)
+
 					if (parseInt(stateEl.text()) >= parts[0] && parseInt(stateEl.text()) <= parts[1]) {
 						show = true
+					} else {
+						show = false
 					}
+					console.log(parseInt(stateEl.text()))
+					console.log(show)
 				} else {
 					// The state is a string comparison.
 					show = stateEl.text() == value;
