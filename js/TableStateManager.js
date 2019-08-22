@@ -94,7 +94,7 @@ var TableStateManager = function (rowSelector, batchUpdateUrl) {
 					if (state != (value == 'true')) {
 						show = false;
 					}
-				} else if key.includes('count') {
+				} else if (key.includes('count')) {
 					parts = value.split('-')
 					if (parseInt(stateEl.text()) >= parts[0] && parseInt(stateEl.text()) <= parts[1]) {
 						show = true
