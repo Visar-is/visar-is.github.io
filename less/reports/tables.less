@@ -42,11 +42,11 @@
 #sorttable_sortrevind { display: none; }
 
 .sortable thead th:first-child:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort)::after { 
-    content: ' ↑↓';
+    content: ' ↑↓'; /* Warning! The space here is a raw nbsp character. Do no replace with a normal space. */
 }
 
-.sortable thead th.sorttable_sorted::after { content: ' ↓'; }
-.sortable thead th.sorttable_sorted_reverse::after { content: ' ↑'; }
+.sortable thead th.sorttable_sorted::after { content: ' ↓'; /* Warning! The space here is a raw nbsp character. Do no replace with a normal space. */ }
+.sortable thead th.sorttable_sorted_reverse::after { content: ' ↑'; /* Warning! The space here is a raw nbsp character. Do no replace with a normal space. */ }
 
 
 
