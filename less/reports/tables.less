@@ -41,12 +41,12 @@
 #sorttable_sortfwdind,
 #sorttable_sortrevind { display: none; }
 
-.sortable thead th:first-child:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+.sortable thead th:first-child:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort)::after { 
     content: ' ↑↓';
 }
 
-.sorttable thead th.sorttable_sorted:after { content: ' ↓'; }
-.sorttable thead th.sorttable_sorted_reverse:after { content: ' ↑'; }
+.sortable thead th.sorttable_sorted::after { content: ' ↓'; }
+.sortable thead th.sorttable_sorted_reverse::after { content: ' ↑'; }
 
 
 
