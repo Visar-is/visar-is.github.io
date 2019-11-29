@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="110px" viewBox="0 0 119 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>logout-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logout-white" fill="#FFFFFF">
+            <path d="M56,38 L56,19.0022777 C56,16.7944236 54.2064959,15 51.9940966,15 L19.0059034,15 C16.7880823,15 15,16.7918808 15,19.0022777 L15,88.9977223 C15,91.2055764 16.7935041,93 19.0059034,93 L51.9940966,93 C54.2119177,93 56,91.2081192 56,88.9977223 L56,71 L72,71 L72,38 L56,38 Z M0,10.004525 C0,4.47917841 4.47671884,0 9.99237268,0 L62.0076273,0 C67.5262624,0 72,4.48272809 72,10.004525 L72,99.995475 C72,105.520822 67.5232812,110 62.0076273,110 L9.99237268,110 C4.47373763,110 0,105.517272 0,99.995475 L0,10.004525 Z" id="Combined-Shape"></path>
+            <rect id="Rectangle-4" x="32" y="48" width="72" height="13" rx="4"></rect>
+            <g id="Group" transform="translate(82.000000, 25.000000)">
+                <rect id="Rectangle-4" transform="translate(19.091883, 19.091883) rotate(45.000000) translate(-19.091883, -19.091883) " x="-1.40811691" y="12.5918831" width="41" height="13" rx="4"></rect>
+                <rect id="Rectangle-4" transform="translate(19.091883, 39.091883) scale(1, -1) rotate(45.000000) translate(-19.091883, -39.091883) " x="-1.40811691" y="32.5918831" width="41" height="13" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
