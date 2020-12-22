@@ -75,8 +75,15 @@ td[axis=N] sub {
 }
 
 .summary-table .data-column-cell {
-	width: 3em;
+	width: 2.5em;
 	position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+	.summary-table .data-column-cell {
+		width: 2em;
+		position: relative;
+	}
 }
 
 .summary-table tbody .data-column-cell {
