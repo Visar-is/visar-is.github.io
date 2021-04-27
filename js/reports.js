@@ -52,11 +52,11 @@ $(document).ready(function() {
 			// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
 			// handling longitudinal scatter charts (the original) and the other handling cohort charts.
 			var lineClass = ysline.getAttribute('class').split(' ').filter(function (c) {
-				// Is the currentl classname one which we can use to identify associated line and li.point elements?
+				// Is the current classname one which we can use to identify associated line and li.point elements?
 				// • of the form `s\d+` for longitudinal schools
 				// • `cohort-grade-\d+` for grade cohort charts.
-				// • bg-{bg_key}-{bg_val} for background longitudinal charts.
-				return c[0] == 's' || c.indexOf('cohort-grade-') != -1 || c.match(/^bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
+				// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
+				return c[0] == 's' || c.indexOf('cohort-grade-') != -1 || c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
 			})[0];
 			
 			var points = $('.point.' + lineClass);
