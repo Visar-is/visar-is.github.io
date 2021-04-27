@@ -11201,13 +11201,15 @@ $(document).ready(function() {
 
 		yslines.each(function(i, ysline) {
 			// We need a classname which identifies lines of the same class as the one we’re processing right now.
-			// Currently, this is not easily achievable across differen types of longitudinal chart, and fixing that
+			// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
 			// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
 			// handling longitudinal scatter charts (the original) and the other handling cohort charts.
 			var lineClass = ysline.getAttribute('class').split(' ').filter(function (c) {
 				// Is the currentl classname one which we can use to identify associated line and li.point elements?
-				// i.e. of the form `s\d+` for longitudinal schools or `cohort-grade-\d+` for grade cohort charts.
-				return c[0] == 's' || c.indexOf('cohort-grade-') != -1;
+				// • of the form `s\d+` for longitudinal schools
+				// • `cohort-grade-\d+` for grade cohort charts.
+				// • bg-{bg_key}-{bg_val} for background longitudinal charts.
+				return c[0] == 's' || c.indexOf('cohort-grade-') != -1 || c.match(/^bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
 			})[0];
 			
 			var points = $('.point.' + lineClass);
