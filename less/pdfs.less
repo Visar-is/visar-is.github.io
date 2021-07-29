@@ -11,8 +11,6 @@
 
 @import "reports/tables.less";
 
-body { margin-left: 0.5cm; }
-
 strong {
 	font-family: @text-font-family-bold;
 }
@@ -44,9 +42,7 @@ a {	color: #007722; }
 }
 
 .chart-section, .survey-metadata-section, .html-section, .table-section {
-	/* preventing page breaks doesn’t work in phantom 1.9, lines below fake this behaviour */
 	page-break-inside: avoid;
-	-webkit-region-break-inside: avoid;
 	width: 100%;
 }
 
@@ -58,6 +54,7 @@ a {	color: #007722; }
 
 .chart {
 	font-size: 11px;
+	margin-bottom: 5em;
 }
 
 /* Override chart styles
@@ -215,16 +212,17 @@ a {	color: #007722; }
 
 /* Skólavogin Summary Table PDF Styling */
 
-/* The 3.5em translation right which was required in the web view is too much for the PDFs. 1em works better. 
- * Phantom JS will likely only ever use -webkit, but the standards compliant declaration is left in for completeness.
- */
+/* The 3.5em translation right which was required in the web view is too much for the PDFs. 1em works better. */
 .summary-table th.data-column-cell .header-text {
 	transform: translate(1em, -0.5em) rotate(-90deg);
-	-webkit-transform: translate(1em, -0.5em) rotate(-90deg);
 	white-space: nowrap;
 
 }
 
 .summary-table th.data-column-cell {
 	height: 11em;
+}
+
+tr {
+	page-break-inside: avoid;
 }
