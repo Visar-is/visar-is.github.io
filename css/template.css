@@ -4975,6 +4975,7 @@ label span.form_error {
   padding: 2px 10px;
   font-size: 12px;
   border-radius: 4px;
+  margin: 4px 10px;
 }
 #messages abbr.message-close:hover {
   background: #b0b1b2;
