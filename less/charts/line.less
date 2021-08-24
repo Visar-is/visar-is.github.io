@@ -1,24 +1,28 @@
-@line-data-height: 275px;
-
-.bn-compare-line .longitudinal-lines svg { position: absolute; top: 0; left: 0; }
-
-.bn-compare-line {
-	.longitudinal-lines {
-		position: absolute;
-		width: 100%;
-		height: @line-data-height;
-		margin-left: 60px;
-	}
-	
-	.longitudinal-points {
+.bn-longitudinal-chart {
+	.data {
 		position: relative;
-		bottom: 4px;
-		pointer-events: none; /* Allow pointer events through to lines underneath. */
-	}
+		width: 100%;
+		height: 100%;
+
+		svg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
 	
-	.longitudinal-points li.compare:before {
-		color: #DC3912;
-		z-index: 99;
+		.longitudinal-points {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			pointer-events: none; /* Allow pointer events through to lines underneath. */
+
+			li.compare:before {
+				color: #DC3912;
+				z-index: 99;
+			}
+		}
 	}
 	
 	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
@@ -37,10 +41,6 @@
 
 	.points li.bg_sex_1:before { z-index: 8500000; color: #74d2c6; }
 	.points li.bg_sex_2:before { z-index: 8500000; color: #b07fa9; }
-	
-	@media screen and (min-width: 900px) {
-		.longitudinal-lines { margin-right: 160px; }
-	}
 	
 	line { stroke: #ccc; }
 	
@@ -93,10 +93,6 @@
 
 	line.hovered {
 		stroke-width: 4px;
-	}
-	
-	.y-axis {
-		height: @line-data-height;
 	}
 }
 

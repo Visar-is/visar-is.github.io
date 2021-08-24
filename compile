@@ -1,12 +1,12 @@
 #!/bin/sh
 
-lessc -x less/konnun.less css/konnun.css
-lessc -x less/reports.less css/reports.css
-lessc -x less/visar.less css/visar.css
-lessc -x less/ops.less css/ops.css
-lessc -x less/pdfs.less css/pdfs.css
-lessc -x less/charts.less css/charts.css
-lessc -x less/crm.less css/crm.css
+lessc less/konnun.less css/konnun.css --clean-css="--s1 --advanced"
+lessc less/reports.less css/reports.css --clean-css="--s1 --advanced"
+lessc less/visar.less css/visar.css --clean-css="--s1 --advanced"
+lessc less/ops.less css/ops.css --clean-css="--s1 --advanced"
+lessc less/pdfs.less css/pdfs.css --clean-css="--s1 --advanced"
+lessc less/charts.less css/charts.css --clean-css="--s1 --advanced"
+lessc less/crm.less css/crm.css --clean-css="--s1 --advanced"
 
 echo "Compiled 6 .less files"
 
