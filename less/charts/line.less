@@ -22,25 +22,25 @@
 				color: #DC3912;
 				z-index: 99;
 			}
+
+			li { position: absolute; margin: 0; padding: 0; text-align: center; }
+			li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; position: relative; }
+			li span { display: none; }
+
+			li.you:before { z-index: 9000000; color: #65DB65; }
+			li.compare:before { z-index: 8000000; color: #dc3912; }
+			li.you_schools:before { z-index: 7000000; color: #555; }
+			li.compare_schools:before { z-index: 6000000; color: #bbb; color: rgba(190, 190, 190, 0.4); font-size: 1.25em; }
+			li.cohort-grade-6:before, .points li.cohort-grade-1:before { z-index: 9000000; color: #712F0A; }
+			li.cohort-grade-7:before, .points li.cohort-grade-2:before { z-index: 8000000; color: #E9681B; }
+			li.cohort-grade-8:before, .points li.cohort-grade-3:before { z-index: 7000000; color: #65DB65; }
+			li.cohort-grade-9:before, .points li.cohort-grade-4:before { z-index: 6000000; color: #FFB600; }
+			li.cohort-grade-10:before, .points li.cohort-grade-5:before { z-index: 5000000; color: #3359BA; }
+
+			li.bg_sex_1:before { z-index: 8500000; color: #74d2c6; }
+			li.bg_sex_2:before { z-index: 8500000; color: #b07fa9; }
 		}
 	}
-	
-	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
-	.points li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; position: relative; }
-	.points li span { display: none; }
-	
-	.points li.you:before { z-index: 9000000; color: #65DB65; }
-	.points li.compare:before { z-index: 8000000; color: #dc3912; }
-	.points li.you_schools:before { z-index: 7000000; color: #555; }
-	.points li.compare_schools:before { z-index: 6000000; color: #bbb; color: rgba(190, 190, 190, 0.4); font-size: 1.25em; }
-	.points li.cohort-grade-6:before, .points li.cohort-grade-1:before { z-index: 9000000; color: #712F0A; }
-	.points li.cohort-grade-7:before, .points li.cohort-grade-2:before { z-index: 8000000; color: #E9681B; }
-	.points li.cohort-grade-8:before, .points li.cohort-grade-3:before { z-index: 7000000; color: #65DB65; }
-	.points li.cohort-grade-9:before, .points li.cohort-grade-4:before { z-index: 6000000; color: #FFB600; }
-	.points li.cohort-grade-10:before, .points li.cohort-grade-5:before { z-index: 5000000; color: #3359BA; }
-
-	.points li.bg_sex_1:before { z-index: 8500000; color: #74d2c6; }
-	.points li.bg_sex_2:before { z-index: 8500000; color: #b07fa9; }
 	
 	line { stroke: #ccc; }
 	
