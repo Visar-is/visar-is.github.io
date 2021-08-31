@@ -20,6 +20,7 @@
 		grid-column: 2;
 		grid-row: 3;
 		height: 13em;  /* default chart data height */
+		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
 		font-size: 80%;
 		position: relative;
 
@@ -59,6 +60,7 @@
 		grid-column: 2;
 		grid-row: 4;
 		font-size: 80%;
+		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
 
 		ol.x-axis-row {
 			width: 100%;
