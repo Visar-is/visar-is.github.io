@@ -2,7 +2,7 @@
 	width: 100%;
 	display: grid;
 	grid-template-columns: auto auto 1fr;
-	grid-template-rows: auto auto 13em auto;
+	grid-template-rows: auto auto auto auto;
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
@@ -19,6 +19,7 @@
 	.data {
 		grid-column: 2;
 		grid-row: 3;
+		height: 13em;  /* default chart data height */
 		font-size: 80%;
 		position: relative;
 
@@ -63,11 +64,14 @@
 			width: 100%;
 
 			li {
-				float: left;
+				display: inline-block;
+				vertical-align: top;
 				color: #666;
 				padding: 0 0.5em;
 				box-sizing: border-box;
 				text-align: center;
+				overflow-wrap: break-word;
+				hyphens: auto;
 			}
 		}
 
@@ -143,7 +147,7 @@
 
 	.chart:not(.wide-chart) {
 		grid-template-columns: auto auto auto 1fr;
-		grid-template-rows: auto 13em auto;
+		grid-template-rows: auto auto auto;
 
 		.title {
 			padding: 1em;
