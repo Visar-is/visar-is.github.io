@@ -11209,7 +11209,10 @@ $(document).ready(function() {
 				// • of the form `s\d+` for longitudinal schools
 				// • `cohort-grade-\d+` for grade cohort charts.
 				// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
-				return c[0] == 's' || c.indexOf('cohort-grade-') != -1 || c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
+				return c[0] == 's'
+					|| (c == 'you' || c == 'compare')
+					|| c.indexOf('cohort-grade-') != -1
+					|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
 			})[0];
 			
 			var points = $('.point.' + lineClass);
