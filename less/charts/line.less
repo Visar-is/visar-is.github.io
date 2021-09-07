@@ -80,10 +80,13 @@
 	.point.hovered span,
 	.point:hover span {
 		font-size: 0.8em;
-		display: inline !important;
+		display: block !important;
 		position: absolute;
+		z-index: 9999999999999 !important;
+		box-sizing: border-box;
+		left: 40%;
+		left: calc(50% - 1em);
 		background: #FFFAD4;
-		float: left;
 		padding: 0.3em;
 		border-radius: 0.5em;
 	}
