@@ -32,6 +32,14 @@
 
 				.label {
 					display: none;
+					background: rgba(256, 250, 0, 0.8);
+					padding: 0.3em;
+					position: absolute;
+					top: 1.5em;
+					max-width: 100%;
+					left: -50%;
+					z-index: 999999999;
+					box-sizing: border-box;
 				}
 			}
 
@@ -98,6 +106,10 @@
 
 		.point.hovered {
 			z-index: 999999999999;
+
+			.label {
+				display: block;
+			}
 		}
 	}
 }
