@@ -44,42 +44,44 @@ $(document).ready(function() {
 	
 	// Longitudinal chart hover effects.
 	(function () {
-		var yslines = $('.longitudinal-lines line');
+		$('.bn-longitudinal-chart').each(function (i, chartEl) {
+			var chartEl = $(chartEl);
+			var yslines = chartEl.find('.longitudinal-lines line');
 
-		yslines.each(function(i, ysline) {
-			var ysline = $(ysline);
-			var chartEl = ysline.next('.chart');
-
-			// We need a classname which identifies lines of the same class as the one we’re processing right now.
-			// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
-			// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
-			// handling longitudinal scatter charts (the original) and the other handling cohort charts.
-			var lineClass = ysline.attr('class').split(' ').filter(function (c) {
-				// Is the current classname one which we can use to identify associated line and li.point elements?
-				// • of the form `s\d+` for longitudinal schools
-				// • `cohort-grade-\d+` for grade cohort charts.
-				// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
-				return c[0] == 's'
-					|| (c == 'you' || c == 'compare')
-					|| c.indexOf('cohort-grade-') != -1
-					|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
-			})[0];
-			
-			var points = $('.point.' + lineClass);
-			var lines = $('.longitudinal-lines line.' + lineClass);
-			$('.point.' + lineClass).last().addClass('last');
-
-			ysline.on('mouseover', function (event) {
-				console.log(chartEl);
-				points.addClass('hovered');
-				lines.addClass('hovered');
-				chartEl.addClass('hovered');
-			});
-
-			ysline.on('mouseout', function (event) {
-				points.removeClass('hovered');
-				lines.removeClass('hovered');
-				chartEl.removeClass('hovered');
+			yslines.each(function(i, ysline) {
+				var ysline = $(ysline);
+	
+				// We need a classname which identifies lines of the same class as the one we’re processing right now.
+				// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
+				// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
+				// handling longitudinal scatter charts (the original) and the other handling cohort charts.
+				var lineClass = ysline.attr('class').split(' ').filter(function (c) {
+					// Is the current classname one which we can use to identify associated line and li.point elements?
+					// • of the form `s\d+` for longitudinal schools
+					// • `cohort-grade-\d+` for grade cohort charts.
+					// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
+					return c[0] == 's'
+						|| (c == 'you' || c == 'compare')
+						|| c.indexOf('cohort-grade-') != -1
+						|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
+				})[0];
+				
+				var points = $('.point.' + lineClass);
+				var lines = $('.longitudinal-lines line.' + lineClass);
+				$('.point.' + lineClass).last().addClass('last');
+	
+				ysline.on('mouseover', function (event) {
+					console.log(chartEl);
+					points.addClass('hovered');
+					lines.addClass('hovered');
+					chartEl.addClass('hovered');
+				});
+	
+				ysline.on('mouseout', function (event) {
+					points.removeClass('hovered');
+					lines.removeClass('hovered');
+					chartEl.removeClass('hovered');
+				});
 			});
 		});
 	}());
