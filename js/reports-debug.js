@@ -11224,16 +11224,19 @@ $(document).ready(function() {
 				$('.point.' + lineClass).last().addClass('last');
 	
 				ysline.on('mouseover', function (event) {
-					console.log(chartEl);
-					points.addClass('hovered');
-					lines.addClass('hovered');
 					chartEl.addClass('hovered');
+					points.addClass('hovered');
+					// Even jQuery 3.6 seems to not correctly support svg class operations.
+					lines.each(function (i, lineEl) { lineEl.setAttribute('class', lineEl.getAttribute('class') + ' hovered')});
 				});
 	
 				ysline.on('mouseout', function (event) {
-					points.removeClass('hovered');
-					lines.removeClass('hovered');
 					chartEl.removeClass('hovered');
+					points.removeClass('hovered');
+					// Even jQuery 3.6 seems to not correctly support svg class operations.
+					lines.each(function (i, lineEl) {
+						lineEl.setAttribute('class', lineEl.getAttribute('class').split(' ').filter(function (c) { return c !== 'hovered' }).join(' '))
+					});
 				});
 			});
 		});
