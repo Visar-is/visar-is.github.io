@@ -47,6 +47,8 @@ $(document).ready(function() {
 		var yslines = $('.longitudinal-lines line');
 
 		yslines.each(function(i, ysline) {
+			var chartEl = ysline.next('.chart');
+
 			// We need a classname which identifies lines of the same class as the one we’re processing right now.
 			// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
 			// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
@@ -68,16 +70,14 @@ $(document).ready(function() {
 
 			$(ysline).on('mouseover', function (event) {
 				points.addClass('hovered');
-				lines.each(function (i, line) {
-					line.setAttribute('class', line.getAttribute('class') + ' hovered');
-				});
+				lines.addClass('hovered');
+				chartEl.addClass('hovered');
 			});
 
 			$(ysline).on('mouseout', function (event) {
 				points.removeClass('hovered');
-				lines.each(function (i, line) {
-					line.setAttribute('class', line.getAttribute('class').split(' ').filter(function (c) { return c != 'hovered'; }).join(' '));
-				});
+				lines.removeClass('hovered');
+				chartEl.removeClass('hovered');
 			});
 		});
 	}());
