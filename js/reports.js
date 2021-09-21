@@ -47,7 +47,7 @@ $(document).ready(function() {
 		var yslines = $('.longitudinal-lines line');
 
 		yslines.each(function(i, ysline) {
-			var chartEl = ysline.next('.chart');
+			var chartEl = $(ysline).next('.chart');
 
 			// We need a classname which identifies lines of the same class as the one we’re processing right now.
 			// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
