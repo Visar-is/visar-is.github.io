@@ -11223,14 +11223,13 @@ $(document).ready(function() {
 			$('.point.' + lineClass).last().addClass('last');
 
 			ysline.on('mouseover', function (event) {
-				console.log('hov');
+				console.log(chartEl);
 				points.addClass('hovered');
 				lines.addClass('hovered');
 				chartEl.addClass('hovered');
 			});
 
 			ysline.on('mouseout', function (event) {
-				console.log('unhov');
 				points.removeClass('hovered');
 				lines.removeClass('hovered');
 				chartEl.removeClass('hovered');
