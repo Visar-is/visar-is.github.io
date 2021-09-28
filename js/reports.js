@@ -81,8 +81,7 @@ $(document).ready(function() {
 
 					// Add in hover effect elements.
 					points.each(function (i, pointEl) {
-						console.log(pointEl);
-						if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) == -1) {
+						if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) !== -1) {
 							console.log('Point has no name, skipping', pointEl);
 							return;
 						}
