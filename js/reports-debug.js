@@ -11228,6 +11228,23 @@ $(document).ready(function() {
 					points.addClass('hovered');
 					// Even jQuery 3.6 seems to not correctly support svg class operations.
 					lines.each(function (i, lineEl) { lineEl.setAttribute('class', lineEl.getAttribute('class') + ' hovered')});
+
+					// Ensure that hover effect elements are cleaned up.
+					chartEl.find('.hover-box').hide();
+
+					// Add in hover effect elements.
+					points.each(function (i, pointEl) {
+						var pointEl = $(pointEl);
+						if ([undefined, ''].indexOf(pointEl.attr('data-name')) == -1) {
+							return;
+						}
+
+						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.attr('data-index')+']');
+						hoverBoxEl.text(pointEl.attr('data-name'));
+						hoverBoxEl.show();
+						hoverBoxEl.css('top', pointEl.position().top + 20);
+						hoverBoxEl.css('left', pointEl.position().left - (hoverBoxEl.outerWidth() / 2))
+					})
 				});
 	
 				ysline.on('mouseout', function (event) {
@@ -11237,6 +11254,9 @@ $(document).ready(function() {
 					lines.each(function (i, lineEl) {
 						lineEl.setAttribute('class', lineEl.getAttribute('class').split(' ').filter(function (c) { return c !== 'hovered' }).join(' '))
 					});
+
+					// Hide hover effects.
+					chartEl.find('.hover-box').hide();
 				});
 			});
 		});

@@ -29,19 +29,6 @@
 					background: #ccc;
 					transform: translate(-0.25em, 0.25em) rotate(45deg);
 				}
-
-				.label {
-					display: none;
-					background: rgba(256, 250, 0, 0.8);
-					padding: 0.3em;
-					position: relative;
-					margin: 0 auto;
-					top: 1.5em;
-					max-width: 100%;
-					left: -50%;
-					z-index: 999999999;
-					box-sizing: border-box;
-				}
 			}
 
 			li.you .dot { z-index: 9000000; background-color: #65DB65; }
@@ -56,6 +43,18 @@
 
 			li.bg_sex_1 .dot { z-index: 8500000; color: #74d2c6; }
 			li.bg_sex_2 .dot { z-index: 8500000; color: #b07fa9; }
+		}
+
+		.hover-content {
+			height: 100%;
+			width: 100%;
+
+			.hover-box {
+				position: absolute;
+				background: #FFFAD4;
+				font-size: .8em;
+				border-radius: 0.5em;
+			}
 		}
 	}
 	
@@ -107,10 +106,6 @@
 
 		.point.hovered {
 			z-index: 999999999999;
-
-			.label {
-				display: block;
-			}
 		}
 	}
 }
