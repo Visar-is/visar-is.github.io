@@ -80,13 +80,16 @@ $(document).ready(function() {
 					chartEl.find('.hover-box').hide();
 
 					// Add in hover effect elements.
+					console.log(points);
 					points.each(function (i, pointEl) {
 						var pointEl = $(pointEl);
 						if ([undefined, ''].indexOf(pointEl.attr('data-name')) == -1) {
+							console.log('Point has no name, skipping', pointEl);
 							return;
 						}
 
 						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.attr('data-index')+']');
+						console.log(hoverBoxEl);
 						hoverBoxEl.text(pointEl.attr('data-name'));
 						hoverBoxEl.show();
 						hoverBoxEl.css('top', pointEl.position().top + 20);
