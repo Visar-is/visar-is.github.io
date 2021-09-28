@@ -11233,15 +11233,14 @@ $(document).ready(function() {
 					chartEl.find('.hover-box').hide();
 
 					// Add in hover effect elements.
-					console.log(points);
 					points.each(function (i, pointEl) {
+						console.log(pointEl);
 						if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) == -1) {
 							console.log('Point has no name, skipping', pointEl);
 							return;
 						}
 
 						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
-						console.log(hoverBoxEl);
 						hoverBoxEl.text(pointEl.getAttribute('data-name'));
 						hoverBoxEl.show();
 						hoverBoxEl.css('top', $(pointEl).position().top + 20);
