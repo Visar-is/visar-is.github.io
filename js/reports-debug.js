@@ -11235,18 +11235,17 @@ $(document).ready(function() {
 					// Add in hover effect elements.
 					console.log(points);
 					points.each(function (i, pointEl) {
-						var pointEl = $(pointEl);
-						if ([undefined, ''].indexOf(pointEl.attr('data-name')) == -1) {
+						if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) == -1) {
 							console.log('Point has no name, skipping', pointEl);
 							return;
 						}
 
-						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.attr('data-index')+']');
+						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
 						console.log(hoverBoxEl);
-						hoverBoxEl.text(pointEl.attr('data-name'));
+						hoverBoxEl.text(pointEl.getAttribute('data-name'));
 						hoverBoxEl.show();
-						hoverBoxEl.css('top', pointEl.position().top + 20);
-						hoverBoxEl.css('left', pointEl.position().left - (hoverBoxEl.outerWidth() / 2))
+						hoverBoxEl.css('top', $(pointEl).position().top + 20);
+						hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2))
 					})
 				});
 	
