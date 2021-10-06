@@ -1,48 +1,69 @@
-@line-data-height: 275px;
-
-.bn-compare-line .longitudinal-lines svg { position: absolute; top: 0; left: 0; }
-
-.bn-compare-line {
-	.longitudinal-lines {
-		position: absolute;
-		width: 100%;
-		height: @line-data-height;
-		margin-left: 60px;
-	}
-	
-	.longitudinal-points {
+.bn-longitudinal-chart {
+	.data {
 		position: relative;
-		bottom: 4px;
-		pointer-events: none; /* Allow pointer events through to lines underneath. */
-	}
-	
-	.longitudinal-points li.compare:before {
-		color: #DC3912;
-		z-index: 99;
-	}
-	
-	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
-	.points li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; position: relative; }
-	.points li span { display: none; }
-	
-	.points li.you:before { z-index: 9000000; color: #65DB65; }
-	.points li.compare:before { z-index: 8000000; color: #dc3912; }
-	.points li.you_schools:before { z-index: 7000000; color: #555; }
-	.points li.compare_schools:before { z-index: 6000000; color: #bbb; color: rgba(190, 190, 190, 0.4); font-size: 1.25em; }
-	.points li.cohort-grade-6:before, .points li.cohort-grade-1:before { z-index: 9000000; color: #712F0A; }
-	.points li.cohort-grade-7:before, .points li.cohort-grade-2:before { z-index: 8000000; color: #E9681B; }
-	.points li.cohort-grade-8:before, .points li.cohort-grade-3:before { z-index: 7000000; color: #65DB65; }
-	.points li.cohort-grade-9:before, .points li.cohort-grade-4:before { z-index: 6000000; color: #FFB600; }
-	.points li.cohort-grade-10:before, .points li.cohort-grade-5:before { z-index: 5000000; color: #3359BA; }
+		width: 100%;
+		height: 20em;
 
-	.points li.bg_sex_1:before { z-index: 8500000; color: #74d2c6; }
-	.points li.bg_sex_2:before { z-index: 8500000; color: #b07fa9; }
+		svg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
 	
-	@media screen and (min-width: 900px) {
-		.longitudinal-lines { margin-right: 160px; }
+		.longitudinal-points {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			pointer-events: none; /* Allow pointer events through to lines underneath. */
+
+			.point {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+
+				.dot {
+					width: 0.5em;
+					height: 0.5em;
+					background: #ccc;
+					transform: translate(-0.25em, 0.25em) rotate(45deg);
+				}
+			}
+
+			li.you .dot { z-index: 9000000; background-color: #65DB65; }
+			li.compare .dot { z-index: 8000000; background-color: #dc3912; }
+			li.you_schools .dot { z-index: 7000000; background-color: #555; }
+			li.compare_schools .dot { z-index: 6000000; background-color: #bbb; background-color: rgba(190, 190, 190, 0.4); width: 0.4em; height: 0.4em; transform: translate(-0.2em, 0.2em) rotate(45deg); }
+			li.cohort-grade-6 .dot, .points li.cohort-grade-1 .dot { z-index: 9000000; background-color: #712F0A; }
+			li.cohort-grade-7 .dot, .points li.cohort-grade-2 .dot { z-index: 8000000; background-color: #E9681B; }
+			li.cohort-grade-8 .dot, .points li.cohort-grade-3 .dot { z-index: 7000000; background-color: #65DB65; }
+			li.cohort-grade-9 .dot, .points li.cohort-grade-4 .dot { z-index: 6000000; background-color: #FFB600; }
+			li.cohort-grade-10 .dot, .points li.cohort-grade-5 .dot { z-index: 5000000; background-color: #3359BA; }
+
+			li.bg_sex_1 .dot { z-index: 8500000; color: #74d2c6; }
+			li.bg_sex_2 .dot { z-index: 8500000; color: #b07fa9; }
+		}
+
+		.hover-content {
+			height: 100%;
+			width: 100%;
+
+			.hover-box {
+				position: absolute;
+				background: #FFFAD4;
+				font-size: .8em;
+				border-radius: 0.5em;
+				padding: 0.5em;
+				text-align: center;
+			}
+		}
 	}
 	
-	line { stroke: #ccc; }
+	line {
+		stroke: #ccc;
+		stroke-width: 1.5px;
+	}
 	
 	line.you { stroke: #65DB65; }
 	line.compare { stroke: #dc3912; }
@@ -57,46 +78,37 @@
 	line.bg_sex_2 { stroke: #b07fa9; }
 	
 	line.you.bg-sex-1 { stroke: #81e29e; }
-	.points li.you.bg-sex-1:before { color: #81e29e; }
+	.points li.you.bg-sex-1 .dot { background-color: #81e29e; }
 	line.you.bg-sex-2 { stroke: #93d3c5; }
-	.points li.you.bg-sex-2:before { color: #93d3c5; }
+	.points li.you.bg-sex-2 .dot { background-color: #93d3c5; }
 
 	line.compare.bg-sex-1 { stroke: #d39166; }
-	.points li.compare.bg-sex-1:before { color: #d39166; }
+	.points li.compare.bg-sex-1 .dot { background-color: #d39166; }
 	line.compare.bg-sex-2 { stroke: #b981da; }
-	.points li.compare.bg-sex-2:before { color: #b981da; }
-
-	/* Line Hover Effects */
-	.point.hovered:before {
-		z-index: 9999999999999 !important;
-		text-shadow: #FFFAD4 0 0 2px, #FFFAD4 0 -2px 1px, #FFFAD4 0 2px 1px, #FFFAD4 -2px 0 1px, #FFFAD4 2px 0 1px;
-	}
+	.points li.compare.bg-sex-2 .dot { background-color: #b981da; }
 	
 	.point.unconnected {
 		pointer-events: auto;
 		pointer-events: all;
 	}
 	
-	.point.hovered span,
-	.point:hover span {
-		font-size: 0.8em;
-		display: inline;
-		position: absolute;
-		background: #FFFAD4;
-		float: left;
-		padding: 0.3em;
-		border-radius: 0.5em;
-	}
-	
 	/* Disable hover effects on national points */
-	.points li.compare_schools span { display: none !important; }
+	.points li.compare_schools .label { display: none !important; }
 
-	line.hovered {
-		stroke-width: 4px;
-	}
-	
-	.y-axis {
-		height: @line-data-height;
+	&.hovered {
+		line:not(.hovered),
+		.point:not(.hovered):not(.compare_schools) {
+			opacity: 0.3;
+		}
+
+		line.hovered {
+			stroke-width: 3px;
+			z-index: 999999999999;
+		}
+
+		.point.hovered {
+			z-index: 999999999999;
+		}
 	}
 }
 
