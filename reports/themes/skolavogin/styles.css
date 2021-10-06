@@ -89,27 +89,29 @@ button.disabled,
 /* Skolavogin-specific chart styling
  * At the moment, skolavogin-specific chart styling is done as far as possible in the base chart styles,
  * with overrides here where required.
+ *
+ * TODO: Make a less function or something to streamline these.
  */
 
-.bn-compare-line .points li.you:before { color: #31419A; }
+.bn-compare-line .data .longitudinal-points li.you .dot { color: #31419A; }
 .bn-compare-line line.you { stroke: #31419A; }
 .bn-compare-line-x-axis .you { color: #31419A; }
 .fixed-key .you span, .key .you span { color: #31419A; }
 
-.bn-compare-line .points li.you_school:before { color: #65DB65; z-index: 9000001; }
+.bn-compare-line .data .longitudinal-points li.you_school .dot { color: #65DB65; z-index: 9000001; }
 .bn-compare-line line.you_school { stroke: #65DB65; }
 .bn-compare-line-x-axis .you_school { color: #65DB65; }
 .fixed-key .you_school span, .key .you_school span { color: #65DB65; }
 
 line.you.bg-sex-1 { stroke: #81e29e; }
-.points li.you.bg-sex-1:before { color: #81e29e; }
+.bn-compare-line .data .longitudinal-points li.you.bg-sex-1 .dot { color: #81e29e; }
 line.you.bg-sex-2 { stroke: #93d3c5; }
-.points li.you.bg-sex-2:before { color: #93d3c5; }
+.bn-compare-line .data .longitudinal-points li.you.bg-sex-2 .dot { color: #93d3c5; }
 
 line.compare.bg-sex-1 { stroke: #d39166; }
-.points li.compare.bg-sex-1:before { color: #d39166; }
+.bn-compare-line .data .longitudinal-points li.compare.bg-sex-1 .dot { color: #d39166; }
 line.compare.bg-sex-2 { stroke: #b981da; }
-.points li.compare.bg-sex-2:before { color: #b981da; }
+.bn-compare-line .data .longitudinal-points li.compare.bg-sex-2 .dot { color: #b981da; }
 
 .key .you.bg-sex-1 span, .fixed-key .you.bg-sex-1 span { color: #81e29e; }
 .key .you.bg-sex-2 span, .fixed-key .you.bg-sex-2 span { color: #93d3c5; }
@@ -118,11 +120,15 @@ line.compare.bg-sex-2 { stroke: #b981da; }
 
 /* Bar Charts */
 
-.bars li.you { background-color: #31419A; outline: 1px solid #31419A; }
-.bars li.you.bg { background-color: #4d7bdf; outline: 1px solid #4d7bdf; }
+.bar-chart {
+	.data {
+		li.you { background-color: #31419A; outline: 1px solid #31419A; }
+		li.you.bg { background-color: #4d7bdf; outline: 1px solid #4d7bdf; }
 
-.bars li.you_school { background-color: #65DB65; outline: 1px solid #65DB65; }
-.bars li.you_school.bg { background-color: #75DB75; outline: 1px solid #75DB75; }
+		li.you_school { background-color: #65DB65; outline: 1px solid #65DB65; }
+		li.you_school.bg { background-color: #75DB75; outline: 1px solid #75DB75; }
+	}
+}
 
 .fixed-key .you span,
 .key .you span { color: #31419A; }
