@@ -4,9 +4,21 @@
 .scatter {
 	.points li.you::before { color: #2f502f; }
 	
-	.data {
+	/* Y-axis consistent areas have the same height, their children have height: 100% */
+	.y-axis,
+	.plot {
+		height: 250px;
+	}
+	
+	/* The legend ol requires a very slight negative offset to put the ticks in the right place. */
+	.y-axis ol {
+		height: 100%;
 		position: relative;
-		height: 20em;
+		top: -3.5px;
+	}
+	
+	.plot {
+		position: relative;
 	}
 	
 	/* Percentage-accurate canvasses inside .plot overlap and fill all the available space */
@@ -32,6 +44,7 @@
 		border-radius: 0.5em;
 	}
 
+	
 	.points li.you:hover:before {
 		z-index: 110;
 		font-size: 1.6em;
@@ -62,6 +75,12 @@
 	
 	.line.compare-iceland,
 	.line.compare-nordic { border-color: #00c500; }
+	
+	@media screen and (min-width: 900px) {
+		margin-right: 160px;
+		
+		.lines { margin-right: 160px; }
+	}
 }
 
 /* Disable hover on pre-2015 reports */
