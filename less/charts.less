@@ -59,11 +59,11 @@
 	.x-axis {
 		grid-column: 2;
 		grid-row: 4;
-		font-size: 80%;
 		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
 
 		ol.x-axis-row {
 			width: 100%;
+			font-size: 80%;
 
 			li {
 				display: inline-block;
@@ -76,7 +76,6 @@
 		}
 
 		.row1 li {
-			max-width: 30em;
 			color: #333;
 			overflow-wrap: break-word;
 			hyphens: auto;
