@@ -11,6 +11,10 @@
 
 @import "reports/tables.less";
 
+* {
+	box-sizing: border-box !important;
+}
+
 strong {
 	font-family: @text-font-family-bold;
 }
@@ -22,9 +26,6 @@ a {	color: #007722; }
 	width: 100%;
 	clear: both;
 }
-
-/* Temporary fix for overlapping table header bug described (along with various other potential fixes) here: https://github.com/ariya/phantomjs/issues/10927 */
-.table-section thead, .table-section tfoot { display: table-row-group; }
 
 .table-section,
 .section-note { font-size: 12px; }
