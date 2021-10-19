@@ -95,7 +95,7 @@ button.disabled,
 
 .bn-longitudinal-chart .data .longitudinal-points li.you .dot { background-color: #31419A; }
 .bn-compare-line .points li.you:before,
-.bn-compare-line .x-axis li span.you { color: #31419A !important; }
+.bn-compare-line .x-axis li .you { color: #31419A !important; }
 .bn-longitudinal-chart line.you { stroke: #31419A; }
 .bn-longitudinal-chart-x-axis .you { color: #31419A; }
 .fixed-key .you span, .key .you span { color: #31419A; }
