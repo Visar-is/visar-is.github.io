@@ -94,6 +94,7 @@ button.disabled,
  */
 
 .bn-longitudinal-chart .data .longitudinal-points li.you .dot { background-color: #31419A; }
+.bn-compare-line .points li.you:before { color: #31419A; }
 .bn-longitudinal-chart line.you { stroke: #31419A; }
 .bn-longitudinal-chart-x-axis .you { color: #31419A; }
 .fixed-key .you span, .key .you span { color: #31419A; }
@@ -121,11 +122,11 @@ line.compare.bg-sex-2 { stroke: #b981da; }
 /* Bar Charts */
 
 
-.bar-chart .data li.you { background-color: #31419A; border: 1px solid #31419A; }
-.bar-chart .data li.you.bg { background-color: #4d7bdf; border: 1px solid #4d7bdf; }
+.bar-chart .data li.you { background-color: #31419A; border: 1px solid #31419A; outline: none; }
+.bar-chart .data li.you.bg { background-color: #4d7bdf; border: 1px solid #4d7bdf; outline: none; }
 
-.bar-chart .data li.you_school { background-color: #65DB65; border: 1px solid #65DB65; }
-.bar-chart .data li.you_school.bg { background-color: #75DB75; border: 1px solid #75DB75; }
+.bar-chart .data li.you_school { background-color: #65DB65; border: 1px solid #65DB65; outline: none; }
+.bar-chart .data li.you_school.bg { background-color: #75DB75; border: 1px solid #75DB75; outline: none; }
 
 .fixed-key .you span,
 .key .you span { color: #31419A; }

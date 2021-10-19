@@ -15,7 +15,8 @@ cat js/lib/jquery.1.11.3.min.js js/global/messages.js js/lib/soundmanager/soundm
 
 cat js/lib/jquery.1.11.3.min.js js/global/messages.js js/lib/papa-parse.js js/lib/sort-table.js js/lib/jsdifflib/difflib.js js/lib/jsdifflib/diffview.js js/ops.js | jsmin > js/ops-min.js
 
-cat js/lib/bean.js js/lib/jquery-3.6.0.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
+#cat js/lib/bean.js js/lib/jquery-3.6.0.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
+cat js/lib/bean.js js/lib/jquery.1.11.3.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
 
 cat js/lib/bean.js js/lib/jquery.1.11.3.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js > js/reports-debug.js
 
