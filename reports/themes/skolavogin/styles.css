@@ -122,11 +122,11 @@ line.compare.bg-sex-2 { stroke: #b981da; }
 /* Bar Charts */
 
 
-.bar-chart .data li.you { background-color: #31419A; border: 1px solid #31419A; outline: none; }
-.bar-chart .data li.you.bg { background-color: #4d7bdf; border: 1px solid #4d7bdf; outline: none; }
+.bar-chart .data li.you { background-color: #31419A; border: none; outline: none; }
+.bar-chart .data li.you.bg { background-color: #4d7bdf; border: none; outline: none; }
 
-.bar-chart .data li.you_school { background-color: #65DB65; border: 1px solid #65DB65; outline: none; }
-.bar-chart .data li.you_school.bg { background-color: #75DB75; border: 1px solid #75DB75; outline: none; }
+.bar-chart .data li.you_school { background-color: #65DB65; border: none; outline: none; }
+.bar-chart .data li.you_school.bg { background-color: #75DB75; border: none; outline: none; }
 
 .fixed-key .you span,
 .key .you span { color: #31419A; }
