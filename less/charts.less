@@ -1,7 +1,7 @@
 .chart {
 	width: 100%;
 	display: grid;
-	grid-template-columns: auto auto 1fr;
+	grid-template-columns: min-content auto 1fr;
 	grid-template-rows: auto auto auto auto;
 	padding: 0;
 	margin: 0;
@@ -147,7 +147,7 @@
 	}
 
 	.chart:not(.wide-chart) {
-		grid-template-columns: auto auto auto 1fr;
+		grid-template-columns: min-content auto auto 1fr;
 		grid-template-rows: auto auto auto;
 
 		.title {
