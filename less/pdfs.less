@@ -23,9 +23,6 @@ a {	color: #007722; }
 	clear: both;
 }
 
-/* Temporary fix for overlapping table header bug described (along with various other potential fixes) here: https://github.com/ariya/phantomjs/issues/10927 */
-.table-section thead, .table-section tfoot { display: table-row-group; }
-
 .table-section,
 .section-note { font-size: 12px; }
 
@@ -60,38 +57,6 @@ a {	color: #007722; }
 /* Override chart styles
  * Typically sizes and offsets, tweaked by a few pixels to ensure everything lines up perfectly.
  */
-
-.chart .bars,
-.chart .bars ol,
-.bar-chart .y-axis { height: 100px; }
-
-.scatter .y-axis, .scatter .plot { height: 200px; }
-.scatter .y-axis ol { top: -1.5px; }  /* The offset required for scatter charts in the PDFs is smaller than on the web. */
-
-/* Longitudinal y axes require a slight offset in PDFs. */
-.bn-compare-line .y-axis ol {
-	height: 100%;
-	position: relative;
-	top: 3px;
-}
-
-/* Longitudinal charts have a tendency to overflow unless hard limits are set on the container element. !important lets us override the max-width in the element style attribute. */
-.bn-longitudinal-chart {
-	max-width: 450px !important;
-}
-
-/* longitudinal points requires an offset to move the points up to the (correct) line positions */
-.bn-compare-line .longitudinal-points {
-	bottom: 7px;
-}
-
-/* Bar chart y axes require a slight offset in PDFs. */
-.bar-chart .y-axis ol {
-	height: 100%;
-	position: relative;
-	top: 1.5px;
-}
-
 
 /* Cover Pages */
 
