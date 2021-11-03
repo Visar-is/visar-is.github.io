@@ -61,9 +61,9 @@ $(document).ready(function() {
 					// • `cohort-grade-\d+` for grade cohort charts.
 					// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
 					return c[0] == 's'
-						|| (c == 'you' || c == 'compare')
+						|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null
 						|| c.indexOf('cohort-grade-') != -1
-						|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
+						|| (c == 'you' || c == 'compare');
 				})[0];
 				
 				var points = chartEl.find('.point.' + lineClass);
