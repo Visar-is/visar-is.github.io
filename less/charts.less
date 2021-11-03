@@ -88,11 +88,12 @@
 	}
 
 	.error-message {
-		margin-right: 0px;
-		text-align: center;
+		grid-column: 2;
+		grid-row: 3;
 		min-width: 20em;
+
+		text-align: center;
 		font-size: 0.77em;
-		margin-bottom: 0.77em;
 		color: #888;
 	}
 		
@@ -154,7 +155,7 @@
 			padding: 1em;
 		}
 
-		.data {
+		.data, .error-message {
 			grid-column: 2;
 			grid-row: 2;
 		}
