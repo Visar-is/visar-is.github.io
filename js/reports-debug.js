@@ -11217,7 +11217,9 @@ $(document).ready(function() {
 						|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null
 						|| c.indexOf('cohort-grade-') != -1
 						|| (c == 'you' || c == 'compare');
-				})[0];
+				}).reduce(function (longest, current) {
+					return current.length > longest.length ? current : longest;
+				});
 				
 				var points = chartEl.find('.point.' + lineClass);
 				var lines = chartEl.find('.longitudinal-lines line.' + lineClass);
