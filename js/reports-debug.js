@@ -11219,9 +11219,9 @@ $(document).ready(function() {
 						|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null;
 				})[0];
 				
-				var points = $('.point.' + lineClass);
-				var lines = $('.longitudinal-lines line.' + lineClass);
-				$('.point.' + lineClass).last().addClass('last');
+				var points = chartEl.find('.point.' + lineClass);
+				var lines = chartEl.find('.longitudinal-lines line.' + lineClass);
+				chartEl.find('.point.' + lineClass).last().addClass('last');
 	
 				ysline.on('mouseover', function (event) {
 					chartEl.addClass('hovered');
