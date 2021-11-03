@@ -93,10 +93,7 @@ button.disabled,
  * TODO: Make a less function or something to streamline these.
  */
 
- /*
 .bn-longitudinal-chart .data .longitudinal-points li.you .dot { background-color: #31419A; }
-.bn-compare-line .points li.you:before,
-.bn-compare-line .x-axis li .you { color: #31419A !important; }
 .bn-longitudinal-chart line.you { stroke: #31419A; }
 .bn-longitudinal-chart-x-axis .you { color: #31419A; }
 .fixed-key .you span, .key .you span { color: #31419A; }
@@ -123,49 +120,12 @@ line.compare.bg-sex-2 { stroke: #b981da; }
 
 /* Bar Charts */
 
-/*
-.bar-chart .data li.you { background-color: #31419A; border: none; outline: none; }
-.bar-chart .data li.you.bg { background-color: #4d7bdf; border: none; outline: none; }
 
-.bar-chart .data li.you_school { background-color: #65DB65; border: none; outline: none; }
-.bar-chart .data li.you_school.bg { background-color: #75DB75; border: none; outline: none; }
+.bar-chart .data li.you { background-color: #31419A; border: 1px solid #31419A; }
+.bar-chart .data li.you.bg { background-color: #4d7bdf; border: 1px solid #4d7bdf; }
 
-.fixed-key .you span,
-.key .you span { color: #31419A; }
-*/
-
-.bn-compare-line .points li.you:before { color: #31419A; }
-.bn-compare-line line.you { stroke: #31419A; }
-.bn-compare-line-x-axis .you { color: #31419A; }
-.fixed-key .you span, .key .you span { color: #31419A; }
-
-.bn-compare-line .points li.you_school:before { color: #65DB65; z-index: 9000001; }
-.bn-compare-line line.you_school { stroke: #65DB65; }
-.bn-compare-line-x-axis .you_school { color: #65DB65; }
-.fixed-key .you_school span, .key .you_school span { color: #65DB65; }
-
-line.you.bg-sex-1 { stroke: #81e29e; }
-.points li.you.bg-sex-1:before { color: #81e29e; }
-line.you.bg-sex-2 { stroke: #93d3c5; }
-.points li.you.bg-sex-2:before { color: #93d3c5; }
-
-line.compare.bg-sex-1 { stroke: #d39166; }
-.points li.compare.bg-sex-1:before { color: #d39166; }
-line.compare.bg-sex-2 { stroke: #b981da; }
-.points li.compare.bg-sex-2:before { color: #b981da; }
-
-.key .you.bg-sex-1 span, .fixed-key .you.bg-sex-1 span { color: #81e29e; }
-.key .you.bg-sex-2 span, .fixed-key .you.bg-sex-2 span { color: #93d3c5; }
-.key .compare.bg-sex-1 span, .fixed-key .compare.bg-sex-1 span { color: #d39166; }
-.key .compare.bg-sex-2 span, .fixed-key .compare.bg-sex-2 span { color: #b981da; }
-
-/* Bar Charts */
-
-.bars li.you { background-color: #31419A; outline: 1px solid #31419A; }
-.bars li.you.bg { background-color: #4d7bdf; outline: 1px solid #4d7bdf; }
-
-.bars li.you_school { background-color: #65DB65; outline: 1px solid #65DB65; }
-.bars li.you_school.bg { background-color: #75DB75; outline: 1px solid #75DB75; }
+.bar-chart .data li.you_school { background-color: #65DB65; border: 1px solid #65DB65; }
+.bar-chart .data li.you_school.bg { background-color: #75DB75; border: 1px solid #75DB75; }
 
 .fixed-key .you span,
 .key .you span { color: #31419A; }
