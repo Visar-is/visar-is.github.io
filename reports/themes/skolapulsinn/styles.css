@@ -4,7 +4,11 @@ body {
 
 body header {
 	background-image: none;
+}
+
+body #header {
 	background-color: #80C860;
+	border-radius: 6px;
 }
 
 body #header ul li a {
