@@ -1,10 +1,207 @@
-.chart { width: 100%; position: relative;  padding: 0; margin:0; font-size: 16px;  }
-.title { text-align: center; font-size: 16px; margin: 0.5em 0.5em 0 0.5em; font-size: 120%; }
-.data { font-size: 80%; position: relative; margin-top: 0.5em; }
-ol, ul, li { padding: 0; margin:0; list-style-type: none;}
-.fixed-key ul, .key ul { display: block; }
-.fixed-key li, .key li { width: 50%; float: left; text-align: left; }
-.fixed-key, .key { padding: .25em; margin-left: 65px; font-size: 80%; }
+.chart {
+	width: 100%;
+	display: grid;
+	grid-template-columns: min-content auto 1fr;
+	grid-template-rows: auto auto auto auto;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+
+	ol, ul, li { padding: 0; margin: 0; list-style-type: none; }
+
+	.title {
+		grid-column: 1 / span 2;
+		padding: 1em 1em 0 1em;
+		text-align: center;
+		font-size: 120%;
+	}
+
+	.data {
+		grid-column: 2;
+		grid-row: 3;
+		height: 13em;  /* default chart data height */
+		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
+		font-size: 80%;
+		position: relative;
+
+		.y-axis-lines {
+			display: flex;
+			position: absolute;
+			flex-direction: column-reverse;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+
+			li {
+				width: 100%;
+				height: 0px;
+				border-bottom: 1px #ddd solid;
+			}
+		}
+	}
+
+	.key {
+		grid-column: 2;
+		grid-row: 2;
+		padding: 0.5em 0 1em 0;
+		font-size: 0.9em;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			height: 100%;
+
+			li { margin-right: 1em; }
+		}
+	}
+
+	.x-axis {
+		grid-column: 2;
+		grid-row: 4;
+		font-size: 80%; /* Font size must be 80% to match .data */
+		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
+
+		ol.x-axis-row {
+			width: 100%;
+			display: flex;
+
+			li {
+				vertical-align: top;
+				color: #666;
+				padding: 0 0.1em;
+				box-sizing: border-box;
+				text-align: center;
+			}
+		}
+
+		.row1 li {
+			color: #333;
+			overflow-wrap: break-word;
+			hyphens: auto;
+		}
+
+		.row1,
+		.row2 { font-size: 1em; }
+
+		.row3 { font-size: 0.8em; }
+	}
+
+	.error-message {
+		grid-column: 2;
+		grid-row: 3;
+		min-width: 20em;
+
+		text-align: center;
+		font-size: 0.77em;
+		color: #888;
+	}
+		
+	.y-axis {
+		grid-row: 3;
+		grid-column: 1;
+
+		color: #333;
+		text-align: right;
+		font-size: 0.9em;
+
+		ol {
+			position: relative;
+			height: 100%;
+
+			li {
+				position: absolute;
+				right: 0;
+				margin: 0;
+				padding: 0 0.5em 0 0;
+			}
+		}
+	}
+}
+
+.chart.no-key {
+	.title {
+		padding-bottom: 1em;
+	}
+}
+
+/* On particularly large charts, bump the text size down a little and move the legend above the chart */
+.wide-chart {
+	.x-axis {
+		.row1 { font-size: 0.9em !important; }
+		.row2 { font-size: 0.8em !important; }
+	}
+}
+
+@media screen and (min-width: 40em), print {
+	.chart {
+		.title {
+			grid-column: span 3;
+			grid-row: 1;
+		}
+	}
+
+	.chart.wide-chart {
+		.title {
+			padding: 0.5em 1em 0 1em;
+		}
+	}
+
+	.chart:not(.wide-chart) {
+		grid-template-columns: min-content min-content auto 1fr;
+		grid-template-rows: auto auto auto;
+
+		.title {
+			padding: 1em;
+		}
+
+		.data, .error-message {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.key {
+			grid-column: 3;
+			grid-row: 2;
+			
+			ul {
+				flex-direction: column;
+				margin-left: 1em;
+			}
+		}
+
+		.y-axis {
+			grid-row: 2;
+			grid-column: 1;
+		}
+	}
+}
+
+/* Add in specific chart type styling */
+@import "charts/bars.less";
+@import "charts/h_bar.less";
+@import "charts/scatter.less";
+@import "charts/line.less";
+@import "charts/is_muni_map.less";
+
+
+/* General key colour overrides after chart styling, to override */
+
+.bn-compare-line .points li.you_muni:before { color: #31419A; z-index: 9000001; }
+.bn-compare-line line.you_muni { stroke: #31419A; }
+.bn-compare-line-x-axis .you_muni { color: #31419A; }
+.fixed-key .you_muni span, .key .you_muni span { color: #31419A; }
+
+.bn-compare-line .points li.you_school:before { color: #65DB65; z-index: 9000001; }
+.bn-compare-line line.you_school { stroke: #65DB65; }
+.bn-compare-line-x-axis .you_school { color: #65DB65; }
+.fixed-key .you_school span, .key .you_school span { color: #65DB65; }
+
+.bars li.you_muni { background-color: #31419A; }
+.bars li.you_muni.bg { background-color: #4d7bdf; }
+
+.bars li.you_school { background-color: #65DB65; }
+.bars li.you_school.bg { background-color: #75DB75; }
 
 /* Key Colours */
 .fixed-key .you span,
@@ -16,9 +213,6 @@ ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 .key .you_schools span,
 .fixed-key .you_point span,
 .key .you_point span { color: #555; }
-
-/* By default, hide the longitudinal key items for individual schools (to be shown on hover) */
-.key .you_school { display: none; }
 
 .fixed-key .compare_schools span,
 .key .compare_schools span,
@@ -57,97 +251,3 @@ ol, ul, li { padding: 0; margin:0; list-style-type: none;}
 .key .you.bg-sex-2 span, .fixed-key .you.bg-sex-2 span { color: #93d3c5; }
 .key .compare.bg-sex-1 span, .fixed-key .compare.bg-sex-1 span { color: #d39166; }
 .key .compare.bg-sex-2 span, .fixed-key .compare.bg-sex-2 span { color: #b981da; }
-
-
-.x-axis { padding-left: 65px; font-size: 80%; clear: both; }
-.x-axis ol.x-axis-row li { color: #333; white-space: nowrap; }
-.x-axis ol.row1 { border-top: 1px solid #ccc; }
-.x-axis ol.row1 li { color: #333; white-space: normal; }
-
-.chart .x-axis ol.x-axis-row li {
-	color: #666;
-}
-
-.chart .x-axis ol.x-axis-row { font-size: 0.8em; width:98%; }
-.chart .x-axis ol.row1,
-.chart .x-axis ol.row2 { font-size: 1em; }
-
-.x-axis ol li { float: left; text-align: center; color: #333; }
-.x-axis ol.compare li:nth-child(odd) { margin-left: 1%; }
-.x-axis ol.compare li:nth-child(even) { margin-right: 1%; }
-
-.plot { margin-left: 65px; }
-
-.notes { clear: both;  }
-
-.error-message {
-	margin-right: 0px;
-	text-align: center;
-	min-width: 20em;
-	font-size: 0.77em;
-	margin-bottom: 0.77em;
-	color: #888;
-}
-	
-.y-axis { float:left; border-right: 1px solid #CCC; width: 65px; color: #333; text-align: right; height: 200px; position: relative; }
-.y-axis li { margin:0; padding:0; position: absolute; right: -1px; }
-
-/* .y-axis .major:after { content: "—"; color: #333; padding-left: 0.2em; } */
-.y-axis .major:after, .y-axis .minor:after { content: "-"; color: #333; padding-left: 0.3em; /* margin-right: -0.1em;  */ }
-
-@media screen and (min-width: 900px) {
-	.key { padding: 0.25em; width: 300px; position: absolute; top: 11em; right: -170px;}
-	.bn-longitudinal-chart .key { right: -100px; }
-	.key li { width: 100% !important; float: none; margin-left: 15px; }
-	.key li span { margin-left: -15px; }
-	.x-axis { margin-right: 160px; }
-	div.h-x-axis { margin-right: 0px; }
-}
-@media screen and (max-width: 600px) {
-	.chart { font-size: 90%; }
-}
-@media screen and (max-width: 400px) {
-	.chart { font-size: 80%; }
-}
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-html[xmlns] .clearfix {
-	display: block;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-/* Add in specific chart type styling */
-@import "charts/bars.less";
-@import "charts/h_bar.less";
-@import "charts/scatter.less";
-@import "charts/line.less";
-
-
-/* General key colour overrides after chart styling, to override */
-
-.bn-compare-line .points li.you_muni:before { color: #31419A; z-index: 9000001; }
-.bn-compare-line line.you_muni { stroke: #31419A; }
-.bn-compare-line-x-axis .you_muni { color: #31419A; }
-.fixed-key .you_muni span, .key .you_muni span { color: #31419A; }
-
-.bn-compare-line .points li.you_school:before { color: #65DB65; z-index: 9000001; }
-.bn-compare-line line.you_school { stroke: #65DB65; }
-.bn-compare-line-x-axis .you_school { color: #65DB65; }
-.fixed-key .you_school span, .key .you_school span { color: #65DB65; }
-
-.bars li.you_muni { background-color: #31419A; outline: 1px solid #31419A; }
-.bars li.you_muni.bg { background-color: #4d7bdf; outline: 1px solid #4d7bdf; }
-
-.bars li.you_school { background-color: #65DB65; outline: 1px solid #65DB65; }
-.bars li.you_school.bg { background-color: #75DB75; outline: 1px solid #75DB75; }
