@@ -131,3 +131,7 @@ line.compare.bg-sex-2 { stroke: #b981da; }
 
 .fixed-key .you span,
 .key .you span { color: #31419A; }
+
+@media only screen and (max-width: 959px) {
+	.web body #header { border-radius:  0;}
+}

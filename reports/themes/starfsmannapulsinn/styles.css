@@ -86,3 +86,6 @@ nav li { color: #80c860; }
 
 #pdf-builder .collapse { color: #007711; }
 
+@media only screen and (max-width: 959px) {
+	body #header { border-radius:  0;}
+}
