@@ -168,7 +168,7 @@ a .inline-icon {
 #wrap { min-height: 100%; }
 
 header { background-color: #fff; width: 100%; height: 65px; position: fixed; z-index: 999999999; }
-#header { padding: 0px 10px 0px 20px; height: 65px; max-width: 1040px; margin: 0 auto; text-align: center; position: relative; width: 90%; }
+#header { padding: 0px 10px 0px 20px; height: 65px; max-width: 1040px; margin: 0 auto; text-align: center; position: relative; width: 90%; 	border-radius: 6px; }
 #header .logo { position: absolute; left: 10px; top: 10px; }
 #header .logo object { pointer-events: none; }
 #header ul li { float: right; padding: 0 1em; /*border-left: 1px solid #B0B1B2;*/ }
@@ -198,15 +198,18 @@ body footer {
 	header { position: fixed; width: 100%; }
 	#messages { padding-top: 0; }
 	.last span { display: none; }
+	#header { width: 100%; border-radius:  0;}
 	#header ul li a { padding: 20px 0; }
 	#header ul li.last { right: 90px; }
 }
+
 
 /* Mobile Portrait */
 
 @media only screen and (max-width: 480px) {
 	header { position: fixed;  width: 100%; }
 	header a.logo { margin: 0 auto; position: relative; top: 14px; left: 0px; }
+	#header { width: 100%;  border-radius:  0;}
 
 	#messages { padding-top: 0; }
 	.last span { display: none; }
@@ -219,6 +222,7 @@ body footer {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	header { position: fixed; width: 100%; }
 	#messages { padding-top: 0; }
+	#header { width: 100%;  border-radius:  0;}
 }
 
 .greeting { font-size: 28px; margin:0; padding: 0.5em 0; line-height: 34px; font-family: AvenirNextLTProDemi, AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif }
