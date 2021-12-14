@@ -11229,7 +11229,6 @@ $(document).ready(function() {
 					})] = true;
 				});
 			}
-			console.log(hoverableClasses);
 
 			// Do some setup work now that we know which elements are hoverable.
 			hoverableClasses.forEach(function (hoverClass) {
@@ -11245,7 +11244,7 @@ $(document).ready(function() {
 				var hoverClass = Array.from(event.target.classList).find(function (c) {
 					return c in hoverableClasses;
 				});
-				console.log(event, hoverClass);
+				
 				if (hoverClass) {
 					var points = chartEl.find('.point.' + hoverClass);
 					var lines = chartEl.find('.longitudinal-lines line.' + hoverClass);
