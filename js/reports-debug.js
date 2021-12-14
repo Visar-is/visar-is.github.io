@@ -11199,33 +11199,57 @@ $(document).ready(function() {
 	(function () {
 		$('.bn-longitudinal-chart').each(function (i, chartEl) {
 			var chartEl = $(chartEl);
-			var yslines = chartEl.find('.longitudinal-lines line');
-
-			yslines.each(function(i, ysline) {
-				var ysline = $(ysline);
-	
-				// We need a classname which identifies lines of the same class as the one we’re processing right now.
-				// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
-				// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
-				// handling longitudinal scatter charts (the original) and the other handling cohort charts.
-				var lineClass = ysline.attr('class').split(' ').filter(function (c) {
-					// Is the current classname one which we can use to identify associated line and li.point elements?
-					// • of the form `s\d+` for longitudinal schools
-					// • `cohort-grade-\d+` for grade cohort charts.
-					// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
-					return c[0] == 's'
-						|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null
-						|| c.indexOf('cohort-grade-') != -1
-						|| (c == 'you' || c == 'compare');
-				}).reduce(function (longest, current) {
-					return current.length > longest.length ? current : longest;
+			var hoverableClasses = [];
+			var keyEl = chartEl.find('.key');
+			
+			// Make a list of hoverable classes. If any key items have data-hoverable, then it’s a new chart using
+			// explicit hoverability. Otherwise, use the cludgy old heuristic.
+			if (keyEl.find('[data-hoverable]').length > 0) {
+				keyEl.find('[data-hoverable]').each(function (i, el) {
+					hoverableClasses.push(el.className);
 				});
-				
-				var points = chartEl.find('.point.' + lineClass);
-				var lines = chartEl.find('.longitudinal-lines line.' + lineClass);
-				chartEl.find('.point.' + lineClass).last().addClass('last');
-	
-				ysline.on('mouseover', function (event) {
+			} else {
+				var hcd = {};
+				yslines.each(function(i, el) {
+					// We need a classname which identifies lines of the same class as the one we’re processing right now.
+					// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
+					// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
+					// handling longitudinal scatter charts (the original) and the other handling cohort charts.
+					// TODO: use the key 'hoverable' value to detect what values should be hoverable.
+					hcd[ysline.attr('class').split(' ').filter(function (c) {
+						// Is the current classname one which we can use to identify associated line and li.point elements?
+						// • of the form `s\d+` for longitudinal schools
+						// • `cohort-grade-\d+` for grade cohort charts.
+						// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
+						return c[0] == 's'
+							|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null
+							|| c.indexOf('cohort-grade-') != -1
+							|| (c == 'you' || c == 'compare');
+					}).reduce(function (longest, current) {
+						return current.length > longest.length ? current : longest;
+					})] = true;
+				});
+			}
+
+			// Do some setup work now that we know which elements are hoverable.
+			hoverableClasses.forEach(function (hoverClass) {
+				var points = chartEl.find('.point.' + hoverClass);
+				var lines = chartEl.find('.longitudinal-lines line.' + hoverClass);
+				chartEl.find('.point.' + hoverClass).last().addClass('last');
+			});
+
+
+			// Assign chart-level event handlers for relevant hover events.
+			chartEl.mouseover(function (event) {
+				// Determine whether the target of the mouseover is a hoverable element.
+				var hoverClass = event.target.classList.find(function (c) {
+					return c in hoverableClasses;
+				});
+
+				if (hoverClass) {
+					var points = chartEl.find('.point.' + hoverClass);
+					var lines = chartEl.find('.longitudinal-lines line.' + hoverClass);
+
 					chartEl.addClass('hovered');
 					points.addClass('hovered');
 					// Even jQuery 3.6 seems to not correctly support svg class operations.
@@ -11247,9 +11271,19 @@ $(document).ready(function() {
 						hoverBoxEl.css('top', $(pointEl).position().top + 20);
 						hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2))
 					})
+				}
+			});
+
+			chartEl.mouseout(function (event) {
+				// Determine whether the target of the mouseout is a hoverable element.
+				var hoverClass = event.target.classList.find(function (c) {
+					return c in hoverableClasses;
 				});
-	
-				ysline.on('mouseout', function (event) {
+
+				if (hoverClass) {
+					var points = chartEl.find('.point.' + hoverClass);
+					var lines = chartEl.find('.longitudinal-lines line.' + hoverClass);
+
 					chartEl.removeClass('hovered');
 					points.removeClass('hovered');
 					// Even jQuery 3.6 seems to not correctly support svg class operations.
@@ -11259,7 +11293,7 @@ $(document).ready(function() {
 
 					// Hide hover effects.
 					chartEl.find('.hover-box').hide();
-				});
+				}
 			});
 		});
 	}());
