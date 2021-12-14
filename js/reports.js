@@ -91,7 +91,7 @@ $(document).ready(function() {
 				var hoverClass = Array.from(event.target.classList).find(function (c) {
 					return c in hoverableClasses;
 				});
-
+				console.log(event, hoverClass);
 				if (hoverClass) {
 					var points = chartEl.find('.point.' + hoverClass);
 					var lines = chartEl.find('.longitudinal-lines line.' + hoverClass);
