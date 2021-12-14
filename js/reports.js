@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 					chartEl.addClass('hovered');
 					points.addClass('hovered');
-					keyEl.find('.'+hoverClass).addClass('hovered');
+					keyEl.find('.' + hoverClass).addClass('hovered');
 					// Even jQuery 3.6 seems to not correctly support svg class operations.
 					lines.each(function (i, lineEl) { lineEl.setAttribute('class', lineEl.getAttribute('class') + ' hovered')});
 
