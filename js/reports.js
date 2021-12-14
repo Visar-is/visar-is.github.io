@@ -89,7 +89,7 @@ $(document).ready(function() {
 			chartEl.mouseover(function (event) {
 				// Determine whether the target of the mouseover is a hoverable element.
 				var hoverClass = Array.from(event.target.classList).find(function (c) {
-					return c in hoverableClasses;
+					return hoverableClasses.includes(c);
 				});
 				
 				if (hoverClass) {
@@ -123,7 +123,7 @@ $(document).ready(function() {
 			chartEl.mouseout(function (event) {
 				// Determine whether the target of the mouseout is a hoverable element.
 				var hoverClass = Array.from(event.target.classList).find(function (c) {
-					return c in hoverableClasses;
+					return hoverableClasses.includes(c);
 				});
 
 				if (hoverClass) {
