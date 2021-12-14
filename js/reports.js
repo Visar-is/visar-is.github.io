@@ -51,9 +51,9 @@ $(document).ready(function() {
 			
 			// Make a list of hoverable classes. If any key items have data-hoverable, then it’s a new chart using
 			// explicit hoverability. Otherwise, use the cludgy old heuristic.
-			if (keyEl.find('[data-hoverable]').length > 0) {
-				keyEl.find('[data-hoverable]').each(function (i, el) {
-					hoverableClasses.push(el.className);
+			if (keyEl.find('[data-hoverclass]').length > 0) {
+				keyEl.find('[data-hoverclass]').each(function (i, el) {
+					hoverableClasses.push(el.getAttribute('data-hoverclass'));
 				});
 			} else {
 				var hcd = {};
