@@ -76,6 +76,7 @@ $(document).ready(function() {
 					})] = true;
 				});
 			}
+			console.loc(hoverableClasses);
 
 			// Do some setup work now that we know which elements are hoverable.
 			hoverableClasses.forEach(function (hoverClass) {
