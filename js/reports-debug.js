@@ -11239,7 +11239,7 @@ $(document).ready(function() {
 				// Make thicker, transparent duplicates of every hoverable line element, requiring less sensitive mouse positioning.
 				lines.each(function (i, lineEl) {
 					var hoverLineEl = document.cloneNode(lineEl);
-					hoverLineEl.classList.addClass('hover-area');
+					hoverLineEl.classList.add('hover-area');
 					lineEl.parent.appendChild(hoverLineEl);
 				});
 			});
