@@ -82,6 +82,13 @@ $(document).ready(function() {
 				var points = chartEl.find('.point.' + hoverClass);
 				var lines = chartEl.find('.longitudinal-lines line.' + hoverClass);
 				chartEl.find('.point.' + hoverClass).last().addClass('last');
+
+				// Make thicker, transparent duplicates of every hoverable line element, requiring less sensitive mouse positioning.
+				lines.each(function (i, lineEl) {
+					var hoverLineEl = document.cloneNode(lineEl);
+					hoverLineEl.classList.addClass('hover-area');
+					lineEl.parent.appendChild(hoverLineEl);
+				});
 			});
 
 
