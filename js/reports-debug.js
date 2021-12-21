@@ -11240,7 +11240,7 @@ $(document).ready(function() {
 				lines.each(function (i, lineEl) {
 					var hoverLineEl = lineEl.cloneNode(lineEl);
 					hoverLineEl.setAttribute('class', hoverLineEl.getAttribute('class') + ' hover-area');
-					lineEl.parent.appendChild(hoverLineEl);
+					lineEl.parentElement.appendChild(hoverLineEl);
 				});
 			});
 
