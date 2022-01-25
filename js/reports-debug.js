@@ -11195,6 +11195,14 @@ $(document).ready(function() {
 	// Causes a flicker, should only do this for Chrome browsers!
 	$("#header object").each(function() { $(this).load($(this).attr("data")); });
 	
+	// For the moment, chart hover effects are implemented separately for each chart type. Might be possible
+	// to generalise this in the future, if having multiple functions becomes enough of a maintenance burden.
+
+	// Scatter chart hover effects.
+	(function () {
+		
+	}());
+
 	// Longitudinal chart hover effects.
 	(function () {
 		$('.bn-longitudinal-chart').each(function (i, chartEl) {

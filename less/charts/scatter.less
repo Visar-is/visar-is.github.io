@@ -18,8 +18,8 @@
 	}
 	
 	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
-	.points li:before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; }
-	.points li.you:before { z-index: 100; }
+	.points li::before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; }
+	.points li.you::before { z-index: 100; }
 	.points li span { display: none; }
 	
 	.points li.you:hover span {
@@ -32,7 +32,7 @@
 		border-radius: 0.5em;
 	}
 
-	.points li.you:hover:before {
+	.points li.you:hover::before {
 		z-index: 110;
 		font-size: 1.6em;
 		color: #000;
@@ -71,7 +71,7 @@
 			display: none !important;
 		}
 		
-		.points li.you:hover:before {
+		.points li.you:hover::before {
 			z-index: auto;
 			font-size: auto;
 		}
