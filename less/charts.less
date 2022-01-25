@@ -52,7 +52,16 @@
 			justify-content: center;
 			height: 100%;
 
-			li { margin-right: 1em; }
+			li {
+				margin-right: 1em;
+				padding: 0.1em 0.5em;
+				border-radius: 0.5em;
+
+				&.hovered {
+					background: #FFFAD4;
+					cursor: default;
+				}
+			}
 		}
 	}
 
