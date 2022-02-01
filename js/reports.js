@@ -47,7 +47,100 @@ $(document).ready(function() {
 
 	// Scatter chart hover effects.
 	(function () {
-		
+		$('.chart.scatter').each(function (i, chartEl) {
+			var chartEl = $(chartEl);
+			var keyEl = chartEl.find('.key');
+			var hoverableClasses = [];
+			
+			// Make a list of hoverable classes.
+			if (keyEl.find('[data-hoverclass]').length > 0) {
+				keyEl.find('[data-hoverclass]').each(function (i, el) {
+					hoverableClasses.push(el.getAttribute('data-hoverclass'));
+				});
+				console.log('Hoverable classes are', hoverableClasses);
+			} else {
+				var hcd = {};
+				chartEl.find('.point').each(function (i, el) {
+					el.getAttribute('class').split(' ').filter(function (c) {
+						return c[0] == 's'
+							|| c == 'you-line'
+							|| c == 'compare-line'
+					});
+				}).forEach(function (c) {
+					hcd[c] = true;
+				});
+
+				hoverableClasses = Object.keys(hcd);
+			}
+
+			// Do some setup work now that we know which elements are hoverable.
+			hoverableClasses.forEach(function (hoverClass) {
+				var lines = chartEl.find('.lines .line.' + hoverClass);
+
+				// Make thicker, transparent duplicates of every hoverable line element, requiring less sensitive mouse positioning.
+				lines.each(function (i, lineEl) {
+					var hoverLineEl = lineEl.cloneNode();
+					hoverLineEl.setAttribute('class', hoverLineEl.getAttribute('class') + ' hover-area');
+					lineEl.parentElement.appendChild(hoverLineEl);
+				});
+			});
+
+			// Assign a chart-wide mouseover handler.
+			chartEl.mouseover(function (event) {
+				// Determine whether the target of the mouseover is a hoverable element.
+				var hoverClass = Array.from(event.target.classList).find(function (c) {
+					return hoverableClasses.includes(c);
+				});
+				
+				if (hoverClass) {
+					var points = chartEl.find('.point.' + hoverClass);
+					var lines = chartEl.find('.lines .line.' + hoverClass);
+
+					chartEl.addClass('hovered');
+					points.addClass('hovered');
+					lines.addClass('hovered');
+					keyEl.find('.' + hoverClass).addClass('hovered');
+
+					// Ensure that hover effect elements are cleaned up.
+					chartEl.find('.hover-box').hide();
+
+					// Add in hover effect elements.
+					points.each(function (i, pointEl) {
+						if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) !== -1) {
+							console.log('Point has no name, skipping', pointEl);
+							return;
+						}
+
+						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
+						hoverBoxEl.text(pointEl.getAttribute('data-name'));
+						hoverBoxEl.show();
+						hoverBoxEl.css('top', $(pointEl).position().top + 20);
+						hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2))
+					})
+				}
+			});
+
+			chartEl.mouseout(function (event) {
+				// Determine whether the target of the mouseout is a hoverable element.
+				var hoverClass = Array.from(event.target.classList).find(function (c) {
+					return hoverableClasses.includes(c);
+				});
+
+				if (hoverClass) {
+					var points = chartEl.find('.point.' + hoverClass);
+					var lines = chartEl.find('.lines .line.' + hoverClass);
+
+					chartEl.removeClass('hovered');
+					points.removeClass('hovered');
+					lines.removeClass('hovered');
+					keyEl.find('.'+hoverClass).removeClass('hovered');
+
+					// Hide hover effects.
+					chartEl.find('.hover-box').hide();
+				}
+			});
+
+		});
 	}());
 
 	// Longitudinal chart hover effects.

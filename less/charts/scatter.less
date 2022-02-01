@@ -2,66 +2,91 @@
 .key-scatter li.you_line span { color: #00f; }
 
 .scatter {
-	.points li.you::before { color: #2f502f; }
-	
 	.data {
 		position: relative;
 		height: 20em;
-	}
-	
-	/* Percentage-accurate canvasses inside .plot overlap and fill all the available space */
-	.plot .points,
-	.plot .lines {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
-	
-	.points li { position: absolute; margin: 0; padding: 0; text-align: center; }
-	.points li::before { content: "◆"; font-size: 1.5em; color: #ccc; z-index:90; }
-	.points li.you::before { z-index: 100; }
-	.points li span { display: none; }
-	
-	.points li.you:hover span {
-		position: absolute;
-		display: inline;
-		background: #FFFAD4;
-		float: left;
-		font-size: 0.8em;
-		padding: 0.3em;
-		border-radius: 0.5em;
-	}
 
-	.points li.you:hover::before {
-		z-index: 110;
-		font-size: 1.6em;
-		color: #000;
+		.points {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 90;
+			pointer-events: none;
+
+			.point {
+				position: absolute;
+				pointer-events: initial;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+
+				.dot {
+					width: 0.5em;
+					height: 0.5em;
+					background: #ccc;
+					transform: translate(-0.25em, 0.25em) rotate(45deg);
+					z-index: 10;
+				}
+				
+				/* Point styles */
+				&.you {
+					z-index: 20;
+					.dot { background: #555; }
+				}
+
+				&.compare {
+					z-index: 5;
+					.dot { background-color: rgba(190, 190, 190, 0.4); width: 0.4em; height: 0.4em; transform: translate(-0.2em, 0.2em) rotate(45deg); }
+				}
+			}
+		}
+
+		.hover-content {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+
+			.hover-box {
+				position: absolute;
+				z-index: 999999999999999999;
+				background: #FFFAD4;
+				font-size: .8em;
+				border-radius: 0.5em;
+				padding: 0.5em;
+				text-align: center;
+			}
+		}
+		
+		.lines {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 80;
+
+			.line {
+				border-top: 1px solid red;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				position: absolute;
+				
+				&.overlapping { border-style: dashed; }
+
+				span { display: none; }
+			}
+
+			.line.hover-area {
+				border: solid 5px rgba(0, 0, 0, 0) !important;
+			}
+
+			/* Individual line styling */
+			.line.you { border-color: #00f; }
+			.line.compare-oecd { border-color: #00f; }
+
+			.line.compare-iceland,
+			.line.compare-nordic { border-color: #00c500; }
+		}
 	}
-	
-	.plot .points {
-		z-index: 90;
-	}
-	
-	.plot .lines {
-		z-index: 80;
-	}
-	
-	/* Individual line styling */
-	.lines .line {
-		border-top: 1px solid red;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		position: absolute;
-	}
-	.lines .line span { display: none; }
-	.lines .line.overlapping { border-style: dashed; }
-	
-	.line.you { border-color: #00f; }
-	.line.compare-oecd { border-color: #00f; }
-	
-	.line.compare-iceland,
-	.line.compare-nordic { border-color: #00c500; }
 }
 
 /* Disable hover on pre-2015 reports */
