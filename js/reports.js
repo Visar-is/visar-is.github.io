@@ -87,8 +87,14 @@ $(document).ready(function() {
 
 			// Assign a chart-wide mouseover handler.
 			chartEl.mouseover(function (event) {
+				var target = event.target;
+
 				// Determine whether the target of the mouseover is a hoverable element.
-				var hoverClass = Array.from(event.target.classList).find(function (c) {
+				if (event.target.classList.contains('dot')) {
+					target = event.target.parentElement;
+				}
+
+				var hoverClass = Array.from(target.classList).find(function (c) {
 					return hoverableClasses.includes(c);
 				});
 				
@@ -121,8 +127,14 @@ $(document).ready(function() {
 			});
 
 			chartEl.mouseout(function (event) {
-				// Determine whether the target of the mouseout is a hoverable element.
-				var hoverClass = Array.from(event.target.classList).find(function (c) {
+				var target = event.target;
+
+				// Determine whether the target of the mouseover is a hoverable element.
+				if (event.target.classList.contains('dot')) {
+					target = event.target.parentElement;
+				}
+				
+				var hoverClass = Array.from(target.classList).find(function (c) {
 					return hoverableClasses.includes(c);
 				});
 

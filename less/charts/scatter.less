@@ -64,7 +64,8 @@
 			z-index: 80;
 
 			.line {
-				border-top: 1px solid red;
+				border: solid red;
+				border-width: 1px 0 0 0;
 				margin: 0;
 				padding: 0;
 				width: 100%;
@@ -85,6 +86,31 @@
 
 			.line.compare-iceland,
 			.line.compare-nordic { border-color: #00c500; }
+		}
+	}
+
+	&.hovered {
+		.data {
+			.lines {
+				.line:not(.hovered) {
+					opacity: 0.3;
+				}
+
+				.line.hovered {
+					border-bottom-width: 1px;
+					z-index: 999999999999;
+				}
+			}
+
+			.points {
+				.point:not(.hovered):not(.compare_schools) {
+					opacity: 0.3;
+				}
+
+				.point.hovered {
+					z-index: 999999999999;
+				}
+			}
 		}
 	}
 }
