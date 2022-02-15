@@ -11418,4 +11418,28 @@ $(document).ready(function() {
 			});
 		});
 	}());
+
+	// Bar chart hover effects
+	// For the moment, this is a much more basic version of the effects than in the other charts, simply
+	// reacting to legend hovers by highlighting relevant values.
+	(function () {
+		$('.bar-chart').each(function (i, el) {
+			var chartEl = $(el);
+			
+			chartEl.find('.key li').mouseover(function (event) {
+				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
+				var hoverclass = event.target.getAttribute('class');
+				chartEl.addClass('hovered');
+				chartEl.find('.' + hoverclass).addClass('hovered');
+			});
+
+			chartEl.find('.key li').mouseout(function (event) {
+				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
+				var hoverclass = event.target.getAttribute('class').replace('hovered', '');
+
+				chartEl.removeClass('hovered');
+				chartEl.find('.' + hoverclass).removeClass('hovered');
+			});
+		});
+	}());
 });
