@@ -11323,12 +11323,12 @@ $(document).ready(function() {
 				});
 			} else {
 				var hcd = {};
-				yslines.each(function(i, el) {
+				chartEl.find('.data line').each(function(i, el) {
 					// We need a classname which identifies lines of the same class as the one we’re processing right now.
 					// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
 					// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
 					// handling longitudinal scatter charts (the original) and the other handling cohort charts.
-					hcd[ysline.attr('class').split(' ').filter(function (c) {
+					hcd[$(el).attr('class').split(' ').filter(function (c) {
 						// Is the current classname one which we can use to identify associated line and li.point elements?
 						// • of the form `s\d+` for longitudinal schools
 						// • `cohort-grade-\d+` for grade cohort charts.
@@ -11340,6 +11340,7 @@ $(document).ready(function() {
 					}).reduce(function (longest, current) {
 						return current.length > longest.length ? current : longest;
 					})] = true;
+					hoverableClasses = Object.keys(hcd);
 				});
 			}
 
