@@ -8,7 +8,6 @@ body header {
 
 body #header {
 	background-color: #80C860;
-	border-radius: 6px;	
 }
 
 body #header ul li a {
@@ -85,4 +84,3 @@ nav li { color: #80c860; }
 #header ul li button.logout 	{ color: #ffffff; }
 
 #pdf-builder .collapse { color: #007711; }
-

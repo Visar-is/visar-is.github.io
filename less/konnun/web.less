@@ -27,13 +27,23 @@ button object[type="image/svg+xml"] { pointer-events: none; }
 #wrap { min-height: 100%; }
 
 header { width: 100%; min-height: 48px; }
-#header { display: block; text-align: right; min-height: 48px; }
-#header #progress { width: 200px; margin-top: 12px; margin-left: 45px; float: left; font-family: AvenirNextLTProDemi, AvenirNextLTPro-Demi; text-align: left; }
-#header #progress span { width: 200px; margin-left: 5px; }
-#header .languages {  position: relative; top: 12px; right: 10px; padding: 4px; margin: 0 1em 0 0; padding: 0; }
+#header { display: block; min-height: 48px; }
+#header #progress {
+	display: block;
+	float: left;
+	margin-top: 12px;
+	margin-left: 45px;
+	font-family: AvenirNextLTProDemi, AvenirNextLTPro-Demi;
+}
+#header #progress span { margin-left: 5px; }
+#header .languages {
+	display: block;
+	float: right;
+	margin: 0.8em;
+}
 #header .languages a { margin-left: 15px; }
 
-#content { text-align: center; overflow:auto; padding-bottom: 65px; /* must be same height as the footer */ } 
+#content { clear: both; text-align: center; overflow:auto; padding-bottom: 65px; /* must be same height as the footer */ } 
 
 footer { width: 100%; clear:both; text-align: right;  }	
 footer .logo { height: 42px; padding-right: 30px; padding-bottom: 30px; }
