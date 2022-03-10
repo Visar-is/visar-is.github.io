@@ -11253,7 +11253,7 @@ $(document).ready(function() {
 				
 				if (hoverClass) {
 					var points = chartEl.find('.point.' + hoverClass);
-					var lines = chartEl.find('.line.' + hoverClass);
+					var lines = chartEl.find('.lines .line.' + hoverClass);
 
 					chartEl.addClass('hovered');
 					points.addClass('hovered');
