@@ -57,12 +57,11 @@
 				padding: 0.1em 0.5em;
 				border-radius: 0.5em;
 
-				&[data-hoverclass] {
-					cursor: pointer;
-				}
-
-				&.hovered, &.toggled, &:hover {
+				&.hovered[data-hoverclass],
+				&.toggled[data-hoverclass],
+				&[data-hoverclass]:hover {
 					background: #FFFAD4;
+					cursor: pointer;
 				}
 
 				&.toggled {
