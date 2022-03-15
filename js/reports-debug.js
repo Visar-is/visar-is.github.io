@@ -11417,6 +11417,33 @@ $(document).ready(function() {
 					chartEl.find('.hover-box').hide();
 				}
 			});
+
+			// Assign legend item click handler for toggling hover effects.
+			chartEl.find('.key li').click(function (event) {
+				var target = $(event.target);
+				// Determine whether the target of the mouseout is a toggleable
+				var hoverClass = Array.from(event.target.classList).find(function (c) {
+					return hoverableClasses.includes(c);
+				});
+
+				if (hoverClass) {
+					// If this item isn’t toggled, toggle it.
+					if (!target.hasClass('toggled')) {
+						chartEl.find('.point.'+hoverClass).addClass('toggled');
+						chartEl.find('.longitudinal-lines line.' + hoverClass).each(function (i, lineEl) { lineEl.setAttribute('class', lineEl.getAttribute('class') + ' toggled')});
+						target.addClass('toggled');
+					} else { // Otherwise, untoggle it.
+						target.removeClass('toggled');
+						chartEl.find('.point.'+hoverClass).removeClass('toggled');
+						chartEl.find('.longitudinal-lines line.' + hoverClass).each(function (i, lineEl) {
+							lineEl.setAttribute('class', lineEl.getAttribute('class').split(' ').filter(function (c) { return c !== 'toggled' }).join(' '))
+						});
+					}
+
+					// Make chart-wide toggle flag reflect reality.
+					chartEl.toggleClass('toggled', chartEl.find('.toggled').length > 0);
+				}
+			});
 		});
 	}());
 

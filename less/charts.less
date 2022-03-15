@@ -57,9 +57,17 @@
 				padding: 0.1em 0.5em;
 				border-radius: 0.5em;
 
-				&.hovered, &:hover {
+				&[data-hoverclass] {
+					cursor: pointer;
+				}
+
+				&.hovered, &.toggled, &:hover {
 					background: #FFFAD4;
-					cursor: default;
+				}
+
+				&.toggled {
+					font-weight: bold;
+					letter-spacing: -0.5px;
 				}
 			}
 		}

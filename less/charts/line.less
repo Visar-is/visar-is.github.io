@@ -106,18 +106,21 @@
 	/* Disable hover effects on national points */
 	.points li.compare_schools .label { display: none !important; }
 
-	&.hovered {
-		line:not(.hovered),
-		.point:not(.hovered):not(.compare_schools) {
+	&.hovered,
+	&.toggled {
+		line:not(.hovered, .toggled),
+		.point:not(.hovered, .toggled):not(.compare_schools) {
 			opacity: 0.3;
 		}
 
-		line.hovered {
+		line.hovered,
+		line.toggled {
 			stroke-width: 3px;
 			z-index: 999999999999;
 		}
 
-		.point.hovered {
+		.point.hovered,
+		.point.toggled {
 			z-index: 999999999999;
 		}
 	}
