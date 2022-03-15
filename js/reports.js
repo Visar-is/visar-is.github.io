@@ -84,6 +84,24 @@ $(document).ready(function() {
 					lineEl.parentElement.appendChild(hoverLineEl);
 				});
 			});
+			
+			var showHoverBoxes = function (points, toggled=false) {
+				points.each(function (i, pointEl) {
+					if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) !== -1) {
+						console.log('Point has no name, skipping', pointEl);
+						return;
+					}
+
+					var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
+					hoverBoxEl.text(pointEl.getAttribute('data-name'));
+					hoverBoxEl.show();
+					hoverBoxEl.css('top', $(pointEl).position().top + 20);
+					hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2));
+					if (toggled) {
+						hoverBoxEl.addClass('toggled');
+					}
+				})
+			};
 
 			// Assign a chart-wide mouseover handler.
 			chartEl.mouseover(function (event) {
@@ -108,21 +126,10 @@ $(document).ready(function() {
 					keyEl.find('.' + hoverClass).addClass('hovered');
 
 					// Ensure that hover effect elements are cleaned up.
-					chartEl.find('.hover-box').hide();
+					chartEl.find('.hover-box:not(.toggled)').hide();
 
-					// Add in hover effect elements.
-					points.each(function (i, pointEl) {
-						if ([undefined, ''].indexOf(pointEl.getAttribute('data-name')) !== -1) {
-							console.log('Point has no name, skipping', pointEl);
-							return;
-						}
-
-						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
-						hoverBoxEl.text(pointEl.getAttribute('data-name'));
-						hoverBoxEl.show();
-						hoverBoxEl.css('top', $(pointEl).position().top + 20);
-						hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2))
-					})
+					// Show hover effect elements.
+					showHoverBoxes(points);
 				}
 			});
 
@@ -148,7 +155,43 @@ $(document).ready(function() {
 					keyEl.find('.'+hoverClass).removeClass('hovered');
 
 					// Hide hover effects.
-					chartEl.find('.hover-box').hide();
+					chartEl.find('.hover-box:not(.toggled)').hide();
+				}
+			});
+
+			// Assign legend item click handler for toggling hover effects.
+			chartEl.find('.key li').click(function (event) {
+				var target = $(event.target);
+				// Determine whether the target of the mouseout is a toggleable
+				var hoverClass = Array.from(event.target.classList).find(function (c) {
+					return hoverableClasses.includes(c);
+				});
+
+				if (hoverClass) {
+					// If this item isn’t toggled, toggle it.
+					if (!target.hasClass('toggled')) {
+						chartEl.find('.point.'+hoverClass+', .lines .line.'+hoverClass).addClass('toggled');
+						target.addClass('toggled');
+
+						// If only one key item is toggled, toggle hover boxes for that item.
+						if (chartEl.find('.key li.toggled').length == 1) {
+							showHoverBoxes(chartEl.find('.point.' + hoverClass), true);
+						} else {
+							// If this click led to more than one item being toggled, untoggle and hide all hover boxes.
+							chartEl.find('.hover-box.toggled').removeClass('.toggled').hide();
+						}
+					} else { // Otherwise, untoggle it.
+						target.removeClass('toggled');
+						chartEl.find('.point.'+hoverClass+', .lines .line.'+hoverClass).removeClass('toggled');
+
+						// Untoggle and hide relevant hover boxes.
+						chartEl.find('.point.' + hoverClass).each(function (i, pointEl) {
+							chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']').removeClass('toggled').hide();
+						});
+					}
+
+					// Make chart-wide toggle flag reflect reality.
+					chartEl.toggleClass('toggled', chartEl.find('.toggled').length > 0);
 				}
 			});
 
@@ -303,17 +346,36 @@ $(document).ready(function() {
 			
 			chartEl.find('.key li').mouseover(function (event) {
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
-				var hoverclass = event.target.getAttribute('class');
+				var hoverclass = event.target.getAttribute('class').replace('toggled', '');
 				chartEl.addClass('hovered');
 				chartEl.find('.' + hoverclass).addClass('hovered');
 			});
 
 			chartEl.find('.key li').mouseout(function (event) {
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
-				var hoverclass = (event.target.getAttribute('class') || '').replace('hovered', '');
+				var hoverclass = (event.target.getAttribute('class') || '').replace('hovered', '').replace('toggled', '');
 
 				chartEl.removeClass('hovered');
 				chartEl.find('.' + hoverclass).removeClass('hovered');
+			});
+
+			// Assign legend item click handler for toggling hover effects.
+			chartEl.find('.key li').click(function (event) {
+				var target = $(event.target);
+				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
+				var hoverClass = (event.target.getAttribute('class') || '').replace('hovered', '').replace('toggled', '');
+
+				if (hoverClass) {
+					// If this item isn’t toggled, toggle it.
+					if (!target.hasClass('toggled')) {
+						chartEl.find('.'+hoverClass).addClass('toggled');
+					} else { // Otherwise, untoggle it.
+						chartEl.find('.'+hoverClass).removeClass('toggled');
+					}
+
+					// Make chart-wide toggle flag reflect reality.
+					chartEl.toggleClass('toggled', chartEl.find('.toggled').length > 0);
+				}
 			});
 		});
 	}());

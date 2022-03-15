@@ -94,25 +94,28 @@
 		}
 	}
 
-	&.hovered {
+	&.hovered,
+	&.toggled {
 		.data {
 			.lines {
-				.line:not(.hovered) {
+				.line:not(.hovered, .toggled) {
 					opacity: 0.3;
 				}
 
-				.line.hovered {
+				.line.hovered,
+				.line.toggled {
 					border-bottom-width: 1px;
 					z-index: 999999999999;
 				}
 			}
 
 			.points {
-				.point:not(.hovered):not(.compare_schools) {
+				.point:not(.hovered, .toggled):not(.compare_schools) {
 					opacity: 0.3;
 				}
 
-				.point.hovered {
+				.point.hovered,
+				.point.toggled {
 					z-index: 999999999999;
 				}
 			}
