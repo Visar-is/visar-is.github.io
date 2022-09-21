@@ -1,0 +1,27 @@
+#!/bin/sh
+
+lessc less/konnun.less css/konnun.css --clean-css="--s1 --advanced"
+lessc less/reports.less css/reports.css --clean-css="--s1 --advanced"
+lessc less/visar.less css/visar.css --clean-css="--s1 --advanced"
+lessc less/ops.less css/ops.css --clean-css="--s1 --advanced"
+lessc less/pdfs.less css/pdfs.css --clean-css="--s1 --advanced"
+lessc less/charts.less css/charts.css --clean-css="--s1 --advanced"
+lessc less/crm.less css/crm.css --clean-css="--s1 --advanced"
+
+echo "Compiled 6 .less files"
+
+
+cat js/lib/jquery.1.11.3.min.js js/global/messages.js js/lib/soundmanager/soundmanager2-nodebug-jsmin.js js/lib/clipboard.js js/konnun.js | jsmin > js/konnun-min.js
+
+cat js/lib/jquery.1.11.3.min.js js/global/messages.js js/lib/papa-parse.js js/lib/sort-table.js js/lib/jsdifflib/difflib.js js/lib/jsdifflib/diffview.js js/ops.js | jsmin > js/ops-min.js
+
+#cat js/lib/bean.js js/lib/jquery-3.6.0.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
+cat js/lib/bean.js js/lib/jquery.1.11.3.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js | jsmin > js/reports-min.js
+
+cat js/lib/bean.js js/lib/jquery.1.11.3.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js > js/reports-debug.js
+
+cat js/lib/jquery.1.11.3.min.js js/lib/enquire.js js/lib/html5shiv.js js/visar.js | jsmin > js/visar-min.js
+
+cat js/lib/jquery.1.11.3.min.js js/lib/html5shiv.js js/global/messages.js js/lib/sort-table.js js/lib/papa-parse.js | jsmin > js/crm-min.js
+
+echo "Compiled 4 .js files"
