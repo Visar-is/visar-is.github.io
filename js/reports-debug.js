@@ -11218,9 +11218,9 @@ $(document).ready(function() {
 						return c[0] == 's'
 							|| c == 'you-line'
 							|| c == 'compare-line'
+					}).forEach(function (c) {
+						hcd[c] = true;
 					});
-				}).forEach(function (c) {
-					hcd[c] = true;
 				});
 
 				hoverableClasses = Object.keys(hcd);
