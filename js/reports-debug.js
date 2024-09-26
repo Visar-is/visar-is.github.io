@@ -11532,4 +11532,13 @@ $(document).ready(function() {
 			});
 		});
 	}());
+
+	// All Lines Longitudinal Chart Child Display
+	$('#all-lines-child-select').change(function (event) {
+		// Hide all toggleable elements.
+		$('.all-lines-child-toggleable').each(function (i) { this.classList.add('hidden'); });
+		if (this.value !== 'none') {
+			$('.all-lines-child-toggleable.' + this.value).each(function (i) { this.classList.remove('hidden'); });
+		}
+	});
 });
