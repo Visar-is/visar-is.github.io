@@ -12,31 +12,35 @@
       max-width: 130em;
     }
 
-    .content {
+    .container {
       max-width: 130em;
-      display: flex;
-      flex-wrap: wrap;
+      
+      .content {
+        
+        display: flex;
+        flex-wrap: wrap;
 
-      .section {
-        &:not(.chart-section) { width: 100%; }
-        &.chart-section { width: 50%; }
+        .section {
+          &:not(.chart-section) { width: 100%; }
+          &.chart-section { width: 50%; }
 
-        .chart-container { overflow-x: scroll; } /* Prevent charts from ever overlapping, worst case is horizontal scrolling */
+          .chart-container { overflow-x: scroll; } /* Prevent charts from ever overlapping, worst case is horizontal scrolling */
 
-        .chart {
-          grid-template-columns: min-content auto; /* only two columns rather than three, no need to repeat legend */
+          .chart {
+            grid-template-columns: min-content auto; /* only two columns rather than three, no need to repeat legend */
 
-          .title { grid-column: span 2 }
+            .title { grid-column: span 2 }
 
-          .data {
-            min-width: auto !important; /* override hardcoded suggested chart width */
-          }
+            .data {
+              min-width: auto !important; /* override hardcoded suggested chart width */
+            }
 
-          .key { display: none; }
+            .key { display: none; }
 
-          .x-axis {
-            font-size: 70%; /* text needs to be even smaller than usual for all charts to be able to fit */
-            max-width: 100%;
+            .x-axis {
+              font-size: 70%; /* text needs to be even smaller than usual for all charts to be able to fit */
+              max-width: 100%;
+            }
           }
         }
       }
