@@ -1,120 +1,12 @@
-/* SKOLAPULSINN GREEN */
-.-white-sp,
-.-white-st {background-color:#80c860}
-.hi, .rvk {background-color:#fefefe}
-.hi footer, .sfs footer, .rvk footer { text-align: center; }
-
-.hi button  { background-color: rgb(12,0,140)}
-.rvk button { background-color: rgb(12,0,140)}
-
-
-.-white-sp .choice-target,
-.-white-st .choice-target  { background-color: #D4E8C1; outline: 1px solid #D4E8C1; }
-
-.-white-sp .choice-target.selected,
-.-white-sp .choice-target:hover,
-.no-touch .-white-sp .choice-target:hover,
-.-white-st .choice-target.selected,
-.-white-st .choice-target:hover,
-.no-touch .-white-st .choice-target:hover { background-color: #FEFCD7; -webkit-transition: all 0.1s linear;  }
-
-.-white-sp #header,
-.-white-st #header  { background: none; }
-
-.-white-sp a, .-white-sp a:visited, .-white-st a, .-white-st a:visited  { color: #005511 }
-
-	.language-container {
-		display: inline;
-		display: inline-block;
-		position: relative;
-	}
-
-	.global-speech-toggle-button,
-	.global-speech-toggle-button:hover,
-	.global-speech-toggle-button:active,
-	.rvk .global-speech-toggle-button,
-	.rvk .global-speech-toggle-button:hover,
-	.rvk .global-speech-toggle-button:active,
-	.-white-sp .global-speech-toggle-button,
-	.-white-sp .global-speech-toggle-button:hover,
-	.-white-sp .global-speech-toggle-button:active,
-	.-white-st .global-speech-toggle-button,
-	.-white-st .global-speech-toggle-button:hover,
-	.-white-st .global-speech-toggle-button:active {
-		background: none repeat scroll 0% 0% transparent;
-		background-color: none;
-		border: medium none;
-		box-shadow: none;
-		width: 1.5em;
-		padding: 0px;
-		vertical-align: middle;
-		margin-right: 0.5em;
-		margin-bottom: 4px;
-	}
-
-	.speech-button img,
-	.global-speech-toggle-button img {
-		width: 100%;
-	}
-
-	.response .speech-button {
-		top: 0.05em;
-	}
-
-	.speech-button.speech-button-inline,
-	.speech-button.speech-button-inline:hover,
-	.speech-button.speech-button-inline:active {
-		display: inline;
-		position: static;
-		padding: 0.2em 0.2em 0.2em;
-		width: 2em !important;
-	}
-
-h1 ol, h1 ul { margin: 0 0 20px 20px; list-style: disc; }
-
-input#access_key {
-	width: 12em;
-}
-
-#survey-form button[type="submit"].pause-button {
-	height: 12px; width: 30px;
-	background: transparent;
-	border: none;
-	padding: 0;
-	margin: 0;
-	box-shadow: none;
-	position: absolute;
-	top: 17px;
-	left: 10px;
-}
-
-input#access_key {
-	width: 250px;
-}
 
 /* Config */
 @import "app/config.less";
-
-@font-face {
-	font-family: 'AvenirNextLTPro-Demi';
-	src: url('../webfonts/26E8D5_3_0.eot');
-	src: url('../webfonts/26E8D5_3_0.eot?#iefix') format('embedded-opentype'),
-	url('../webfonts/26E8D5_3_0.woff') format('woff'),
-	url('../webfonts/26E8D5_3_0.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'AvenirNextLTPro-Regular';
-	src: url('../webfonts/26E8D5_4_0.eot');
-	src: url('../webfonts/26E8D5_4_0.eot?#iefix') format('embedded-opentype'),
-	url('../webfonts/26E8D5_4_0.woff') format('woff'),
-	url('../webfonts/26E8D5_4_0.ttf') format('truetype');
-}
-
+@import "app/variables.css";
 
 /* Base */
 @import "base/_base.less";
 @import "base/_typography.less";
-@import "base/_buttons.less";
+@import "base/_buttons.css";
 @import "base/_forms.less";
 
 
@@ -122,3 +14,6 @@ input#access_key {
 @import "konnun/web.less";
 @import "konnun/tablet.less";
 @import "konnun/mobile.less";
+
+/* Do this last to overwrite any previously set styles with more specific selectors */
+@import "themes/default.less";

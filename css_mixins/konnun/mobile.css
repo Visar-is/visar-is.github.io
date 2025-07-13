@@ -1,0 +1,18 @@
+/*	Vísar - Konnun - mobile.less
+========================================= */
+
+@media only screen and (max-width: 480px) {
+	footer .logo { height: 42px; margin-right: auto; margin-left: auto; float: none; }
+	#survey-form textarea { width: 266px; margin: 0 auto; }
+	body #survey-form [name=finish] {
+		margin-left: 0;
+	}
+	
+	.languages a {
+		margin: 0px 0.3em 0px 0.3em !important;
+	}
+
+	.cookie-notice {
+		margin: auto 3em;
+	}
+}

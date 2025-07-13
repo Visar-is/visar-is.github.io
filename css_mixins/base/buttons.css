@@ -1,0 +1,121 @@
+/* #Buttons
+================================================== */
+/* Primary */
+.button,
+.button-primary,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button:visited,
+.button-primary:visited {	
+	border: 1px solid var(--button-primary-border);
+	border-top: 1px solid var(--button-primary-top);
+	border-left: 1px solid var(--button-primary-left);
+
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
+	// Font
+	color: var(--button-primary-color);
+	font-size: 16px;
+	font-weight: normal !important;
+	line-height: normal;
+	text-shadow: var(--button-primary-shadow); 		
+	text-decoration: none;
+
+	// Display
+	padding: 5px 15px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	// Select
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+
+	// Animate
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;	
+
+	background: var(--button-primary-top);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+}
+
+
+.button:hover,
+.button-primary:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+	background: var(--button-primary-top-hover);
+}
+.button:active,
+.button-primary:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {	
+	border: 1px solid var(--button-primary-border-hover);
+	border-top: 1px solid var(--button-primary-top);
+	border-left: 1px solid var(--button-primary-left);
+	background: var(--button-primary-top-hover);
+}
+
+/* disabled */
+button:disabled,
+button.disabled,
+.button.disabled {
+	background: #555;
+	cursor: normal;
+}
+
+/* Icons */
+.button span,
+.button-secondary span,
+.button-alert span,
+.button-warning span, {
+	margin-right: 5px;
+}
+
+
+/* Full Width */
+.button.full-width,
+.button-primary.full-width,
+.button-secondary.full-width,
+.button-alert.full-width,
+.button-warning.full-width,
+.button-big-primary.full-width,
+.button-big-secondary.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center;
+}
+
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.button-small {
+	font-size: 0.7em !important;
+	padding: 0.5ex 1ex !important;
+}
