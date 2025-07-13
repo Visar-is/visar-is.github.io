@@ -1,6 +1,6 @@
 #!/bin/sh
 
-lessc less/konnun.less css/konnun.css --clean-css="--s1 --advanced"
+#lessc less/konnun.less css/konnun.css --clean-css="--s1 --advanced"
 lessc less/reports.less css/reports.css --clean-css="--s1 --advanced"
 lessc less/visar.less css/visar.css --clean-css="--s1 --advanced"
 lessc less/ops.less css/ops.css --clean-css="--s1 --advanced"

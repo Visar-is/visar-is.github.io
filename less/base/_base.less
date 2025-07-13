@@ -28,12 +28,12 @@
 /* #Body Styles
 ================================================== */
 	body {
-	  	color: var(--label-color);
-  		background-color: var(--background-color);
-		font-size: 18px;
-		font-weight: normal;
-		font-family: "Atkinson Hyperlegible", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		line-height: 1.45;
+		background: @body-background-image @body-background-repeat @body-background-position @body-background-color;
+		font-size: @text-font-size;
+		font-weight: @text-font-weight;
+		font-family: @text-font-family;
+		line-height: @text-line-height;
+		color: @text-color;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
