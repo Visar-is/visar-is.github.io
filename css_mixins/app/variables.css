@@ -28,11 +28,10 @@
   --button-primary-right: #3d6088;
   --button-primary-bottom: #005283;
 
-  --button-primary-top-hover: darken(#005283, 12%);
-  --button-primary-bottom-hover: darken(#3d6088, 12%);
-
-
+  --button-primary-top-hover: #132da6;
+  --button-primary-bottom-hover: #132da6;
 }
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -66,8 +65,8 @@
     --button-primary-right: #3d6088;
     --button-primary-bottom: #005283;
 
-    --button-primary-top-hover: darken(#005283, 12%);
-    --button-primary-bottom-hover: darken(#3d6088, 12%)
+    --button-primary-top-hover: #132da6;
+    --button-primary-bottom-hover: #132da6;
 
   }
 }

@@ -1,4 +1,14 @@
+:root .skolapulsinn {
+    --background-color: #80c860;
+}
+
+:root .hi {
+    --background-color: #fefefe;
+}
+
+
 /* SKOLAPULSINN GREEN */
+/*
 .-white-sp,
 .-white-st {background-color:#80c860}
 .hi, .rvk {background-color:#fefefe}
@@ -23,15 +33,8 @@
 
 .-white-sp a, .-white-sp a:visited, .-white-st a, .-white-st a:visited  { color: #005511 }
 
-	.language-container {
-		display: inline;
-		display: inline-block;
-		position: relative;
-	}
 
-	.global-speech-toggle-button,
-	.global-speech-toggle-button:hover,
-	.global-speech-toggle-button:active,
+
 	.rvk .global-speech-toggle-button,
 	.rvk .global-speech-toggle-button:hover,
 	.rvk .global-speech-toggle-button:active,
@@ -51,51 +54,13 @@
 		margin-right: 0.5em;
 		margin-bottom: 4px;
 	}
-
-	.speech-button img,
-	.global-speech-toggle-button img {
-		width: 100%;
-	}
-
-	.response .speech-button {
-		top: 0.05em;
-	}
-
-	.speech-button.speech-button-inline,
-	.speech-button.speech-button-inline:hover,
-	.speech-button.speech-button-inline:active {
-		display: inline;
-		position: static;
-		padding: 0.2em 0.2em 0.2em;
-		width: 2em !important;
-	}
-
-h1 ol, h1 ul { margin: 0 0 20px 20px; list-style: disc; }
-
-input#access_key {
-	width: 12em;
-}
-
-#survey-form button[type="submit"].pause-button {
-	height: 12px; width: 30px;
-	background: transparent;
-	border: none;
-	padding: 0;
-	margin: 0;
-	box-shadow: none;
-	position: absolute;
-	top: 17px;
-	left: 10px;
-}
-
-input#access_key {
-	width: 250px;
-}
+*/
 
 
 
 
 	/* Green Primary */
+	/*
 	.-white-sp .button,
 	.-white-sp .button-primary,
 	.-white-sp button,
@@ -152,9 +117,10 @@ input#access_key {
 		background-color: #004411; border-left: 1px solid #418223; border-top: 1px solid #418223;  border-right: 1px solid #22692F; border-bottom: 1px solid #22692F;
 		text-decoration: none;
 	}
-
+	*/
 
 /* Green Primary */
+/*
 	.rvk .button,
 	.rvk .button-primary,
 	.rvk button,
@@ -194,10 +160,6 @@ input#access_key {
 
 
 
-
-.speech-button,
-.speech-button:hover,
-.speech-button:active,
 .-white-sp .speech-button,
 .-white-sp .speech-button:hover,
 .-white-sp .speech-button:active,
@@ -227,9 +189,9 @@ input#access_key {
 .sfs .speech-button img, .rvk .speech-button img {
 	filter: invert(1);
 }
+*/
 
-
-
+/*
 @media only screen and (max-width: 1020px) {
 	.global-speech-toggle-button,
 	.global-speech-toggle-button:hover,
@@ -243,7 +205,6 @@ input#access_key {
 		left: 0.45em !important;
 	}
 	
-	/* #content added to selector to (yuk) increase specificity. */
 	#content .speech-button,
 	#content .speech-button:hover,
 	#content .speech-button:active,
@@ -275,3 +236,4 @@ input#access_key {
 	}
 
 }
+*/
