@@ -1,10 +1,8 @@
 :root .skolapulsinn {
-    --background-color: #80c860;
+  --button-primary-color: #007711;
+  --button-primary-color-hover: #005511;
 }
 
-:root .hi {
-    --background-color: #fefefe;
-}
 
 
 /* SKOLAPULSINN GREEN */

@@ -25,9 +25,7 @@
 
   --button-primary-text-color: #ffffff;
   --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-  --button-primary-border: #0A0561;
   --button-primary-color: #10099F;
-
   --button-primary-color-hover: #5752BB;
 }
 
@@ -763,12 +761,10 @@ input#access_key {
 	}
 }
 :root .skolapulsinn {
-    --background-color: #80c860;
+  --button-primary-color: #007711;
+  --button-primary-color-hover: #005511;
 }
 
-:root .hi {
-    --background-color: #fefefe;
-}
 
 
 /* SKOLAPULSINN GREEN */
