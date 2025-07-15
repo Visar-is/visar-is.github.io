@@ -40,7 +40,7 @@ if (!('ontouchstart' in document.documentElement)) {
 
 // Add padding to .wrap so that scrolling to the last question doesn’t break flow
 // in theory, += screen height - last question height - footer height. in practice…
-$('#wrap').css('padding-bottom', '10em');
+$('#content').css('padding-bottom', '10em');
 
 
 $('.response-input').click(function (event) {
