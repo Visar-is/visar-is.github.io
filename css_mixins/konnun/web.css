@@ -122,7 +122,7 @@ padding: 0.5em 0.25em; font-size: 18px
 
 .no-touch .response .choice-target:hover,
 .response.selected .choice-target {
-	background: #CDC9C9;
+	background: var(--form-background-color-hover);
 }
 
 .response.missing-value { padding-top: 0.5em; }
@@ -200,7 +200,7 @@ input.optional-text {
 
 .speech-button:hover,
 .speech-button:active {
-		background: var(--button-primary-hover-color);
+		background: var(--button-primary-color-hover);
 
 }
 

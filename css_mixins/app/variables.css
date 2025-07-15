@@ -14,11 +14,14 @@
 
   --form-text-color: #666666;
   --form-background-color: #FFFFFF;
-  --form-border-color: #999999;
+  --form-background-color-hover: #D3D3D3;
+  --form-border-color: #D3D3D3;
 
   --form-border-focus-color: #666666;
   --form-text-focus-color: #333333;
   --form-label-focus-color: #3d6088;
+
+
 
   --button-primary-text-color: #ffffff;
   --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
