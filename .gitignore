@@ -2,6 +2,7 @@
 /netbeans/
 /nbproject/
 node_modules/
+node_modules/*
 serve
 watch
 .cache
