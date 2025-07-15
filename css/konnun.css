@@ -577,8 +577,8 @@ input.optional-text {
 
 .speech-button {
 	padding: 0.5em;
-	background: var(--button-primary-color);
-	border-color: var(--button-primary-border);
+	background: rgb(249, 249, 249);
+	border: 1px solid var(--form-border-color);
 	box-shadow: none;
 	width: 3em !important;
 	position: absolute;
@@ -587,7 +587,7 @@ input.optional-text {
 
 .speech-button:hover,
 .speech-button:active {
-		background: var(--button-primary-color-hover);
+		background: var(--form-background-color-hover);
 
 }
 
