@@ -48,9 +48,9 @@
 
   }
 
-  .speech-button img, .global-speech-toggle-button img {
+  .pause-button, .speech-button img, .global-speech-toggle-button img {
     filter: invert(1);
-    opactity: 0.8;
+    opacity: 0.85;
   }
 }
 
