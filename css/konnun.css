@@ -4,11 +4,6 @@
   --error-color: rgb(252, 132, 132);
   --label-color: rgb(28, 28, 28);
 
-  --light-grey-color: rgb(252, 252, 252);
-  --grey-color: rgb(232, 232, 232);
-  --dark-grey-color: rgb(112, 112, 112);
-
-
   --background-color: rgb(252, 252, 252);
   --subhead-color: rgb(119, 119, 119);
 
@@ -19,9 +14,6 @@
 
   --form-border-focus-color: #666666;
   --form-text-focus-color: #333333;
-  --form-label-focus-color: #3d6088;
-
-
 
   --button-primary-text-color: #ffffff;
   --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
@@ -33,37 +25,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --success-color: rgb(0, 255, 186);
-    --warning-color: rgb(250, 197, 91);
-    --error-color: rgb(252, 132, 132);
-    --label-color: rgb(227, 227, 227);
+  --success-color: rgb(0, 255, 186);
+  --warning-color: rgb(250, 197, 91);
+  --error-color: rgb(252, 132, 132);
+  --label-color: rgb(28, 28, 28);
 
-    --light-grey-color: rgb(33, 33, 33);
-    --grey-color: rgb(25, 25, 25);
-    --dark-grey-color: rgb(112, 112, 112);
+  --background-color: rgb(3, 3, 3);
+  --subhead-color: #888888;
 
+  --form-text-color: #999999;
+  --form-background-color: #060606;
+  --form-background-color-hover: #2c2c2c;
+  --form-border-color: #2c2c2c;
 
-    --background-color: rgb(33, 33, 33);
-    --subhead-color: rgb(119, 119, 119);
+  --form-border-focus-color: #999999;
+  --form-text-focus-color: #cccccc;
 
-    --form-text-color: #666666;
-    --form-background-color: #FFFFFF;
-    --form-border-color: #999999;
-
-    --form-border-focus-color: #666666;
-    --form-text-focus-color: #333333;
-    --form-label-focus-color: #3d6088;
-
-    --button-primary-color: #ffffff;
-    --button-primary-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-    --button-primary-border: #005283;
-    --button-primary-top: #3d6088;
-    --button-primary-left: #3d6088;
-    --button-primary-right: #3d6088;
-    --button-primary-bottom: #005283;
-
-    --button-primary-top-hover: #132da6;
-    --button-primary-bottom-hover: #132da6;
+  --button-primary-text-color: #000;
+  --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  --button-primary-color: #10099F;
+  --button-primary-color-hover: #5752BB;
 
   }
 }
