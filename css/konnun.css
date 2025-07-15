@@ -605,6 +605,7 @@ input.optional-text {
 	.speech-button img,
 	.global-speech-toggle-button img {
 		width: 100%;
+		filter: invert(1);
 	}
 
 	.response .speech-button {
