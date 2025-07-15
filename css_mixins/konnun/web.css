@@ -192,7 +192,6 @@ input.optional-text {
 .speech-button:hover,
 .speech-button:active {
 	padding: 0.5em;
-	padding-bottom: 0.2em;
 	background: var(--button-primary-color);
 	border-color: var(--button-primary-border);
 	box-shadow: none;
