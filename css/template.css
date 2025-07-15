@@ -4329,7 +4329,7 @@ legend {
   margin-bottom: 5px;
 }
 select {
-  color: #3d6088;
+  color: var(--form-background-color);
   width: 220px;
 }
 input[type="checkbox"] {
@@ -4339,7 +4339,7 @@ label span,
 legend span {
   font-weight: normal;
   font-size: 14px;
-  color: #444;
+  color: var(--label-color);
 }
 a {
   font-style: normal;

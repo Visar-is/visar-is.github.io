@@ -74,7 +74,7 @@
 	legend span {
 		font-weight: normal;
 		font-size: 14px;
-		color: #444;
+		color: var(--label-color);
 	}
 
 	a {
@@ -83,5 +83,5 @@
 
 	label span.form_error {
 		margin: 0 0 0 3px;
-		color: var(--form-label-color);
+		color: var(--label-color);
 	}

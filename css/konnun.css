@@ -353,7 +353,7 @@ input::-moz-focus-inner {
 	legend span {
 		font-weight: normal;
 		font-size: 14px;
-		color: #444;
+		color: var(--label-color);
 	}
 
 	a {
@@ -362,7 +362,7 @@ input::-moz-focus-inner {
 
 	label span.form_error {
 		margin: 0 0 0 3px;
-		color: var(--form-label-color);
+		color: var(--label-color);
 	}
 /*	Vísar - Konnun - web.less
 ========================================= */
@@ -484,7 +484,13 @@ padding-bottom: 18px;
 padding: 0.5em 0.25em; font-size: 18px
 }
 
-.choice-target { margin-bottom: 0.5em; display: block; background: #fff; outline: #ccc 1px solid; cursor: pointer; }
+.choice-target { 
+	margin-bottom: 0.5em; 
+	display: block; 
+	background: var(--form-background-color); 
+	outline: var(--form-border-color) 1px solid; 
+	cursor: pointer; 
+}
 
 .no-touch .response .choice-target:hover,
 .response.selected .choice-target {
