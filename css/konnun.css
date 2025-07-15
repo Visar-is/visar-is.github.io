@@ -41,7 +41,7 @@
   --form-border-focus-color: #999999;
   --form-text-focus-color: #cccccc;
 
-  --button-primary-text-color: #000;
+  --button-primary-text-color: #fff;
   --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   --button-primary-color: #10099F;
   --button-primary-color-hover: #5752BB;
@@ -383,7 +383,7 @@ input::-moz-focus-inner {
 }
 
 html, body { height: 100%;}
-body { background-color: #fff; }
+body { background-color: var(--background-color); }
 
 a object[type="image/svg+xml"],
 button object[type="image/svg+xml"] { pointer-events: none; }

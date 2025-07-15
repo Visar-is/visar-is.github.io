@@ -17,7 +17,7 @@
 }
 
 html, body { height: 100%;}
-body { background-color: #fff; }
+body { background-color: var(--background-color); }
 
 a object[type="image/svg+xml"],
 button object[type="image/svg+xml"] { pointer-events: none; }
