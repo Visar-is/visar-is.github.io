@@ -1,5 +1,15 @@
 /* #Links
 ================================================== */
-a, a:visited { color: #006daf; font-weight: bold; text-decoration: none; outline: 0; }
-a:hover, a:focus { color: #005283; text-decoration: underline; }
-p a, p a:visited { line-height: inherit; }
+a, a:visited { 	
+	color: var(--link-color); 
+	font-weight: normal; 
+	text-decoration: underline; 
+	outline: 0; 
+}
+a:hover, a:focus { 
+	color: var(--link-color-hover); 
+	text-decoration: underline; 
+}
+p a, p a:visited { 
+	line-height: inherit; 
+}

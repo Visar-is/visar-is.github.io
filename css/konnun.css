@@ -7,6 +7,9 @@
   --background-color: rgb(252, 252, 252);
   --subhead-color: rgb(119, 119, 119);
 
+  --link-color: #10099F;
+  --link-color-hover: #5752BB;
+
   --form-text-color: #666666;
   --form-background-color: rgb(249, 249, 249);;
   --form-background-color-hover: #D3D3D3;
@@ -43,8 +46,6 @@
 
   --button-primary-text-color: #fff;
   --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-  --button-primary-color: #10099F;
-  --button-primary-color-hover: #5752BB;
 
   }
 
@@ -361,14 +362,25 @@ input::-moz-focus-inner {
 		color: var(--label-color);
 	}
 
-	a {
-		font-style: normal;
-	}
-
 	label span.form_error {
 		margin: 0 0 0 3px;
 		color: var(--label-color);
 	}
+/* #Links
+================================================== */
+a, a:visited { 	
+	color: var(--link-color); 
+	font-weight: normal; 
+	text-decoration: underline; 
+	outline: 0; 
+}
+a:hover, a:focus { 
+	color: var(--link-color-hover); 
+	text-decoration: underline; 
+}
+p a, p a:visited { 
+	line-height: inherit; 
+}
 /*	Vísar - Konnun - web.less
 ========================================= */
 
