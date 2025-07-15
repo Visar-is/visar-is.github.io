@@ -28,11 +28,10 @@
   --button-primary-right: #3d6088;
   --button-primary-bottom: #005283;
 
-  --button-primary-top-hover: darken(#005283, 12%);
-  --button-primary-bottom-hover: darken(#3d6088, 12%);
-
-
+  --button-primary-top-hover: #132da6;
+  --button-primary-bottom-hover: #132da6;
 }
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -66,8 +65,8 @@
     --button-primary-right: #3d6088;
     --button-primary-bottom: #005283;
 
-    --button-primary-top-hover: darken(#005283, 12%);
-    --button-primary-bottom-hover: darken(#3d6088, 12%)
+    --button-primary-top-hover: #132da6;
+    --button-primary-bottom-hover: #132da6;
 
   }
 }
@@ -205,15 +204,15 @@ input[type="button"],
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 
-	// Font
+	/* Font */
 	color: var(--button-primary-color);
 	font-size: 16px;
-	font-weight: normal !important;
+	font-weight: bold;
 	line-height: normal;
 	text-shadow: var(--button-primary-shadow); 		
 	text-decoration: none;
 
-	// Display
+	/* Display */
 	padding: 5px 15px;
 	display: inline-block;
 	cursor: pointer;
@@ -221,13 +220,13 @@ input[type="button"],
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
-	// Select
+	/* Select */
 	-webkit-user-select:none;
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
 
-	// Animate
+	/* Animate */
 	-webkit-transition-duration: 0.2s;
 	-moz-transition-duration: 0.2s;
 	transition-duration: 0.2s;	
@@ -563,17 +562,76 @@ input.optional-text {
 .open { padding-bottom: 0.5em; }
 
 
+.global-speech-toggle-button,
+.global-speech-toggle-button:hover,
+.global-speech-toggle-button:active
+ {
+	background: none repeat scroll 0% 0% transparent;
+	border: medium none;
+	box-shadow: none;
+	width: 1.5em;
+	padding: 0px;
+	vertical-align: middle;
+	margin-right: 0.5em;
+	margin-bottom: 4px;
+}
+
 .speech-button,
 .speech-button:hover,
 .speech-button:active {
 	padding: 0.5em;
 	padding-bottom: 0.2em;
-	background: #90d173;
-	border-color: #439753;
+	background: var(--button-primary-bottom);
+	border-color: var(--button-primary-border);
 	box-shadow: none;
 	width: 3em !important;
 	position: absolute;
 	left: -4em;
+}
+
+	.language-container {
+		display: inline;
+		display: inline-block;
+		position: relative;
+	}
+
+
+	.speech-button img,
+	.global-speech-toggle-button img {
+		width: 100%;
+	}
+
+	.response .speech-button {
+		top: 0.05em;
+	}
+
+	.speech-button.speech-button-inline,
+	.speech-button.speech-button-inline:hover,
+	.speech-button.speech-button-inline:active {
+		display: inline;
+		position: static;
+		padding: 0.2em 0.2em 0.2em;
+		width: 2em !important;
+	}
+
+h1 ol, h1 ul { margin: 0 0 20px 20px; list-style: disc; }
+
+input#access_key {
+	width: 12em;
+	width: 250px;
+
+}
+
+#survey-form button[type="submit"].pause-button {
+	height: 12px; width: 30px;
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+	box-shadow: none;
+	position: absolute;
+	top: 17px;
+	left: 10px;
 }
 
 
@@ -649,6 +707,9 @@ input.optional-text {
 	}
 }
 
+
+
+
 @media only screen and (max-width: 1020px) {
 	.global-speech-toggle-button,
 	.global-speech-toggle-button:hover,
@@ -699,7 +760,17 @@ input.optional-text {
 		margin: auto 3em;
 	}
 }
+:root .skolapulsinn {
+    --background-color: #80c860;
+}
+
+:root .hi {
+    --background-color: #fefefe;
+}
+
+
 /* SKOLAPULSINN GREEN */
+/*
 .-white-sp,
 .-white-st {background-color:#80c860}
 .hi, .rvk {background-color:#fefefe}
@@ -724,15 +795,8 @@ input.optional-text {
 
 .-white-sp a, .-white-sp a:visited, .-white-st a, .-white-st a:visited  { color: #005511 }
 
-	.language-container {
-		display: inline;
-		display: inline-block;
-		position: relative;
-	}
 
-	.global-speech-toggle-button,
-	.global-speech-toggle-button:hover,
-	.global-speech-toggle-button:active,
+
 	.rvk .global-speech-toggle-button,
 	.rvk .global-speech-toggle-button:hover,
 	.rvk .global-speech-toggle-button:active,
@@ -752,51 +816,13 @@ input.optional-text {
 		margin-right: 0.5em;
 		margin-bottom: 4px;
 	}
-
-	.speech-button img,
-	.global-speech-toggle-button img {
-		width: 100%;
-	}
-
-	.response .speech-button {
-		top: 0.05em;
-	}
-
-	.speech-button.speech-button-inline,
-	.speech-button.speech-button-inline:hover,
-	.speech-button.speech-button-inline:active {
-		display: inline;
-		position: static;
-		padding: 0.2em 0.2em 0.2em;
-		width: 2em !important;
-	}
-
-h1 ol, h1 ul { margin: 0 0 20px 20px; list-style: disc; }
-
-input#access_key {
-	width: 12em;
-}
-
-#survey-form button[type="submit"].pause-button {
-	height: 12px; width: 30px;
-	background: transparent;
-	border: none;
-	padding: 0;
-	margin: 0;
-	box-shadow: none;
-	position: absolute;
-	top: 17px;
-	left: 10px;
-}
-
-input#access_key {
-	width: 250px;
-}
+*/
 
 
 
 
 	/* Green Primary */
+	/*
 	.-white-sp .button,
 	.-white-sp .button-primary,
 	.-white-sp button,
@@ -853,9 +879,10 @@ input#access_key {
 		background-color: #004411; border-left: 1px solid #418223; border-top: 1px solid #418223;  border-right: 1px solid #22692F; border-bottom: 1px solid #22692F;
 		text-decoration: none;
 	}
-
+	*/
 
 /* Green Primary */
+/*
 	.rvk .button,
 	.rvk .button-primary,
 	.rvk button,
@@ -895,10 +922,6 @@ input#access_key {
 
 
 
-
-.speech-button,
-.speech-button:hover,
-.speech-button:active,
 .-white-sp .speech-button,
 .-white-sp .speech-button:hover,
 .-white-sp .speech-button:active,
@@ -928,9 +951,9 @@ input#access_key {
 .sfs .speech-button img, .rvk .speech-button img {
 	filter: invert(1);
 }
+*/
 
-
-
+/*
 @media only screen and (max-width: 1020px) {
 	.global-speech-toggle-button,
 	.global-speech-toggle-button:hover,
@@ -944,7 +967,6 @@ input#access_key {
 		left: 0.45em !important;
 	}
 	
-	/* #content added to selector to (yuk) increase specificity. */
 	#content .speech-button,
 	#content .speech-button:hover,
 	#content .speech-button:active,
@@ -976,3 +998,4 @@ input#access_key {
 	}
 
 }
+*/
