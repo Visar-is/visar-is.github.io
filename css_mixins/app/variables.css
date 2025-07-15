@@ -28,9 +28,9 @@
   --success-color: rgb(0, 255, 186);
   --warning-color: rgb(250, 197, 91);
   --error-color: rgb(252, 132, 132);
-  --label-color: rgb(28, 28, 28);
+  --label-color: #e6e3e3;
 
-  --background-color: rgb(3, 3, 3);
+  --background-color: #333333;
   --subhead-color: #888888;
 
   --form-text-color: #999999;
