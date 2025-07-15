@@ -34,9 +34,9 @@
   --subhead-color: #888888;
 
   --form-text-color: #999999;
-  --form-background-color: #060606;
-  --form-background-color-hover: #2c2c2c;
-  --form-border-color: #2c2c2c;
+  --form-background-color: #2c2c2c;
+  --form-background-color-hover: #060606;
+  --form-border-color: #060606;
 
   --form-border-focus-color: #999999;
   --form-text-focus-color: #cccccc;
@@ -46,6 +46,11 @@
   --button-primary-color: #10099F;
   --button-primary-color-hover: #5752BB;
 
+  }
+
+  .speech-button img, .global-speech-toggle-button img {
+    filter: invert(1);
+    opactity: 0.8;
   }
 }
 
