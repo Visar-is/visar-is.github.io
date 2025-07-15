@@ -9,20 +9,18 @@ input[type="reset"],
 input[type="button"],
 .button:visited,
 .button-primary:visited {	
-	border: 1px solid var(--button-primary-border);
-	border-top: 1px solid var(--button-primary-top);
-	border-left: 1px solid var(--button-primary-left);
+	border: none;
 
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 
 	/* Font */
-	color: var(--button-primary-color);
+	color: var(--button-primary-text-color);
 	font-size: 16px;
 	font-weight: bold;
 	line-height: normal;
-	text-shadow: var(--button-primary-shadow); 		
+	text-shadow: var(--button-primary-text-shadow); 		
 	text-decoration: none;
 
 	/* Display */
@@ -44,10 +42,8 @@ input[type="button"],
 	-moz-transition-duration: 0.2s;
 	transition-duration: 0.2s;	
 
-	background: var(--button-primary-top);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	background: var(--button-primary-color);
+	box-shadow: none;
 	text-decoration: none;
 }
 
@@ -58,7 +54,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-	background: var(--button-primary-top-hover);
+	background: var(--button-primary-color-hover);
 }
 .button:active,
 .button-primary:active,
@@ -66,10 +62,8 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {	
-	border: 1px solid var(--button-primary-border-hover);
-	border-top: 1px solid var(--button-primary-top);
-	border-left: 1px solid var(--button-primary-left);
-	background: var(--button-primary-top-hover);
+	border: none;
+	background: var(--button-primary-color-hover);
 }
 
 /* disabled */
