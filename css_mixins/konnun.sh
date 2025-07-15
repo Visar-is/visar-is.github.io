@@ -1,13 +1,24 @@
 #!/bin/bash
 
 # List of CSS files
-CSS_FILES="app/variables.css base/base.css base/typography.css base/buttons.css base/forms.css konnun/web.css konnun/tablet.css konnun/mobile.css app/themes.css"
+css_files=(
+	"css_mixins/app/variables.css" 
+	"css_mixins/base/base.css" 
+	"css_mixins/base/typography.css"
+	"css_mixins/base/buttons.css"
+	"css_mixins/base/forms.css"
+	"css_mixins/konnun/web.css"
+	"css_mixins/konnun/tablet.css"
+	"css_mixins/konnun/mobile.css"
+	"css_mixins/app/themes.css"
+)
+
 
 # Output file
-OUTPUT="../css/konnun"
+OUTPUT="css/konnun"
 
 # Combine
-cat $CSS_FILES > "${OUTPUT}.css"
+cat "${css_files[@]}" > "${OUTPUT}.css"
 
 echo "✅ CSS files combined into ${OUTPUT}.css"
 
