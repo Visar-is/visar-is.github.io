@@ -24,7 +24,13 @@ button object[type="image/svg+xml"] { pointer-events: none; }
 
 /* Structure IDs & Classes */
 
-#wrap { min-height: 100%; }
+#wrap { 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full height of the viewport */
+  text-align: center;
+  margin: 0 auto;
+}
 
 header { width: 100%; min-height: 48px; }
 #header { display: block; min-height: 48px; }
@@ -42,7 +48,7 @@ header { width: 100%; min-height: 48px; }
 }
 #header .languages a { margin-left: 15px; }
 
-#content { clear: both; text-align: center; overflow:auto; padding-bottom: 65px; /* must be same height as the footer */ } 
+#content { clear: both; text-align: center; overflow:auto; flex: 1; /* take up all remaining space */ } 
 
 footer { width: 100%; clear:both; text-align: right;  }	
 footer .logo { height: 42px; padding-right: 30px; padding-bottom: 30px; }
