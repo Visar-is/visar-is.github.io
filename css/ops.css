@@ -849,7 +849,7 @@ input::-moz-focus-inner {
 ================================================== */
 
 body {
-	background: #fff;
+	background: var(--background-color);
 }
 
 header {
@@ -997,7 +997,94 @@ input[type="submit"]:visited {
 
 .ticket-table tbody td {
 	vertical-align: middle;
-}:root .skolapulsinn {
+}
+
+
+
+
+
+table { padding: 0.5em; width: 100%; }
+			
+			table th {
+				font-weight: bold;
+				border-bottom: #333 solid 1px;
+			}
+			
+			table th,
+			table td {
+				padding: 0.5em;
+			}
+			
+			.csv-preview-table {
+				font-size: 0.6em;
+			}
+			
+			.header-select {
+				font-size: 1em;
+				width: 100%;
+			}
+			
+			input[type=text] {
+				width: 25em;
+			}
+			.logout button, .logout button:hover, .logout button:active {
+background: none;
+border: none;
+box-shadow: none;
+padding: 0;
+margin: 0;
+text-shadow: none;
+font-family: AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.inline-icon, .inline-icon img {
+width: 1em;
+height: 1em;
+position: relative;
+bottom: -0.3ex;
+margin-right: .3ex;
+}
+#header ul {
+margin: 0 auto;
+}
+#header ul li {
+float: right;
+padding: 0 1em;
+height: 63px;
+line-height: 63px;
+}
+#header .logo {
+position: absolute;
+left: 0;
+top: 10px;
+}
+body footer {
+background-color: #80C860;
+color: #fff;
+}
+footer {
+padding: 1em 0;
+}
+footer .container {
+	padding-top: 1em;
+}
+nav a, nav a:hover, nav a:visited, nav a:focus { color: #fff; font-size: 16px; }
+
+		.error { background-color: #900; }
+		.info, .warning { background-color: #c4c452; }
+
+		#messages .message {
+		padding: 1em;
+		color: white;
+		font-weight: bold;
+		}
+
+		#header {
+			max-width: 1040px;
+			margin: 0 auto;
+			position: relative;
+			width: 90%;
+
+		}:root .skolapulsinn {
   --button-primary-color-hover: rgb(116,169,72);
   --button-primary-color: #007711;
 }
