@@ -64,6 +64,7 @@ input[type="reset"]:active,
 input[type="button"]:active {	
 	border: none;
 	background: var(--button-primary-color-hover);
+	margin-top: 2px;
 }
 
 /* disabled */
