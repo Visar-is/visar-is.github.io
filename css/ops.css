@@ -977,6 +977,9 @@ input[type="submit"]:visited {
 	height: 1em;
 	padding: 0.2em;
 }
+.collapsible-expanded-indicator img {
+	width: 100%;
+}
 
 .collapsible .collapsible-content {
 	padding: 0.5em 1.5em 1em 1.5em;
