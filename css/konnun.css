@@ -66,7 +66,7 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: text-bottom; }
+	}
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
 	body {
@@ -645,6 +645,7 @@ input.optional-text {
 	.speech-button img,
 	.global-speech-toggle-button img {
 		width: 100%;
+		vertical-align: text-bottom;
 	}
 
 	.response .speech-button {

@@ -220,6 +220,7 @@ input.optional-text {
 	.speech-button img,
 	.global-speech-toggle-button img {
 		width: 100%;
+		vertical-align: text-bottom;
 	}
 
 	.response .speech-button {
