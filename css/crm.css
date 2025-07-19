@@ -4,6 +4,10 @@
   --error-color: rgb(252, 132, 132);
   --label-color: rgb(28, 28, 28);
 
+  --positive-color: #0B0;
+  --negative-color: #D00;
+
+
   --background-color: rgb(252, 252, 252);
   --subhead-color: rgb(119, 119, 119);
   --table-cell-alt-color: #f5f5f5;
@@ -37,6 +41,9 @@
   --error-color: rgb(252, 132, 132);
   --label-color: #e6e3e3;
 
+  --positive-color: #5ed25e;
+  --negative-color: #eb3e3e;
+
   --link-color: #9b96ec;
   --link-color-hover: #d4d3fe;
 
@@ -57,6 +64,9 @@
 
   --button-primary-text-color: #fff;
   --button-primary-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+
+
 
   }
 
