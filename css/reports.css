@@ -927,11 +927,11 @@ form .form-row {
 }
 
 form .errornote {
-	color: @red;
+	color: var(--error-color);
 }
 
 form .errorlist {
-	color: @red;
+	color: var(--error-color);
 }
 .breadcrumbs li { display: block; float: left;  }
 .breadcrumbs li a { padding: 0 0.5em 0 0;}
@@ -1285,8 +1285,6 @@ tfoot tr:first-child td {
 
 .icon { height: 25px; vertical-align: middle; }/* Unsorted/Specific reports app styles */
 
-body { background-color: #fff; }
-
 .pseudo-text, .pseudo-text:active, .pseudo-text:focus {
 	width: 100%;
 	border: 1px solid;
@@ -1360,11 +1358,6 @@ body { background-color: #fff; }
 	margin-right: 1em;
 }
 
-.background-stone {
-	background-image: url('../img/background-stone.jpg');
-	background-position: 0 0;
-	background-repeat: repeat;
-}
 
 .report-context {
 	background: #EEE;
