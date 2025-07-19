@@ -5,14 +5,14 @@
 ./css_mixins/ops.sh
 ./css_mixins/pdfs.sh
 ./css_mixins/crm.sh
-./css_mixins/charts.sh
+#./css_mixins/charts.sh
 
 #lessc less/konnun.less css/konnun.css --clean-css="--s1 --advanced"
 #lessc less/reports.less css/reports.css --clean-css="--s1 --advanced"
 lessc less/visar.less css/visar.css --clean-css="--s1 --advanced"
 #lessc less/ops.less css/ops.css --clean-css="--s1 --advanced"
 #lessc less/pdfs.less css/pdfs.css --clean-css="--s1 --advanced"
-#lessc less/charts.less css/charts.css --clean-css="--s1 --advanced"
+lessc less/charts.less css/charts.css --clean-css="--s1 --advanced"
 #lessc less/crm.less css/crm.css --clean-css="--s1 --advanced"
 
 echo "Compiled 6 .less files"
