@@ -35,8 +35,8 @@
   --error-color: rgb(252, 132, 132);
   --label-color: #e6e3e3;
 
-  --link-color: #7d77ec;
-  --link-color-hover: #b5b1ff;
+  --link-color: #9b96ec;
+  --link-color-hover: #d4d3fe;
 
   --background-color: #333333;
   --subhead-color: #888888;
@@ -1315,7 +1315,6 @@ tfoot tr:first-child td {
 .pseudo-text:hover, .pseudo-text:focus {
 	border-color: #777;
 	box-shadow: inset #777 0 0 0.3em;
-	background: #eaeaea;
 }
 
 .section {

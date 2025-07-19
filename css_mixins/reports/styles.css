@@ -14,7 +14,6 @@
 .pseudo-text:hover, .pseudo-text:focus {
 	border-color: #777;
 	box-shadow: inset #777 0 0 0.3em;
-	background: #eaeaea;
 }
 
 .section {
