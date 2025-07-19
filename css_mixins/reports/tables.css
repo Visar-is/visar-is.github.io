@@ -155,7 +155,7 @@ tfoot tr:first-child td {
 .significant.positive,
 .negative.inverted,
 .significant.negative.inverted {
-	color: #0B0;
+	color: var(--positive-color);
 }
 
 .lowest-quartile,
@@ -165,7 +165,7 @@ tfoot tr:first-child td {
 .positive.inverted, 
 .significant.positive.inverted
 {
-	color: #D00; 
+	color: var(--negative-color); 
 }
 
 .rank-cell.lowest-quartile,
