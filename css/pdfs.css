@@ -12,6 +12,8 @@
   --link-color: #10099F;
   --link-color-hover: #5752BB;
 
+  --table-row-hover: #fbf8e9;
+
   --form-text-color: #666666;
   --form-background-color: rgb(249, 249, 249);;
   --form-background-color-hover: #D3D3D3;
@@ -42,6 +44,8 @@
   --subhead-color: #888888;
   --table-cell-alt-color: #404040;
   --subbox-background-color: #3f3f3f;
+
+  --table-row-hover: #202020;
 
   --form-text-color: #999999;
   --form-background-color: #2c2c2c;
@@ -656,7 +660,7 @@ hr.large {
 	/* Both */
 
 	.rounded tbody tr:hover, .zebra tbody tr:hover {
-		background: #fbf8e9;
+		background: var(--table-row-hover);
 		-o-transition: all 0.1s ease-in-out;
 		-webkit-transition: all 0.1s ease-in-out;
 		-moz-transition: all 0.1s ease-in-out;

@@ -147,7 +147,7 @@
 	/* Both */
 
 	.rounded tbody tr:hover, .zebra tbody tr:hover {
-		background: #fbf8e9;
+		background: var(--table-row-hover);
 		-o-transition: all 0.1s ease-in-out;
 		-webkit-transition: all 0.1s ease-in-out;
 		-moz-transition: all 0.1s ease-in-out;
