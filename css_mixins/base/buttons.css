@@ -68,6 +68,18 @@ input[type="button"]:active {
 	margin-bottom: -2px;
 }
 
+/* Warning */
+body button.button-warning {
+	background-color: #c94d35;
+}
+body button.button-warning:hover {
+	background-color: #782e20;
+}
+body button.button-warning:active {
+	background-color: #c94d35;
+	text-decoration: none;
+}
+
 /* disabled */
 button:disabled,
 button.disabled,
