@@ -14,3 +14,16 @@ ul li, ol li {
 ul li {
 	list-style-type: '';
 }
+
+.alpha-list {
+	list-style: lower-alpha outside none; margin: 0 0 1em 1.5em;
+}
+.alpha-list li { 
+ 	list-style-type: lower-alpha; list-style-position: outside; list-style-image: none;
+ }
+ .bullet-list {
+ 	list-style: disc; outside none; margin: 0 0 1em 1.5em;
+ }
+ .bullet-list li { 
+ 	list-style-type: disc; list-style-position: outside; list-style-image: none;
+ }
