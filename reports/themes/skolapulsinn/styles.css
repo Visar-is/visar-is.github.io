@@ -10,7 +10,7 @@ body #header {
 	background-color: #80C860;
 }
 
-body #header ul li a {
+body #header ul li a, body footer ul li a  {
 	color: #FFFFFF;
 }
 
@@ -19,9 +19,12 @@ body footer {
 	color: #fff;
 }
 
+/*
 a, a:visited { color: #007711; }
 a:hover { color: #005511; }
+*/
 
+/*
 .button,
 .button-primary,
 button,
@@ -77,6 +80,7 @@ button.disabled,
 	cursor: normal;
 	background-color: #555;
 }
+*/
 
 /* Appears to be unused styling: th span { color: #80c860; }*/
 nav li { color: #80c860; }
