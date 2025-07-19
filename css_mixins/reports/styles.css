@@ -1,0 +1,232 @@
+/* Unsorted/Specific reports app styles */
+
+.pseudo-text, .pseudo-text:active, .pseudo-text:focus {
+	width: 100%;
+	border: 1px solid;
+	border-color: #eee;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: none;
+	padding: 0.25em;
+	margin: 0.5em 0;
+	font-size: 90%;
+	background: #efefef;
+}
+
+.pseudo-text:hover, .pseudo-text:focus {
+	border-color: #777;
+	box-shadow: inset #777 0 0 0.3em;
+	background: #eaeaea;
+}
+
+.section {
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.significant { color: #010871; font-weight: bold; }
+
+.muted { color: #aaa; }
+
+.chart-section, .message-section {
+	background: #FFFEFF;
+	margin-bottom: 2em;
+	padding: 1em 0;
+}
+
+.section-note { white-space: pre-wrap; font-size: 0.9em; }
+.staff-notes { border-left: none; }
+
+.notes-save-button {
+	float: right;
+}
+
+/* Offsetting of things to line up with 5% chart left margin */
+.message-section .notes, .chart-section .notes {
+	width: 90%;
+	margin: 0% 5%;
+}
+
+.message-section .controls, .chart-section .controls {
+	width: 95%;
+	margin: 0.5em auto 0.5em 5%;
+}
+
+.chart-section .controls li {
+	display: inline;
+	margin-right: 1em;
+}
+
+.survey-metadata-section {
+	font-size: 0.9em;
+}
+
+/* these styles are duplicated in the PDF stylesheet, maybe make them common to both somewhere */
+.list-section .response-list li {
+	padding: 0.2em;
+	margin-bottom: 0.5em;
+	background: #efefef;
+	word-break: break-all;
+}
+
+.links-section ul li {
+	display: inline;
+	margin-right: 1em;
+}
+
+
+.report-context {
+	background: #EEE;
+	padding: 0;
+	margin-bottom: 1em;
+	width: 100%;
+	border-radius: 6px;
+}
+
+.report-context .language-form {
+	display: inline;
+	float: right;
+	padding: 0.5em
+}
+
+.report-context .language-form select {
+	display: inline;
+	width: auto;
+}
+
+/* Use clearfix class on parent to clear nested columns, or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; clear: both; }
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.download-chart-container {
+	height: 100%;
+	width: 100%;
+	background: black;
+	display: block;
+	position: absolute;
+}
+
+.download-chart-instructions {
+	padding: 1em 1em 0 1em;
+	background: #EEE;
+	border-bottom: #AAA 1px solid;
+}
+
+.download-chart-chart {
+	margin-top: 5%;
+}
+
+.download-chart-chart img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Settings icon, maybe others in the future */
+.inline-icon,
+.inline-icon img {
+	width: 1em;
+	height: 1em;
+	position: relative;
+	bottom: -0.3ex;
+	margin-right: 0.3ex;
+}
+
+a .inline-icon {
+	cursor: pointer;
+}
+
+
+/* Global Base */
+	
+#wrap { min-height: 100%; }
+
+header { background-color: #fff; width: 100%; height: 65px; position: fixed; z-index: 999999999; }
+#header { padding: 0px 10px 0px 20px; height: 65px; max-width: 1040px; margin: 0 auto; text-align: center; position: relative; width: 90%; 	border-radius: 6px; }
+#header .logo { position: absolute; left: 10px; top: 10px; }
+#header .logo object { pointer-events: none; }
+#header ul li { float: right; padding: 0 1em; /*border-left: 1px solid #B0B1B2;*/ }
+#header ul li.last { /*border-right: 1px solid #B0B1B2;*/ position: absolute; right: 130px; top: 0; -webkit-font-smoothing: auto; }
+#header ul li a,
+#header ul li form { display: block; padding: 20px 0; width: 100%; font-size: 16px; }
+#header ul li form button { color: #006daf; }
+
+#content { 
+min-height: 500px;
+background-color: #fff; padding-top: 66px; padding-bottom: 25px; /* must be same height as the footer */ }
+.container { width: 90%; max-width: 1040px; margin: 0px auto; padding-top: 1em; }
+
+footer { padding: 1em 0 2em 0; }
+body footer {
+	max-width: 1040px;
+	margin: 0 auto;
+	border-radius: 6px;
+	margin-bottom: 1em;
+	padding: 0px 10px 20px 20px
+}
+
+
+/* Mobile Landscape */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	header { position: fixed; width: 100%; }
+	#messages { padding-top: 0; }
+	.last span { display: none; }
+	#header { width: 100%; border-radius:  0; padding: 0;}
+	#header ul li a { padding: 20px 0; }
+	#header ul li.last { right: 90px; }
+	body footer { border-radius: 0}
+}
+
+
+/* Mobile Portrait */
+
+@media only screen and (max-width: 480px) {
+	header { position: fixed;  width: 100%; }
+	header a.logo { margin: 0 auto; position: relative; top: 14px; left: 0px; }
+	#header { width: 100%;  border-radius:  0; padding: 0;}
+
+	#messages { padding-top: 0; }
+	.last span { display: none; }
+	#header ul li a { padding: 20px 0; }
+	#header ul li.last { right: 90px; }
+	body footer { border-radius: 0}
+}
+
+/* (Portrait) Design for a width of 768px  */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	header { position: fixed; width: 100%; }
+	#messages { padding-top: 0; }
+	#header { width: 100%;  border-radius:  0; padding: 0;}
+	body footer { border-radius: 0}
+}
+
+.greeting { font-size: 28px; margin:0; padding: 0.5em 0; line-height: 34px; font-family: AvenirNextLTProDemi, AvenirNextLTPro-Demi,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif }
+.logout button, .logout button:hover, .logout button:active { background: none; border: none; box-shadow: none; padding: 0; margin: 0; text-shadow: none; font-family: AvenirNextLTProRegular, AvenirNextLTPro-Regular,"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif }
+
+.dashboard-instructions { 
+	color: #999999;
+	font-size: 0.9em;
+	font-style: normal;
+	line-height: 1.4;
+}

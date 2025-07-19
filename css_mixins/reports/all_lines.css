@@ -1,0 +1,55 @@
+/* Special styles and overrides for the all lines page */
+
+/*
+  Squish charts into a two-column layout with full-width section separators on screens which are wide enough.
+   
+  90em picked based on all lines longitudinal charts typically having a “suggested” width of 70em, which can be
+  squished down to around 45em for stacking two next to each other on one screen. */
+@media only screen and (min-width: 90em) {
+  body:has(> #content [data-page-name=summary-lines]) {
+    header nav#header {
+      padding: 0;
+      max-width: 130em;
+    }
+
+    footer {
+      width: 90%;
+      max-width: 130em;
+      font-size: 100%;
+    }
+
+    .container {
+      max-width: 130em;
+
+      .content {
+        
+        display: flex;
+        flex-wrap: wrap;
+
+        .section {
+          &:not(.chart-section) { width: 100%; }
+          &.chart-section { width: 50%; }
+
+          .chart-container { overflow-x: scroll; } /* Prevent charts from ever overlapping, worst case is horizontal scrolling */
+
+          .chart {
+            grid-template-columns: min-content auto; /* only two columns rather than three, no need to repeat legend */
+
+            .title { grid-column: span 2 }
+
+            .data {
+              min-width: auto !important; /* override hardcoded suggested chart width */
+            }
+
+            .key { display: none; }
+
+            .x-axis {
+              font-size: 70%; /* text needs to be even smaller than usual for all charts to be able to fit */
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

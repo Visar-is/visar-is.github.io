@@ -1,0 +1,175 @@
+@media only screen and (max-width: 767px) {
+	/* Collapsing Responsive Tables */
+	
+	table.collapse,
+	.collapse thead,
+	.collapse tbody,
+	.collapse th,
+	.collapse td,
+	.collapse tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.collapse thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	.collapse .rounded tr td { 
+		/* Behave like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 45%; 
+	}
+	
+	.collapse td:before {
+		width: 40%;
+		padding-right: 10px;
+		white-space: nowrap;
+		content: attr(axis) ':';
+	}
+}
+
+
+
+/* Table Sorting */
+
+/* Hide buggy sorttable.js sorting arrows. */
+#sorttable_sortfwdind,
+#sorttable_sortrevind { display: none; }
+
+.sortable thead th:first-child:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort)::after { 
+    content: ' ↑↓'; /* Warning! The space here is a raw nbsp character. Do no replace with a normal space. */
+}
+
+.sortable thead th.sorttable_sorted::after { content: ' ↓'; /* Warning! The space here is a raw nbsp character. Do no replace with a normal space. */ }
+.sortable thead th.sorttable_sorted_reverse::after { content: ' ↑'; /* Warning! The space here is a raw nbsp character. Do no replace with a normal space. */ }
+
+
+
+/* Reports-specific styling. */
+
+td.significant { font-weight: bold; color: #010871; }
+td.significant:after { content: "*"; }
+
+td[axis=N] sub {
+	color: rgb(85, 85, 85);
+	font-size: 0.7em;
+}
+
+.summary-table {
+	table-layout: fixed;
+}
+
+.summary-table td,
+.summary-table th {
+	position: relative;
+}
+
+.summary-table .header-text {
+	position: absolute;
+	bottom: 0;
+}
+
+.summary-table .data-column-cell {
+	width: 2.5em;
+	position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+	.summary-table .data-column-cell {
+		width: 2em;
+		position: relative;
+	}
+}
+
+.summary-table tbody .data-column-cell {
+	font-size: 0.7em;
+}
+
+.summary-table .scale-name-column-cell,
+.summary-table .category-cell {
+	width: 20em;
+	font-size: 0.9em;
+}
+
+.summary-table .category-cell {
+	font-weight: bold;
+}
+
+.summary-table th.data-column-cell {
+	height: 7em;
+	text-align: bottom;
+}
+
+.summary-table th.data-column-cell .header-text {
+	font-size: 0.7em;
+	display: inline-block;
+	position: absolute;
+	left: 1em;
+	bottom: 0;
+	max-width: 7em;
+	transform-origin: left bottom 0px;
+	transform: translate(3.5em, -0.5em) rotate(-90deg);
+	-webkit-transform-origin: left bottom 0px;
+	-webkit-transform: translate(3.5em, -0.5em) rotate(-90deg);
+}
+
+.summary-table .negatively-significant {
+	background: rgba(255, 0, 0, 0.2);
+}
+.summary-table .negatively-significant:after {
+	content: ' ▼';
+	color: rgba(200, 0, 0, 0.7);
+}
+.summary-table .negatively-significant.inverted:after { content: ' ▲'; }
+
+.summary-table .positively-significant {
+	background: rgba(0, 255, 0, 0.2);
+}
+.summary-table .positively-significant:after {
+	content: ' ▲';
+	color: rgba(0, 200, 0, 0.7);
+}
+.summary-table .positively-significant.inverted:after { content: ' ▼'; }
+
+.summary-table td.muni-data-column,
+.summary-table th.muni-data-column,
+.summary-table td.muni-data-column-cell,
+.summary-table th.muni-data-column-cell {
+	border-left-width: 4px;
+}
+
+tfoot tr:first-child td {
+	border-top: solid 2px #555;
+}
+
+
+/* Rank Cells */
+.highest-quartile,
+.lowest-quartile.inverted,
+.positive,
+.significant.positive,
+.negative.inverted,
+.significant.negative.inverted {
+	color: #0B0;
+}
+
+.lowest-quartile,
+.highest-quartile.inverted,
+.negative,
+.significant.negative,
+.positive.inverted, 
+.significant.positive.inverted
+{
+	color: #D00; 
+}
+
+.rank-cell.lowest-quartile,
+.rank-cell.highest-quartile,
+.significant {
+	font-weight: bold;
+}
