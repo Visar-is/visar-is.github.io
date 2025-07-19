@@ -10,13 +10,14 @@
 
   --background-color: rgb(252, 252, 252);
   --subhead-color: rgb(119, 119, 119);
-  --table-cell-alt-color: #f5f5f5;
   --subbox-background-color: #EEE;
 
   --link-color: #10099F;
   --link-color-hover: #5752BB;
 
   --table-row-hover: #fbf8e9;
+  --table-cell-alt-color: #f5f5f5;
+  --table-cell-header-color: #f5f5f5;
 
   --form-text-color: #666666;
   --form-background-color: rgb(249, 249, 249);;
@@ -49,10 +50,11 @@
 
   --background-color: #333333;
   --subhead-color: #888888;
-  --table-cell-alt-color: #404040;
   --subbox-background-color: #3f3f3f;
 
   --table-row-hover: #202020;
+  --table-cell-alt-color: #404040;
+  --table-cell-header-color: #f5f5f5;
 
   --form-text-color: #999999;
   --form-background-color: #2c2c2c;
@@ -175,13 +177,17 @@
 	
 	
 	/* Zebra Striping ----------------------*/
-	
+	.zebra thead tr, .zebra tfoot tr {
+		background-color: var(--table-cell-header-color);
+	}
+
+
 	.zebra td, .zebra th {
 		padding: 0.5em;
 		border-bottom: 1px solid #f2f2f2;
 	}
 	
-	th, tfoot td { font-weight: bold; }
+	th { font-weight: bold; }
 	
 	.zebra tbody tr:nth-child(even) {
 		background: var(--table-cell-alt-color);
