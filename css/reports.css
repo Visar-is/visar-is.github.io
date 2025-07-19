@@ -145,7 +145,6 @@
 	}
 	
 	.rounded th {
-		background-color: #dce9f9;
 		border-top: none;
 	}
 	
@@ -182,7 +181,7 @@
 		border-bottom: 1px solid #f2f2f2;
 	}
 	
-	th { font-weight: bold; }
+	th, tfoot td { font-weight: bold; }
 	
 	.zebra tbody tr:nth-child(even) {
 		background: var(--table-cell-alt-color);
