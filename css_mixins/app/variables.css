@@ -6,6 +6,7 @@
 
   --background-color: rgb(252, 252, 252);
   --subhead-color: rgb(119, 119, 119);
+  --table-cell-alt-color: #f5f5f5;
 
   --link-color: #10099F;
   --link-color-hover: #5752BB;
@@ -38,6 +39,8 @@
 
   --background-color: #333333;
   --subhead-color: #888888;
+  --table-cell-alt-color: #404040;
+
 
   --form-text-color: #999999;
   --form-background-color: #2c2c2c;

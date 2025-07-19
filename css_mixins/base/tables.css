@@ -4,7 +4,7 @@
 	
 	.full-width-table {
 		width: 100%;
-		margin-top: @base-margin;
+		margin-top: 20px;
 	}
 	
 	.rounded {
@@ -77,7 +77,7 @@
 	
 	.zebra td, .zebra th {
 		padding: 0.5em;
-		border-bottom: 1px solid #f2f2f2;
+		border-bottom: 1px solid var(--table-cell-alt-color);
 	}
 	
 	th { font-weight: bold; }
@@ -92,7 +92,7 @@
 	.zebra th {
 		text-align: left;
 		text-shadow: 0 1px 0 rgba(255,255,255,.5); 
-		background-color: #eee;
+		background-color: var(--table-cell-alt-color);
 		background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
 		background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
 		background-image: -moz-linear-gradient(top, #f5f5f5, #eee);

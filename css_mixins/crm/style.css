@@ -1,0 +1,62 @@
+/* Styling for Skólapúlsinn CRM */
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block; }
+body {
+	line-height: 1; }
+ol, ul {
+	list-style: none; }
+blockquote, q {
+	quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none; }
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+/* Skolapúlsinn colours on buttons */
+.button,
+.button-primary,
+button {
+	background-color: #071;
+	border-left: 1px solid #418223;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #418223 #22692F #22692F #418223;
+	color: #FFF;
+}
+
+button:hover {
+	background-color: #005511;
+	border-left-color: #418223;
+	border-top-color: #418223;
+	border-right-color: #22692F;
+	border-bottom-color: #22692F;
+}
+
+button:active {
+	background-color: #004411;
+	border-left-color: #418223;
+	border-top-color: #418223;
+	border-right-color: #22692F;
+	border-bottom-color: #22692F;
+}
+
+button:visited {
+	background-color: #004411;
+	border-left-color: #418223;
+	border-top-color: #418223;
+	border-right-color: #22692F;
+	border-bottom-color: #22692F;
+}
