@@ -74,7 +74,7 @@
 
 
 .report-context {
-	background: #EEE;
+	background: var(--subbox-background-color);
 	padding: 0;
 	margin-bottom: 1em;
 	width: 100%;
