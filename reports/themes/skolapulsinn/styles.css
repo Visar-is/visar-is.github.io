@@ -10,7 +10,7 @@ body #header {
 	background-color: #80C860;
 }
 
-body #header ul li a, body footer ul li a  {
+body #header ul li a, body #footer-info a  {
 	color: #FFFFFF;
 }
 
