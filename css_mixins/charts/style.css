@@ -60,7 +60,7 @@
 .chart .key ul li.hovered[data-hoverclass],
 .chart .key ul li.toggled[data-hoverclass],
 .chart .key ul li[data-hoverclass]:hover {
-	background: #FFFAD4;
+	background: var(--key-hover-color);
 	cursor: pointer;
 }
 
@@ -75,14 +75,14 @@
 	font-size: 80%; /* Font size must be 80% to match .data */
 	max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
 }
-.chart  .x-axis ol.x-axis-row {
+.chart .x-axis ol.x-axis-row {
 	width: 100%;
 	display: flex;
 }
 
-.chart  .x-axis ol.x-axis-row li {
+.chart .x-axis ol.x-axis-row li {
 	vertical-align: top;
-	color: #666;
+	color: var(--x-axis-label-color);
 	padding: 0 0.1em;
 	box-sizing: border-box;
 	text-align: center;
