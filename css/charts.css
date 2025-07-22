@@ -2,6 +2,8 @@
   --key-hover-color: #FFFAD4;
   --y-axis-label-color: #333;
   --y-axis-line-color: #ddd;
+
+  --y-axis-label-color: #666;
 }
 
 
@@ -11,6 +13,9 @@
     --key-hover-color: #252525;
     --y-axis-label-color: #969696;
     --y-axis-line-color: #525252;
+
+
+    --y-axis-label-color: #bbb;
   }
 
 }
@@ -336,7 +341,7 @@ div.h-x-axis ol li { text-align: left; }
 .bn-longitudinal-chart .data .hover-content .hover-box {
 	position: absolute;
 	z-index: 999999999999999999;
-	background: #FFFAD4;
+	background: var(--key-hover-color);
 	font-size: .8em;
 	border-radius: 0.5em;
 	padding: 0.5em;
@@ -473,7 +478,7 @@ div.h-x-axis ol li { text-align: left; }
 .scatter .data .hover-content .hover-box {
 	position: absolute;
 	z-index: 999999999999999999;
-	background: #FFFAD4;
+	background: var(--key-hover-color);
 	font-size: .8em;
 	border-radius: 0.5em;
 	padding: 0.5em;
