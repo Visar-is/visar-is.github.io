@@ -1,0 +1,68 @@
+
+/* General key colour overrides after chart styling, to override */
+
+.bn-compare-line .points li.you_muni:before { color: #31419A; z-index: 9000001; }
+.bn-compare-line line.you_muni { stroke: #31419A; }
+.bn-compare-line-x-axis .you_muni { color: #31419A; }
+.fixed-key .you_muni span, .key .you_muni span { color: #31419A; }
+
+.bn-compare-line .points li.you_school:before { color: #65DB65; z-index: 9000001; }
+.bn-compare-line line.you_school { stroke: #65DB65; }
+.bn-compare-line-x-axis .you_school { color: #65DB65; }
+.fixed-key .you_school span, .key .you_school span { color: #65DB65; }
+
+.bars li.you_muni { background-color: #31419A; }
+.bars li.you_muni.bg { background-color: #4d7bdf; }
+
+.bars li.you_school { background-color: #65DB65; }
+.bars li.you_school.bg { background-color: #75DB75; }
+
+/* Key Colours */
+.fixed-key .you span,
+.key .you span { color: #65DB65; }
+.fixed-key .compare span,
+.key .compare span { color: #dc3912; }
+
+.fixed-key .you_schools span,
+.key .you_schools span,
+.fixed-key .you_point span,
+.key .you_point span,
+.key .you_school span { color: #555; }
+
+.fixed-key .compare_schools span,
+.key .compare_schools span,
+.fixed-key .compare_point span,
+.key .compare_point span { color: #bbb; }
+
+.fixed-key .cohort-grade-6 span,
+.key .cohort-grade-6 span, .fixed-key .cohort-grade-1 span,
+.key .cohort-grade-1 span { color: #712F0A; }
+.fixed-key .cohort-grade-7 span,
+.key .cohort-grade-7 span, .fixed-key .cohort-grade-2 span,
+.key .cohort-grade-2 span { color: #E9681B; }
+.fixed-key .cohort-grade-8 span,
+.key .cohort-grade-8 span, .fixed-key .cohort-grade-3 span,
+.key .cohort-grade-3 span { color: #65DB65; }
+.fixed-key .cohort-grade-9 span,
+.key .cohort-grade-9 span, .fixed-key .cohort-grade-4 span,
+.key .cohort-grade-4 span { color: #FFB600; }
+.fixed-key .cohort-grade-10 span,
+.key .cohort-grade-10 span, .fixed-key .cohort-grade-5 span,
+.key .cohort-grade-5 span { color: #3359BA; }
+
+.fixed-key .compare-oecd span,
+.key .compare-oecd span { color: #0000ff; }
+
+.fixed-key .compare-iceland span,
+.key .compare-iceland span,
+.fixed-key .compare-nordic span,
+.key .compare-nordic span { color: #00c500; }
+
+
+.key .bg_sex_1 span, .fixed-key .bg_sex_1 span { color: #74d2c6; }
+.key .bg_sex_2 span, .fixed-key .bg_sex_2 span { color: #b07fa9; }
+
+.key .you.bg-sex-1 span, .fixed-key .you.bg-sex-1 span { color: #81e29e; }
+.key .you.bg-sex-2 span, .fixed-key .you.bg-sex-2 span { color: #93d3c5; }
+.key .compare.bg-sex-1 span, .fixed-key .compare.bg-sex-1 span { color: #d39166; }
+.key .compare.bg-sex-2 span, .fixed-key .compare.bg-sex-2 span { color: #b981da; }

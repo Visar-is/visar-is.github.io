@@ -1,0 +1,163 @@
+.bn-longitudinal-chart .hidden { display: none; }
+
+.bn-longitudinal-chart .key {
+	.hidden.hovered { display: block; }
+}
+
+.bn-longitudinal-chart .data {
+	position: relative;
+	width: 100%;
+	height: 20em;
+}
+
+
+
+.bn-longitudinal-chart .data .longitudinal-points {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none; /* Allow pointer events through to lines underneath. */
+}
+
+.bn-longitudinal-chart .data .longitudinal-points .point {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+
+.bn-longitudinal-chart .data .longitudinal-points .point .dot {
+	width: 0.5em;
+	height: 0.5em;
+	background: #ccc;
+	transform: translate(-0.25em, 0.25em) rotate(45deg);
+}
+
+
+.bn-longitudinal-chart .data .longitudinal-points li.you {
+	z-index: 9000000;
+}
+.bn-longitudinal-chart .data .longitudinal-points li.you .dot { background-color: #65DB65; }
+
+.bn-longitudinal-chart .data .longitudinal-points li.compare {
+	z-index: 8000000;
+}
+.bn-longitudinal-chart .data .longitudinal-points li.compare .dot { background-color: #dc3912; }
+
+.bn-longitudinal-chart .data .longitudinal-points li.you_schools {
+	z-index: 7000000;
+}
+.bn-longitudinal-chart .data .longitudinal-points li.you_schools .dot { background-color: #555; }
+
+.bn-longitudinal-chart .data .longitudinal-points li.compare_schools {
+	z-index: 6000000;
+}
+.bn-longitudinal-chart .data .longitudinal-points li.compare_schools .dot { background-color: rgba(190, 190, 190, 0.4); width: 0.4em; height: 0.4em; transform: translate(-0.2em, 0.2em) rotate(45deg); }
+
+.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_1 { z-index: 8500000; }
+.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_1 .dot { color: #74d2c6; }}
+.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_2 { z-index: 8500000; } 
+.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_2 .dot { color: #b07fa9; }}
+
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-6, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-1 { z-index: 7000000;   } 
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-6 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-1 .dot { background-color: #712F0A; }}
+
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-7, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-2 { z-index: 7100000;   } 
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-7 .dot , .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-2 .dot { background-color: #E9681B; }}
+
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-8, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-3 { z-index: 7200000;   } 
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-8 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-3 .dot { background-color: #65DB65; }}
+
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-9, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-4 { z-index: 7300000;   } 
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-9 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-4 .dot { background-color: #FFB600; }}
+
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-10, .bn-longitudinal-chart .data .longitudinal-points  li.cohort-grade-5 { z-index: 7400000; } 
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-10 .dot, .bn-longitudinal-chart .data .longitudinal-points  li.cohort-grade-5 .dot { background-color: #3359BA; }}
+
+
+.bn-longitudinal-chart .data .hover-content {
+	height: 100%;
+	width: 100%;
+
+	.hover-box {
+		position: absolute;
+		z-index: 999999999999999999;
+		background: #FFFAD4;
+		font-size: .8em;
+		border-radius: 0.5em;
+		padding: 0.5em;
+		text-align: center;
+	}
+}
+
+
+.bn-longitudinal-chart line {
+	stroke: #ccc;
+	stroke-width: 1.5px;
+}
+
+.bn-longitudinal-chart line.you { stroke: #65DB65; }
+.bn-longitudinal-chart line.compare { stroke: #dc3912; }
+.bn-longitudinal-chart line.you_schools { stroke: #555; }
+.bn-longitudinal-chart line.cohort-grade-6, .bn-longitudinal-chart line.cohort-grade-1 { stroke: #712F0A; }
+.bn-longitudinal-chart line.cohort-grade-7, .bn-longitudinal-chart line.cohort-grade-2 { stroke: #E9681B; }
+.bn-longitudinal-chart line.cohort-grade-8, .bn-longitudinal-chart line.cohort-grade-3 { stroke: #65DB65; }
+.bn-longitudinal-chart line.cohort-grade-9, .bn-longitudinal-chart line.cohort-grade-4 { stroke: #FFB600; }
+.bn-longitudinal-chart line.cohort-grade-10, .bn-longitudinal-chart line.cohort-grade-5 { stroke: #3359BA; }
+
+.bn-longitudinal-chart line.bg_sex_1 { stroke: #74d2c6; }
+.bn-longitudinal-chart line.bg_sex_2 { stroke: #b07fa9; }
+
+.bn-longitudinal-chart line.you.bg-sex-1 { stroke: #81e29e; }
+.bn-longitudinal-chart .points li.you.bg-sex-1 .dot { background-color: #81e29e; }
+.bn-longitudinal-chart line.you.bg-sex-2 { stroke: #93d3c5; }
+.bn-longitudinal-chart .points li.you.bg-sex-2 .dot { background-color: #93d3c5; }
+
+.bn-longitudinal-chart line.compare.bg-sex-1 { stroke: #d39166; }
+.bn-longitudinal-chart .points li.compare.bg-sex-1 .dot { background-color: #d39166; }
+.bn-longitudinal-chart line.compare.bg-sex-2 { stroke: #b981da; }
+.bn-longitudinal-chart .points li.compare.bg-sex-2 .dot { background-color: #b981da; }
+
+.bn-longitudinal-chart line.hover-area {
+	stroke: rgba(0, 0, 0, 0) !important;
+	stroke-width: 10px !important;
+}
+
+.bn-longitudinal-chart .point.unconnected {
+	pointer-events: auto;
+	pointer-events: all;
+}
+
+/* Disable hover effects on national points */
+.bn-longitudinal-chart .points li.compare_schools .label { display: none !important; }
+
+.bn-longitudinal-chart.hovered line:not(.hovered, .toggled), .bn-longitudinal-chart.toggled line:not(.hovered, .toggled),
+.bn-longitudinal-chart.hovered .point:not(.hovered, .toggled):not(.compare_schools), .bn-longitudinal-chart.toggled .point:not(.hovered, .toggled):not(.compare_schools) {
+	opacity: 0.3;
+}
+
+
+
+.bn-longitudinal-chart.hovered line.hovered, .bn-longitudinal-chart.toggled line.hovered,
+.bn-longitudinal-chart.hovered line.toggled, .bn-longitudinal-chart.toggled line.toggled {
+	stroke-width: 3px;
+	z-index: 999999999999;
+}
+
+.bn-longitudinal-chart.hovered .point.hovered, .bn-longitudinal-chart.toggled .point.hovered,
+.bn-longitudinal-chart.hovered .point.toggled, .bn-longitudinal-chart.toggled .point.toggled {
+	z-index: 999999999999;
+}
+
+
+.bn-compare-line-x-axis .you { color: #65DB65; }
+.bn-compare-line-x-axis .compare { color: #dc3912; }
+.bn-compare-line-x-axis .cohort-grade-6, .bn-compare-line-x-axis .cohort-grade-1 { color: #712F0A; }
+.bn-compare-line-x-axis .cohort-grade-7, .bn-compare-line-x-axis .cohort-grade-2 { color: #E9681B; }
+.bn-compare-line-x-axis .cohort-grade-8, .bn-compare-line-x-axis .cohort-grade-3 { color: #65DB65; }
+.bn-compare-line-x-axis .cohort-grade-9, .bn-compare-line-x-axis .cohort-grade-4 { color: #FFB600; }
+.bn-compare-line-x-axis .cohort-grade-10, .bn-compare-line-x-axis .cohort-grade-5 { color: #3359BA; }
+
+/* Disable hover on pre-2015 reports */
+.year-2011, .year-2012, .year-2013, .year-2014 .bn-longitudinal-chart .point.hovered.last span {
+	display: none !important;
+}

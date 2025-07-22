@@ -3,6 +3,14 @@
 # List of CSS files
 css_files=(
 	"css_mixins/charts/style.css" 
+	"css_mixins/charts/bars.css" 
+	"css_mixins/charts/h_bar.css" 
+	"css_mixins/charts/is_muni_map.css" 
+	"css_mixins/charts/line.css" 
+	"css_mixins/charts/scatter.css" 
+
+	"css_mixins/charts/overrides.css" 
+
 )
 
 

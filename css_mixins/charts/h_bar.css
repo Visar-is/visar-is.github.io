@@ -1,0 +1,15 @@
+.h_bars { margin-left: 60px; }
+.h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
+
+.h_bars .label { padding-top: 1em; padding-left: .5em; font-size: 120% }
+
+.h_bar { line-height: 2em; height: 2em; }
+.h_bars  span { background-color: #cccccc; outline: 1px solid #cccccc; }
+.h_bars li.you span { background-color: #65DB65; outline: 1px solid #65DB65;}
+.h_bars li.compare span { background-color: #dc3912; outline: 1px solid #dc3912;}
+.h_bars li.you.bg span { background-color: #a3e9a3; outline: 1px solid #a3e9a3;}
+.h_bars li.compare.bg span { background-color: #EFA17C; outline: 1px solid #EFA17C;}
+div.h-x-axis ol.row1, div.h-x-axis ol.row2, div.h-x-axis ol.row3 { padding: 0; }
+
+.h_bar span { display: block; float: left; color: #fff; text-align: right; padding-right: .5em; margin-right: .5em }	
+div.h-x-axis ol li { text-align: left; }
