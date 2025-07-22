@@ -3,7 +3,7 @@
   --y-axis-label-color: #333;
   --y-axis-line-color: #ddd;
 
-  --y-axis-label-color: #666;
+  --x-axis-label-color: #666;
 }
 
 
@@ -15,7 +15,7 @@
     --y-axis-line-color: #525252;
 
 
-    --y-axis-label-color: #bbb;
+    --x-axis-label-color: #bbb;
   }
 
 }
