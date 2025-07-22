@@ -2,6 +2,7 @@
 
 # List of CSS files
 css_files=(
+	"css_mixins/charts/variables.css" 
 	"css_mixins/charts/style.css" 
 	"css_mixins/charts/bars.css" 
 	"css_mixins/charts/h_bar.css" 

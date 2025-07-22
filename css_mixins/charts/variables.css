@@ -1,0 +1,17 @@
+:root {
+  --key-hover-color: #FFFAD4;
+  --y-axis-label-color: #333;
+  --y-axis-line-color: #ddd;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --key-hover-color: #252525;
+    --y-axis-label-color: #969696;
+    --y-axis-line-color: #525252;
+  }
+
+}
+
