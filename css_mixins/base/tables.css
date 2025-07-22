@@ -8,13 +8,13 @@
 	}
 	
 	.rounded {
-		border: solid #ccc 1px;
+		border: solid var(--table-border-color) 1px;
 		border-radius: 6px; 	
 	}
 		
 	.rounded td, .rounded th {
-		border-left: 1px solid #ccc;
-		border-top: 1px solid #ccc;
+		border-left: 1px solid var(--table-border-color);
+		border-top: 1px solid var(--table-border-color);
 		padding: 10px;
 		text-align: left;
 	}
@@ -39,12 +39,19 @@
 		border-radius: 6px 6px 0 0;
 	}
 	
-	.rounded tr:last-child td:first-child {
+
+	.rounded:has(tfoot) tfoot tr:last-child td:first-child {
+		border-radius: 0 0 0 6px;
+	}
+	.rounded:not(:has(tfoot)) tbody tr:last-child td:first-child {
 		border-radius: 0 0 0 6px;
 	}
 	
-	.rounded tr:last-child td:last-child {
-		border-radius: 0 0 6px 0;
+	.rounded:has(tfoot) tfoot tr:last-child td:last-child {
+		border-radius: 0 0 0 6px;
+	}
+	.rounded:not(:has(tfoot)) tbody tr:last-child td:last-child {
+		border-radius: 0 0 0 6px;
 	}
 	
 	
@@ -57,7 +64,6 @@
 
 	.zebra td, .zebra th {
 		padding: 0.5em;
-		border-bottom: 1px solid #f2f2f2;
 	}
 	
 	th { font-weight: bold; }

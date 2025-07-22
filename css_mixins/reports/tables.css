@@ -20,7 +20,7 @@
 	.collapse .rounded tr td { 
 		/* Behave like a "row" */
 		border: none;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid var(--table-border-color);
 		position: relative;
 		padding-left: 45%; 
 	}
@@ -52,7 +52,7 @@
 
 /* Reports-specific styling. */
 
-td.significant { font-weight: bold; color: #010871; }
+td.significant { font-weight: bold; color: var(--significant-color); }
 td.significant:after { content: "*"; }
 
 td[axis=N] sub {
@@ -119,20 +119,20 @@ td[axis=N] sub {
 }
 
 .summary-table .negatively-significant {
-	background: rgba(255, 0, 0, 0.2);
+	background: var(--negative-color);
 }
 .summary-table .negatively-significant:after {
 	content: ' ▼';
-	color: rgba(200, 0, 0, 0.7);
+	color: var(--negative-color);
 }
 .summary-table .negatively-significant.inverted:after { content: ' ▲'; }
 
 .summary-table .positively-significant {
-	background: rgba(0, 255, 0, 0.2);
+	background: var(--positive-color);
 }
 .summary-table .positively-significant:after {
 	content: ' ▲';
-	color: rgba(0, 200, 0, 0.7);
+	color: var(--positive-color);
 }
 .summary-table .positively-significant.inverted:after { content: ' ▼'; }
 
@@ -144,7 +144,7 @@ td[axis=N] sub {
 }
 
 tfoot tr:first-child td {
-	border-top: solid 2px #555;
+	border-top: solid 2px var(--table-border-color);
 }
 
 

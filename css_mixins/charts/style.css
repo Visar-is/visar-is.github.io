@@ -6,133 +6,125 @@
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
+}
+.chart ol, .chart ul, .chart li { padding: 0; margin: 0; list-style-type: none; }
 
-	ol, ul, li { padding: 0; margin: 0; list-style-type: none; }
+.chart .title {
+	grid-column: 1 / span 2;
+	padding: 1em 1em 0 1em;
+	text-align: center;
+	font-size: 120%;
+}
 
-	.title {
-		grid-column: 1 / span 2;
-		padding: 1em 1em 0 1em;
-		text-align: center;
-		font-size: 120%;
-	}
+.chart .data {
+	grid-column: 2;
+	grid-row: 3;
+	height: 13em;  /* default chart data height */
+	max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
+	font-size: 80%;
+	position: relative;
+}
 
-	.data {
-		grid-column: 2;
-		grid-row: 3;
-		height: 13em;  /* default chart data height */
-		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
-		font-size: 80%;
-		position: relative;
+.chart .data .y-axis-lines {
+	display: flex;
+	position: absolute;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
 
-		.y-axis-lines {
-			display: flex;
-			position: absolute;
-			flex-direction: column-reverse;
-			justify-content: space-between;
-			width: 100%;
-			height: 100%;
+.chart .data .y-axis-lines li {
+	width: 100%;
+	height: 0px;
+	border-bottom: 1px #ddd solid;
+}
 
-			li {
-				width: 100%;
-				height: 0px;
-				border-bottom: 1px #ddd solid;
-			}
-		}
-	}
+.chart  .key {
+	grid-column: 2;
+	grid-row: 2/span 3;
+	padding: 0.5em 0 1em 0;
+	font-size: 0.9em;
+}
+.chart  .key ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 100%;
+} 
+.chart .key ul li {
+	margin-right: 1em;
+	padding: 0.1em 0.5em;
+	border-radius: 0.5em;
+}
+.chart .key ul li.hovered[data-hoverclass],
+.chart .key ul li.toggled[data-hoverclass],
+.chart .key ul li[data-hoverclass]:hover {
+	background: #FFFAD4;
+	cursor: pointer;
+}
 
-	.key {
-		grid-column: 2;
-		grid-row: 2/span 3;
-		padding: 0.5em 0 1em 0;
-		font-size: 0.9em;
+.chart .key ul li .toggled {
+	font-weight: bold;
+	letter-spacing: -0.5px;
+}
 
-		ul {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			height: 100%;
+.chart  .x-axis {
+	grid-column: 2;
+	grid-row: 4;
+	font-size: 80%; /* Font size must be 80% to match .data */
+	max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
+}
+.chart  .x-axis ol.x-axis-row {
+	width: 100%;
+	display: flex;
+}
 
-			li {
-				margin-right: 1em;
-				padding: 0.1em 0.5em;
-				border-radius: 0.5em;
+.chart  .x-axis ol.x-axis-row li {
+	vertical-align: top;
+	color: #666;
+	padding: 0 0.1em;
+	box-sizing: border-box;
+	text-align: center;
+}
 
-				&.hovered[data-hoverclass],
-				&.toggled[data-hoverclass],
-				&[data-hoverclass]:hover {
-					background: #FFFAD4;
-					cursor: pointer;
-				}
+.chart  .x-axis .row1 li {
+	color: #333;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
 
-				&.toggled {
-					font-weight: bold;
-					letter-spacing: -0.5px;
-				}
-			}
-		}
-	}
+.chart  .x-axis .row1,
+.chart  .x-axis .row2 { font-size: 1em; }
+.chart  .x-axis .row3 { font-size: 0.8em; }
 
-	.x-axis {
-		grid-column: 2;
-		grid-row: 4;
-		font-size: 80%; /* Font size must be 80% to match .data */
-		max-width: 90vw;  /* Some charts (e.g. bar) set their nominal data width in inline styles. Cap this at 90% of the screen width. */
+.chart .error-message {
+	grid-column: 2;
+	grid-row: 3;
+	min-width: 20em;
 
-		ol.x-axis-row {
-			width: 100%;
-			display: flex;
+	text-align: center;
+	font-size: 0.77em;
+	color: #888;
+}
+	
+.chart .y-axis {
+	grid-row: 3;
+	grid-column: 1;
 
-			li {
-				vertical-align: top;
-				color: #666;
-				padding: 0 0.1em;
-				box-sizing: border-box;
-				text-align: center;
-			}
-		}
-
-		.row1 li {
-			color: #333;
-			overflow-wrap: break-word;
-			hyphens: auto;
-		}
-
-		.row1,
-		.row2 { font-size: 1em; }
-
-		.row3 { font-size: 0.8em; }
-	}
-
-	.error-message {
-		grid-column: 2;
-		grid-row: 3;
-		min-width: 20em;
-
-		text-align: center;
-		font-size: 0.77em;
-		color: #888;
-	}
-		
-	.y-axis {
-		grid-row: 3;
-		grid-column: 1;
-
-		color: #333;
-		text-align: right;
-		font-size: 0.9em;
-
-		ol {
-			position: relative;
-			height: 100%;
-
-			li {
-				position: absolute;
-				right: 0;
-				margin: 0;
-				padding: 0 0.5em 0 0;
-			}
-		}
-	}
+	color: #333;
+	text-align: right;
+	font-size: 0.9em;
+}
+.chart .y-axis ol {
+	position: relative;
+	height: 100%;
+}
+.chart .y-axis ol li {
+	position: absolute;
+	right: 0;
+	margin: 0;
+	padding: 0 0.5em 0 0;
 }
 
 .chart.no-key {
