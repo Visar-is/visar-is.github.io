@@ -84,7 +84,7 @@
 .chart .key ul li[data-hoverclass]:hover {
 	background: var(--key-hover-color);
 	cursor: pointer;
-    transition: background 1s;
+    transition: background 0.25s;
 }
 
 .chart .key ul li .toggled {
@@ -211,21 +211,21 @@
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0.5em 0.5em 0 0;
-    transition: background 1s;
+    transition: background 0.25s;
 }
 
 .bar-chart .x-axis .row3 li.hovered,
 .bar-chart .x-axis .row3 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0 0 0.5em 0.5em;
-    transition: background 1s;
+    transition: background 0.25s;
 }
 
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover {
 	background: var(--key-hover-color);
-    transition: background 1s;
+    transition: background 0.25s;
 }
 .h_bars { margin-left: 60px; }
 .h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
@@ -351,7 +351,7 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
-    transition: background 1s;
+    transition: background 0.25s;
 
 }
 
@@ -488,7 +488,7 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
-    transition: background 1s;
+    transition: background 0.25s;
 }
 
 

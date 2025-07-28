@@ -62,7 +62,7 @@
 .chart .key ul li[data-hoverclass]:hover {
 	background: var(--key-hover-color);
 	cursor: pointer;
-    transition: background 1s;
+    transition: background 0.25s;
 }
 
 .chart .key ul li .toggled {
