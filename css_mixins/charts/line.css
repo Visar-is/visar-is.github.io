@@ -1,7 +1,7 @@
-.bn-longitudinal-chart .hidden { opacity: 0%; display: block; }
+.bn-longitudinal-chart .hidden { opacity: 0; display: block; }
 
 .bn-longitudinal-chart .key .hidden.hovered {
-	 opacity: 100%;
+	 opacity: 1;
 	 transition: opacity 0.25s;
 }
 
@@ -96,7 +96,7 @@
 	padding: 0.5em;
 	text-align: center;
     transition: background 0.25s;
-
+    opacity: 0;
 }
 
 

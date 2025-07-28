@@ -94,7 +94,7 @@ $(document).ready(function() {
 
 					var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
 					hoverBoxEl.text(pointEl.getAttribute('data-name'));
-					hoverBoxEl.show();
+					hoverBoxEl.css('opacity') = '1';
 					hoverBoxEl.css('top', $(pointEl).position().top + 20);
 					hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2));
 					if (toggled) {
@@ -126,7 +126,7 @@ $(document).ready(function() {
 					keyEl.find('.' + hoverClass).addClass('hovered');
 
 					// Ensure that hover effect elements are cleaned up.
-					chartEl.find('.hover-box:not(.toggled)').hide();
+					chartEl.find('.hover-box:not(.toggled)').css('opacity') = '';
 
 					// Show hover effect elements.
 					showHoverBoxes(points);
@@ -155,7 +155,7 @@ $(document).ready(function() {
 					keyEl.find('.'+hoverClass).removeClass('hovered');
 
 					// Hide hover effects.
-					chartEl.find('.hover-box:not(.toggled)').hide();
+					chartEl.find('.hover-box:not(.toggled)').css('opacity') = '0';
 				}
 			});
 
@@ -178,7 +178,7 @@ $(document).ready(function() {
 							showHoverBoxes(chartEl.find('.point.' + hoverClass), true);
 						} else {
 							// If this click led to more than one item being toggled, untoggle and hide all hover boxes.
-							chartEl.find('.hover-box.toggled').removeClass('.toggled').hide();
+							chartEl.find('.hover-box.toggled').removeClass('.toggled').css('opacity') = '0';
 						}
 					} else { // Otherwise, untoggle it.
 						target.removeClass('toggled');
@@ -186,7 +186,7 @@ $(document).ready(function() {
 
 						// Untoggle and hide relevant hover boxes.
 						chartEl.find('.point.' + hoverClass).each(function (i, pointEl) {
-							chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']').removeClass('toggled').hide();
+							chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']').removeClass('toggled').css('opacity') = '0';
 						});
 					}
 
@@ -267,7 +267,7 @@ $(document).ready(function() {
 					lines.each(function (i, lineEl) { lineEl.setAttribute('class', lineEl.getAttribute('class') + ' hovered')});
 
 					// Ensure that hover effect elements are cleaned up.
-					chartEl.find('.hover-box').hide();
+					chartEl.find('.hover-box').css('opacity') = '0';
 
 					// Add in hover effect elements.
 					points.each(function (i, pointEl) {
@@ -278,7 +278,7 @@ $(document).ready(function() {
 
 						var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
 						hoverBoxEl.text(pointEl.getAttribute('data-name'));
-						hoverBoxEl.show();
+						hoverBoxEl.css('opacity') = '1';
 						hoverBoxEl.css('top', $(pointEl).position().top + 20);
 						hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2))
 					})
@@ -304,7 +304,7 @@ $(document).ready(function() {
 					});
 
 					// Hide hover effects.
-					chartEl.find('.hover-box').hide();
+					chartEl.find('.hover-box').css('opacity') = '0';
 				}
 			});
 

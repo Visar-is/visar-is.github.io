@@ -255,10 +255,10 @@ div.h-x-axis ol li { text-align: left; }
 	grid-column: 1;
 	grid-row: 3;
 }
-.bn-longitudinal-chart .hidden { opacity: 0%; display: block; }
+.bn-longitudinal-chart .hidden { opacity: 0; display: block; }
 
 .bn-longitudinal-chart .key .hidden.hovered {
-	 opacity: 100%;
+	 opacity: 1;
 	 transition: opacity 0.25s;
 }
 
@@ -353,7 +353,7 @@ div.h-x-axis ol li { text-align: left; }
 	padding: 0.5em;
 	text-align: center;
     transition: background 0.25s;
-
+    opacity: 0;
 }
 
 
