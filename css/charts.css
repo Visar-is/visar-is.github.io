@@ -84,8 +84,7 @@
 .chart .key ul li[data-hoverclass]:hover {
 	background: var(--key-hover-color);
 	cursor: pointer;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 
 .chart .key ul li .toggled {
@@ -212,24 +211,21 @@
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0.5em 0.5em 0 0;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 
 .bar-chart .x-axis .row3 li.hovered,
 .bar-chart .x-axis .row3 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0 0 0.5em 0.5em;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover {
 	background: var(--key-hover-color);
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 .h_bars { margin-left: 60px; }
 .h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
@@ -355,8 +351,7 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 
 }
 
@@ -493,8 +488,7 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 
 

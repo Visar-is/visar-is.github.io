@@ -12,22 +12,19 @@
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0.5em 0.5em 0 0;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 
 .bar-chart .x-axis .row3 li.hovered,
 .bar-chart .x-axis .row3 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0 0 0.5em 0.5em;
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
 
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover {
 	background: var(--key-hover-color);
-	opacity: 100%;
-    transition: opacity 1s;
+    transition: background 1s;
 }
