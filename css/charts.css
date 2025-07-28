@@ -211,21 +211,21 @@
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0.5em 0.5em 0 0;
-    transition: background 0.25s;
+    transition: background 0.5s;
 }
 
 .bar-chart .x-axis .row3 li.hovered,
 .bar-chart .x-axis .row3 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0 0 0.5em 0.5em;
-    transition: background 0.25s;
+    transition: background 0.5s;
 }
 
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover {
 	background: var(--key-hover-color);
-    transition: background 0.25s;
+    transition: background 0.5s;
 }
 .h_bars { margin-left: 60px; }
 .h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
@@ -352,8 +352,6 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
-    transition: opacity 0.25s;
-    opacity: 0;
 }
 
 
