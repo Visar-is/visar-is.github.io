@@ -95,7 +95,7 @@
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
-    transition: background 0.25s;
+    transition: opacity 0.25s;
     opacity: 0;
 }
 
