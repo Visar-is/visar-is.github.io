@@ -94,7 +94,9 @@ $(document).ready(function() {
 
 					var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
 					hoverBoxEl.text(pointEl.getAttribute('data-name'));
-					hoverBoxEl.show();
+					hoverBoxEl.fadeIn( 500, function() {
+    					// Animation complete
+					});
 					hoverBoxEl.css('top', $(pointEl).position().top + 20);
 					hoverBoxEl.css('left', $(pointEl).position().left - (hoverBoxEl.outerWidth() / 2));
 					if (toggled) {
