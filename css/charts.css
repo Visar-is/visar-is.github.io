@@ -210,18 +210,24 @@
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0.5em 0.5em 0 0;
+	opacity: 100%;
+    transition: opacity 1s;
 }
 
 .bar-chart .x-axis .row3 li.hovered,
 .bar-chart .x-axis .row3 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0 0 0.5em 0.5em;
+	opacity: 100%;
+    transition: opacity 1s;
 }
 
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover {
 	background: var(--key-hover-color);
+	opacity: 100%;
+    transition: opacity 1s;
 }
 .h_bars { margin-left: 60px; }
 .h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
@@ -290,6 +296,7 @@ div.h-x-axis ol li { text-align: left; }
 	height: 0.5em;
 	background: #ccc;
 	transform: translate(-0.25em, 0.25em) rotate(45deg);
+	border-radius: 0.25em;
 }
 
 
@@ -346,6 +353,9 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
+	opacity: 100%;
+    transition: opacity 1s;
+
 }
 
 
@@ -424,10 +434,8 @@ div.h-x-axis ol li { text-align: left; }
 .key-scatter li.you span { color: #2f502f; }
 .key-scatter li.you_line span { color: #00f; }
 
-.scatter .key {
-	.hidden { display: none; }
-	.hidden.hovered { display: block; }
-}
+.scatter .key .hidden { display: none; }
+.scatter .key .hidden.hovered { display: block; }
 
 .scatter .data {
 	position: relative;
@@ -483,6 +491,8 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
+	opacity: 100%;
+    transition: opacity 1s;
 }
 
 

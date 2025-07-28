@@ -7,7 +7,7 @@ body header {
 }
 
 body #header {
-	background-color: #80C860;
+	background-color: var(--button-primary-color);
 }
 
 body #header ul li a, body #footer-info a  {
@@ -15,7 +15,7 @@ body #header ul li a, body #footer-info a  {
 }
 
 body footer {
-	background-color: #80C860;
+	background-color: var(--button-primary-color);
 	color: #fff;
 }
 

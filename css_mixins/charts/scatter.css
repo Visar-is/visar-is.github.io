@@ -1,10 +1,8 @@
 .key-scatter li.you span { color: #2f502f; }
 .key-scatter li.you_line span { color: #00f; }
 
-.scatter .key {
-	.hidden { display: none; }
-	.hidden.hovered { display: block; }
-}
+.scatter .key .hidden { display: none; }
+.scatter .key .hidden.hovered { display: block; }
 
 .scatter .data {
 	position: relative;
@@ -60,6 +58,8 @@
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
+	opacity: 100%;
+    transition: opacity 1s;
 }
 
 
