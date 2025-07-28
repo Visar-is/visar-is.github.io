@@ -84,6 +84,8 @@
 .chart .key ul li[data-hoverclass]:hover {
 	background: var(--key-hover-color);
 	cursor: pointer;
+	opacity: 100%;
+    transition: opacity 1s;
 }
 
 .chart .key ul li .toggled {
