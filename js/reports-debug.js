@@ -11247,7 +11247,7 @@ $(document).ready(function() {
 
 					var hoverBoxEl = chartEl.find('.hover-box[data-index='+pointEl.getAttribute('data-index')+']');
 					hoverBoxEl.text(pointEl.getAttribute('data-name'));
-					hoverBoxEl.fadeIn( 500, function() {
+					hoverBoxEl.fadeIn( 5000, function() {
     					// Animation complete
 					});
 					hoverBoxEl.css('top', $(pointEl).position().top + 20);
