@@ -200,7 +200,7 @@
 .bar-chart .data .bar { position: absolute; bottom: 0; margin: 0; padding: 0; background-color: #ccc; text-align: center;}
 .bar-chart .data .bar span { display: none; }
 
-.bar-chart .data li { box-sizing: border-box; }
+.bar-chart .data li { box-sizing: border-box; border-radius: 6px 6px 0 0; }
 .bar-chart .data li.you { background-color: #65DB65; border: 1px solid #65DB65; }
 .bar-chart .data li.compare { background-color: #dc3912; border: 1px solid #dc3912; }
 .bar-chart .data li.you.bg { background-color: #a3e9a3; border: 1px solid #a3e9a3; }
@@ -255,10 +255,11 @@ div.h-x-axis ol li { text-align: left; }
 	grid-column: 1;
 	grid-row: 3;
 }
-.bn-longitudinal-chart .hidden { display: none; }
+.bn-longitudinal-chart .hidden { opacity: 0%; display: block; }
 
-.bn-longitudinal-chart .key {
-	.hidden.hovered { display: block; }
+.bn-longitudinal-chart .key .hidden.hovered {
+	 opacity: 100%;
+	 transition: opacity 0.25s;
 }
 
 .bn-longitudinal-chart .data {
