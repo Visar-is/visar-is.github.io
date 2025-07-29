@@ -1,5 +1,6 @@
 :root {
   --key-hover-color: #FFFAD4;
+  --key-hover-color-border: #d7c64e;
   --y-axis-label-color: #333;
   --y-axis-line-color: #ddd;
 
@@ -11,6 +12,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --key-hover-color: #252525;
+    --key-hover-color-border: #000;
     --y-axis-label-color: #969696;
     --y-axis-line-color: #525252;
 
@@ -85,6 +87,7 @@
 	background: var(--key-hover-color);
 	cursor: pointer;
     transition: background 0.25s;
+    outline: 1px solid var(--key-hover-color-border);
 }
 
 .chart .key ul li .toggled {
@@ -352,6 +355,7 @@ div.h-x-axis ol li { text-align: left; }
 	border-radius: 0.5em;
 	padding: 0.5em;
 	text-align: center;
+	outline: 1px solid var(--key-hover-color-border);
 }
 
 

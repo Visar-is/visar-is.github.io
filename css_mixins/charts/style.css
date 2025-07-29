@@ -63,6 +63,7 @@
 	background: var(--key-hover-color);
 	cursor: pointer;
     transition: background 0.25s;
+    outline: 1px solid var(--key-hover-color-border);
 }
 
 .chart .key ul li .toggled {
