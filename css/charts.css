@@ -215,7 +215,7 @@
 	background: var(--key-hover-color);
 	border-radius: 0.5em 0.5em 0 0;
     transition: background 0.5s;
-    box-shadow: 1px 1px  var(--key-hover-color-border), -1px 1px  var(--key-hover-color-border);
+    box-shadow: 1px -1px  var(--key-hover-color-border), -1px -1px  var(--key-hover-color-border);
 }
 
 .bar-chart .x-axis .row3 li.hovered,
@@ -223,7 +223,7 @@
 	background: var(--key-hover-color);
 	border-radius: 0 0 0.5em 0.5em;
     transition: background 0.5s;
-    box-shadow: 1px -1px var(--key-hover-color-border), -1px -1px var(--key-hover-color-border);
+    box-shadow: 1px 1px var(--key-hover-color-border), -1px 1px var(--key-hover-color-border);
 }
 
 
