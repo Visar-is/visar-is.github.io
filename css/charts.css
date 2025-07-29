@@ -1,10 +1,10 @@
 :root {
   --key-hover-color: #FFFAD4;
   --key-hover-color-border: #d7c64e;
+  --x-axis-label-color: #333;
   --y-axis-label-color: #333;
   --y-axis-line-color: #ddd;
 
-  --x-axis-label-color: #333;
 }
 
 
@@ -13,11 +13,11 @@
   :root {
     --key-hover-color: #252525;
     --key-hover-color-border: #000;
+    --x-axis-label-color: #969696;
     --y-axis-label-color: #969696;
     --y-axis-line-color: #525252;
 
 
-    --x-axis-label-color: #bbb;
   }
 
 }
