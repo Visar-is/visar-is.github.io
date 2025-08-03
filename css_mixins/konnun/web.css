@@ -50,6 +50,11 @@ header { width: 100%; min-height: 48px; }
 
 #content { clear: both; text-align: center; overflow:auto; flex: 1; /* take up all remaining space */ } 
 
+.logo { 
+max-width: 300px;
+max-height: 60px;
+ }
+
 footer { width: 100%; clear:both; text-align: right;  }	
 footer .logo { height: 42px; padding-right: 30px; padding-bottom: 30px; }
 
