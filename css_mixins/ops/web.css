@@ -225,12 +225,14 @@ footer .container {
 nav a, nav a:hover, nav a:visited, nav a:focus { color: #fff; font-size: 16px; }
 
 		.error { background-color: #900; }
-		.info, .warning { background-color: #c4c452; }
+		.info, .warning { background-color: #c4c452; color: black; }
 
 		#messages .message {
 		padding: 1em;
 		color: white;
 		font-weight: bold;
+		max-width: 1000px;
+		margin: 0 auto;
 		}
 
 		#header {
