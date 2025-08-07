@@ -4,7 +4,7 @@ $(document).ready(function() {
 	// Return corresponding height value
 	var header_padding = function() {
 		if ($('header').css('position') === 'fixed') {
-			var padding = $('header').height() + 45;
+			var padding = $('header').height();// + 45;
 		}
 		else {
 			var padding = 0;
