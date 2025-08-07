@@ -902,13 +902,12 @@ body {
 }
 
 header {
-	background: #80C860;
+	background: var(--button-primary-color);
 	width: 100%;
 	min-height: 65px;
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	border-bottom: 1px solid #b0b1b2;
 }
 
 #header {
@@ -1109,7 +1108,7 @@ left: 0;
 top: 10px;
 }
 body footer {
-background-color: #80C860;
+background-color: var(--button-primary-color);
 color: #fff;
 }
 footer {
@@ -1118,7 +1117,7 @@ padding: 1em 0;
 footer .container {
 	padding-top: 1em;
 }
-nav a, nav a:hover, nav a:visited, nav a:focus { color: #fff; font-size: 16px; }
+nav a, nav a:hover, nav a:visited, nav a:focus, footer a, footer a:hover, footer a:visited, footer a:focus { color: #fff; font-size: 16px; }
 
 		.error { background-color: #900; }
 		.info, .warning { background-color: #c4c452; color: black; }
