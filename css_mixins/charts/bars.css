@@ -11,11 +11,12 @@
 .bar-chart .x-axis .row2 li.hovered,
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
-	border-radius: 0.5em 0.5em 0 0;
+	border-radius: 0.5em;
     transition: background 0.5s;
-    box-shadow: 1px -1px  var(--key-hover-color-border), -1px -1px  var(--key-hover-color-border);
+    outline: 1px solid var(--key-hover-color-border);
 }
 
+/*
 .bar-chart .x-axis .row3 li.hovered,
 .bar-chart .x-axis .row3 li.toggled {
 	background: var(--key-hover-color);
@@ -23,7 +24,7 @@
     transition: background 0.5s;
     box-shadow: 1px 1px var(--key-hover-color-border), -1px 1px var(--key-hover-color-border);
 }
-
+*/
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover {
