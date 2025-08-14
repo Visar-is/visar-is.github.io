@@ -11503,13 +11503,14 @@ $(document).ready(function() {
 			console.log("Bar Chart Found!")
 
 			chartEl.find('.bars .bar').mouseover(function (event) {
-				console.log(event.target)
+
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
 				var hoverclass = 'compare'
 				if (event.target.getAttribute('class').includes('you')){
-					hoverClass = 'you'
+					hoverclass = 'you'
 				}
 				chartEl.addClass('hovered');
+				console.log(hoverclass)
 				chartEl.find('.' + hoverclass).addClass('hovered');
 			});
 
@@ -11517,7 +11518,7 @@ $(document).ready(function() {
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
 				var hoverclass = 'compare'
 				if (event.target.getAttribute('class').includes('you') || ''){
-					hoverClass = 'you'
+					hoverclass = 'you'
 				}
 
 				chartEl.removeClass('hovered');
