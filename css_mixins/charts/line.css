@@ -143,6 +143,7 @@
 .bn-longitudinal-chart.hovered line:not(.hovered, .toggled), .bn-longitudinal-chart.toggled line:not(.hovered, .toggled),
 .bn-longitudinal-chart.hovered .point:not(.hovered, .toggled):not(.compare_schools), .bn-longitudinal-chart.toggled .point:not(.hovered, .toggled):not(.compare_schools) {
 	opacity: 0.3;
+    transition: opacity 0.25s;
 }
 
 
@@ -151,6 +152,8 @@
 .bn-longitudinal-chart.hovered line.toggled, .bn-longitudinal-chart.toggled line.toggled {
 	stroke-width: 3px;
 	z-index: 999999999999;
+    transition: stroke-width 0.25s;
+
 }
 
 .bn-longitudinal-chart.hovered .point.hovered, .bn-longitudinal-chart.toggled .point.hovered,
