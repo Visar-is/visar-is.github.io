@@ -56,6 +56,7 @@
 	margin-right: 1em;
 	padding: 0.1em 0.5em;
 	border-radius: 0.5em;
+	outline: 1px solid transparent;
 }
 .chart .key ul li.hovered[data-hoverclass],
 .chart .key ul li.toggled[data-hoverclass],
@@ -88,6 +89,7 @@
 	padding: 0 0.1em;
 	box-sizing: border-box;
 	text-align: center;
+	outline: 1px solid transparent;
 }
 
 .chart  .x-axis .row1 li {
