@@ -11502,6 +11502,7 @@ $(document).ready(function() {
 			var chartEl = $(el);
 
 			chartEl.find('li.bar').mouseover(function (event) {
+				console.log(event.target)
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
 				var hoverclass = event.target.getAttribute('class');
 				chartEl.addClass('hovered');
