@@ -11500,7 +11500,6 @@ $(document).ready(function() {
 	(function () {
 		$('.bar-chart').each(function (i, el) {
 			var chartEl = $(el);
-			console.log("Bar Chart Found!")
 
 			chartEl.find('.bars .bar').mouseover(function (event) {
 
@@ -11510,7 +11509,6 @@ $(document).ready(function() {
 					hoverclass = 'you'
 				}
 				chartEl.addClass('hovered');
-				console.log(hoverclass)
 				chartEl.find('.' + hoverclass).addClass('hovered');
 			});
 
@@ -11527,17 +11525,20 @@ $(document).ready(function() {
 			
 			chartEl.find('.key li').mouseover(function (event) {
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
-				var hoverclass = event.target.getAttribute('class').replace('toggled', '');
-				chartEl.addClass('hovered');
-				chartEl.find('.' + hoverclass).addClass('hovered');
+				if (event.target && event.target.getAttribute) {
+					var hoverclass = event.target.getAttribute('class').replace('toggled', '');
+					chartEl.addClass('hovered');
+					chartEl.find('.' + hoverclass).addClass('hovered');
+				}
 			});
 
 			chartEl.find('.key li').mouseout(function (event) {
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
-				var hoverclass = (event.target.getAttribute('class') || '').replace('hovered', '').replace('toggled', '');
-
-				chartEl.removeClass('hovered');
-				chartEl.find('.' + hoverclass).removeClass('hovered');
+				if (event.target && event.target.getAttribute) {
+					var hoverclass = (event.target.getAttribute('class') || '').replace('hovered', '').replace('toggled', '');
+					chartEl.removeClass('hovered');
+					chartEl.find('.' + hoverclass).removeClass('hovered');
+				}
 			});
 
 			// Assign legend item click handler for toggling hover effects.
