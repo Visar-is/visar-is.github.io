@@ -11387,26 +11387,6 @@ $(document).ready(function() {
 					})] = true;
 					hoverableClasses = Object.keys(hcd);
 				});
-
-				chartEl.find('.data .bar').each(function(i, el) {
-					// We need a classname which identifies lines of the same class as the one we’re processing right now.
-					// Currently, this is not easily achievable across different types of longitudinal chart, and fixing that
-					// would require regenerating many charts. Therefore, for the moment, I opted for two special cases: one
-					// handling longitudinal scatter charts (the original) and the other handling cohort charts.
-					hcd[$(el).attr('class').split(' ').filter(function (c) {
-						// Is the current classname one which we can use to identify associated line and li.point elements?
-						// • of the form `s\d+` for longitudinal schools
-						// • `cohort-grade-\d+` for grade cohort charts.
-						// • {you/compare}-bg-{bg_key}-{bg_val} for background longitudinal charts.
-						return c[0] == 's'
-							|| c.match(/^[a-zA-Z0-9_]+-bg-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+/) !== null
-							|| c.indexOf('cohort-grade-') != -1
-							|| (c == 'you' || c == 'compare');
-					}).reduce(function (longest, current) {
-						return current.length > longest.length ? current : longest;
-					})] = true;
-					hoverableClasses = Object.keys(hcd);
-				});
 			}
 
 			// Do some setup work now that we know which elements are hoverable.
@@ -11520,6 +11500,21 @@ $(document).ready(function() {
 	(function () {
 		$('.bar-chart').each(function (i, el) {
 			var chartEl = $(el);
+
+			chartEl.find('li.bar').mouseover(function (event) {
+				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
+				var hoverclass = event.target.getAttribute('class');
+				chartEl.addClass('hovered');
+				chartEl.find('.' + hoverclass).addClass('hovered');
+			});
+
+			chartEl.find('li.bar').mouseout(function (event) {
+				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.
+				var hoverclass = (event.target.getAttribute('class') || '');
+
+				chartEl.removeClass('hovered');
+				chartEl.find('.' + hoverclass).removeClass('hovered');
+			});
 			
 			chartEl.find('.key li').mouseover(function (event) {
 				// For the moment we can assume that bar chart legend items have a single class, vastly simplifying the hover code.

@@ -216,6 +216,7 @@
 	border-radius: 0.5em;
     transition: background 0.5s;
     outline: 1px solid var(--key-hover-color-border);
+    transition: outline 0.5s;
 }
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
@@ -223,6 +224,7 @@
 	background: var(--key-hover-color);
     transition: background 0.5s;
     outline: 1px solid var(--key-hover-color-border);
+    transition: outline 0.5s;
 }
 .h_bars { margin-left: 60px; }
 .h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
