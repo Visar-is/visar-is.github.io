@@ -214,17 +214,15 @@
 .bar-chart .x-axis .row2 li.toggled {
 	background: var(--key-hover-color);
 	border-radius: 0.5em;
-    transition: background 0.5s;
     outline: 1px solid var(--key-hover-color-border);
-    transition: outline 0.5s;
+    transition: outline 0.5s, background 0.5s;
 }
 
 /* Bar chart legends currently have no data-hoverclass attribute. */
 .bar-chart .key  ul li:hover, .bar-chart .key  ul li.toggled, .bar-chart .key  ul li.hovered {
 	background: var(--key-hover-color);
-    transition: background 0.5s;
     outline: 1px solid var(--key-hover-color-border);
-    transition: outline 0.5s;
+    transition: outline 0.5s,  background 0.5s;
 }
 .h_bars { margin-left: 60px; }
 .h_bars ol { border-left: 1px solid #ccc; padding-bottom: 1em;}
