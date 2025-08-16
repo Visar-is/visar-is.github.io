@@ -1,7 +1,7 @@
 :root {
-  --success-color: rgb(0, 255, 186);
-  --warning-color: #BF125D;
-  --error-color: rgb(252, 132, 132);
+  --success-color: #00bf5d;
+  --warning-color: #958645;
+  --error-color: rgb(179, 58, 58);
   --label-color: rgb(28, 28, 28);
 
   --positive-color: #0B0;
@@ -39,9 +39,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --success-color: rgb(0, 255, 186);
-  --warning-color: rgb(250, 197, 91);
-  --error-color: rgb(252, 132, 132);
+  --success-color: rgb(56, 117, 69);
+  --warning-color: rgb(120, 96, 50);
+  --error-color: rgb(92, 27, 27);
   --label-color: #e6e3e3;
 
   --positive-color: #5ed25e;
@@ -861,9 +861,12 @@ input::-moz-focus-inner {
 #messages li {
 	padding: 10px 10px 10px 20px;
 	list-style: none;
-	color: #333;
+	color: #fff;
 	background-color: #ccc;
 	font-weight: bold;
+	max-width: 1040px;
+	margin: 3px auto;
+	border-radius: 6px;
 }
 
 #messages span.message-text a, #messages span.message-text a:visited, #messages span.message-text a:hover {

@@ -3,9 +3,12 @@
 #messages li {
 	padding: 10px 10px 10px 20px;
 	list-style: none;
-	color: #333;
+	color: #fff;
 	background-color: #ccc;
 	font-weight: bold;
+	max-width: 1040px;
+	margin: 3px auto;
+	border-radius: 6px;
 }
 
 #messages span.message-text a, #messages span.message-text a:visited, #messages span.message-text a:hover {
