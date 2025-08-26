@@ -7,7 +7,7 @@ a {	color: #007722; }
 }
 
 .table-section,
-.section-note { font-size: 12px; }
+.section-note { font-size: 14px; }
 
 .section-note { margin-top: 10px; }
 
@@ -17,7 +17,7 @@ a {	color: #007722; }
 	margin-bottom: 0;
 	margin-left: 0.6em;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.4;
 }
 
@@ -33,7 +33,7 @@ a {	color: #007722; }
 }
 
 .chart {
-	font-size: 12px;
+	font-size: 14px;
 	margin-bottom: 1em;
 }
 
@@ -67,7 +67,7 @@ a {	color: #007722; }
 }
 
 .cover-footer {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 14px;
 	padding-top: 5pt;
 	padding-left: 1em;
@@ -80,7 +80,7 @@ a {	color: #007722; }
 }
 
 .cover-footer a {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 14px;
 }
 
