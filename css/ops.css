@@ -101,6 +101,7 @@
 		font-style: italic;
 		src: local('AtkinsonHyperlegible-BoldItalic'),
 		local('Atkinson Hyperlegible Bold Italic'),
+		url('../webfonts/AtkinsonHyperlegible-BoldItalic.woff2') format('woff2'),
 		url('../webfonts/AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
 	}
 	
@@ -110,12 +111,14 @@
 		font-style: italic;
 		src: local('AtkinsonHyperlegible-Italic'),
 		local('Atkinson Hyperlegible Italic'),
+		url('../webfonts/AtkinsonHyperlegible-Italic.woff2') format('woff2'),
 		url('../webfonts/AtkinsonHyperlegible-Italic.ttf') format('truetype');
 	}
   
 	@font-face {
 		font-family: 'Atkinson Hyperlegible';
 		font-weight: regular;
+		font-style: normal;
 		src:  local('AtkinsonHyperlegible-Regular'),
 		local('Atkinson Hyperlegible'),
 		url('../webfonts/AtkinsonHyperlegible-Regular.woff2') format('woff2'),
