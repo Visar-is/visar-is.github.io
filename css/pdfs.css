@@ -90,6 +90,7 @@
 		font-weight: 700;
 		src: local('AtkinsonHyperlegible-Bold'),
 		local('Atkinson Hyperlegible Bold'),
+		url('../webfonts/AtkinsonHyperlegible-Bold.woff2') format('woff2'),
 		url('../webfonts/AtkinsonHyperlegible-Bold.ttf') format('truetype');
 	}
 	
@@ -117,6 +118,7 @@
 		font-weight: regular;
 		src:  local('AtkinsonHyperlegible-Regular'),
 		local('Atkinson Hyperlegible'),
+		url('../webfonts/AtkinsonHyperlegible-Regular.woff2') format('woff2'),
 		url('../webfonts/AtkinsonHyperlegible-Regular.ttf') format('truetype');
 	}
 /* #Reset & Basics (Inspired by E. Meyers)
