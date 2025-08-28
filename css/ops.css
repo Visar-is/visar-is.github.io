@@ -81,6 +81,44 @@
   }
 }
 
+/* #Fonts
+================================================== */
+	
+	@font-face {
+		font-family: 'Atkinson Hyperlegible';
+		font-weight: bold;
+		font-weight: 700;
+		src: local('AtkinsonHyperlegible-Bold'),
+		local('Atkinson Hyperlegible Bold'),
+		url('../webfonts/AtkinsonHyperlegible-Bold.ttf') format('truetype');
+	}
+	
+	@font-face {
+		font-family: 'Atkinson Hyperlegible';
+		font-weight: bold;
+		font-weight: 700;
+		font-style: italic;
+		src: local('AtkinsonHyperlegible-BoldItalic'),
+		local('Atkinson Hyperlegible Bold Italic'),
+		url('../webfonts/AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+	}
+	
+	@font-face {
+		font-family: 'Atkinson Hyperlegible';
+		font-weight: regular;
+		font-style: italic;
+		src: local('AtkinsonHyperlegible-Italic'),
+		local('Atkinson Hyperlegible Italic'),
+		url('../webfonts/AtkinsonHyperlegible-Italic.ttf') format('truetype');
+	}
+  
+	@font-face {
+		font-family: 'Atkinson Hyperlegible';
+		font-weight: regular;
+		src:  local('AtkinsonHyperlegible-Regular'),
+		local('Atkinson Hyperlegible'),
+		url('../webfonts/AtkinsonHyperlegible-Regular.ttf') format('truetype');
+	}
 .icon-research {
 	width: 64px;
 	height: 64px;

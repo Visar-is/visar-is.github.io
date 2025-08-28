@@ -3,6 +3,7 @@
 # List of CSS files
 css_files=(
 	"css_mixins/app/variables.css" 
+	"css_mixins/app/fonts.css" 
 	"css_mixins/app/icons.css"
 	"css_mixins/base/base.css" 
 	"css_mixins/base/links.css"
