@@ -826,7 +826,13 @@ input#access_key {
 
 .copy-to-clipboard {
 	margin-left: 1em;
-}/*	Vísar - Konnun - tablet.less
+}
+
+ol, ul {
+	list-style: disc;
+	margin: 0 0 20px 0;
+}
+/*	Vísar - Konnun - tablet.less
 ========================================= */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
