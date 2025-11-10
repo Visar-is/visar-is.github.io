@@ -6,7 +6,7 @@
 	background-image: none;
 }
 .web body #header {
-	background-color: #4159A8;
+	background-color: var(--button-primary-color);
 }
 
 .web body #header a,
@@ -17,7 +17,7 @@
 }
 
 .web body footer {
-	background-color: #4159A8;
+	background-color: var(--button-primary-color);
 	color: #fff;
 }
 
