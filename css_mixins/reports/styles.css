@@ -168,7 +168,7 @@ header { background-color: #fff; width: 100%; margin-top: 1em; }
 #header ul li form button { color: #006daf; }
 
 #content { min-height: 500px; padding-bottom: 25px; /* must be same height as the footer */ }
-.container { width: 90%; max-width: 1040px; margin: 0px auto; padding-top: 1em; }
+.container { max-width: 1320px; width: 100%; margin: 0px auto; padding-top: 1em; }
 
 footer { padding: 1em 0 2em 0; }
 body footer {
