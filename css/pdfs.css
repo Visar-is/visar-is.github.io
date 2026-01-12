@@ -162,6 +162,7 @@
 		line-height: 1.45;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
+		padding: 0 1em;
  }
 
 /*
