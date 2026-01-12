@@ -1519,7 +1519,6 @@ body footer {
 /* Mobile Portrait */
 
 @media only screen and (max-width: 480px) {
-	header { position: fixed;  width: 100%; }
 	header a.logo { margin: 0 auto; position: relative; top: 14px; left: 0px; }
 
 	#messages { padding-top: 0; }
@@ -1534,7 +1533,6 @@ body footer {
 /* (Portrait) Design for a width of 768px  */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-	header { position: fixed; width: 100%; }
 	#messages { padding-top: 0; }
 }
 
