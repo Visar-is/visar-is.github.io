@@ -952,9 +952,8 @@ header {
 	background: var(--button-primary-color);
 	width: 100%;
 	min-height: 65px;
-	position: fixed;
-	top: 0px;
-	left: 0px;
+	margin: 1em 0;
+	border-radius: 10px;
 }
 
 #header {
@@ -1149,11 +1148,7 @@ padding: 0 1em;
 height: 63px;
 line-height: 63px;
 }
-#header .logo {
-position: absolute;
-left: 0;
-top: 10px;
-}
+
 body footer {
 background-color: var(--button-primary-color);
 color: #fff;
@@ -1178,11 +1173,9 @@ nav a, nav a:hover, nav a:visited, nav a:focus, footer a, footer a:hover, footer
 		}
 
 		#header {
-			max-width: 1040px;
+			max-width: 1320px;
 			margin: 0 auto;
-			position: relative;
-			width: 90%;
-
+			width: 100%;
 		}:root .skolapulsinn {
   --button-primary-color-hover: rgb(116,169,72);
   --button-primary-color: #007711;
