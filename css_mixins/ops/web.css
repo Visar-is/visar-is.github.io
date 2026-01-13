@@ -15,7 +15,7 @@ header {
 
 #header {
 	height: 65px;
-	padding: 0px 10px 0px 20px;
+	padding: 0px;
 }
 
 #header .logo {
@@ -212,6 +212,10 @@ color: #fff;
 }
 footer {
 padding: 1em 0;
+border-radius: 10px;
+max-width: 1320px;
+margin: 0 auto;
+margin-bottom: 20px;
 }
 footer .container {
 	padding-top: 1em;
