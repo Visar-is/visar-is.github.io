@@ -1163,6 +1163,7 @@ margin-bottom: 20px;
 }
 footer .container {
 	padding-top: 1em;
+	max-width: 1320px;
 }
 nav a, nav a:hover, nav a:visited, nav a:focus, footer a, footer a:hover, footer a:visited, footer a:focus { color: #fff; font-size: 16px; }
 
