@@ -291,6 +291,10 @@ button:visited {
   --button-primary-color: #007711;
 }
 
+:root .rvk {
+  --button-primary-color-hover: rgb(35,80,173);
+  --button-primary-color: rgb(44,101,217);
+}
 
 
 /* SKOLAPULSINN GREEN */
