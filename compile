@@ -8,9 +8,8 @@ export PATH=./node_modules/.bin:$PATH
 ./css_mixins/pdfs.sh
 ./css_mixins/crm.sh
 ./css_mixins/charts.sh
-./css_mixins/visar.sh
 
-echo "Compiled 7 .css files"
+echo "Compiled 6 .css files"
 
 
 cat js/lib/jquery.1.11.3.min.js js/global/messages.js js/lib/soundmanager/soundmanager2-nodebug-jsmin.js js/lib/clipboard.js js/konnun.js | jsmin > js/konnun-min.js
