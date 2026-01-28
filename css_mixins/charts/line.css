@@ -64,24 +64,24 @@
 .bn-longitudinal-chart .data .longitudinal-points li.compare_schools .dot { background-color: rgba(190, 190, 190, 0.4); width: 0.4em; height: 0.4em; transform: translate(-0.2em, 0.2em) rotate(45deg); }
 
 .bn-longitudinal-chart .data .longitudinal-points li.bg_sex_1 { z-index: 8500000; }
-.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_1 .dot { color: #74d2c6; }}
+.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_1 .dot { color: #74d2c6; }
 .bn-longitudinal-chart .data .longitudinal-points li.bg_sex_2 { z-index: 8500000; } 
-.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_2 .dot { color: #b07fa9; }}
+.bn-longitudinal-chart .data .longitudinal-points li.bg_sex_2 .dot { color: #b07fa9; }
 
 .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-6, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-1 { z-index: 7000000;   } 
-.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-6 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-1 .dot { background-color: #712F0A; }}
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-6 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-1 .dot { background-color: #712F0A; }
 
 .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-7, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-2 { z-index: 7100000;   } 
-.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-7 .dot , .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-2 .dot { background-color: #E9681B; }}
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-7 .dot , .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-2 .dot { background-color: #E9681B; }
 
 .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-8, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-3 { z-index: 7200000;   } 
-.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-8 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-3 .dot { background-color: #65DB65; }}
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-8 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-3 .dot { background-color: #65DB65; }
 
 .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-9, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-4 { z-index: 7300000;   } 
-.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-9 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-4 .dot { background-color: #FFB600; }}
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-9 .dot, .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-4 .dot { background-color: #FFB600; }
 
 .bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-10, .bn-longitudinal-chart .data .longitudinal-points  li.cohort-grade-5 { z-index: 7400000; } 
-.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-10 .dot, .bn-longitudinal-chart .data .longitudinal-points  li.cohort-grade-5 .dot { background-color: #3359BA; }}
+.bn-longitudinal-chart .data .longitudinal-points li.cohort-grade-10 .dot, .bn-longitudinal-chart .data .longitudinal-points  li.cohort-grade-5 .dot { background-color: #3359BA; }
 
 
 .bn-longitudinal-chart .data .hover-content {
