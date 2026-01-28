@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=./node_modules/.bin:$PATH
+
 ./css_mixins/konnun.sh
 ./css_mixins/reports.sh
 ./css_mixins/ops.sh
@@ -9,7 +11,7 @@
 
 #lessc less/konnun.less css/konnun.css --clean-css="--s1 --advanced"
 #lessc less/reports.less css/reports.css --clean-css="--s1 --advanced"
-lessc less/visar.less css/visar.css --clean-css="--s1 --advanced"
+#lessc less/visar.less css/visar.css --clean-css="--s1 --advanced"
 #lessc less/ops.less css/ops.css --clean-css="--s1 --advanced"
 #lessc less/pdfs.less css/pdfs.css --clean-css="--s1 --advanced"
 #lessc less/charts.less css/charts.css --clean-css="--s1 --advanced"

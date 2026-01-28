@@ -254,11 +254,12 @@ div.h-x-axis ol li { text-align: left; }
 	grid-column: 1;
 	grid-row: 3;
 }
-.bn-longitudinal-chart .hidden { opacity: 0; display: block; }
+.bn-longitudinal-chart .hidden { opacity: 0; display: none; }
 
 .bn-longitudinal-chart .key .hidden.hovered {
 	 opacity: 1;
 	 transition: opacity 0.25s;
+	 display: block;
 }
 
 .bn-longitudinal-chart .data {

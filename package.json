@@ -1,8 +1,6 @@
 {
   "dependencies": {
-    "lessc": "^1.0.2",
     "uglify-js": "^3.19.3",
-    "uglifycss": "^0.0.29",
-    "uglifyjs": "^2.4.11"
+    "uglifycss": "^0.0.29"
   }
 }
