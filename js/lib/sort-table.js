@@ -13,6 +13,8 @@
   Thanks to many, many people for contributions and suggestions.
   Licenced as X11: http://www.kryogenix.org/code/browser/licence.html
   This basically means: do what you want with it.
+
+  2026-02-05: Removed some uses of the delete keyword which aren‘t allowed in strict mode. -BW
 */
 
 
@@ -56,7 +58,7 @@ sorttable = {
     // "total" rows, for example). This is B&R, since what you're supposed
     // to do is put them in a tfoot. So, if there are sortbottom rows,
     // for backwards compatibility, move them to tfoot (creating it if needed).
-    sortbottomrows = [];
+    var sortbottomrows = [];
     for (var i=0; i<table.rows.length; i++) {
       if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
         sortbottomrows[sortbottomrows.length] = table.rows[i];
@@ -71,7 +73,6 @@ sorttable = {
       for (var i=0; i<sortbottomrows.length; i++) {
         tfo.appendChild(sortbottomrows[i]);
       }
-      delete sortbottomrows;
     }
 
     // work through each column and calculate its type
@@ -141,7 +142,7 @@ sorttable = {
 	        // i.e., we "decorate" each row with the actual sort key,
 	        // sort based on the sort keys, and then put the rows back in order
 	        // which is a lot faster because you only do getInnerText once per row
-	        row_array = [];
+	        var row_array = [];
 	        col = this.sorttable_columnindex;
 	        rows = this.sorttable_tbody.rows;
 	        for (var j=0; j<rows.length; j++) {
@@ -156,8 +157,6 @@ sorttable = {
 	        for (var j=0; j<row_array.length; j++) {
 	          tb.appendChild(row_array[j][1]);
 	        }
-
-	        delete row_array;
 	      });
 	    }
     }
@@ -245,14 +244,13 @@ sorttable = {
 
   reverse: function(tbody) {
     // reverse the rows in a tbody
-    newrows = [];
+    var newrows = [];
     for (var i=0; i<tbody.rows.length; i++) {
       newrows[newrows.length] = tbody.rows[i];
     }
     for (var i=newrows.length-1; i>=0; i--) {
        tbody.appendChild(newrows[i]);
     }
-    delete newrows;
   },
 
   /* sort functions
