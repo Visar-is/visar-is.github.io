@@ -295,8 +295,8 @@ button:visited {
   --button-primary-color-hover: rgb(35,80,173);
   --button-primary-color: rgb(44,101,217);
 
-  html body #header #progress { display: none; }
 }
+:root .rvk #header #progress { display: none; }
 
 
 /* SKOLAPULSINN GREEN */
