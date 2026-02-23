@@ -1138,7 +1138,7 @@ nav a, nav a:hover, nav a:visited, nav a:focus, footer a, footer a:hover, footer
   --button-primary-color-hover: rgb(35,80,173);
   --button-primary-color: rgb(44,101,217);
 
-  html body #progress { display: none; }
+  html body #header #progress { display: none; }
 }
 
 
