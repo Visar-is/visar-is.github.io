@@ -1607,7 +1607,9 @@ body footer {
 :root .rvk {
   --button-primary-color-hover: rgb(35,80,173);
   --button-primary-color: rgb(44,101,217);
+
 }
+:root .rvk #header #progress { display: none; }
 
 
 /* SKOLAPULSINN GREEN */
