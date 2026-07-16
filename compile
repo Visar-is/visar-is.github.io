@@ -19,7 +19,7 @@ uglifyjs js/lib/jquery.1.11.3.min.js js/global/messages.js js/lib/papa-parse.js 
 #uglifyjs js/lib/bean.js js/lib/jquery-3.6.0.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js -o js/reports-min.js
 uglifyjs js/lib/bean.js js/lib/jquery.1.11.3.min.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js -o js/reports-min.js
 
-uglifyjs js/lib/bean.js js/lib/jquery.1.11.3.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js > js/reports-debug.js
+uglifyjs js/lib/bean.js js/lib/jquery.1.11.3.js js/lib/enquire.js js/global/messages.js js/lib/sort-table.js js/reports.js -o js/reports-debug.js
 
 uglifyjs js/lib/jquery.1.11.3.min.js js/lib/enquire.js js/lib/html5shiv.js js/visar.js -o js/visar-min.js
 
