@@ -1040,10 +1040,14 @@ a:hover { color: var(--link-color-hover); }
 
 .ticket-table tbody td {
 	vertical-align: middle;
+
 }
 
-
-
+@media print {
+	.ticket-table tbody td {
+		color: #000;
+	}
+}
 
 
 table { padding: 0.5em; width: 100%; }
