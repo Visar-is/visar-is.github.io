@@ -644,7 +644,7 @@ padding: 0.5em 0.25em; font-size: 18px
 	background: var(--form-background-color-hover);
 }
 
-.response.missing-value { padding-top: 0.5em; }
+.response.missing-value { padding: 0.5em 0; }
 
 .checkbox-target, .radio-target { padding: 0.5em; display: block; cursor: pointer; }
 .checkbox-optional-target, .radio-optional-target { padding: 0.5em; }
