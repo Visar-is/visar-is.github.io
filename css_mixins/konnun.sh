@@ -6,6 +6,7 @@ css_files=(
 	"css_mixins/app/fonts.css" 
 	"css_mixins/base/base.css" 
 	"css_mixins/base/typography.css"
+	"css_mixins/base/rtl.css"
 	"css_mixins/base/buttons.css"
 	"css_mixins/base/forms.css"
 	"css_mixins/base/links.css"

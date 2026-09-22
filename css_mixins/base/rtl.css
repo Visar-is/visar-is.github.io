@@ -1,0 +1,12 @@
+/* RTL language settings */
+.lang-ar #survey-form {
+	text-align: right !important; 
+}
+.lang-ar button img { transform: rotate(180deg) !important; }
+.lang-ar .speech-button, .lang-ar .speech-button:active, .lang-ar .speech-button:hover {
+		position: static; float: right; margin-right: -60px;
+}
+
+.lang-ar .choice-target .speech-button, .lang-ar .choice-target  .speech-button:active, .lang-ar .choice-target  .speech-button:hover {
+	float: none; margin-right: 0px;
+}
